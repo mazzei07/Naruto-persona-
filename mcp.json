@@ -3,7 +3,7 @@
   "mcpServers": {
     "naruto-persona-engine": {
       "type": "streamable-http",
-      "url": "https://REPLACE_WITH_YOUR_DEPLOYMENT/mcp"
+      "url": "https://naruto-persona-engine.onrender.com/mcp"
     }
   }
 }
