@@ -1,0 +1,137 @@
+{
+  "registry_version": "2.0",
+  "teams": {
+    "Time 4": "Kaede Uchiha / Kaito Shimura / Nao Kurusu — Sayuri Hyūga",
+    "Time 5": "Aki Senju / Rin Senju / Tōru Senju — sensei a fechar",
+    "Time 6": "Shin Uchiha / Koharu Inuzuka + Kuro / Hibiki Shirogane — Shigure Namikado",
+    "Time 7": "Amatsu Uchiha / Saya Haruno / Kazuma Uzumaki — Kagetsu Shiranui",
+    "Time 8": "Mio Inuzuka + Yoru / Ayame Hyūga / Seki Aburame — Tōma Aburame",
+    "Time 9": "Reika Hyūga / Tetsu Iwagane / Riku Fūma — Masaru Fūma. Um ano mais velhos",
+    "Time 10": "Renji Nara / Hana Yamanaka / Daichi Akimichi — Akihiko Sarutobi",
+    "Time 11": "Arata Senju / Natsuki Hyūga / Jun Sarutobi — Shōma Sarutobi"
+  },
+  "clans": {
+    "Uchiha": {
+      "name": "Uchiha",
+      "source_raw": "Os Uchiha NÃO foram exterminados.\n\nO clã permanece:\n- orgulhoso;\n- tradicional;\n- ligado à Polícia;\n- politicamente sensível;\n- preocupado com reputação coletiva;\n- dividido internamente entre visões mais rígidas e moderadas.\n\nMasato Uchiha permanece chefe do clã.\n\n### Kaede Uchiha\n- 12 anos.\n- filha de Seijūrō Uchiha.\n- excelente aluna, disciplinada, orgulhosa, competitiva.\n- não gosta de Amatsu no início.\n- considera as pegadinhas dele uma vergonha ao nome Uchiha.\n- segue fortemente orientação familiar para manter distância.\n- pode ser mais grossa, fria e crítica com Amatsu que na continuidade antiga.\n- não possui Sharingan inicialmente.\n\n### Shin Uchiha\n- 12 anos.\n- filho de Daigo Uchiha.\n- físico, direto, competitivo.\n- também reproduz preconceitos familiares contra Amatsu.\n- pode confrontá-lo de maneira mais aberta que Kaede.\n- não possui Sharingan inicialmente.\n\nA evolução deles em relação a Amatsu deve ser gradual e baseada em fatos vividos.\n\n---",
+      "status": "explicit_base_section"
+    },
+    "Hyūga": {
+      "name": "Hyūga",
+      "source_raw": "A estrutura opressiva Sōke/Bunke permanece ativa.\n\n### Ayame Hyūga\n- pertence à Sōke.\n- mantém costumes da família principal.\n- inicialmente hierárquica, preconceituosa e condescendente com membros da Bunke.\n- foi ensinada a considerar várias desigualdades como naturais.\n- pode esperar deferência de Reika em ambientes familiares e sociais.\n- mudança, caso ocorra, deve ser lenta.\n\n### Reika Hyūga\n- pertence à Bunke.\n- está no Time 9, um ano acima da geração de Amatsu.\n- sofre e internaliza em diferentes graus a estrutura familiar.\n- NÃO é cópia de Hinata ou Neji; sua relação com Ayame tem identidade própria.\n\n---",
+      "status": "explicit_base_section"
+    },
+    "Uzumaki": {
+      "name": "Uzumaki",
+      "source_raw": "O clã Uzumaki NÃO foi exterminado nesta continuidade.\n\nCaracterísticas culturais:\n- enormes reservas de chakra são comuns, embora variem individualmente;\n- Fūinjutsu é patrimônio técnico central;\n- conhecimento de selamento é controlado por tradição, família e nível de confiança;\n- não é permitido presumir que qualquer Uzumaki criança saiba selar Bijū ou usar técnicas Rank S;\n- em Konoha, os Uzumaki possuem um complexo/zona clânica própria, comparável em função social aos bairros/complexos Uchiha e Hyūga;\n- existe rivalidade histórica de prestígio, tradição e influência entre grandes clãs, inclusive Uchiha e Uzumaki, mas isso não equivale a hostilidade militar automática.\n\nA mãe de Amatsu era Uzumaki. A união com um Uchiha contrariou expectativas de setores conservadores dos dois clãs e contribuiu para o estigma social da família.\n\nUzushiogakure e a posição política externa dos Uzumaki deverão ser reconstruídas de forma compatível com a existência continuada do clã.\n\n---",
+      "status": "explicit_base_section"
+    },
+    "Senju": {
+      "name": "Senju",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Inuzuka": {
+      "name": "Inuzuka",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Nara": {
+      "name": "Nara",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Yamanaka": {
+      "name": "Yamanaka",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Akimichi": {
+      "name": "Akimichi",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Aburame": {
+      "name": "Aburame",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Sarutobi": {
+      "name": "Sarutobi",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Fūma": {
+      "name": "Fūma",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Shimura": {
+      "name": "Shimura",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Haruno": {
+      "name": "Haruno",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Shirogane": {
+      "name": "Shirogane",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Namikado": {
+      "name": "Namikado",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Shiranui": {
+      "name": "Shiranui",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Kisaragi": {
+      "name": "Kisaragi",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Mochizuki": {
+      "name": "Mochizuki",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Kurusu": {
+      "name": "Kurusu",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    },
+    "Iwagane": {
+      "name": "Iwagane",
+      "source_raw": "",
+      "status": "known_from_dossier_identity"
+    }
+  },
+  "organizations": {
+    "Konoha": {
+      "type": "village",
+      "source": "Base Canônica v27"
+    },
+    "Tenkai": {
+      "type": "organization",
+      "source": "Base Canônica v27 / Dossiê Mestre"
+    },
+    "Uchiha": {
+      "type": "clan",
+      "source": "Base Canônica v27"
+    },
+    "Hyūga": {
+      "type": "clan",
+      "source": "Base Canônica v27"
+    },
+    "Uzumaki": {
+      "type": "clan",
+      "source": "Base Canônica v27"
+    }
+  }
+}

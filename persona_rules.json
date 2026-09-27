@@ -1,0 +1,91 @@
+{
+  "engine_name": "Naruto Persona Engine",
+  "version": "0.1.0",
+  "continuity_id": "classico_floresta_da_morte",
+  "scope": "Naruto Reboot — Continuidade Clássica",
+  "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
+  "precedence": [
+    "correção live mais recente do usuário",
+    "estado live validado pelo chat/Canoney",
+    "perfil individual do registro clássico",
+    "relação direcional específica",
+    "fase exata da referência",
+    "situação/pressão/audiência/corpo",
+    "regras globais de voz",
+    "pesquisa externa apenas como calibração"
+  ],
+  "pipeline": [
+    "stimulus",
+    "perception_constraint",
+    "legitimate_knowledge_constraint",
+    "reference_and_phase",
+    "directional_relationship",
+    "objective",
+    "private_impulse",
+    "social_filter",
+    "body_state",
+    "decision",
+    "speech_or_silence",
+    "voice_realization",
+    "body_realization",
+    "post_reaction"
+  ],
+  "absolute_rules": [
+    "Amatsu Uchiha é controlado integralmente pelo usuário; o Persona Engine nunca gera fala, pensamento, emoção, intenção ou ação voluntária nova dele.",
+    "Relação específica vence personalidade genérica.",
+    "A relação é direcional: A→B não implica B→A.",
+    "Usar a fase exata da referência; bloquear desenvolvimento futuro.",
+    "Referência fornece faixa de atuação, não história, trauma, poder, conhecimento, parentesco ou destino.",
+    "Silêncio fiel vence fala de preenchimento.",
+    "Personalidade deve aparecer em superfície: latência, corpo, cadência, volume, vocativo, completude, interrupção e silêncio.",
+    "Correto não significa formal; casual não significa gíria moderna.",
+    "Morfossintaxe faz parte da voz.",
+    "Bordão é microassinatura, não muleta.",
+    "Comédia física é válida somente quando contexto, relação e pressão permitirem.",
+    "Perigo comprime linguagem, mas não transforma criança em comandante adulto.",
+    "Conhecimento e percepção são fornecidos pelo Canoney/chat; este motor não concede informação nova.",
+    "Quando evidência de referência for insuficiente, marcar research_required em vez de inventar."
+  ],
+  "voice_gates": [
+    "falaria_agora",
+    "tem_tempo_e_folego",
+    "atividade_corporal_atual",
+    "objetivo_com_interlocutor",
+    "o_que_esconde",
+    "latencia",
+    "vocativo_funcional",
+    "silencio_mais_fiel",
+    "completude_sintatica",
+    "registro_e_hierarquia",
+    "morfossintaxe",
+    "pos_reacao"
+  ],
+  "forbidden_modernisms": [
+    "cringe",
+    "skill issue",
+    "red flag",
+    "gaslighting",
+    "terapia",
+    "gatilho emocional",
+    "NPC",
+    "buff",
+    "nerf",
+    "meta",
+    "build"
+  ],
+  "authority_titles": {
+    "Daizen Sarutobi": ["Hokage-sama", "Senhor Hokage"],
+    "Kagetsu Shiranui": ["sensei", "Kagetsu-sensei"]
+  },
+  "situation_keywords": {
+    "danger": ["perigo", "ameaça", "ataque", "emboscada", "inimigo", "explosão", "armadilha", "ferido", "morte", "letal", "urgente", "combate"],
+    "comedy": ["piada", "provocação", "provoca", "zoa", "brinca", "cômico", "engraçado", "pegadinha", "ridículo"],
+    "authority": ["hokage", "sensei", "superior", "comandante", "instrutor", "professor", "gabinete"],
+    "romance": ["crush", "romântico", "romance", "gosta", "admira", "elogio", "aproximação", "ciúme", "vergonha"],
+    "instruction": ["treino", "ensina", "instrução", "corrige", "exercício", "teste"],
+    "insult": ["insulto", "idiota", "burro", "provoca", "zomba", "humilha"],
+    "request": ["pedido", "pede", "pergunta", "solicita", "ajuda"],
+    "praise": ["elogio", "parabéns", "impressionado", "admiração"],
+    "social": ["conversa", "cotidiano", "descanso", "caminha", "refeição", "almoço", "sala", "grupo"]
+  }
+}

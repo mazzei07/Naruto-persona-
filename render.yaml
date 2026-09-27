@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: naruto-persona-engine
+    runtime: docker
+    plan: free
+    autoDeploy: true
