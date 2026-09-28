@@ -42,7 +42,7 @@ def persona_turn(
     perception_constraint: str = "",
     knowledge_constraint: str = "",
 ):
-    return character_turn_packet(
+    packet = character_turn_packet(
         name=name,
         interlocutor=interlocutor,
         stimulus=stimulus,
@@ -54,6 +54,10 @@ def persona_turn(
         perception_constraint=perception_constraint,
         knowledge_constraint=knowledge_constraint,
     )
+    if packet.get("status") == "ok":
+        packet.setdefault("evidence_v24", fidelity_evidence_packet(name, interlocutor, situation, stimulus))
+        packet.setdefault("semantic_review_required", True)
+    return packet
 
 
 def persona_check(
@@ -102,7 +106,7 @@ def persona_sayability(
         "reference_voice_family_v23": packet.get("reference_voice_family_v23"),
         "formality_profile_v23": packet.get("formality_profile_v23"),
         "universal_language_v23": packet.get("universal_language_v23"),
-        "evidence_v24": packet.get("evidence_v24"),
+        "evidence_v24": packet.get("evidence_v24") or fidelity_evidence_packet(name, interlocutor, situation, stimulus),
         "semantic_review_required": packet.get("semantic_review_required", True),
     }
 
