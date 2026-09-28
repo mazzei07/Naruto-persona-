@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.1.0",
+  "version": "0.3.0-v21",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -74,18 +74,172 @@
     "build"
   ],
   "authority_titles": {
-    "Daizen Sarutobi": ["Hokage-sama", "Senhor Hokage"],
-    "Kagetsu Shiranui": ["sensei", "Kagetsu-sensei"]
+    "Daizen Sarutobi": [
+      "Hokage-sama",
+      "Senhor Hokage"
+    ],
+    "Kagetsu Shiranui": [
+      "sensei",
+      "Kagetsu-sensei"
+    ]
   },
   "situation_keywords": {
-    "danger": ["perigo", "ameaça", "ataque", "emboscada", "inimigo", "explosão", "armadilha", "ferido", "morte", "letal", "urgente", "combate"],
-    "comedy": ["piada", "provocação", "provoca", "zoa", "brinca", "cômico", "engraçado", "pegadinha", "ridículo"],
-    "authority": ["hokage", "sensei", "superior", "comandante", "instrutor", "professor", "gabinete"],
-    "romance": ["crush", "romântico", "romance", "gosta", "admira", "elogio", "aproximação", "ciúme", "vergonha"],
-    "instruction": ["treino", "ensina", "instrução", "corrige", "exercício", "teste"],
-    "insult": ["insulto", "idiota", "burro", "provoca", "zomba", "humilha"],
-    "request": ["pedido", "pede", "pergunta", "solicita", "ajuda"],
-    "praise": ["elogio", "parabéns", "impressionado", "admiração"],
-    "social": ["conversa", "cotidiano", "descanso", "caminha", "refeição", "almoço", "sala", "grupo"]
-  }
+    "danger": [
+      "perigo",
+      "ameaça",
+      "ataque",
+      "emboscada",
+      "inimigo",
+      "explosão",
+      "armadilha",
+      "ferido",
+      "morte",
+      "letal",
+      "urgente",
+      "combate"
+    ],
+    "comedy": [
+      "piada",
+      "provocação",
+      "provoca",
+      "zoa",
+      "brinca",
+      "cômico",
+      "engraçado",
+      "pegadinha",
+      "ridículo"
+    ],
+    "authority": [
+      "hokage",
+      "sensei",
+      "superior",
+      "comandante",
+      "instrutor",
+      "professor",
+      "gabinete"
+    ],
+    "romance": [
+      "crush",
+      "romântico",
+      "romance",
+      "gosta",
+      "admira",
+      "elogio",
+      "aproximação",
+      "ciúme",
+      "vergonha"
+    ],
+    "instruction": [
+      "treino",
+      "ensina",
+      "instrução",
+      "corrige",
+      "exercício",
+      "teste"
+    ],
+    "insult": [
+      "insulto",
+      "idiota",
+      "burro",
+      "provoca",
+      "zomba",
+      "humilha"
+    ],
+    "request": [
+      "pedido",
+      "pede",
+      "pergunta",
+      "solicita",
+      "ajuda"
+    ],
+    "praise": [
+      "elogio",
+      "parabéns",
+      "impressionado",
+      "admiração"
+    ],
+    "social": [
+      "conversa",
+      "cotidiano",
+      "descanso",
+      "caminha",
+      "refeição",
+      "almoço",
+      "sala",
+      "grupo"
+    ]
+  },
+  "universe_register_v21": {
+    "rule": "Todos pertencem ao mesmo universo linguístico de Naruto Clássico em PT-BR, mas cada personagem possui registro individual.",
+    "axes": [
+      "correção gramatical",
+      "formalidade",
+      "oralidade/contração",
+      "comprimento de frase",
+      "elipse",
+      "vocativo e posição do nome",
+      "honorífico",
+      "impulsividade",
+      "interrupção",
+      "ironia",
+      "explicação vs implicitude",
+      "volume",
+      "latência",
+      "ornamentação",
+      "postura corporal",
+      "contraste privado/público",
+      "hierarquia",
+      "transformação sob pressão"
+    ],
+    "process": [
+      "linha semanticamente correta",
+      "gramática individual",
+      "relação direcional",
+      "cortar o que o personagem não diria",
+      "vocativo/honorífico natural",
+      "prosódia e corpo",
+      "fala ou silêncio"
+    ]
+  },
+  "performance_wash_v21": {
+    "mandatory": true,
+    "before_generation": [
+      "exact reference and phase",
+      "reboot divergences",
+      "directional relationship",
+      "current private impulse",
+      "social filter",
+      "body state",
+      "universe register",
+      "micro-signatures",
+      "speech-vs-silence decision",
+      "subtext"
+    ],
+    "after_draft": [
+      "swap test",
+      "AI-exposition test",
+      "interchangeability test",
+      "read-aloud character test",
+      "body-voice unity",
+      "vocative placement",
+      "register consistency"
+    ]
+  },
+  "forbidden_ai_dialogue": [
+    "fala que explica ao leitor o que a cena já mostra",
+    "personagem explicando a própria psicologia",
+    "tese, relatório ou resumo de cena na boca do NPC",
+    "não é X, é Y sem motivação humana real",
+    "isso significa / a diferença é / você precisa entender como exposição",
+    "frase de efeito ou trailer usada para parecer intensa",
+    "comentário obrigatório depois de cada estímulo",
+    "gesto decorativo sem impulso comum com a fala"
+  ],
+  "mandatory_final_gates": [
+    "Se trocar o falante por dois ou três NPCs e a linha ainda funcionar, reescrever.",
+    "Se o personagem não precisaria falar, usar silêncio/corpo.",
+    "A fala deve pertencer simultaneamente ao universo Naruto e ao registro individual.",
+    "Relação, idade, fase, hierarquia e audiência devem alterar a superfície.",
+    "O leitor não deve perceber as regras; deve perceber o personagem."
+  ]
 }
