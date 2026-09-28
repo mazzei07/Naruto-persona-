@@ -27,7 +27,8 @@
       "live user corrections through 2026-09-28"
     ],
     "rule": "A line is never generated from 'personality' alone. Resolve history + interlocutor + trigger + audience + body + objective + prior exchange, then bend the semantic intent into the actor.",
-    "dialogue_flow_version": "v27-dialogue-flow"
+    "dialogue_flow_version": "v27-dialogue-flow",
+    "reference_relation_matrix_version": "v28"
   },
   "characters": {
     "Amatsu Uchiha": {
@@ -277,11 +278,22 @@
       "relationship_overrides": {
         "Amatsu Uchiha": {
           "baseline": "Low social filter, fast irritation, oral imperatives, interruption and legitimate physical comedy when the beat is actually comedic.",
-          "must_not": "Do not turn her into a permanently sensible girl who only sighs or rolls her eyes."
+          "must_not": "Do not turn her into a permanently sensible girl who only sighs or rolls her eyes.",
+          "reference_relation_axis_v28": "Sakura jovem → Naruto (início/Exame Chūnin)",
+          "transfer_v28": "baixa paciência, interrupção, bronca oral, reação rápida ao exibicionismo; afeto/cuidado pode aparecer em risco real sem virar doçura constante",
+          "must_not_v28": "não tratar Amatsu como Kazuma; não usar deferência romântica; não transformar bronca em conselho adulto"
         },
         "Kazuma Uzumaki": {
           "baseline": "Higher self-monitoring and image-consciousness; softer entry, more complete syntax, admiration can delay criticism.",
-          "must_not": "Do not use the same aggressive register she uses with Amatsu."
+          "must_not": "Do not use the same aggressive register she uses with Amatsu.",
+          "reference_relation_axis_v28": "Sakura jovem → Sasuke",
+          "transfer_v28": "maior autocontrole de imagem, atenção seletiva ao que ele pensa dela, suavização de tom e tentativa de parecer mais composta; ainda adolescente e capaz de irritação/embaraço",
+          "must_not_v28": "não falar com Kazuma no mesmo registro brusco usado com Amatsu"
+        },
+        "Kagetsu Shiranui": {
+          "reference_relation_axis_v28": "Sakura jovem → Kakashi",
+          "transfer_v28": "respeito de aluna + possibilidade de reclamar/questionar quando frustrada; autoridade reconhecida sem servilismo",
+          "must_not_v28": "não usar intimidade de par"
         }
       },
       "evidence": {
@@ -306,7 +318,25 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Sakura jovem → Naruto (início/Exame Chūnin)",
+          "transfer": "baixa paciência, interrupção, bronca oral, reação rápida ao exibicionismo; afeto/cuidado pode aparecer em risco real sem virar doçura constante",
+          "must_not": "não tratar Amatsu como Kazuma; não usar deferência romântica; não transformar bronca em conselho adulto"
+        },
+        "Kazuma Uzumaki": {
+          "reference_axis": "Sakura jovem → Sasuke",
+          "transfer": "maior autocontrole de imagem, atenção seletiva ao que ele pensa dela, suavização de tom e tentativa de parecer mais composta; ainda adolescente e capaz de irritação/embaraço",
+          "must_not": "não falar com Kazuma no mesmo registro brusco usado com Amatsu"
+        },
+        "Kagetsu Shiranui": {
+          "reference_axis": "Sakura jovem → Kakashi",
+          "transfer": "respeito de aluna + possibilidade de reclamar/questionar quando frustrada; autoridade reconhecida sem servilismo",
+          "must_not": "não usar intimidade de par"
+        }
       }
     },
     "Kazuma Uzumaki": {
@@ -424,7 +454,20 @@
       "relationship_overrides": {
         "Amatsu Uchiha": {
           "baseline": "Peer/rival axis. He can argue, provoke and sustain full exchanges when the subject matters; economy is about relevance, not word count.",
-          "must_not": "No automatic 'hn', no one-line critic commentary every beat."
+          "must_not": "No automatic 'hn', no one-line critic commentary every beat.",
+          "reference_relation_axis_v28": "Sasuke jovem → Naruto",
+          "transfer_v28": "competição, irritação com barulho/exibicionismo, comparação silenciosa, orgulho ferido quando Amatsu cresce; pode provocar/recusar/agir em vez de comentar",
+          "must_not_v28": "não virar crítico frio permanente; reconhecimento raramente vem como elogio limpo"
+        },
+        "Saya Haruno": {
+          "reference_relation_axis_v28": "Sasuke jovem → Sakura",
+          "transfer_v28": "baixa reciprocidade ao investimento dela; resposta à informação/tarefa mais que à expectativa afetiva; não precisa ser cruel, mas não alimenta romance por educação",
+          "must_not_v28": "não tratar Saya como rival masculino nem devolver flerte automaticamente"
+        },
+        "Kagetsu Shiranui": {
+          "reference_relation_axis_v28": "Sasuke jovem → Kakashi",
+          "transfer_v28": "respeito técnico, respostas econômicas, atenção quando o sensei prova competência; pode resistir internamente sem teatralizar",
+          "must_not_v28": "não usar sarcasmo adolescente de igual para igual"
         }
       },
       "evidence": {
@@ -450,7 +493,25 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Sasuke jovem → Naruto",
+          "transfer": "competição, irritação com barulho/exibicionismo, comparação silenciosa, orgulho ferido quando Amatsu cresce; pode provocar/recusar/agir em vez de comentar",
+          "must_not": "não virar crítico frio permanente; reconhecimento raramente vem como elogio limpo"
+        },
+        "Saya Haruno": {
+          "reference_axis": "Sasuke jovem → Sakura",
+          "transfer": "baixa reciprocidade ao investimento dela; resposta à informação/tarefa mais que à expectativa afetiva; não precisa ser cruel, mas não alimenta romance por educação",
+          "must_not": "não tratar Saya como rival masculino nem devolver flerte automaticamente"
+        },
+        "Kagetsu Shiranui": {
+          "reference_axis": "Sasuke jovem → Kakashi",
+          "transfer": "respeito técnico, respostas econômicas, atenção quando o sensei prova competência; pode resistir internamente sem teatralizar",
+          "must_not": "não usar sarcasmo adolescente de igual para igual"
+        }
       }
     },
     "Kaede Uchiha": {
@@ -587,7 +648,10 @@
               "response": "Cold competitive focus; becomes more cutting, not suddenly loud unless the scene truly breaks her restraint."
             }
           ],
-          "must_not": "No warm teasing, no quick friendship, no generic tsundere softness, no spectator-commentator voice."
+          "must_not": "No warm teasing, no quick friendship, no generic tsundere softness, no spectator-commentator voice.",
+          "reference_relation_axis_v28": "Sasuke jovem → Naruto, filtrado por histórico Uchiha próprio mais hostil",
+          "transfer_v28": "competição e atenção relutante ao crescimento; respostas precisas, orgulho e distância. O passado da Academia torna o tratamento mais frio que o Sasuke médio com Naruto no início.",
+          "must_not_v28": "não virar camaradagem, brincadeira ou elogio aberto só porque Amatsu foi competente"
         }
       },
       "evidence": {
@@ -613,7 +677,15 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Sasuke jovem → Naruto, filtrado por histórico Uchiha próprio mais hostil",
+          "transfer": "competição e atenção relutante ao crescimento; respostas precisas, orgulho e distância. O passado da Academia torna o tratamento mais frio que o Sasuke médio com Naruto no início.",
+          "must_not": "não virar camaradagem, brincadeira ou elogio aberto só porque Amatsu foi competente"
+        }
       }
     },
     "Kaito Shimura": {
@@ -1380,7 +1452,10 @@
               "response": "Pride injury + rivalry: short, hot, specific, likely challenge/insult rather than explanation."
             }
           ],
-          "must_not": "No adult composure, no therapist-like self-control, no elegant clan speech, no long explanation of his feelings."
+          "must_not": "No adult composure, no therapist-like self-control, no elegant clan speech, no long explanation of his feelings.",
+          "reference_relation_axis_v28": "Kiba → Naruto + Sasuke→Naruto + fisicalidade competitiva tipo Lee",
+          "transfer_v28": "provoca mais abertamente, reage com corpo, sobe o volume, quer provar superioridade; insulto sobre pai/clã atinge identidade e acelera explosão",
+          "must_not_v28": "não responder com compostura adulta, ironia fina ou frieza de Kaede"
         }
       },
       "evidence": {
@@ -1413,7 +1488,15 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Kiba → Naruto + Sasuke→Naruto + fisicalidade competitiva tipo Lee",
+          "transfer": "provoca mais abertamente, reage com corpo, sobe o volume, quer provar superioridade; insulto sobre pai/clã atinge identidade e acelera explosão",
+          "must_not": "não responder com compostura adulta, ironia fina ou frieza de Kaede"
+        }
       }
     },
     "Koharu Inuzuka": {
@@ -1524,7 +1607,13 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Amatsu Uchiha": {
+          "reference_relation_axis_v28": "Kiba → Naruto (par competitivo conhecido)",
+          "transfer_v28": "competição direta, confiança no próprio estilo e pouca cerimônia; respeito só cresce por experiência vista",
+          "must_not_v28": "não virar fã nem analista"
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "ep34",
@@ -1542,7 +1631,15 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Kiba → Naruto (par competitivo conhecido)",
+          "transfer": "competição direta, confiança no próprio estilo e pouca cerimônia; respeito só cresce por experiência vista",
+          "must_not": "não virar fã nem analista"
+        }
       }
     },
     "Hibiki Shirogane": {
@@ -1789,7 +1886,10 @@
       "relationship_overrides": {
         "Amatsu Uchiha": {
           "baseline": "Spontaneous, competitive, curious, provocative; no predetermined romance in this continuity. She reacts through body, challenge and curiosity before exposition.",
-          "must_not": "Do not make her Amatsu's cheerleader or import later-continuity romance."
+          "must_not": "Do not make her Amatsu's cheerleader or import later-continuity romance.",
+          "reference_relation_axis_v28": "Kiba→Naruto na competição + Ino/Sakura na expressividade social, sem romance predeterminado",
+          "transfer_v28": "provocação espontânea, disputa de ego, curiosidade e fisicalidade; quando risco é real, a brincadeira cai rápido",
+          "must_not_v28": "não importar paixão da Sakura por Sasuke nem intimidade futura desta continuidade"
         }
       },
       "evidence": {
@@ -1820,7 +1920,15 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Kiba→Naruto na competição + Ino/Sakura na expressividade social, sem romance predeterminado",
+          "transfer": "provocação espontânea, disputa de ego, curiosidade e fisicalidade; quando risco é real, a brincadeira cai rápido",
+          "must_not": "não importar paixão da Sakura por Sasuke nem intimidade futura desta continuidade"
+        }
       }
     },
     "Ayame Hyūga": {
@@ -1934,7 +2042,10 @@
       "relationship_overrides": {
         "Reika Hyūga": {
           "baseline": "Sōke-conditioned hierarchy is real. Ayame expects deference more readily than she admits; condescension can surface in word choice and posture.",
-          "must_not": "Do not make her neutral/equalitarian by default; change must be earned."
+          "must_not": "Do not make her neutral/equalitarian by default; change must be earned.",
+          "reference_relation_axis_v28": "conflito Hyūga Neji/Hinata como mecanismo de hierarquia e ressentimento, com direção própria Sōke→Bunke",
+          "transfer_v28": "formalidade clânica, condescendência inicial e cobrança de deferência; tensão explode mais por status familiar que por competição comum",
+          "must_not_v28": "não copiar fatalismo/biografia de Neji nem inverter automaticamente os papéis"
         }
       },
       "evidence": {
@@ -1952,7 +2063,15 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Reika Hyūga": {
+          "reference_axis": "conflito Hyūga Neji/Hinata como mecanismo de hierarquia e ressentimento, com direção própria Sōke→Bunke",
+          "transfer": "formalidade clânica, condescendência inicial e cobrança de deferência; tensão explode mais por status familiar que por competição comum",
+          "must_not": "não copiar fatalismo/biografia de Neji nem inverter automaticamente os papéis"
+        }
       }
     },
     "Seki Aburame": {
@@ -2197,7 +2316,10 @@
       "relationship_overrides": {
         "Ayame Hyūga": {
           "baseline": "Bunke/Sōke tension is personal and embodied. Reika may comply, resist, go precise/cold or choose silence depending audience; she is not simply Neji's fatalism.",
-          "must_not": "Do not import Neji's exact ideology or speeches."
+          "must_not": "Do not import Neji's exact ideology or speeches.",
+          "reference_relation_axis_v28": "conflito Hyūga Neji/Hinata apenas como mecanismo de pressão clânica; personalidade própria prevalece",
+          "transfer_v28": "controle externo, atenção a hierarquia e resistência à condescendência; resposta precisa em vez de submissão automática",
+          "must_not_v28": "não copiar timidez de Hinata nem fatalismo de Neji"
         }
       },
       "evidence": {
@@ -2215,7 +2337,15 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Ayame Hyūga": {
+          "reference_axis": "conflito Hyūga Neji/Hinata apenas como mecanismo de pressão clânica; personalidade própria prevalece",
+          "transfer": "controle externo, atenção a hierarquia e resistência à condescendência; resposta precisa em vez de submissão automática",
+          "must_not": "não copiar timidez de Hinata nem fatalismo de Neji"
+        }
       }
     },
     "Tetsu Iwagane": {
@@ -2576,7 +2706,18 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Hana Yamanaka": {
+          "reference_relation_axis_v28": "Shikamaru → Ino",
+          "transfer_v28": "reclama de energia/pressão dela, humor seco, mas coopera quase por hábito; confiança aparece na execução",
+          "must_not_v28": "não transformar toda resposta em 'problemático'"
+        },
+        "Daichi Akimichi": {
+          "reference_relation_axis_v28": "Shikamaru → Choji",
+          "transfer_v28": "amizade confortável, baixa necessidade de explicar, defesa rápida quando o parceiro é atacado/menosprezado",
+          "must_not_v28": "não usar distância emocional"
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "ep33",
@@ -2594,7 +2735,20 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Hana Yamanaka": {
+          "reference_axis": "Shikamaru → Ino",
+          "transfer": "reclama de energia/pressão dela, humor seco, mas coopera quase por hábito; confiança aparece na execução",
+          "must_not": "não transformar toda resposta em 'problemático'"
+        },
+        "Daichi Akimichi": {
+          "reference_axis": "Shikamaru → Choji",
+          "transfer": "amizade confortável, baixa necessidade de explicar, defesa rápida quando o parceiro é atacado/menosprezado",
+          "must_not": "não usar distância emocional"
+        }
       }
     },
     "Hana Yamanaka": {
@@ -2705,7 +2859,18 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Renji Nara": {
+          "reference_relation_axis_v28": "Ino → Shikamaru (Time 10 clássico)",
+          "transfer_v28": "familiaridade antiga, pode mandar/apressar/reclamar sem formalidade; espera competência quando importa",
+          "must_not_v28": "não tratar como estranho ou rival romântico"
+        },
+        "Daichi Akimichi": {
+          "reference_relation_axis_v28": "Ino → Choji",
+          "transfer_v28": "familiaridade protetora com liberdade para repreender; sensibilidade a inseguranças sem pisar nelas por descuido",
+          "must_not_v28": "não reduzir Daichi a piada de comida"
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "ep33",
@@ -2723,7 +2888,20 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Renji Nara": {
+          "reference_axis": "Ino → Shikamaru (Time 10 clássico)",
+          "transfer": "familiaridade antiga, pode mandar/apressar/reclamar sem formalidade; espera competência quando importa",
+          "must_not": "não tratar como estranho ou rival romântico"
+        },
+        "Daichi Akimichi": {
+          "reference_axis": "Ino → Choji",
+          "transfer": "familiaridade protetora com liberdade para repreender; sensibilidade a inseguranças sem pisar nelas por descuido",
+          "must_not": "não reduzir Daichi a piada de comida"
+        }
       }
     },
     "Daichi Akimichi": {
@@ -2835,7 +3013,18 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Renji Nara": {
+          "reference_relation_axis_v28": "Choji → Shikamaru",
+          "transfer_v28": "confiança simples e antiga; segue plano porque conhece o amigo, não por submissão",
+          "must_not_v28": "não idolatrar"
+        },
+        "Hana Yamanaka": {
+          "reference_relation_axis_v28": "Choji → Ino",
+          "transfer_v28": "aceita bronca com familiaridade, pode retrucar quando ela passa do ponto; vínculo de time é dado",
+          "must_not_v28": "não ficar passivo em toda troca"
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "ep33"
@@ -2851,7 +3040,20 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Renji Nara": {
+          "reference_axis": "Choji → Shikamaru",
+          "transfer": "confiança simples e antiga; segue plano porque conhece o amigo, não por submissão",
+          "must_not": "não idolatrar"
+        },
+        "Hana Yamanaka": {
+          "reference_axis": "Choji → Ino",
+          "transfer": "aceita bronca com familiaridade, pode retrucar quando ela passa do ponto; vínculo de time é dado",
+          "must_not": "não ficar passivo em toda troca"
+        }
       }
     },
     "Arata Senju": {
@@ -3350,7 +3552,23 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Amatsu Uchiha": {
+          "reference_relation_axis_v28": "Kakashi → Naruto jovem",
+          "transfer_v28": "mistura de tolerância, correção prática e humor seco; deixa o aluno se expor até certo ponto, mas corta quando missão/perigo exige; cuidado aparece em decisão e proteção",
+          "must_not_v28": "não virar terapeuta, pai meloso ou comentarista constante"
+        },
+        "Kazuma Uzumaki": {
+          "reference_relation_axis_v28": "Kakashi → Sasuke jovem",
+          "transfer_v28": "mais leitura silenciosa do orgulho/talento, cobrança precisa, ensino técnico e atenção a risco de isolamento/obsessão sem psicologizar em voz alta",
+          "must_not_v28": "não falar com ele como fala com Amatsu"
+        },
+        "Saya Haruno": {
+          "reference_relation_axis_v28": "Kakashi → Sakura jovem",
+          "transfer_v28": "reconhece inteligência/controle, cobra iniciativa e trata como membro pleno; menos duelo de ego, mais instrução e confiança prática",
+          "must_not_v28": "não infantilizar ou reduzir a suporte"
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "ep21",
@@ -3369,7 +3587,25 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Kakashi → Naruto jovem",
+          "transfer": "mistura de tolerância, correção prática e humor seco; deixa o aluno se expor até certo ponto, mas corta quando missão/perigo exige; cuidado aparece em decisão e proteção",
+          "must_not": "não virar terapeuta, pai meloso ou comentarista constante"
+        },
+        "Kazuma Uzumaki": {
+          "reference_axis": "Kakashi → Sasuke jovem",
+          "transfer": "mais leitura silenciosa do orgulho/talento, cobrança precisa, ensino técnico e atenção a risco de isolamento/obsessão sem psicologizar em voz alta",
+          "must_not": "não falar com ele como fala com Amatsu"
+        },
+        "Saya Haruno": {
+          "reference_axis": "Kakashi → Sakura jovem",
+          "transfer": "reconhece inteligência/controle, cobra iniciativa e trata como membro pleno; menos duelo de ego, mais instrução e confiança prática",
+          "must_not": "não infantilizar ou reduzir a suporte"
+        }
       }
     },
     "Sayuri Hyūga": {
@@ -11896,15 +12132,24 @@
       "relationship_overrides": {
         "Amatsu Uchiha": {
           "baseline": "Atenção/fixação pós-Floresta; silêncio, areia e foco carregam mais que fala.",
-          "must_not": "Sem camaradagem, filosofia adulta ou ameaça verborrágica."
+          "must_not": "Sem camaradagem, filosofia adulta ou ameaça verborrágica.",
+          "reference_relation_axis_v28": "Gaara → rival que conseguiu atravessar/pressionar sua defesa, adaptado ao histórico live",
+          "transfer_v28": "atenção concentrada e curiosidade hostil aparecem mais por olhar/areia/decisão que por fala; não esquece o confronto",
+          "must_not_v28": "não virar rival falante estilo Naruto/Sasuke"
         },
         "Sayo Sabaku": {
           "baseline": "Irmã mais velha; vínculo familiar reconhecido sem afeto verbal fácil.",
-          "must_not": "Sem obediência infantil automática ou calor excessivo."
+          "must_not": "Sem obediência infantil automática ou calor excessivo.",
+          "reference_relation_axis_v28": "Gaara → Temari (Chūnin Exams)",
+          "transfer_v28": "reconhece presença familiar sem buscar aprovação; baixa responsividade verbal; pode ignorar/cortar sem intenção de humor",
+          "must_not_v28": "não virar irmão caloroso nem criança obediente"
         },
         "Kuroto Sabaku": {
           "baseline": "Irmão mais velho; familiaridade existe, mas Yoshiro segue econômico e autocontido.",
-          "must_not": "Sem rotina cômica durante instabilidade."
+          "must_not": "Sem rotina cômica durante instabilidade.",
+          "reference_relation_axis_v28": "Gaara → Kankurō (Chūnin Exams)",
+          "transfer_v28": "mesma economia e distância; familiaridade não gera brincadeira automática",
+          "must_not_v28": "não fazer banter constante"
         }
       },
       "evidence": {
@@ -11928,7 +12173,25 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Sayo Sabaku": {
+          "reference_axis": "Gaara → Temari (Chūnin Exams)",
+          "transfer": "reconhece presença familiar sem buscar aprovação; baixa responsividade verbal; pode ignorar/cortar sem intenção de humor",
+          "must_not": "não virar irmão caloroso nem criança obediente"
+        },
+        "Kuroto Sabaku": {
+          "reference_axis": "Gaara → Kankurō (Chūnin Exams)",
+          "transfer": "mesma economia e distância; familiaridade não gera brincadeira automática",
+          "must_not": "não fazer banter constante"
+        },
+        "Amatsu Uchiha": {
+          "reference_axis": "Gaara → rival que conseguiu atravessar/pressionar sua defesa, adaptado ao histórico live",
+          "transfer": "atenção concentrada e curiosidade hostil aparecem mais por olhar/areia/decisão que por fala; não esquece o confronto",
+          "must_not": "não virar rival falante estilo Naruto/Sasuke"
+        }
       }
     },
     "Equipe de Amegakure": {
@@ -12506,11 +12769,17 @@
       "relationship_overrides": {
         "Yoshiro Sabaku": {
           "baseline": "Proteção de irmã mais velha misturada a cautela real diante de Shukaku.",
-          "must_not": "Sem discurso maternal; sem provocação casual quando instável."
+          "must_not": "Sem discurso maternal; sem provocação casual quando instável.",
+          "reference_relation_axis_v28": "Temari → Gaara (Chūnin Exams), com cautela familiar",
+          "transfer_v28": "cuidado existe, mas medo/reserva também; reduz provocação quando percebe instabilidade; fala funcional e mede aproximação",
+          "must_not_v28": "não tratá-lo como irmão caçula normal ou fazer sermão afetivo"
         },
         "Kuroto Sabaku": {
           "baseline": "Atrito fraterno + confiança operacional; pode cortar/interromper sem cerimônia.",
-          "must_not": "Sem hostilidade genérica."
+          "must_not": "Sem hostilidade genérica.",
+          "reference_relation_axis_v28": "Temari → Kankurō",
+          "transfer_v28": "irmã mais velha direta; corta enrolação, corrige e discute sem perder confiança operacional",
+          "must_not_v28": "não maternalizar nem falar como comandante oficial em toda cena"
         }
       },
       "evidence": {
@@ -12532,7 +12801,20 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Kuroto Sabaku": {
+          "reference_axis": "Temari → Kankurō",
+          "transfer": "irmã mais velha direta; corta enrolação, corrige e discute sem perder confiança operacional",
+          "must_not": "não maternalizar nem falar como comandante oficial em toda cena"
+        },
+        "Yoshiro Sabaku": {
+          "reference_axis": "Temari → Gaara (Chūnin Exams), com cautela familiar",
+          "transfer": "cuidado existe, mas medo/reserva também; reduz provocação quando percebe instabilidade; fala funcional e mede aproximação",
+          "must_not": "não tratá-lo como irmão caçula normal ou fazer sermão afetivo"
+        }
       }
     },
     "Kuroto Sabaku": {
@@ -12646,11 +12928,17 @@
       "relationship_overrides": {
         "Yoshiro Sabaku": {
           "baseline": "Cuidado desconfortável; reclamações cedem a cautela quando Yoshiro/Shukaku desestabiliza.",
-          "must_not": "Sem provocar Shukaku por comédia; sem abandono covarde."
+          "must_not": "Sem provocar Shukaku por comédia; sem abandono covarde.",
+          "reference_relation_axis_v28": "Kankurō → Gaara (Chūnin Exams)",
+          "transfer_v28": "cuidado misturado a tensão/medo; irritação fica filtrada quando Yoshiro parece instável; ele observa risco antes de fazer piada",
+          "must_not_v28": "não provocar Shukaku por comic relief"
         },
         "Sayo Sabaku": {
           "baseline": "Rebate e discute como irmão; confiança prática permanece.",
-          "must_not": "Sem formalidade ou obediência mecânica."
+          "must_not": "Sem formalidade ou obediência mecânica.",
+          "reference_relation_axis_v28": "Kankurō → Temari",
+          "transfer_v28": "rebate, reclama, discute, mas aceita coordenação quando a situação aperta; intimidade permite interrupção",
+          "must_not_v28": "não ser subordinado obediente nem antagonista"
         }
       },
       "evidence": {
@@ -12671,7 +12959,20 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true,
-        "requires_reference_fingerprint": true
+        "requires_reference_fingerprint": true,
+        "requires_reference_relation_axis": true
+      },
+      "reference_relationship_matrix": {
+        "Sayo Sabaku": {
+          "reference_axis": "Kankurō → Temari",
+          "transfer": "rebate, reclama, discute, mas aceita coordenação quando a situação aperta; intimidade permite interrupção",
+          "must_not": "não ser subordinado obediente nem antagonista"
+        },
+        "Yoshiro Sabaku": {
+          "reference_axis": "Kankurō → Gaara (Chūnin Exams)",
+          "transfer": "cuidado misturado a tensão/medo; irritação fica filtrada quando Yoshiro parece instável; ele observa risco antes de fazer piada",
+          "must_not": "não provocar Shukaku por comic relief"
+        }
       }
     }
   }
