@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.5.0-v23",
+  "version": "0.6.0-v24",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -216,7 +216,7 @@
       "subtext"
     ],
     "after_draft": [
-      "swap test",
+      "avaliar decisão e relação na cena; permitir falas funcionais comuns",
       "AI-exposition test",
       "interchangeability test",
       "read-aloud character test",
@@ -236,7 +236,7 @@
     "gesto decorativo sem impulso comum com a fala"
   ],
   "mandatory_final_gates": [
-    "Se trocar o falante por dois ou três NPCs e a linha ainda funcionar, reescrever.",
+    "Avaliar identidade no conjunto de decisões e relações; uma frase funcional compartilhada não exige bordão, insulto ou reescrita.",
     "Se o personagem não precisaria falar, usar silêncio/corpo.",
     "A fala deve pertencer simultaneamente ao universo Naruto e ao registro individual.",
     "Relação, idade, fase, hierarquia e audiência devem alterar a superfície.",
@@ -520,5 +520,7 @@
       "honorific -> manter quando identidade relacional importa; omitir quando o próprio personagem canônico não o usaria",
       "catchphrase -> preservar função e frequência, nunca espalhar como bordão obrigatório"
     ]
-  }
+  },
+  "fidelity_contract": "fidelity_catalog.json",
+  "reference_policy": "verify_reference_every_turn_and_research_missing_evidence"
 }

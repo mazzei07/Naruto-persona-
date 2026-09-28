@@ -8,6 +8,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
+from fidelity_core import evidence_packet as evidence_v24, lint as lint_v24, classify as classify_v24, health as fidelity_health, catalog as fidelity_catalog, resolve as resolve_fidelity_name
+
 ROOT = Path(__file__).resolve().parent
 CHARACTERS_PATH = ROOT / "character_registry_seed.json"
 WORLD_PATH = ROOT / "world_registry_seed.json"
@@ -160,6 +162,9 @@ def _extract_labels(lines: Iterable[str], labels: Iterable[str]) -> List[str]:
 
 def _infer_reference(profile: Dict[str, Any]) -> Dict[str, Any]:
     voice = profile.get("voice_raw", "") or ""
+    known = {"Gakuji Aramori": "Zabuza Clássico", "Nagi Sazanami": "Haku Clássico"}
+    if profile.get("name") in known:
+        voice = "Âncora de referência: " + known[profile["name"]] + "\n" + voice
     inspiration = _extract_field(profile, "Inspiração e comparação — Naruto Clássico", "Inspiração e comparação")
     anchor = ""
     m = re.search(r"Âncora de referência:\*?\*?\s*([^\n.]+)", voice, flags=re.I)
@@ -194,14 +199,7 @@ def _relation_anchor(lines: List[str]) -> str:
 
 
 def _classify_situation(stimulus: str, situation: str) -> List[str]:
-    text = _norm(f"{stimulus} {situation}")
-    tags = []
-    for tag, words in _rules().get("situation_keywords", {}).items():
-        if any(_norm(w) in text for w in words):
-            tags.append(tag)
-    if not tags:
-        tags.append("neutral")
-    return tags
+    return classify_v24(stimulus, situation)
 
 
 def _pressure_level(pressure: str) -> str:
@@ -257,25 +255,23 @@ def _physical_comedy(name: str, relation_lines: List[str], tags: List[str], pres
     return {"allowed": False, "reason": "Sem evidência relacional suficiente para fisicalidade cômica."}
 
 
-def _research_packet(profile: Dict[str, Any], interlocutor_profile: Dict[str, Any], relation_lines: List[str], situation: str, stimulus: str) -> Dict[str, Any]:
-    ref_a = _infer_reference(profile)["primary_reference"]
-    ref_b = _infer_reference(interlocutor_profile)["primary_reference"] if interlocutor_profile else "interlocutor equivalente"
-    anchor = _relation_anchor(relation_lines)
-    need = not bool(anchor) or len(relation_lines) < 2
-    query = f"Naruto Clássico {ref_a} com {ref_b}; relação equivalente; situação: {situation or stimulus}; fase juvenil correspondente; diálogo, silêncio, corpo, timing e registro"
-    return {
-        "research_required": need,
-        "reason": "Relação sem âncora clássica suficientemente explícita no cache." if need else "Âncora relacional já presente no registro; pesquisa externa só se a cena for excepcional/ambígua.",
-        "suggested_query": query,
-        "existing_relation_anchor": anchor,
-    }
-
-
+def _research_packet(profile, interlocutor_profile, relation_lines, situation, stimulus):
+    name = profile.get("name") or profile.get("canonical_name", "")
+    target = interlocutor_profile.get("name") or interlocutor_profile.get("canonical_name", "")
+    return evidence_v24(name, target, situation, stimulus)
 
 
 def _reference_voice_family_v23(profile: Dict[str, Any], baseline: List[str]) -> Dict[str, Any]:
     """Infer a Naruto speech-family from the explicit reference/profile, with a profile-driven fallback."""
     ref = _infer_reference(profile)
+    name = resolve_fidelity_name(profile.get("name") or profile.get("canonical_name", ""))
+    mapping = fidelity_catalog()['characters'].get(name, {})
+    if mapping.get('transfer_scope') in ('original', 'technical_or_function_only'):
+        return {
+            "family": "profile_driven", "matched_reference_cues": [],
+            "reference": ref.get("primary_reference"),
+            "rule": "Derive voice from the actor's own dossier; a technical/functional reference is not a personality model.",
+        }
     primary = _norm(ref.get("primary_reference", ""))
     fallback = _norm(" ".join([
         ref.get("source_summary", ""),
@@ -532,7 +528,7 @@ def _universal_language_contract_v23(
             "remove_explanation_the_character_would_not_say",
             "place_name_or_honorific_where_this_relation_naturally_uses_it",
             "prefer_body_or_silence_when_more_faithful",
-            "swap_test_three_other_NPCs",
+            "scene_level_decision_and_relationship_test; functional_shared_phrases_are_valid",
             "mental_read_aloud_test",
         ],
         "anti_ai": [
@@ -544,7 +540,7 @@ def _universal_language_contract_v23(
 
 
 def _v21_voice_contract(profile: Dict[str, Any], relation_lines: List[str], baseline: List[str], filter_level: str, pressure: str) -> Dict[str, Any]:
-    """Legacy wrapper retained for compatibility; canonical contract is v23."""
+    """Legacy wrapper retained for compatibility; v24 evidence and scope take precedence."""
     combined = relation_lines + baseline
     return {
         "version": "v21",
@@ -575,7 +571,7 @@ def _v21_voice_contract(profile: Dict[str, Any], relation_lines: List[str], base
             "remove_explanation_the_character_would_not_say",
             "place_name_or_honorific_where_this_relation_naturally_uses_it",
             "prefer_body_or_silence_when_more_faithful",
-            "swap_test_three_other_NPCs",
+            "scene_level_decision_and_relationship_test; functional_shared_phrases_are_valid",
             "mental_read_aloud_test",
         ],
         "anti_ai": [
@@ -786,7 +782,8 @@ def healthcheck() -> Dict[str, Any]:
         "missing_voice": missing_voice,
         "missing_dossier": missing_dossier,
         "llm_required_for_core": False,
-        "external_research_policy": "only_when_reference_cache_is_insufficient_or_scene_is_exceptional",
+        "external_research_policy": "verify_reference_every_turn_and_research_missing_evidence",
+        "fidelity_v24": fidelity_health(),
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
         "formality_calibration": "v23.3-audit-and-low-filter",
@@ -812,6 +809,7 @@ def persona_get(name: str) -> Dict[str, Any]:
         "voice_baseline": _baseline_voice_lines(p.get("voice_raw", "")),
         "raw_voice_rules": p.get("voice_raw", ""),
         "arc_specific": bool(p.get("arc_specific")),
+        "evidence_v24": evidence_v24(resolved),
     }
 
 
@@ -1003,23 +1001,12 @@ def character_turn_packet(
         "research": research,
         "generation_order": _rules().get("pipeline", []),
         "final_gate": [
-            "Would this reaction still fit if the interlocutor changed? If yes, it may be generic.",
-            "Would this line fit three other NPCs unchanged? If yes, add specific cadence/filter/body or use silence.",
-            "Is silence more faithful than speaking?",
-            "Does age/reference phase match current stage?",
-            "Does the output preserve reboot identity instead of copying canon?",
-            "Does the line sound like a person in Naruto rather than an AI explaining the scene?",
-            "If the line were assigned to three other NPCs, would it still work? If yes, rewrite or cut it.",
-            "Is the grammar/orality/vocative placement specific to this actor and interlocutor?",
-            "Can the line be mentally heard in the exact-phase reference voice without copying canon dialogue?",
-            "Did the sayability gate authorize speech at all? If not, delete the line.",
-            "Does address form (bare name/title/honorific/omission) match this exact relationship and hierarchy?",
-            "Is every microexpression caused by the same playable impulse rather than decoration?",
-            "Does phrasing sound breathed and reactive rather than evenly segmented AI prose?",
-            "Was formality explicitly resolved from actor+relation+hierarchy+pressure?",
-            "Could the same proposition be re-realized differently for another interlocutor? If not, relationship modulation is too weak.",
-            "Does vocabulary fit the actor's age, education, experience and knowledge of this exact subject?",
-            "Does the line obey Naruto's shared universe register without flattening the actor's idiolect?"
+            "Verificar referência v24 por fase, relação e situação; pesquisar lacunas materiais.",
+            "Uma ordem funcional como Abaixa! pode servir a várias pessoas sem ser um erro.",
+            "Avaliar identidade no conjunto de decisões e falas; não forçar bordão, gesto ou insulto.",
+            "Ficha própria precede analogia; inspiração técnica não autoriza copiar personalidade.",
+            "Amatsu permanece inteiramente do jogador; tentativa de NPC não decide reação dele.",
+            "Rever conhecimento, corpo, pressão e continuidade; somente então apresentar a cena."
         ],
     }
 
@@ -1040,7 +1027,7 @@ def persona_audit(
     text = f"{candidate_dialogue} {candidate_action}".strip()
     ntext = _norm(text)
     for word in _rules().get("forbidden_modernisms", []):
-        if _norm(word) in ntext:
+        if re.search(r"(?<!\w)" + re.escape(_norm(word)) + r"(?!\w)", ntext):
             violations.append(f"modernism_or_meta_language:{word}")
     ai_patterns = [
         "isso significa", "a diferença é que", "você precisa entender",
@@ -1048,7 +1035,7 @@ def persona_audit(
         "em outras palavras", "basicamente", "de certa forma"
     ]
     for pattern in ai_patterns:
-        if pattern in ntext:
+        if _norm(pattern) in ntext:
             warnings.append(f"possible_ai_exposition:{pattern}")
     if candidate_dialogue and len(candidate_dialogue.split()) > 20:
         explanatory = sum(1 for x in ["porque", "significa", "diferença", "objetivo", "situação", "estado"] if x in ntext)
@@ -1058,10 +1045,6 @@ def persona_audit(
         warnings.append("dialogue_may_be_too_long_for_current_silence/economy_profile")
     if packet["pressure"] == "high" and len(candidate_dialogue.split()) > 45:
         warnings.append("high_pressure_dialogue_may_be_overlong")
-    if name == "Saya Haruno" and resolve_name(interlocutor) == "Kazuma Uzumaki":
-        aggressive = any(x in ntext for x in ["idiota", "burro", "cala a boca", "imbecil"])
-        if aggressive and "danger" not in packet["situation_tags"]:
-            warnings.append("Saya→Kazuma aggressive casual register requires a strong filter-breaking cause")
     formality_profile = packet.get("formality_profile_v23", {})
     formality_level = int(formality_profile.get("level", 2))
     contractions = [" ta ", " to ", " pra ", " ce ", " pro "]
@@ -1084,8 +1067,17 @@ def persona_audit(
                 warnings.append("Saya_to_teacher_bare_name_is_unusual_without_contextual_reason")
             elif "sensei" not in ntext and len(candidate_dialogue.split()) > 5:
                 warnings.append("Saya_to_teacher_may_need_title_or_more_respectful_register")
+    grounded = lint_v24(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
+    violations = _uniq(violations + grounded["violations"])
+    revisions = grounded["revision_requests"]
+    status = "blocked" if violations else "revision_required" if revisions else grounded["status"]
     return {
-        "pass": not violations,
+        "pass": status == "reviewable",
+        "status": status,
+        "revision_requests": revisions,
+        "semantic_review_required": True,
+        "certifies_character_fidelity": False,
+        "evidence_v24": grounded["evidence"],
         "actor": packet["actor"],
         "interlocutor": packet["interlocutor"],
         "violations": violations,

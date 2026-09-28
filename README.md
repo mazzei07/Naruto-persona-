@@ -1,4 +1,6 @@
-# Naruto Persona Engine v0.1 — MCP remoto
+> **Atualização v24:** interpretação baseada em evidência por fase, relação e estado. Consulte [INTEGRACAO_V24.md](INTEGRACAO_V24.md) para o pacote obrigatório por turno, compatibilidade com clientes existentes e novos cartões pesquisados; [REFERENCIAS_V24.md](REFERENCIAS_V24.md) contém os mapeamentos e as fontes. A revisão de modelo pode usar até quatro chamadas por turno.
+
+# Naruto Persona Engine v0.6 / contrato v24 — MCP remoto
 
 Especialista read-only de interpretação para **Naruto Reboot — Continuidade Clássica**.
 
@@ -94,7 +96,7 @@ O repositório já inclui `Dockerfile`. Em Render, Railway ou serviço equivalen
 https://SEU-DOMINIO/mcp
 ```
 
-Não é necessária chave de API para a v0.1 porque o núcleo não chama LLM nem web.
+Não é necessária chave de API para o núcleo local porque o núcleo não chama LLM nem web.
 
 ## Conectar ao ChatGPT
 
@@ -115,5 +117,5 @@ Depois de conectado, rode `persona_healthcheck` antes dos testes de regressão.
 
 ## Política de economia de usos
 
-A v0.1 não chama LLM. `persona_turn` tenta resolver tudo a partir do registro local.
-Quando uma interação não possui âncora suficiente, o retorno contém `research_required=true` e uma `suggested_query`. O chat principal pode então pesquisar apenas aquele caso excepcional, em vez de gastar uma chamada externa em toda fala.
+O núcleo não chama LLM nem acessa a web. `persona_turn` recupera fichas e cartões de evidência locais a cada turno.
+Quando uma interação não possui âncora suficiente, o retorno contém `research_required=true` e uma `suggested_query`. O chat principal deve pesquisar a lacuna antes de fechar a atuação. A referência deve ser conferida em todo turno; não é preciso repetir busca externa quando a evidência existente é suficiente e compatível.

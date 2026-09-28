@@ -43,8 +43,9 @@ def main():
     assert blocked["status"] == "blocked_player_control"
 
     audit = persona_check("Saya Haruno", "Kazuma Uzumaki", "Cala a boca, idiota.", situation="conversa banal", pressure="baixa")
-    assert audit["pass"] is True
-    assert audit["warnings"], audit
+    assert audit["pass"] is False
+    assert audit["status"] == "revision_required", audit
+    assert audit["revision_requests"], audit
 
     v22_sayability = persona_sayability(
         "Kazuma Uzumaki", "Amatsu Uchiha",

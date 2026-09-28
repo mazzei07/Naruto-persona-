@@ -1,0 +1,3220 @@
+{
+  "schema_version": "1.0",
+  "contract": {
+    "version": "v24.0.0",
+    "continuity_id": "classico_floresta_da_morte",
+    "reference_episode_ceiling": 37,
+    "coverage_statement": "Catálogo de evidências selecionadas, não leitura integral do mangá, databooks, novels ou dublagem. Verificar fonte por turno e pesquisar lacunas antes de fechar uma atuação.",
+    "precedence": [
+      "correção explícita atual do usuário",
+      "ação exata do jogador",
+      "estado live validado e conhecimento individual",
+      "ficha/repertório vigente",
+      "matriz relacional própria",
+      "referência oficial na fase correta",
+      "inferência editorial sinalizada"
+    ],
+    "pre_turn": [
+      "recuperar estado live; nunca tratar exemplo de teste como evento",
+      "recuperar todos os atores presentes e ficha própria",
+      "selecionar cena de referência com fase+relação+situação",
+      "distinguir fato observado, inferência e informação ausente",
+      "verificar conhecimento, objetivo, cansaço, hierarquia, público e tempo disponível",
+      "escolher ação, fala ou silêncio pelo estímulo real",
+      "revisar causalidade, registro e continuidade antes de mostrar"
+    ],
+    "post_turn": [
+      "nenhuma ação/emoção voluntária de Amatsu foi inventada",
+      "sem biografia ou técnica copiada da referência",
+      "a fala responde ao interlocutor e à situação",
+      "não obrigar toda frase a exibir bordão ou assinatura",
+      "sem rodízio de comentários nem protagonista como centro universal",
+      "didática legítima é permitida; não banir porque ou isso significa mecanicamente",
+      "silêncio, gesto e fala podem coexistir sem quantidade obrigatória",
+      "nenhuma piada implica golpe inevitável no jogador",
+      "auditoria automática não certifica fidelidade sem revisão semântica"
+    ],
+    "hard_limits": [
+      "inspiracao_tecnica_nao_e_personalidade",
+      "repertorio_fechado",
+      "agencia_integral_amatsu",
+      "sem_conhecimento_sem_canal",
+      "sem_maturidade_futura",
+      "sem_canonizacao_de_rascunho"
+    ],
+    "research_policy": "retrieve_reference_every_turn; browse_on_missing_scene_or_user_correction; never_claim_unread_material",
+    "translation_policy": "PT-BR original e falável, respeitando função social e idade. Sinopses em inglês não comprovam vocativos ou redação da dublagem BR.",
+    "reference_is_not_scene_state": true,
+    "external_research": "Novas cenas consultadas podem entrar em external_reference_cards com fonte primária, localização, fase, resumo observado e inferência separados. A validação estrutural não verifica o conteúdo remoto."
+  },
+  "sources": {
+    "sakura": {
+      "id": "sakura",
+      "url": "https://naruto-official.com/en/news/01_1743",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Coluna oficial com localização de quadros. Não é transcrição integral nem prova da dublagem brasileira.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "iruka": {
+      "id": "iruka",
+      "url": "https://naruto-official.com/en/news/01_1788",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Consultar especialmente capítulos 1, 35 e 64; passagens posteriores ficam fora do recorte atual.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "sasuke": {
+      "id": "sasuke",
+      "url": "https://naruto-official.com/en/news/01_1856",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "A coluna cobre também fases posteriores; somente trechos de época compatível podem orientar a cena.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "kakashi": {
+      "id": "kakashi",
+      "url": "https://naruto-official.com/en/news/01_1903",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Recortar formação do Time 7 e País das Ondas. Não importar informações retrospectivas para NPCs.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "gaara": {
+      "id": "gaara",
+      "url": "https://naruto-official.com/en/news/01_1688",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Separar Gaara inicial de sua transformação posterior em líder.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "shikamaru": {
+      "id": "shikamaru",
+      "url": "https://naruto-official.com/en/news/01_1910",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Separar o candidato genin do comandante e conselheiro adulto.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "neji": {
+      "id": "neji",
+      "url": "https://naruto-official.com/en/news/01_1817",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Precisão técnica não autoriza transferir automaticamente sua história ou fatalismo.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "hinata": {
+      "id": "hinata",
+      "url": "https://naruto-official.com/en/news/01_1668",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Não usar a Hinata adulta para substituir o registro juvenil.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "lee": {
+      "id": "lee",
+      "url": "https://naruto-official.com/en/news/01_1652",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência inclui desafio a Sasuke e proteção de Sakura na segunda prova.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "orochimaru": {
+      "id": "orochimaru",
+      "url": "https://naruto-official.com/en/news/01_1629",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "A biografia posterior não é conhecimento público dos candidatos.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "guy": {
+      "id": "guy",
+      "url": "https://naruto-official.com/en/news/01_1673",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência de docente não significa copiar bordões para todo sensei.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "jiraiya": {
+      "id": "jiraiya",
+      "url": "https://naruto-official.com/en/news/01_1643",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Personagem com cenas de instrução posteriores ao ponto atual: exigem recorte explícito.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "tsunade": {
+      "id": "tsunade",
+      "url": "https://naruto-official.com/en/news/01_1868",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência estrutural; não há atuação equivalente na Floresta da Morte.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "itachi": {
+      "id": "itachi",
+      "url": "https://naruto-official.com/en/news/01_1814",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência posterior ao arco; não tratar revelações tardias como atuação pública inicial.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "deidara": {
+      "id": "deidara",
+      "url": "https://naruto-official.com/en/news/01_1781",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência fora do clássico; não inventar uma versão dele no Exame Chūnin.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "sasori": {
+      "id": "sasori",
+      "url": "https://naruto-official.com/en/news/01_1641",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência fora do clássico; requer perfil próprio e exceção temporal explícita.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "obito": {
+      "id": "obito",
+      "url": "https://naruto-official.com/en/news/01_1706",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Várias épocas e identidades; desambiguar antes de aplicar uma voz.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "hashirama": {
+      "id": "hashirama",
+      "url": "https://naruto-official.com/en/news/01_1627",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Figura histórica/retrospectiva; referência técnica não define a voz do original.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "tobirama": {
+      "id": "tobirama",
+      "url": "https://naruto-official.com/en/news/01_1694",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Referência administrativa não equivale a identidade ou ideologia idêntica.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "madara": {
+      "id": "madara",
+      "url": "https://naruto-official.com/en/news/01_1663",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "História e revelações tardias não entram como conhecimento dos atores do clássico.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "classic_overview": {
+      "id": "classic_overview",
+      "url": "https://naruto-official.com/en/news/01_1282",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Panorama de episódios iniciais/exame; evidência de contexto, não corpus de diálogo.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "classic_later": {
+      "id": "classic_later",
+      "url": "https://naruto-official.com/en/news/01_1287",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Invasão e busca de Tsunade, posteriores à floresta.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "akatsuki_later": {
+      "id": "akatsuki_later",
+      "url": "https://naruto-official.com/en/news/01_1316",
+      "kind": "official_editorial_with_manga_locators",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Shippuden; não serve como cena equivalente juvenil da floresta.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep3": {
+      "id": "ep3",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_227",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep20": {
+      "id": "ep20",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_244",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep21": {
+      "id": "ep21",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_245",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep27": {
+      "id": "ep27",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_251",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep28": {
+      "id": "ep28",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_252",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep29": {
+      "id": "ep29",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_253",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep30": {
+      "id": "ep30",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_254",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep31": {
+      "id": "ep31",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_255",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep32": {
+      "id": "ep32",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_256",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep33": {
+      "id": "ep33",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_257",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep34": {
+      "id": "ep34",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_258",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep35": {
+      "id": "ep35",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_259",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep36": {
+      "id": "ep36",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_260",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep37": {
+      "id": "ep37",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_261",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep40": {
+      "id": "ep40",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_264",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep42": {
+      "id": "ep42",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_266",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep43": {
+      "id": "ep43",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_267",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep44": {
+      "id": "ep44",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_268",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep45": {
+      "id": "ep45",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_269",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep47": {
+      "id": "ep47",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_271",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep48": {
+      "id": "ep48",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_272",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse consultada; não implica assistir ao episódio nem ouvir a dublagem.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "rin_no_sho": {
+      "id": "rin_no_sho",
+      "url": "https://books.shueisha.co.jp/items/contents.html?jdcn=08873288872840315501",
+      "kind": "official_databook_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Somente catálogo/sumário consultado. Nenhuma página de personagem é marcada como lida.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "to_no_sho": {
+      "id": "to_no_sho",
+      "url": "https://books.shueisha.co.jp/items/contents.html?jdcn=08873734872840315501",
+      "kind": "official_databook_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Somente catálogo/sumário consultado. Nenhuma página de personagem é marcada como lida.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "sha_no_sho": {
+      "id": "sha_no_sho",
+      "url": "https://books.shueisha.co.jp/items/contents.html?jdcn=08874247872840315501",
+      "kind": "official_databook_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Somente catálogo/sumário consultado. Nenhuma página de personagem é marcada como lida.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "jin_no_sho": {
+      "id": "jin_no_sho",
+      "url": "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-880263-3",
+      "kind": "official_databook_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Catálogo consultado; conteúdo integral não adquirido.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "itachi_novel": {
+      "id": "itachi_novel",
+      "url": "https://www.viz.com/manga-books/novel/naruto-novels-volume-4/product/4949/digital",
+      "kind": "official_novel_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse editorial; livro integral não lido. Infância não deve ser confundida com atuação do Itachi do exame.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "sakura_novel": {
+      "id": "sakura_novel",
+      "url": "https://www.viz.com/manga-books/novel/naruto-novels-volume-3-0/product/3793",
+      "kind": "official_novel_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse situa a história depois da guerra; não usar a voz adulta para Saya aos 12 anos.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "shikamaru_novel": {
+      "id": "shikamaru_novel",
+      "url": "https://www.viz.com/manga-books/novel/naruto-novels-volume-2-0/product/3792",
+      "kind": "official_novel_catalog",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Livro catalogado, sem análise integral de prosa.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "rolellm": {
+      "id": "rolellm",
+      "url": "https://arxiv.org/abs/2310.00746",
+      "kind": "research_paper",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Perfis e recuperação contextual; inspiração metodológica, não modelo treinado aqui.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "incharacter": {
+      "id": "incharacter",
+      "url": "https://arxiv.org/abs/2310.17976",
+      "kind": "research_paper",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Avaliar decisões/persona além de padrões linguísticos; não importar teste psicológico como regra de Naruto.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "pingpong": {
+      "id": "pingpong",
+      "url": "https://arxiv.org/abs/2409.06820",
+      "kind": "research_paper",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Avaliação em múltiplos turnos e situações; não é ranking de fidelidade a Naruto em português.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "gemini_models": {
+      "id": "gemini_models",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "kind": "api_documentation",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Modelo existente gemini-3.8-flash confirmado; nenhum vencedor de RP Naruto inferido do marketing.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "gemini_system": {
+      "id": "gemini_system",
+      "url": "https://ai.google.dev/gemini-api/docs/text-generation?hl=pt-br",
+      "kind": "api_documentation",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Instrução de sistema separada dos dados da cena via system_instruction.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep24": {
+      "id": "ep24",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_248",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse oficial; não constitui transcrição nem verificação da voz dublada.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep25": {
+      "id": "ep25",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_249",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sinopse oficial; não constitui transcrição nem verificação da voz dublada.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    }
+  },
+  "scene_cards": [
+    {
+      "id": "sakura_peer_filter",
+      "references": [
+        "Sakura"
+      ],
+      "source_ids": [
+        "sakura",
+        "ep3"
+      ],
+      "locator": "Mangá cap. 3–4; anime ep. 3",
+      "episode_ceiling": 3,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "romance",
+        "comedy",
+        "peer"
+      ],
+      "observed_summary": "Sakura recebe de maneiras diferentes os dois colegas do Time 7.",
+      "acting_inference": "Aplicar a relação direcional já documentada; não sortear bronca a cada fala do colega.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sakura_vulnerable_guard",
+      "references": [
+        "Sakura"
+      ],
+      "source_ids": [
+        "ep31"
+      ],
+      "locator": "Anime ep. 31",
+      "episode_ceiling": 31,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "injury",
+        "protect",
+        "fatigue"
+      ],
+      "observed_summary": "Sakura guarda os dois companheiros incapacitados apesar do cansaço e do medo.",
+      "acting_inference": "Medo, tremor e iniciativa coexistem; não trocar uma emergência por ciúme ou comédia.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sakura_choice",
+      "references": [
+        "Sakura"
+      ],
+      "source_ids": [
+        "sakura",
+        "ep32"
+      ],
+      "locator": "Mangá caps. 53–54; anime ep. 32",
+      "episode_ceiling": 32,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "protect",
+        "resolve"
+      ],
+      "observed_summary": "Sakura arrisca algo que valorizava para defender os companheiros.",
+      "acting_inference": "Escolhas concretas mostram crescimento; não dar habilidades médicas futuras nem repetir o mesmo sacrifício.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "ino_team_rescue",
+      "references": [
+        "Ino",
+        "Shikamaru",
+        "Choji"
+      ],
+      "source_ids": [
+        "ep33"
+      ],
+      "locator": "Anime ep. 33",
+      "episode_ceiling": 33,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "protect",
+        "team"
+      ],
+      "observed_summary": "Ino e a equipe intervêm após observar Sakura resistir.",
+      "acting_inference": "Rivalidade não elimina vínculo; decisão considera risco e coordenação, não uma fila de elogios ao protagonista.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "iruka_discipline_care",
+      "references": [
+        "Iruka"
+      ],
+      "source_ids": [
+        "iruka"
+      ],
+      "locator": "Mangá cap. 1",
+      "episode_ceiling": 1,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "comedy",
+        "reprimand",
+        "care"
+      ],
+      "observed_summary": "Iruka repreende travessuras e oferece presença afetiva.",
+      "acting_inference": "A bronca exige conduta concreta; cuidado pode aparecer na tarefa prática, sem consulta terapêutica.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "iruka_adult_disagreement",
+      "references": [
+        "Iruka",
+        "Kakashi"
+      ],
+      "source_ids": [
+        "iruka",
+        "ep21"
+      ],
+      "locator": "Mangá cap. 35; anime ep. 21",
+      "episode_ceiling": 21,
+      "phase": "classic_through_forest",
+      "tags": [
+        "authority",
+        "protect",
+        "disagreement"
+      ],
+      "observed_summary": "Iruka questiona a prontidão dos genin; Kakashi sustenta a indicação.",
+      "acting_inference": "Distinguir professor preocupado, colega jōnin responsável e destinatários; discordância não vira discurso genérico.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "iruka_tower",
+      "references": [
+        "Iruka",
+        "Hiruzen"
+      ],
+      "source_ids": [
+        "iruka",
+        "ep37"
+      ],
+      "locator": "Mangá cap. 64; anime ep. 37",
+      "episode_ceiling": 37,
+      "phase": "classic_through_forest",
+      "tags": [
+        "tower",
+        "instruction",
+        "exam",
+        "care"
+      ],
+      "observed_summary": "Iruka comunica a aprovação e explica a mensagem do Hokage, deixando transparecer preocupação pessoal.",
+      "acting_inference": "Responde primeiro à pergunta sobre o exame; alterna tarefa oficial e intimidade conforme o interlocutor.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "kakashi_test",
+      "references": [
+        "Kakashi"
+      ],
+      "source_ids": [
+        "kakashi"
+      ],
+      "locator": "Mangá caps. 4–8",
+      "episode_ceiling": 5,
+      "phase": "classic_through_forest",
+      "tags": [
+        "instruction",
+        "team",
+        "authority"
+      ],
+      "observed_summary": "O teste de Kakashi avalia cooperação e cuidado pelos companheiros.",
+      "acting_inference": "Tom casual não significa descuido nem enigma permanente. Não repetir sermão sem necessidade.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "kakashi_threat",
+      "references": [
+        "Kakashi"
+      ],
+      "source_ids": [
+        "kakashi"
+      ],
+      "locator": "Mangá caps. 11–17",
+      "episode_ceiling": 10,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "protect",
+        "instruction"
+      ],
+      "observed_summary": "Kakashi enfrenta uma ameaça séria, fica em dificuldade e prepara os alunos para a continuação.",
+      "acting_inference": "Pode comandar, tranquilizar ou ensinar; não é sempre sarcástico, onisciente ou invulnerável.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sasuke_detection",
+      "references": [
+        "Sasuke"
+      ],
+      "source_ids": [
+        "ep28"
+      ],
+      "locator": "Anime ep. 28",
+      "episode_ceiling": 28,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "deception",
+        "perception"
+      ],
+      "observed_summary": "Sasuke percebe a substituição de Naruto por um impostor, mas não captura o invasor.",
+      "acting_inference": "Detalhe percebido pode sustentar suspeita; perceber não garante impedir a fuga.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sasuke_fear",
+      "references": [
+        "Sasuke",
+        "Naruto"
+      ],
+      "source_ids": [
+        "ep29"
+      ],
+      "locator": "Anime ep. 29",
+      "episode_ceiling": 29,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "fear",
+        "disagreement"
+      ],
+      "observed_summary": "Sasuke considera ceder o pergaminho diante de uma ameaça superior; Naruto contesta.",
+      "acting_inference": "Competência admite medo e mudança de decisão. Não usar frieza adulta invariável.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sasuke_reengages",
+      "references": [
+        "Sasuke",
+        "Orochimaru"
+      ],
+      "source_ids": [
+        "ep30"
+      ],
+      "locator": "Anime ep. 30",
+      "episode_ceiling": 30,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "resolve",
+        "combat"
+      ],
+      "observed_summary": "Sasuke volta a lutar; a ofensiva não vence a diferença de poder.",
+      "acting_inference": "Ajustar decisão à informação e capacidade, sem importar selo, trauma ou técnica para o OC.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "gaara_witnessed",
+      "references": [
+        "Gaara",
+        "Kiba",
+        "Shino",
+        "Hinata",
+        "Akamaru"
+      ],
+      "source_ids": [
+        "ep34"
+      ],
+      "locator": "Anime ep. 34",
+      "episode_ceiling": 34,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "fear",
+        "observe",
+        "tracking"
+      ],
+      "observed_summary": "Akamaru reage ao perigo e a equipe de Kiba observa o confronto de Gaara.",
+      "acting_inference": "Agressividade habitual não elimina cautela; ameaça se manifesta em atos, não em monólogo decorativo.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "naruto_restlessness",
+      "references": [
+        "Naruto"
+      ],
+      "source_ids": [
+        "ep20"
+      ],
+      "locator": "Anime ep. 20",
+      "episode_ceiling": 20,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "ambition",
+        "instruction"
+      ],
+      "observed_summary": "Naruto se impacienta com a rotina depois da missão no País das Ondas.",
+      "acting_inference": "Referência passiva para Amatsu: a IA não decide nem escreve a sua reação.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "forest_recovery",
+      "references": [
+        "Naruto",
+        "Sasuke",
+        "Sakura"
+      ],
+      "source_ids": [
+        "ep35"
+      ],
+      "locator": "Anime ep. 35",
+      "episode_ceiling": 35,
+      "phase": "classic_through_forest",
+      "tags": [
+        "fatigue",
+        "injury",
+        "rest",
+        "exam"
+      ],
+      "observed_summary": "A equipe precisa descansar enquanto o prazo da prova se aproxima.",
+      "acting_inference": "Cansaço e relógio influem no que conseguem fazer; nenhum calendário do anime é imposto ao RP.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "forest_deception",
+      "references": [
+        "Naruto",
+        "Sasuke",
+        "Sakura",
+        "Kabuto"
+      ],
+      "source_ids": [
+        "ep36"
+      ],
+      "locator": "Anime ep. 36",
+      "episode_ceiling": 36,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "deception",
+        "fatigue"
+      ],
+      "observed_summary": "Uma ilusão e clones dificultam o avanço; o estado de Sasuke limita sua atuação.",
+      "acting_inference": "Informação deve chegar por observação; ajuda não concede automaticamente confiança ou conhecimento secreto.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "anko_briefing",
+      "references": [
+        "Anko"
+      ],
+      "source_ids": [
+        "ep27"
+      ],
+      "locator": "Anime ep. 27",
+      "episode_ceiling": 27,
+      "phase": "classic_through_forest",
+      "tags": [
+        "authority",
+        "exam",
+        "instruction"
+      ],
+      "observed_summary": "Anko explica a disputa pelos pergaminhos e o risco da prova.",
+      "acting_inference": "Explicação objetiva pode coexistir com provocação; não transformar examinadora em homicida arbitrária.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "anko_intruder",
+      "references": [
+        "Anko",
+        "Orochimaru"
+      ],
+      "source_ids": [
+        "ep31"
+      ],
+      "locator": "Anime ep. 31",
+      "episode_ceiling": 31,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "authority",
+        "protect"
+      ],
+      "observed_summary": "Anko age a partir de um relatório, mas não consegue deter Orochimaru.",
+      "acting_inference": "Presença confiante não remove limites. Informação institucional exige canal documentado.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "lee_protection",
+      "references": [
+        "Lee"
+      ],
+      "source_ids": [
+        "lee",
+        "ep32"
+      ],
+      "locator": "Anime eps. 31–32",
+      "episode_ceiling": 32,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "protect",
+        "team"
+      ],
+      "observed_summary": "Lee intervém em defesa de Sakura e é derrotado.",
+      "acting_inference": "Enthusiasmo e respeito não garantem vitória; capacidade real vem da ficha.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "zabuza_haku",
+      "references": [
+        "Zabuza",
+        "Haku",
+        "Tazuna",
+        "Gato"
+      ],
+      "source_ids": [
+        "classic_overview"
+      ],
+      "locator": "Anime eps. 6–19, panorama oficial",
+      "episode_ceiling": 19,
+      "phase": "classic_through_forest",
+      "tags": [
+        "danger",
+        "protect",
+        "mission"
+      ],
+      "observed_summary": "O arco envolve escolta, confronto e sacrifício de Haku por Zabuza.",
+      "acting_inference": "Usar os vínculos próprios já registrados; não importar morte, falas ou resultado da obra.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "neji_limits",
+      "references": [
+        "Neji",
+        "Hinata",
+        "Hiashi"
+      ],
+      "source_ids": [
+        "neji",
+        "hinata",
+        "ep47"
+      ],
+      "locator": "Exame: preliminares, posteriores à floresta",
+      "episode_ceiling": 47,
+      "phase": "later_reference_only",
+      "tags": [
+        "combat",
+        "family",
+        "rivalry"
+      ],
+      "observed_summary": "O conflito Hyūga envolve hierarquia familiar, talento e convicção.",
+      "acting_inference": "Referência posterior: técnica de Neji não autoriza seu fatalismo em Reika nem timidez em toda Hyūga.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "shikamaru_tactics",
+      "references": [
+        "Shikamaru",
+        "Temari",
+        "Asuma"
+      ],
+      "source_ids": [
+        "shikamaru"
+      ],
+      "locator": "Exame: finais, posteriores à floresta",
+      "episode_ceiling": 67,
+      "phase": "later_reference_only",
+      "tags": [
+        "combat",
+        "instruction",
+        "team"
+      ],
+      "observed_summary": "Shikamaru usa recursos do cenário e sabe desistir por limite de chakra.",
+      "acting_inference": "Referência posterior: raciocínio não equivale a prever informação escondida ou narrar todos os cálculos.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "shino_counter",
+      "references": [
+        "Shino"
+      ],
+      "source_ids": [
+        "ep40"
+      ],
+      "locator": "Anime ep. 40, posterior à floresta",
+      "episode_ceiling": 40,
+      "phase": "later_reference_only",
+      "tags": [
+        "combat",
+        "deception"
+      ],
+      "observed_summary": "Shino enfrenta Zaku num confronto de recursos e informação incompleta.",
+      "acting_inference": "Não usar este resultado futuro como experiência já vivida por Seki.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "weapon_axes",
+      "references": [
+        "Tenten",
+        "Temari"
+      ],
+      "source_ids": [
+        "ep43"
+      ],
+      "locator": "Anime ep. 43, posterior à floresta",
+      "episode_ceiling": 43,
+      "phase": "later_reference_only",
+      "tags": [
+        "combat",
+        "weapons"
+      ],
+      "observed_summary": "O vento de Temari anula a ofensiva de armas de Tenten.",
+      "acting_inference": "Inspiração técnica funcional não copia temperamento, sarcasmo, arsenal ou escala.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "kiba_partner",
+      "references": [
+        "Kiba",
+        "Akamaru"
+      ],
+      "source_ids": [
+        "ep44",
+        "ep45"
+      ],
+      "locator": "Anime eps. 44–45, posteriores à floresta",
+      "episode_ceiling": 45,
+      "phase": "later_reference_only",
+      "tags": [
+        "combat",
+        "tracking",
+        "team"
+      ],
+      "observed_summary": "Kiba e Akamaru cooperam; Naruto explora recursos de transformação.",
+      "acting_inference": "Faro não equivale a onisciência; manobras ainda dependem de identificação e janela física.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sakura_ino_duel",
+      "references": [
+        "Sakura",
+        "Ino"
+      ],
+      "source_ids": [
+        "ep42"
+      ],
+      "locator": "Anime ep. 42, posterior à floresta",
+      "episode_ceiling": 42,
+      "phase": "later_reference_only",
+      "tags": [
+        "rivalry",
+        "combat"
+      ],
+      "observed_summary": "Amizade anterior e rivalidade coexistem no duelo.",
+      "acting_inference": "Não reduzir Ino à inveja nem apagar afeto por conta de rivalidade; evento não ocorreu automaticamente no RP.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "ibiki_exam_pressure",
+      "references": [
+        "Ibiki"
+      ],
+      "source_ids": [
+        "ep24",
+        "ep25"
+      ],
+      "locator": "Anime clássico episódios 24–25",
+      "episode_ceiling": 25,
+      "phase": "classic_through_forest",
+      "tags": [
+        "authority",
+        "instruction",
+        "exam",
+        "fear"
+      ],
+      "observed_summary": "Ibiki explica regras que vinculam o desempenho individual ao time e anuncia uma condição severa para a última questão; vários candidatos desistem sob pressão.",
+      "acting_inference": "A intimidação é uma ação com finalidade de avaliação. Alternar regra clara, condição e consequência; não transformar cada fala em sadismo ou ameaça ornamental.",
+      "dialogue_evidence": "editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    }
+  ],
+  "characters": {
+    "Amatsu Uchiha": {
+      "name": "Amatsu Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Naruto jovem + identidade própria Uchiha-Uzumaki.",
+      "reference_characters": [
+        "Naruto"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.",
+      "relations": "Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.",
+      "dossier_differences": "Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep20",
+        "ep29"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": true
+    },
+    "Saya Haruno": {
+      "name": "Saya Haruno",
+      "mapping_status": "documented",
+      "source_anchor": "Sakura inicial.",
+      "reference_characters": [
+        "Sakura"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Inteligente, consciente da imagem, temperamental e expressiva; pode acertar Amatsu em contexto cômico/social, nunca comprometendo uma missão séria.",
+      "relations": "Interesse inicial em Kazuma; relação com Amatsu começa conflituosa. Kagetsu ainda precisa conquistar autoridade pessoal, apesar da autoridade formal.",
+      "dossier_differences": "É a mais próxima de Sakura Clássica: semelhante no eixo acadêmico/controle e no foco inicial em imagem/romance, porém um pouco mais preparada para campo e Genjutsu já no Dia 0. Continua muito abaixo da Sakura treinada por Tsunade.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep31",
+        "ep32",
+        "sakura"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kazuma Uzumaki": {
+      "name": "Kazuma Uzumaki",
+      "mapping_status": "documented",
+      "source_anchor": "Sasuke inicial.",
+      "reference_characters": [
+        "Sasuke"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Reservado, disciplinado, orgulhoso, educado em público e competitivo; considera Amatsu um desperdício irritante de talento.",
+      "relations": "Pertence a um clã Uzumaki vivo e tradicional. Saya demonstra interesse inicial nele; não corresponde automaticamente.",
+      "dossier_differences": "Ocupa a função do colega sério/rival de Sasuke, mas não copia sua vingança nem seu kit. Fica um pouco abaixo do Sasuke inicial em ameaça direta e leitura combativa, acima dele em reserva e base de Fūinjutsu.\n\n---\n\n# TIME 4 — Kaede / Kaito / Nao — Sayuri",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep28",
+        "ep29",
+        "ep30",
+        "sasuke"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kaede Uchiha": {
+      "name": "Kaede Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Sasuke acadêmico + disciplina Uchiha própria.",
+      "reference_characters": [
+        "Sasuke"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
+      "relations": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
+      "dossier_differences": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep28",
+        "ep29",
+        "ep30",
+        "sasuke"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kaito Shimura": {
+      "name": "Kaito Shimura",
+      "mapping_status": "documented",
+      "source_anchor": "Tenten/Temari funcional, identidade própria.",
+      "reference_characters": [
+        "Tenten",
+        "Temari"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Prático, observador e menos emocional que os Uchiha do time.",
+      "relations": "Não conhece os segredos de Amatsu; relação com Kaede e Nao é de equipe em construção.",
+      "dossier_differences": "Mistura a função de armas da Tenten com o controle de vento de Temari, mas no Dia 0 está abaixo das duas versões do Exame Chūnin em escala e experiência.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep43"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Nao Kurusu": {
+      "name": "Nao Kurusu",
+      "mapping_status": "documented",
+      "source_anchor": "Kurenai jovem/Genjutsu observacional.",
+      "reference_characters": [
+        "Kurenai"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Atenta, provocadora em medida, gosta de observar antes de falar.",
+      "relations": "Sayuri reconhece seu valor como eixo mental do Time 4; não lê pensamentos.",
+      "dossier_differences": "É uma versão Genin do eixo que Kurenai representa: mais Genjutsu que poder bruto. Muito abaixo de Kurenai adulta e sem copiar seu repertório inteiro.\n\n---\n\n# TIME 5 — Aki / Rin / Tōru — Fuyumi",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Aki Senju": {
+      "name": "Aki Senju",
+      "mapping_status": "documented",
+      "source_anchor": "Senju original, pragmatismo de campo.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Prática, confiante e pouco impressionada por discurso de “sangue Senju”; valoriza execução.",
+      "relations": "Conhece Arata pelo clã e não o idolatra. Rin e Tōru são colegas de famílias diferentes.",
+      "dossier_differences": "Sem equivalente direto. Usa como referência a robustez/versatilidade associada aos Senju, mas em escala de Genin. É mais completa que Sakura inicial fisicamente, muito abaixo de Yamato/Kakashi em Ninjutsu.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Rin Senju": {
+      "name": "Rin Senju",
+      "mapping_status": "documented",
+      "source_anchor": "original com eixo Yamato embrionário.",
+      "reference_characters": [
+        "Yamato"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Direto, obstinado, curioso; prefere experimentar no campo a discutir demais.",
+      "relations": "Aki costuma frear seus excessos; admira Arata sem querer virar “o outro Senju”.",
+      "dossier_differences": "Original. Em função de campo lembra um Yamato muito embrionário, mas sem Mokuton e sem nível Chūnin/Jōnin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [
+        "Yamato"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Tōru Senju": {
+      "name": "Tōru Senju",
+      "mapping_status": "documented",
+      "source_anchor": "Genin talentoso tradicional.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Educado com adultos; competitivo com jovens; esconde nervosismo ficando sério demais.",
+      "relations": "Vê Arata como referência difícil de alcançar, sem idolatria absoluta.",
+      "dossier_differences": "Original. Mais próximo do “Genin normal talentoso” do que de um prodígio canônico; serve para preservar escala dentro de um time Senju.\n\n---\n\n# TIME 6 — Shin / Koharu / Hibiki — Shigure",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shin Uchiha": {
+      "name": "Shin Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Sasuke + agressividade Kiba/Lee.",
+      "reference_characters": [
+        "Sasuke",
+        "Kiba",
+        "Lee"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Direto, físico, competitivo; reproduz preconceitos familiares contra Amatsu de forma mais aberta.",
+      "relations": "Daigo influencia fortemente sua opinião inicial; relação com Koharu/Hibiki é nova.",
+      "dossier_differences": "Mistura a base Uchiha de Sasuke com agressividade física de Kiba/Lee. Mais forte que Sasuke inicial em força bruta, menos técnico em Genjutsu/planejamento e sem o refinamento de Lee após um ano com Guy.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep28",
+        "ep29",
+        "ep30",
+        "ep32",
+        "ep34",
+        "ep44",
+        "lee",
+        "sasuke"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Koharu Inuzuka": {
+      "name": "Koharu Inuzuka",
+      "mapping_status": "documented",
+      "source_anchor": "Kiba funcional, mais pragmática.",
+      "reference_characters": [
+        "Kiba"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Competitiva, enérgica, mais pragmática que Mio.",
+      "relations": "Kuro é vínculo central; não conhece segredos de Amatsu.",
+      "dossier_differences": "Paralelo direto de Kiba/Akamaru em função, mas no Dia 0 está um pouco menos refinada do que Kiba no Exame Chūnin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep44"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Hibiki Shirogane": {
+      "name": "Hibiki Shirogane",
+      "mapping_status": "documented",
+      "source_anchor": "Shino funcional sem enxame.",
+      "reference_characters": [
+        "Shino"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Calmo, atento, ouve antes de falar sem ser passivo.",
+      "relations": "Shigure tende a usá-lo como eixo de informação do Time 6.",
+      "dossier_differences": "Função de sensor lembra Shino, mas sem enxame: menos controle de área, mais foco puro em assinatura de chakra.\n\n---\n\n# TIME 8 — Mio / Ayame / Seki — Tōma",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep40"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Mio Inuzuka": {
+      "name": "Mio Inuzuka",
+      "mapping_status": "documented",
+      "source_anchor": "Kiba + assertividade Sakura/Ino.",
+      "reference_characters": [
+        "Sakura",
+        "Kiba",
+        "Ino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Espontânea, competitiva, curiosa, provocadora e fisicamente expressiva; séria quando risco é real.",
+      "relations": "Sem romance predeterminado com Amatsu nesta linha. Yoru é seu vínculo principal.",
+      "dossier_differences": "Funcionalmente Kiba/Akamaru, mas com assertividade social que lembra Sakura/Ino. Em rastreamento já é excelente; em combate ainda abaixo do Kiba do Exame Chūnin por experiência.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep31",
+        "ep32",
+        "ep33",
+        "ep34",
+        "ep44",
+        "sakura"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Ayame Hyūga": {
+      "name": "Ayame Hyūga",
+      "mapping_status": "documented",
+      "source_anchor": "posição Sōke + certeza de Neji.",
+      "reference_characters": [
+        "Neji"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Formal com hierarquia, orgulhosa e inicialmente condescendente com Bunke; não caricaturalmente cruel.",
+      "relations": "Espera deferência de Reika em contextos clânicos apesar de Reika ser um ano mais velha; isso gera tensão real.",
+      "dossier_differences": "Combina a posição social de Hinata (Sōke) com ortodoxia/confiança mais próxima de Neji. É muito mais assertiva que Hinata inicial, mas abaixo de Neji após um ano de treino em refinamento e repertório.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "neji"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Seki Aburame": {
+      "name": "Seki Aburame",
+      "mapping_status": "documented",
+      "source_anchor": "Shino inicial.",
+      "reference_characters": [
+        "Shino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Reservado, específico, paciente; não fala como robô.",
+      "relations": "Tōma é referência técnica direta; Mio/Ayame oferecem rastreio/Byakugan para uma equipe de informação.",
+      "dossier_differences": "Muito próximo da função de Shino, mas com menos autonomia/refinamento no início. Potencial excelente em reconhecimento.\n\n---\n\n# TIME 9 — Reika / Tetsu / Riku — Masaru (geração um ano mais velha)",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep40"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Reika Hyūga": {
+      "name": "Reika Hyūga",
+      "mapping_status": "documented",
+      "source_anchor": "Neji inicial em excelência técnica.",
+      "reference_characters": [
+        "Neji"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Observadora, precisa, inteligente, competitiva sem transformar tudo em disputa.",
+      "relations": "Ayame é eixo da tensão Sōke/Bunke; relação muda somente por experiência vivida.",
+      "dossier_differences": "É o paralelo mais forte de Neji: um ano acima, Bunke e prodígio. Começa **ligeiramente abaixo de Neji no Exame Chūnin** em refinamento máximo, mas suficientemente perto para ser tratada como uma das Genin mais perigosas de Konoha.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "neji"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Tetsu Iwagane": {
+      "name": "Tetsu Iwagane",
+      "mapping_status": "documented",
+      "source_anchor": "função física do trio mais velho, original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Pragmático, persistente e pouco teatral.",
+      "relations": "Reika é referência técnica do time; Riku resolve distância.",
+      "dossier_differences": "Ocupa parte da função física de Rock Lee no trio mais velho, mas é o oposto técnico: muito mais versátil em Ninjutsu/defesa e muito menos rápido/letal em taijutsu; não possui Portões.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Riku Fūma": {
+      "name": "Riku Fūma",
+      "mapping_status": "documented",
+      "source_anchor": "Tenten + Temari funcional.",
+      "reference_characters": [
+        "Tenten",
+        "Temari"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Enérgico, prático, comunicativo e competitivo.",
+      "relations": "Masaru é modelo técnico direto; precisa coordenar com espaço curto de Reika e terreno de Tetsu.",
+      "dossier_differences": "Mistura Tenten (armas) e Temari (Fūton) sem copiar nenhuma. Tem mais variedade tática que Tenten inicial, mas menos volume de arsenal; muito abaixo de Temari em potência de vento no Exame.\n\n---\n\n# TIME 10 — Renji / Hana / Daichi — Akihiko",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep43"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Renji Nara": {
+      "name": "Renji Nara",
+      "mapping_status": "documented",
+      "source_anchor": "Shikamaru jovem.",
+      "reference_characters": [
+        "Shikamaru"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Preguiçoso no cotidiano, humor seco, raciocínio aparece organicamente na fala; responsabilidade cresce sob pressão.",
+      "relations": "Hana e Daichi formam a versão Ino–Shika–Chō da geração.",
+      "dossier_differences": "Paralelo direto de Shikamaru. Intelectualmente está na mesma classe extraordinária desde cedo, mas ainda não possui a experiência decisória do Shikamaru que sai do Exame como Chūnin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep33",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Hana Yamanaka": {
+      "name": "Hana Yamanaka",
+      "mapping_status": "documented",
+      "source_anchor": "Ino jovem.",
+      "reference_characters": [
+        "Ino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Social, perceptiva, competitiva e capaz de ser cortante sem virar cópia de Ino.",
+      "relations": "Renji/Daichi são parceiros de formação tradicional; família Yamanaka incentiva coordenação do trio.",
+      "dossier_differences": "Equivale funcionalmente a Ino. Levemente mais disciplinada no uso tático inicial, mas sem a experiência/alcance mental que Ino desenvolve depois.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep33",
+        "sakura"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Daichi Akimichi": {
+      "name": "Daichi Akimichi",
+      "mapping_status": "documented",
+      "source_anchor": "Chōji jovem.",
+      "reference_characters": [
+        "Choji"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Afável, seguro, sensível a comentários sobre corpo/comida sem ser definido por isso; protetor.",
+      "relations": "Forma Ino–Shika–Chō com Renji/Hana.",
+      "dossier_differences": "Paralelo de Chōji. Começa um pouco mais confiante fisicamente, mas ainda não possui o pico de pílulas/Modo Borboleta do arco Sasuke Retrieval.\n\n---\n\n# TIME 11 — Arata / Natsuki / Jun — Shōma",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep33"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Arata Senju": {
+      "name": "Arata Senju",
+      "mapping_status": "documented",
+      "source_anchor": "Hashirama/Yamato só no eixo técnico; voz própria.",
+      "reference_characters": [
+        "Yamato",
+        "Hashirama"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Sociável, tranquilo, seguro do próprio nível; detesta ser reduzido a “novo Arashi”.",
+      "relations": "Aki/Rin/Tōru o conhecem pelo clã sem formar corte; Shōma quer impedir que sobrenome substitua teamwork.",
+      "dossier_differences": "A referência técnica é Hashirama/Yamato apenas por Mokuton. Em estágio ele é um Genin excepcional, não “Hashirama criança”. Está no topo dos recém-formados, mas ainda abaixo de Neji após um ano em refinamento; matchup de Mokuton pode fazê-lo parecer acima.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "hashirama"
+      ],
+      "later_reference_characters": [
+        "Yamato",
+        "Hashirama"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Natsuki Hyūga": {
+      "name": "Natsuki Hyūga",
+      "mapping_status": "documented",
+      "source_anchor": "Hinata/Neji intermediário.",
+      "reference_characters": [
+        "Neji",
+        "Hinata"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Controlada, segura e competitiva; menos rígida que Ayame.",
+      "relations": "Conhece Reika/Ayame de treino clânico; Time 11 cria relações fora do Hyūga.",
+      "dossier_differences": "Fica entre Hinata e Neji como referência: muito mais assertiva/técnica que Hinata inicial, abaixo de Reika/Neji em refinamento por experiência.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "hinata",
+        "neji"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Jun Sarutobi": {
+      "name": "Jun Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Asuma/Sarutobi difuso.",
+      "reference_characters": [
+        "Asuma"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Seguro, sociável e responsável sem ser certinho demais.",
+      "relations": "Serve como eixo social entre Arata e Natsuki; parentesco exato com Daizen não é presumido sem registro.",
+      "dossier_differences": "Inspiração difusa Sarutobi/Asuma: versatilidade, Katon e arma de bastão. Abaixo dos prodígios em pico individual, acima da média em completude e teamwork.\n\n---\n\n\n# Parceiros ninken",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kagetsu Shiranui": {
+      "name": "Kagetsu Shiranui",
+      "mapping_status": "documented",
+      "source_anchor": "Kakashi Clássico.",
+      "reference_characters": [
+        "Kakashi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Relaxado quando possível, ironia seca; em perigo muda de professor para comandante de forma abrupta.",
+      "relations": "Parte dos Uchiha ainda o vê com desconforto pelo olho transplantado. Relação com Amatsu cria o simbolismo do Uchiha sem Sharingan treinado por não-Uchiha com Sharingan.",
+      "dossier_differences": "Próximo de Kakashi Clássico em classe geral. Kakashi tem maior fama de cópia/versatilidade ocular; Kagetsu é mais especializado em escolta, contra-infiltração e proteção. Não é mais forte “porque é nosso sensei”; é comparável em base, diferente em kit.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep21",
+        "kakashi"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Sayuri Hyūga": {
+      "name": "Sayuri Hyūga",
+      "mapping_status": "documented",
+      "source_anchor": "Kurenai/Guy em função, voz própria Hyūga.",
+      "reference_characters": [
+        "Kurenai",
+        "Guy"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Profissional, observadora, direta; autoridade natural sem teatralidade.",
+      "relations": "Conhece a política Sōke/Bunke por dentro e não apaga tensões com sermão simples.",
+      "dossier_differences": "Ocupa o espaço de uma Kurenai/Guy como professora de equipe, mas tecnicamente é Hyūga. Mais forte que Kurenai em curta distância/percepção; muito abaixo de Guy em taijutsu de pico/Portões.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "guy"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Fuyumi Kisaragi": {
+      "name": "Fuyumi Kisaragi",
+      "mapping_status": "documented",
+      "source_anchor": "Yamato/ANBU de suporte.",
+      "reference_characters": [
+        "Yamato"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Rápida, organizada, irrita-se com procedimento malfeito; seca sem ser robótica.",
+      "relations": "Escolhida para os três Senju porque força disciplina técnica e teamwork em vez de reverenciar sobrenome.",
+      "dossier_differences": "Função lembra Yamato/ANBU de suporte e especialistas de barreira: abaixo de Kakashi/Asuma em duelo aberto, acima deles em Fūinjutsu/barreiras preparadas.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [
+        "Yamato"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shigure Namikado": {
+      "name": "Shigure Namikado",
+      "mapping_status": "documented",
+      "source_anchor": "Asuma/Kakashi campo.",
+      "reference_characters": [
+        "Asuma",
+        "Kakashi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, pragmático, humor seco; missão acima de demonstração.",
+      "relations": "Time 6 exige que ele coordene um Uchiha agressivo, uma dupla Inuzuka e um sensor.",
+      "dossier_differences": "Na classe de Asuma/Kakashi como comandante de campo, abaixo de Kakashi em hax/Sharingan e abaixo de Guy em pico físico; muito forte em consistência e terreno.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "ep21",
+        "kakashi",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Tōma Aburame": {
+      "name": "Tōma Aburame",
+      "mapping_status": "documented",
+      "source_anchor": "Kurenai função + Shino registro.",
+      "reference_characters": [
+        "Kurenai",
+        "Shino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Reservado, específico, paciente, humano.",
+      "relations": "Sensei ideal para uma equipe de rastreio/informação; precisa conter choque cultural Ayame/Mio sem “curar” personalidade por decreto.",
+      "dossier_differences": "Ocupa o papel de Kurenai como líder do “Time 8” funcional, mas é quase o oposto técnico: muito mais reconhecimento/contrarreconhecimento, muito menos Genjutsu puro.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "ep34",
+        "ep40"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Masaru Fūma": {
+      "name": "Masaru Fūma",
+      "mapping_status": "documented",
+      "source_anchor": "Guy função docente, voz própria.",
+      "reference_characters": [
+        "Guy"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Prático, disciplinado, humor seco; trata treino como problema concreto.",
+      "relations": "Time 9 tem um ano extra e exige menos “babá”, mais refinamento especializado.",
+      "dossier_differences": "Ocupa o lugar estrutural de Guy como professor da geração um ano mais velha, **mas não é equivalente em pico de combate**. Guy é muito superior em taijutsu/Portões; Masaru compensa parcialmente com alcance, armadilhas e Fūton.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "guy"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Akihiko Sarutobi": {
+      "name": "Akihiko Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Asuma.",
+      "reference_characters": [
+        "Asuma"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Paciente, prático, sociável fora de missão, firme com erro perigoso.",
+      "relations": "Treina o Ino–Shika–Chō respeitando tradição sem transformar Renji no único cérebro.",
+      "dossier_differences": "É o paralelo mais direto de Asuma. Em ameaça-base fica muito próximo; Akihiko é mais bōjutsu/proteção, Asuma possui estilo de lâminas de chakra mais letal.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shōma Sarutobi": {
+      "name": "Shōma Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Asuma + Kakashi foco de equipe.",
+      "reference_characters": [
+        "Asuma",
+        "Kakashi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Caloroso e firme; consegue elogiar sem bajular sobrenome.",
+      "relations": "Responsável por impedir que Arata/Natsuki/Jun se tornem uma disputa de clãs prestigiosos.",
+      "dossier_differences": "Lembra Asuma em calor humano e Kakashi em foco de equipe, mas é um Jōnin sólido abaixo de ambos em seus picos mais icônicos.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "ep21",
+        "kakashi",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Iruka Umino": {
+      "name": "Iruka Umino",
+      "mapping_status": "documented",
+      "source_anchor": "Iruka Clássico.",
+      "reference_characters": [
+        "Iruka"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Disciplinador, perceptivo, genuinamente preocupado; bronca forte não elimina afeto.",
+      "relations": "É uma das poucas presenças adultas constantes de Amatsu; leva-o ao Ichiraku. Único que sabe inicialmente do Kage Bunshin; não sabe do Gōka Mekkyaku/pergaminho Uchiha.",
+      "dossier_differences": "Muito próximo do Iruka canônico em combate e função. A relação emocional com Amatsu é deliberadamente ainda mais paterna; o site oficial trata Iruka como o professor que esteve ao lado de Naruto e o apoiou desde cedo.\n\n---\n\n# LIDERANÇA DE KONOHA E CHEFES DE CLÃ",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep37",
+        "iruka"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Daizen Sarutobi": {
+      "name": "Daizen Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Hiruzen Part I.",
+      "reference_characters": [
+        "Hiruzen"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, sarcástico quando apropriado, peso de autoridade sem discursar o tempo todo.",
+      "relations": "Conhece segredos de Estado, inclusive Jinchūriki, somente nos limites estabelecidos.",
+      "dossier_differences": "Equivalente funcional de Hiruzen na Parte I: similar em ameaça global e experiência institucional, um pouco mais jovem fisicamente, porém com repertório elemental mais estreito que “O Professor”.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep37",
+        "iruka"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Masato Uchiha": {
+      "name": "Masato Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Fugaku + chefe político próprio.",
+      "reference_characters": [
+        "Fugaku"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Tradicional, estratégico, mais político que teatral.",
+      "relations": "Chefe do clã; sabe que Takeru traiu Konoha. Não sabe automaticamente técnicas clandestinas de Amatsu sem evidência.",
+      "dossier_differences": "Funcionalmente mistura Fugaku (chefe Uchiha/Polícia) com um veterano de alto escalão; acima do Fugaku mostrado em material principal pela ficha fechada do RP, mas abaixo de lendas Uchiha como Madara/Shūsei.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "sasuke"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Seijūrō Uchiha": {
+      "name": "Seijūrō Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Fugaku-like paterno.",
+      "reference_characters": [
+        "Fugaku"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Exigente, controlado e tradicional.",
+      "relations": "Orienta Kaede a manter distância de Amatsu no início.",
+      "dossier_differences": "Fugaku-like no peso paterno/clânico, mas mais voltado a disciplina técnica e menos a liderança total do clã.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "sasuke"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Daigo Uchiha": {
+      "name": "Daigo Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Jōnin Uchiha físico original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Direto, austero, físico.",
+      "relations": "Influência central no desprezo inicial de Shin por Amatsu.",
+      "dossier_differences": "É um Uchiha de combate corpo a corpo; menos “Fugaku”, mais um Jōnin de elite com função familiar própria.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Hiromasa Hyūga": {
+      "name": "Hiromasa Hyūga",
+      "mapping_status": "documented",
+      "source_anchor": "Hiashi.",
+      "reference_characters": [
+        "Hiashi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Tradicional, disciplinado, institucional.",
+      "relations": "Autoridade sobre Sōke/Bunke; sua política molda Ayame/Reika.",
+      "dossier_differences": "Paralelo de Hiashi: mesma função e ortodoxia, calibrado como Jōnin Elite real.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "hinata",
+        "neji"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shikō Nara": {
+      "name": "Shikō Nara",
+      "mapping_status": "documented",
+      "source_anchor": "Shikaku.",
+      "reference_characters": [
+        "Shikaku"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, preguiçoso quando pode, absolutamente sério com responsabilidade.",
+      "relations": "Referência de Renji e liderança do clã.",
+      "dossier_differences": "Paralelo de Shikaku: mesma função de cérebro adulto, com IC alto por competência completa, não por força bruta.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "akatsuki_later"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Genzaburō Akimichi": {
+      "name": "Genzaburō Akimichi",
+      "mapping_status": "documented",
+      "source_anchor": "Chōza.",
+      "reference_characters": [
+        "Choza"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Afável, direto, protetor.",
+      "relations": "Chefe e referência de Daichi.",
+      "dossier_differences": "Paralelo de Chōza, com ficha fechada de Jōnin Elite.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kohana Yamanaka": {
+      "name": "Kohana Yamanaka",
+      "mapping_status": "documented",
+      "source_anchor": "Inoichi.",
+      "reference_characters": [
+        "Inoichi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Perceptiva, diplomática e difícil de enganar sem ler mente passivamente.",
+      "relations": "Referência de Hana e elo histórico Ino–Shika–Chō.",
+      "dossier_differences": "Paralelo de Inoichi, com ênfase igual em comunicação/sensor.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shigen Aburame": {
+      "name": "Shigen Aburame",
+      "mapping_status": "documented",
+      "source_anchor": "Shibi.",
+      "reference_characters": [
+        "Shibi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Muito reservado, preciso, não robótico.",
+      "relations": "Referência de Tōma/Seki.",
+      "dossier_differences": "Paralelo de Shibi: discreto e extremamente perigoso no próprio eixo.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Hanae Inuzuka": {
+      "name": "Hanae Inuzuka",
+      "mapping_status": "documented",
+      "source_anchor": "Tsume Inuzuka.",
+      "reference_characters": [
+        "Tsume"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Direta, expressiva e protetora.",
+      "relations": "Chefe e referência cultural de Mio/Koharu.",
+      "dossier_differences": "Paralelo de Tsume Inuzuka, com papel de chefe plenamente formalizado.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kenzō Sarutobi": {
+      "name": "Kenzō Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "patriarca Sarutobi/Hiruzen doméstico.",
+      "reference_characters": [
+        "Hiruzen"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Tradicional, paciente, mais informal no clã que no conselho.",
+      "relations": "Referência de Akihiko/Shōma/Jun e interlocutor frequente de Daizen.",
+      "dossier_differences": "Mistura função de Hiruzen como patriarca com Chōza/Shikaku como chefe de clã, mas é claramente abaixo do Hokage em poder/comando estatal.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep37",
+        "iruka"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Masamichi Senju": {
+      "name": "Masamichi Senju",
+      "mapping_status": "documented",
+      "source_anchor": "pragmatismo administrativo tipo Tobirama, sem copiar.",
+      "reference_characters": [
+        "Tobirama"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Sóbrio, prático, tradicional sem misticismo.",
+      "relations": "Administra clã e sabe separar prestígio de função; Arata não vira automaticamente “chefe jovem”.",
+      "dossier_differences": "Sem equivalente direto; tem algo do pragmatismo administrativo de Tobirama, mas em nível Jōnin Elite e sem sua genialidade histórica.\n\n---\n\n# LENDÁRIOS, TAKERU E HISTÓRIA DE ALTO NÍVEL",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "tobirama"
+      ],
+      "later_reference_characters": [
+        "Tobirama"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shōzen Arakawa": {
+      "name": "Shōzen Arakawa",
+      "mapping_status": "documented",
+      "source_anchor": "Jiraiya.",
+      "reference_characters": [
+        "Jiraiya"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, curioso, difícil de impressionar; lado ridículo/pervertido de escritor sem destruir competência.",
+      "relations": "Daizen foi um de seus mestres; Kiyomi/Kairen são pares lendários; futuro contato com Amatsu não predeterminado no Dia 0.",
+      "dossier_differences": "Base Jiraiya, mas com Hiraishin e corvos em vez do ecossistema de sapos. Globalmente fica na mesma classe dos Sannin; melhor mobilidade instantânea que Jiraiya, menos variedade de invocações/barreiras de sapos.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "jiraiya"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kiyomi Senju": {
+      "name": "Kiyomi Senju",
+      "mapping_status": "documented",
+      "source_anchor": "Tsunade.",
+      "reference_characters": [
+        "Tsunade"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Firme, pragmática, intolerante a desperdício de vidas.",
+      "relations": "Par de Shōzen/Kairen; figura maior Senju, mas não professora automática do Time 5.",
+      "dossier_differences": "Praticamente equivalente a Tsunade na função e ameaça. Diferenças ficam em personalidade/lore e repertório elemental, não em “ser uma Tsunade pior”.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "tsunade"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kairen Tsukishiro": {
+      "name": "Kairen Tsukishiro",
+      "mapping_status": "documented",
+      "source_anchor": "Orochimaru.",
+      "reference_characters": [
+        "Orochimaru"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, educado, analítico, inquietantemente paciente; ética utilitarista sobre experimentação/consentimento.",
+      "relations": "Shōzen/Kiyomi são pares lendários; desertou após pesquisa proibida.",
+      "dossier_differences": "Paralelo de Orochimaru no eixo “gênio pesquisador nukenin”. Orochimaru é superior em sobrevivência/modificação corporal extrema; Kairen é superior em Fūinjutsu, barreiras e anatomia/preparo. Mesma classe geral de ameaça.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep30",
+        "orochimaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Takeru Uchiha": {
+      "name": "Takeru Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "Itachi função + identidade própria.",
+      "reference_characters": [
+        "Itachi"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Controlado, casual quando quer, humor seco; com Amatsu pode ser protetor/provocador se e quando isso for estabelecido em cena, sem apagar deserção.",
+      "relations": "A motivação real de sua deserção e sentimentos atuais por Amatsu permanecem informação restrita.",
+      "dossier_differences": "Ocupa a função narrativa de Itachi como irmão prodígio nukenin, **mas não é Itachi 1:1**. Sem Mangekyō revalidado em combate, fica abaixo do Itachi da Parte I com Tsukuyomi/Amaterasu; em base física/técnica é um dos jovens adultos mais perigosos da geração.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "itachi"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kiyomasa Uchiha": {
+      "name": "Kiyomasa Uchiha",
+      "mapping_status": "documented",
+      "source_anchor": "mestre técnico original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Analítico, paciente, exigente; ensina adaptando método ao aluno.",
+      "relations": "Na nova Parte I ainda não é mentor automático de Amatsu; vínculo só nasce se causalmente estabelecido.",
+      "dossier_differences": "Sem equivalente direto; mistura função de velho especialista Uchiha com mestre de Genjutsu. Deve parecer mais professor técnico que “lenda secreta que resolve tudo”.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Sōren": {
+      "name": "Sōren",
+      "mapping_status": "documented",
+      "source_anchor": "Pain/Nagato.",
+      "reference_characters": [
+        "Pain",
+        "Nagato"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Calmo, paternal, quase nunca eleva voz; acredita carregar responsabilidade superior.",
+      "relations": "Tatsuma é irmão escolhido; Miyori executora/protegida; Saigen “anjo” ideológico. Takeru integra a organização.",
+      "dossier_differences": "Paralelo de Pain/Nagato em ameaça. Menos cobertura simultânea que os Seis Caminhos por usar um corpo, mas maior integração corporal e mobilidade pessoal.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "jiraiya"
+      ],
+      "later_reference_characters": [
+        "Pain",
+        "Nagato"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Tatsuma": {
+      "name": "Tatsuma",
+      "mapping_status": "documented",
+      "source_anchor": "braço direito Akatsuki mais humano.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Quente, sociável, protetor; racionaliza autoridade de Sōren como benevolência.",
+      "relations": "Sōren o salvou criança; devoção fraterna profunda.",
+      "dossier_differences": "Estruturalmente lembra um “braço direito” de Akatsuki mais humano; em combate fica na faixa Jōnin Elite, abaixo de monstros oculares como Pain/Itachi.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Miyori": {
+      "name": "Miyori",
+      "mapping_status": "documented",
+      "source_anchor": "Konan funcional + identidade própria.",
+      "reference_characters": [
+        "Konan"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Baixa, educada, aparentemente calma; devoção possessiva/intensa.",
+      "relations": "Prioriza proteção de Sōren.",
+      "dossier_differences": "Função lembra Konan como “asa”/protetora, mas com menos destruição preparada de papel e mais Genjutsu/Fūinjutsu.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "jiraiya"
+      ],
+      "later_reference_characters": [
+        "Konan"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Saigen": {
+      "name": "Saigen",
+      "mapping_status": "documented",
+      "source_anchor": "Obito/Zetsu/Danzō funcional.",
+      "reference_characters": [
+        "Obito",
+        "Zetsu",
+        "Danzo"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Sereno, caloroso e deferente; conduz interpretação em vez de ordenar.",
+      "relations": "Sōren o interpreta como guia quase sagrado; intenção real é informação restrita.",
+      "dossier_differences": "Mistura funções narrativas de Obito/Zetsu/Danzō como manipulador/infiltrador, mas sem importar seus poderes. Em duelo aberto ainda é Kage/Sannin por base, porém sua maior ameaça vem de preparo.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "obito"
+      ],
+      "later_reference_characters": [
+        "Obito",
+        "Zetsu",
+        "Danzo"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Itsurō Kisaragi": {
+      "name": "Itsurō Kisaragi",
+      "mapping_status": "documented",
+      "source_anchor": "Itachi ritmo/precisão sem dōjutsu.",
+      "reference_characters": [
+        "Itachi"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Contido, educado, observador; fala quando há utilidade.",
+      "relations": "Membro da Tenkai sem vínculo Uchiha.",
+      "dossier_differences": "É inspirado em Itachi no ritmo/precisão/Genjutsu, **sem dōjutsu**. Por isso tem menos hax e leitura ocular, mas continua Rank-S por técnica e assassinato.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "itachi"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Gazan Kurosame": {
+      "name": "Gazan Kurosame",
+      "mapping_status": "documented",
+      "source_anchor": "Kisame funcional.",
+      "reference_characters": [
+        "Kisame"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Pesado, paciente, direto.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Inspiração funcional Kisame, mas sem Samehada viva/fusão; ameaça semelhante em atrito, menos transformação.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kōmei Bakuhara": {
+      "name": "Kōmei Bakuhara",
+      "mapping_status": "documented",
+      "source_anchor": "Deidara funcional técnico.",
+      "reference_characters": [
+        "Deidara"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Inventivo, irritável quando plano técnico é subestimado.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Paralelo funcional de Deidara pela explosão/engenharia, mas sem copiar argila/bocas/voo; menos aéreo, mais demolição de terreno.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "deidara"
+      ],
+      "later_reference_characters": [
+        "Deidara"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shunrei Kajiwara": {
+      "name": "Shunrei Kajiwara",
+      "mapping_status": "documented",
+      "source_anchor": "Sasori funcional.",
+      "reference_characters": [
+        "Sasori"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Fria, técnica, curiosa com engenharia.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Paralelo de Sasori por função de marionetista Rank-S, mas menos imortal/modificado e sem coleção de humanos.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "sasori"
+      ],
+      "later_reference_characters": [
+        "Sasori"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Gensai Arakida": {
+      "name": "Gensai Arakida",
+      "mapping_status": "documented",
+      "source_anchor": "Kakuzu funcional.",
+      "reference_characters": [
+        "Kakuzu"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Mercenário metódico e pragmático.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Paralelo funcional de Kakuzu na modularidade elemental, sem imortalidade/corações múltiplos.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "akatsuki_later"
+      ],
+      "later_reference_characters": [
+        "Kakuzu"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Sanza Kurohito": {
+      "name": "Sanza Kurohito",
+      "mapping_status": "documented",
+      "source_anchor": "Hidan funcional.",
+      "reference_characters": [
+        "Hidan"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Provocador, físico, devoto ao próprio ritual sem monólogo constante.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Paralelo de Hidan no eixo ritual/regeneração, mas mortal e mais tecnicamente treinado.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "akatsuki_later"
+      ],
+      "later_reference_characters": [
+        "Hidan"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Mukuha": {
+      "name": "Mukuha",
+      "mapping_status": "documented",
+      "source_anchor": "Zetsu funcional, duas consciências.",
+      "reference_characters": [
+        "Zetsu"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Estranho sem ser caricatura; duas consciências podem discordar.",
+      "relations": "Tenkai.",
+      "dossier_differences": "Paralelo de Zetsu em infiltração/rede, sem ubiquidade, cópia perfeita ou poderes planetários.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [
+        "Zetsu"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kureto Nabatame": {
+      "name": "Kureto Nabatame",
+      "mapping_status": "documented",
+      "source_anchor": "Orochimaru/Kabuto pesquisa.",
+      "reference_characters": [
+        "Orochimaru",
+        "Kabuto"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Clínico, fascinado, menos teatral que Orochimaru.",
+      "relations": "Tenkai; pesquisador autônomo.",
+      "dossier_differences": "Compartilha parte do espaço de Orochimaru/Kabuto, mas é deliberadamente limitado por compatibilidade e laboratório.\n\n---\n\n\n# ENTIDADES E ESTADO DE CÂNONE",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep30",
+        "ep36",
+        "orochimaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kurama — Nove-Caudas": {
+      "name": "Kurama — Nove-Caudas",
+      "mapping_status": "documented",
+      "source_anchor": "Kurama.",
+      "reference_characters": [
+        "Kurama"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "",
+      "relations": "",
+      "dossier_differences": "",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Hotaru Aburame": {
+      "name": "Hotaru Aburame",
+      "mapping_status": "documented",
+      "source_anchor": "Shino funcional.",
+      "reference_characters": [
+        "Shino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Precisa, observadora e mais humana do que estereótipo “Aburame robô”; humor discreto.",
+      "relations": "Conhece Seki/Mina pelo clã. Não sabe segredos de Amatsu sem canal legítimo.",
+      "dossier_differences": "Paralelo de Shino na função de informação/enxame, mas começa um pouco menos autônoma e refinada que o Shino do Exame Chūnin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep40"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kanna Mochizuki": {
+      "name": "Kanna Mochizuki",
+      "mapping_status": "documented",
+      "source_anchor": "controle de campo original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Composta, paciente e prática; tende a falar depois de observar.",
+      "relations": "Já tem mais experiência que recém-formados, mas não autoridade de Chūnin.",
+      "dossier_differences": "Lembra parte do papel de ninjas de Kirigakure/controle de campo do Clássico, sem equivalência individual direta; está acima de um recém-formado médio por experiência, não por poder bruto.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Itsuki": {
+      "name": "Itsuki",
+      "mapping_status": "documented",
+      "source_anchor": "Genin disciplinado original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Disciplinado, atento e pouco teatral; não confundir reserva com timidez.",
+      "relations": "Não possui vínculo prévio especial com Amatsu no Dia 0.",
+      "dossier_differences": "Função lembra um Genin de arma curta do Clássico, sem equivalente 1:1; é mais consistente que chamativo.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Makoto Kurama": {
+      "name": "Makoto Kurama",
+      "mapping_status": "documented",
+      "source_anchor": "Genjutsu juvenil original.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Analítico, sensível a contradições e pouco dado a bravata.",
+      "relations": "O sobrenome Kurama é de clã e não implica relação com a Nove-Caudas.",
+      "dossier_differences": "Cumpre parte do espaço de Genjutsu juvenil que no cânone quase não é ocupado pelos Konoha 12; tecnicamente acima de Sakura/Ino em Genjutsu ofensivo, mas fisicamente abaixo dos lutadores de frente.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Shun Nara": {
+      "name": "Shun Nara",
+      "mapping_status": "documented",
+      "source_anchor": "Shikamaru/Shikaku, mais sociável.",
+      "reference_characters": [
+        "Shikamaru",
+        "Shikaku"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Mais sociável que Renji; gosta genuinamente de jogos e de explicar uma ideia quando se empolga.",
+      "relations": "Primo distante/companheiro de clã de Renji; não existe rivalidade central obrigatória.",
+      "dossier_differences": "Também deriva de Shikamaru/Shikaku, mas é menos brilhante que Renji em raciocínio puro e mais disposto a preparação material/social.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "akatsuki_later",
+        "ep33",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Emi Nara": {
+      "name": "Emi Nara",
+      "mapping_status": "documented",
+      "source_anchor": "Nara deliberadamente não-Shikamaru.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Rápida, curiosa, competitiva e impaciente com planos longos.",
+      "relations": "Conhece Shun/Renji pelo clã; tende a provocar os dois por excesso de cálculo.",
+      "dossier_differences": "É deliberadamente uma Nara que não copia o ritmo de Shikamaru: menos estratégica no longo prazo, mais rápida no improviso.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Kōta Akimichi": {
+      "name": "Kōta Akimichi",
+      "mapping_status": "documented",
+      "source_anchor": "Chōji mais seguro.",
+      "reference_characters": [
+        "Choji"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Afável, seguro e bem-humorado; em combate fala menos e protege mais.",
+      "relations": "Conhece Daichi pelo clã como colega mais jovem, não discípulo.",
+      "dossier_differences": "Entre Chōji inicial e um Akimichi um ano mais treinado: mais seguro e estável que Chōji no começo, sem pílulas/Modo Borboleta.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep33"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Chiyo Akimichi": {
+      "name": "Chiyo Akimichi",
+      "mapping_status": "documented",
+      "source_anchor": "Akimichi confrontadora.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Orgulhosa, leal e competitiva; odeia ser tratada como “escudo”.",
+      "relations": "Conhece Daichi/Kōta por treinos familiares.",
+      "dossier_differences": "Mesmo eixo de Chōji, mas com personalidade mais confrontadora e foco defensivo desde cedo.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Aoi Yamanaka": {
+      "name": "Aoi Yamanaka",
+      "mapping_status": "documented",
+      "source_anchor": "Ino mais disciplinada.",
+      "reference_characters": [
+        "Ino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Segura, social, percebe tensão entre pessoas rápido; não é “Ino 2”.",
+      "relations": "Conhece Hana/Sora pelo clã; pode disputar prestígio sem rivalidade obrigatória.",
+      "dossier_differences": "Paralelo de Ino com um ano adicional de disciplina técnica: menos impulsiva, um pouco mais avançada no Hiden, ainda Genin.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep33",
+        "sakura"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Sora Yamanaka": {
+      "name": "Sora Yamanaka",
+      "mapping_status": "documented",
+      "source_anchor": "Yamanaka observador.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Quieto, atento e bom ouvinte; responde depois de observar a sala.",
+      "relations": "Conhece Hana/Aoi pelo clã.",
+      "dossier_differences": "Compartilha função Yamanaka/Ino, mas é menos socialmente dominante e mais observador.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Haru Inuzuka": {
+      "name": "Haru Inuzuka",
+      "mapping_status": "documented",
+      "source_anchor": "Kiba mais treinado/menos impulsivo.",
+      "reference_characters": [
+        "Kiba"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Competitivo, protetor de Tora e menos impulsivo que Kiba.",
+      "relations": "Conhece Mio/Koharu pelo clã; não é rival automático.",
+      "dossier_differences": "Paralelo de Kiba com um ano a mais: menos espalhafatoso, coordenação melhor, ainda sem transformação avançada.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep44"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Tora": {
+      "name": "Tora",
+      "mapping_status": "documented",
+      "source_anchor": "ninken.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Alerta, energético e responsivo a Haru.",
+      "relations": "Parceiro, não “pet descartável”.",
+      "dossier_differences": "Equivalente funcional de Akamaru como parceiro tático, não fonte de dano infinita.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Mina Aburame": {
+      "name": "Mina Aburame",
+      "mapping_status": "documented",
+      "source_anchor": "Shino + sarcasmo seco.",
+      "reference_characters": [
+        "Shino"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Sarcástica em registro seco, observadora e precisa; não robótica.",
+      "relations": "Conhece Seki/Hotaru pelo clã.",
+      "dossier_differences": "Paralelo de Shino pelo Hiden, mas orientada a precisão e comentário seco; menos madura tecnicamente.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep40"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Miharu Sarutobi": {
+      "name": "Miharu Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Sarutobi acadêmica completa.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "Observadora, precisa, fala com cuidado mas sem timidez automática.",
+      "relations": "Conhece Jun/Keisuke e adultos Sarutobi; sobrenome não dá acesso a segredo do Hokage.",
+      "dossier_differences": "Um Sarutobi mais próximo do eixo “academicamente completo” do que de Asuma; abaixo de Sasuke/Kaede em duelo direto, melhor equilíbrio mental que vários recém-formados.\n\n---",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Keisuke Sarutobi": {
+      "name": "Keisuke Sarutobi",
+      "mapping_status": "documented",
+      "source_anchor": "Asuma/Hiruzen/Konohamaru difuso.",
+      "reference_characters": [
+        "Asuma",
+        "Hiruzen",
+        "Konohamaru"
+      ],
+      "transfer_scope": "technical_or_function_only",
+      "voice_rule": "A voz própria da ficha prevalece. Uma referência técnica/funcional não autoriza transplantar personalidade.",
+      "baseline": "Estável, responsável e naturalmente organizador sem virar adulto em miniatura.",
+      "relations": "Conhece Jun/Miharu e referências adultas do clã.",
+      "dossier_differences": "Paralelo distante de Konohamaru/Asuma/Hiruzen pela versatilidade Sarutobi, mas no estágio é um Genin veterano, não “mini-Hokage”.\n\n---\n\n# REGRAS DE USO DO DOSSIÊ\n\n1. Antes de combate, congelar ficha, repertório, equipamento, objetivo e informação de cada NPC.\n2. Técnica não listada não aparece retroativamente.\n3. “Inspiração” nunca concede poder, técnica, memória ou destino do personagem canônico.\n4. Sharingan/Byakugan/Hiden obedecem limitações físicas e epistemológicas; não são onisciência.\n5. Rank e IC não predeterminam vencedor; matchup, terreno, informação, timing, ferimentos e objetivo são obrigatórios.\n6. As quatro barreiras de reação continuam: **Detecção → Interpretação → Janela Física → Execução**.\n7. O usuário controla Amatsu integralmente em RP live.\n\n# QUADRO DE COMPARAÇÃO — ADULTOS\n\n| Personagem | IC | Benchmark estrutural | Leitura curta |\n|---|---:|---|---|\n| Iruka | 44,0 | Iruka | praticamente equivalente; vínculo paterno mais forte |\n| Fuyumi | 58,0 | Yamato / barreiras | menor duelo, maior preparação técnica |\n| Shōma | 59,0 | Asuma/Kakashi professor | abaixo dos dois em pico; sólido em proteção |\n| Masaru | 59,5 | Guy (função de equipe) | muito abaixo em taijutsu/pico; melhor alcance/armadilhas |\n| Sayuri | 60,0 | Kurenai/Guy professor | muito superior a Kurenai em curta distância; inferior em Genjutsu |\n| Tōma | 60,5 | Kurenai/Shino | superior em recon; inferior em Genjutsu puro |\n| Akihiko | 61,0 | Asuma | muito próximo; mais bō/proteção |\n| Shigure | 61,5 | Asuma/Kakashi campo | menos hax que Kakashi; ótima consistência |\n| Kagetsu | 63,0 | Kakashi Clássico | mesma classe; kit diferente |\n| Takeru | 65,0 | Itachi (função) | abaixo de Itachi com MS; elite em base |\n| Daizen | 69,5 | Hiruzen Parte I | mesma classe; repertório mais estreito, corpo mais jovem |\n| Kiyomi | 69,5 | Tsunade | praticamente equivalente em classe |\n| Kairen | 70,0 | Orochimaru | mesma classe; troca sobrevivência por selos/barreiras |\n| Shōzen | 70,5 | Jiraiya + Hiraishin | mesma classe; mobilidade maior, ecossistema summon menor |\n| Sōren | 71,0 | Pain/Nagato | mesma classe; um corpo reduz cobertura simultânea |\n\n# CONCLUSÃO DE ESCALA\n\nA geração começa deliberadamente comprimida entre **24 e 31 IC**. Isso permite que um Chūnin real em **40+** seja assustador e um Jōnin em **55+** pareça um adulto de outra categoria sem precisar de plot armor. Reika/Tetsu, por terem um ano extra, já entram na faixa Genin veterano; Amatsu/Kaede/Shin/Arata são excepcionais entre recém-formados, mas continuam crianças sem a experiência que separa um “talentoso” de um profissional.",
+      "source_files": [
+        "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_later",
+        "ep37",
+        "iruka",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Gakuji Aramori": {
+      "name": "Gakuji Aramori",
+      "mapping_status": "documented",
+      "source_anchor": "Zabuza Clássico (inspiração estrutural no dossiê)",
+      "reference_characters": [
+        "Zabuza"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "",
+      "relations": "",
+      "dossier_differences": "",
+      "source_files": [
+        "Naruto_Reboot_Classico_Fichas_Arco_Gakuji_Nagi_v3.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_overview"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    },
+    "Nagi Sazanami": {
+      "name": "Nagi Sazanami",
+      "mapping_status": "documented",
+      "source_anchor": "Haku Clássico (inspiração estrutural no dossiê)",
+      "reference_characters": [
+        "Haku"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
+      "baseline": "",
+      "relations": "",
+      "dossier_differences": "",
+      "source_files": [
+        "Naruto_Reboot_Classico_Fichas_Arco_Gakuji_Nagi_v3.md",
+        "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
+      ],
+      "reference_source_ids": [
+        "classic_overview"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false
+    }
+  }
+}
