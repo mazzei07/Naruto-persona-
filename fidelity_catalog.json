@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "contract": {
-    "version": "v24.0.0",
+    "version": "v24.1.0",
     "continuity_id": "classico_floresta_da_morte",
     "reference_episode_ceiling": 37,
     "coverage_statement": "Catálogo de evidências selecionadas, não leitura integral do mangá, databooks, novels ou dublagem. Verificar fonte por turno e pesquisar lacunas antes de fechar uma atuação.",
@@ -45,7 +45,21 @@
     "research_policy": "retrieve_reference_every_turn; browse_on_missing_scene_or_user_correction; never_claim_unread_material",
     "translation_policy": "PT-BR original e falável, respeitando função social e idade. Sinopses em inglês não comprovam vocativos ou redação da dublagem BR.",
     "reference_is_not_scene_state": true,
-    "external_research": "Novas cenas consultadas podem entrar em external_reference_cards com fonte primária, localização, fase, resumo observado e inferência separados. A validação estrutural não verifica o conteúdo remoto."
+    "external_research": "Novas cenas consultadas podem entrar em external_reference_cards com fonte primária, localização, fase, resumo observado e inferência separados. A validação estrutural não verifica o conteúdo remoto.",
+    "actor_card_policy": {
+      "rule": "Actor cards are mandatory for active_npcs, not for every background name in present.",
+      "fallback": "If scene.active_npcs is omitted, validators preserve v24.0 behavior and require every known non-player individual in scene.present.",
+      "active_definition": "NPC who speaks, performs a voluntary action, is directly targeted, materially reacts, or whose knowledge/decision changes the beat.",
+      "background_definition": "Visible/present entity with no generated decision in this beat; may remain in scene.present without a card when active_npcs is supplied.",
+      "player_rule": "Amatsu remains player-controlled and never needs an actor card."
+    },
+    "entity_policy": {
+      "individual": "Normal persona-capable actor.",
+      "ninken": "Non-human individual; may act but never receives human speech unless canon explicitly changes.",
+      "historical": "Not a live actor unless a legitimate flashback/source establishes the beat.",
+      "group": "Aggregate entity; never use as a single speaking persona.",
+      "unresolved_identity": "Do not invent identity/voice until established."
+    }
   },
   "sources": {
     "sakura": {
@@ -1288,7 +1302,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": true
+      "player_controlled": true,
+      "entity_type": "individual"
     },
     "Saya Haruno": {
       "name": "Saya Haruno",
@@ -1314,7 +1329,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kazuma Uzumaki": {
       "name": "Kazuma Uzumaki",
@@ -1341,7 +1357,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kaede Uchiha": {
       "name": "Kaede Uchiha",
@@ -1368,7 +1385,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kaito Shimura": {
       "name": "Kaito Shimura",
@@ -1393,7 +1411,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Nao Kurusu": {
       "name": "Nao Kurusu",
@@ -1417,7 +1436,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Aki Senju": {
       "name": "Aki Senju",
@@ -1437,7 +1457,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Rin Senju": {
       "name": "Rin Senju",
@@ -1461,7 +1482,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Tōru Senju": {
       "name": "Tōru Senju",
@@ -1481,7 +1503,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shin Uchiha": {
       "name": "Shin Uchiha",
@@ -1514,7 +1537,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Koharu Inuzuka": {
       "name": "Koharu Inuzuka",
@@ -1539,7 +1563,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Hibiki Shirogane": {
       "name": "Hibiki Shirogane",
@@ -1564,7 +1589,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Mio Inuzuka": {
       "name": "Mio Inuzuka",
@@ -1595,7 +1621,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Ayame Hyūga": {
       "name": "Ayame Hyūga",
@@ -1619,7 +1646,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Seki Aburame": {
       "name": "Seki Aburame",
@@ -1644,7 +1672,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Reika Hyūga": {
       "name": "Reika Hyūga",
@@ -1668,7 +1697,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Tetsu Iwagane": {
       "name": "Tetsu Iwagane",
@@ -1688,7 +1718,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Riku Fūma": {
       "name": "Riku Fūma",
@@ -1713,7 +1744,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Renji Nara": {
       "name": "Renji Nara",
@@ -1738,7 +1770,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Hana Yamanaka": {
       "name": "Hana Yamanaka",
@@ -1763,7 +1796,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Daichi Akimichi": {
       "name": "Daichi Akimichi",
@@ -1787,7 +1821,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Arata Senju": {
       "name": "Arata Senju",
@@ -1815,7 +1850,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Natsuki Hyūga": {
       "name": "Natsuki Hyūga",
@@ -1842,7 +1878,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Jun Sarutobi": {
       "name": "Jun Sarutobi",
@@ -1867,7 +1904,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kagetsu Shiranui": {
       "name": "Kagetsu Shiranui",
@@ -1892,7 +1930,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Sayuri Hyūga": {
       "name": "Sayuri Hyūga",
@@ -1918,7 +1957,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Fuyumi Kisaragi": {
       "name": "Fuyumi Kisaragi",
@@ -1942,7 +1982,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shigure Namikado": {
       "name": "Shigure Namikado",
@@ -1970,7 +2011,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Tōma Aburame": {
       "name": "Tōma Aburame",
@@ -1997,7 +2039,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Masaru Fūma": {
       "name": "Masaru Fūma",
@@ -2021,7 +2064,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Akihiko Sarutobi": {
       "name": "Akihiko Sarutobi",
@@ -2046,7 +2090,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shōma Sarutobi": {
       "name": "Shōma Sarutobi",
@@ -2074,7 +2119,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Iruka Umino": {
       "name": "Iruka Umino",
@@ -2099,7 +2145,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Daizen Sarutobi": {
       "name": "Daizen Sarutobi",
@@ -2124,7 +2171,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Masato Uchiha": {
       "name": "Masato Uchiha",
@@ -2148,7 +2196,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Seijūrō Uchiha": {
       "name": "Seijūrō Uchiha",
@@ -2172,7 +2221,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Daigo Uchiha": {
       "name": "Daigo Uchiha",
@@ -2192,7 +2242,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Hiromasa Hyūga": {
       "name": "Hiromasa Hyūga",
@@ -2217,7 +2268,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shikō Nara": {
       "name": "Shikō Nara",
@@ -2241,7 +2293,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Genzaburō Akimichi": {
       "name": "Genzaburō Akimichi",
@@ -2263,7 +2316,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kohana Yamanaka": {
       "name": "Kohana Yamanaka",
@@ -2285,7 +2339,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shigen Aburame": {
       "name": "Shigen Aburame",
@@ -2307,7 +2362,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Hanae Inuzuka": {
       "name": "Hanae Inuzuka",
@@ -2329,7 +2385,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kenzō Sarutobi": {
       "name": "Kenzō Sarutobi",
@@ -2354,7 +2411,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Masamichi Senju": {
       "name": "Masamichi Senju",
@@ -2380,7 +2438,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shōzen Arakawa": {
       "name": "Shōzen Arakawa",
@@ -2404,7 +2463,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kiyomi Senju": {
       "name": "Kiyomi Senju",
@@ -2428,7 +2488,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kairen Tsukishiro": {
       "name": "Kairen Tsukishiro",
@@ -2453,7 +2514,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Takeru Uchiha": {
       "name": "Takeru Uchiha",
@@ -2477,7 +2539,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kiyomasa Uchiha": {
       "name": "Kiyomasa Uchiha",
@@ -2497,7 +2560,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Sōren": {
       "name": "Sōren",
@@ -2525,7 +2589,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Tatsuma": {
       "name": "Tatsuma",
@@ -2545,7 +2610,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Miyori": {
       "name": "Miyori",
@@ -2571,7 +2637,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Saigen": {
       "name": "Saigen",
@@ -2601,7 +2668,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Itsurō Kisaragi": {
       "name": "Itsurō Kisaragi",
@@ -2625,7 +2693,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Gazan Kurosame": {
       "name": "Gazan Kurosame",
@@ -2649,7 +2718,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kōmei Bakuhara": {
       "name": "Kōmei Bakuhara",
@@ -2675,7 +2745,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shunrei Kajiwara": {
       "name": "Shunrei Kajiwara",
@@ -2701,7 +2772,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Gensai Arakida": {
       "name": "Gensai Arakida",
@@ -2727,7 +2799,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Sanza Kurohito": {
       "name": "Sanza Kurohito",
@@ -2753,7 +2826,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Mukuha": {
       "name": "Mukuha",
@@ -2777,7 +2851,8 @@
       ],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kureto Nabatame": {
       "name": "Kureto Nabatame",
@@ -2804,7 +2879,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kurama — Nove-Caudas": {
       "name": "Kurama — Nove-Caudas",
@@ -2826,7 +2902,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Hotaru Aburame": {
       "name": "Hotaru Aburame",
@@ -2851,7 +2928,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kanna Mochizuki": {
       "name": "Kanna Mochizuki",
@@ -2871,7 +2949,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Itsuki": {
       "name": "Itsuki",
@@ -2891,7 +2970,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Makoto Kurama": {
       "name": "Makoto Kurama",
@@ -2911,7 +2991,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Shun Nara": {
       "name": "Shun Nara",
@@ -2938,7 +3019,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Emi Nara": {
       "name": "Emi Nara",
@@ -2958,7 +3040,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Kōta Akimichi": {
       "name": "Kōta Akimichi",
@@ -2982,7 +3065,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Chiyo Akimichi": {
       "name": "Chiyo Akimichi",
@@ -3002,7 +3086,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Aoi Yamanaka": {
       "name": "Aoi Yamanaka",
@@ -3027,7 +3112,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Sora Yamanaka": {
       "name": "Sora Yamanaka",
@@ -3047,7 +3133,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Haru Inuzuka": {
       "name": "Haru Inuzuka",
@@ -3072,7 +3159,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Tora": {
       "name": "Tora",
@@ -3092,7 +3180,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "ninken"
     },
     "Mina Aburame": {
       "name": "Mina Aburame",
@@ -3117,7 +3206,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Miharu Sarutobi": {
       "name": "Miharu Sarutobi",
@@ -3137,7 +3227,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Keisuke Sarutobi": {
       "name": "Keisuke Sarutobi",
@@ -3166,7 +3257,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Gakuji Aramori": {
       "name": "Gakuji Aramori",
@@ -3190,7 +3282,8 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
     },
     "Nagi Sazanami": {
       "name": "Nagi Sazanami",
@@ -3214,7 +3307,395 @@
       "later_reference_characters": [],
       "auto_import_biography": false,
       "auto_import_techniques": false,
-      "player_controlled": false
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Genjirō Takemura": {
+      "name": "Genjirō Takemura",
+      "mapping_status": "documented",
+      "source_anchor": "ranzinza, prático, orgulhoso do trabalho; afeto aparece por cobrança e ação. | Tazuna em função, sem cópia 1:1.",
+      "reference_characters": [
+        "Tazuna"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "ranzinza, prático, orgulhoso do trabalho; afeto aparece por cobrança e ação.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "classic_overview"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Genzō Kaneda": {
+      "name": "Genzō Kaneda",
+      "mapping_status": "documented",
+      "source_anchor": "cruel quando protegido por poder econômico, menos seguro diante de ameaça física real. | Gatō em função.",
+      "reference_characters": [
+        "Gato"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "cruel quando protegido por poder econômico, menos seguro diante de ameaça física real.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "classic_overview"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Yoru": {
+      "name": "Yoru",
+      "mapping_status": "documented",
+      "source_anchor": "Função estrutural de Akamaru, com personalidade animal própria. Reações devem vir por postura, faro, som, hesitação, rosnado, proximidade e ação — não por diálogo humano.",
+      "reference_characters": [
+        "Akamaru"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Função estrutural de Akamaru, com personalidade animal própria. Reações devem vir por postura, faro, som, hesitação, rosnado, proximidade e ação — não por diálogo humano.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "ep34"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "ninken"
+    },
+    "Kuro": {
+      "name": "Kuro",
+      "mapping_status": "documented",
+      "source_anchor": "Função de Akamaru em estágio mais jovem, sem copiar comportamento 1:1.",
+      "reference_characters": [
+        "Akamaru"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Função de Akamaru em estágio mais jovem, sem copiar comportamento 1:1.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "ep34"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "ninken"
+    },
+    "Arashi Senju — Primeiro Hokage (histórico)": {
+      "name": "Arashi Senju — Primeiro Hokage (histórico)",
+      "mapping_status": "documented",
+      "source_anchor": "Figura histórica; usar somente quando uma fonte/flashback legítimo estabelecer comportamento. | Hashirama no eixo histórico, sem cópia automática de cada técnica/feito.",
+      "reference_characters": [
+        "Hashirama"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Figura histórica; usar somente quando uma fonte/flashback legítimo estabelecer comportamento.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "hashirama"
+      ],
+      "later_reference_characters": [
+        "Hashirama"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "historical"
+    },
+    "Shūsei Uchiha — cofundador (histórico)": {
+      "name": "Shūsei Uchiha — cofundador (histórico)",
+      "mapping_status": "documented",
+      "source_anchor": "Só mediante flashback/fonte legítima. | Madara no eixo de cofundador/rival, sem importação automática de trajetória/poderes.",
+      "reference_characters": [
+        "Madara"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Só mediante flashback/fonte legítima.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "madara"
+      ],
+      "later_reference_characters": [
+        "Madara"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "historical"
+    },
+    "Chihaya Uzumaki — figura histórica": {
+      "name": "Chihaya Uzumaki — figura histórica",
+      "mapping_status": "documented",
+      "source_anchor": "Não estabelecida o bastante para fala live sem fonte. | eixo histórico Mito/Kushina como Uzumaki receptáculo, com identidade própria.",
+      "reference_characters": [
+        "Mito"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Não estabelecida o bastante para fala live sem fonte.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [
+        "Mito"
+      ],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "historical"
+    },
+    "Tetsuma Kanzaki": {
+      "name": "Tetsuma Kanzaki",
+      "mapping_status": "documented",
+      "source_anchor": "Ibiki Morino no eixo funcional, sem copiar aparência, falas ou trajetória. Voz: controlada, punitiva, econômica; não precisa soar como 'carrasco' em toda frase.",
+      "reference_characters": [
+        "Ibiki"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Ibiki Morino no eixo funcional, sem copiar aparência, falas ou trajetória. Voz: controlada, punitiva, econômica; não precisa soar como 'carrasco' em toda frase.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "ep24",
+        "ep25"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Renka": {
+      "name": "Renka",
+      "mapping_status": "documented",
+      "source_anchor": "Anko no eixo funcional/energético, mas não 'sádica homicida'. Deve ser provocadora, intensa, confortável com risco e teatral na medida certa.",
+      "reference_characters": [
+        "Anko"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Anko no eixo funcional/energético, mas não 'sádica homicida'. Deve ser provocadora, intensa, confortável com risco e teatral na medida certa.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "ep27",
+        "ep31"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Equipe de Amegakure — primeiro confronto": {
+      "name": "Equipe de Amegakure — primeiro confronto",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Equipe original do reboot; não copiar uma célula canônica específica.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Equipe original do reboot; não copiar uma célula canônica específica.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
+    },
+    "Equipe de Kusagakure — Ravina Seca": {
+      "name": "Equipe de Kusagakure — Ravina Seca",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Original; motivação imediata é sobrevivência/recursos, não 'vilania genérica'.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Original; motivação imediata é sobrevivência/recursos, não 'vilania genérica'.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
+    },
+    "Informante das cartas — identidade pendente": {
+      "name": "Informante das cartas — identidade pendente",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Função semelhante ao informante experiente do exame clássico, porém com identidade própria.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "Função semelhante ao informante experiente do exame clássico, porém com identidade própria.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "unresolved_identity"
+    },
+    "Yoshiro Sabaku": {
+      "name": "Yoshiro Sabaku",
+      "mapping_status": "documented",
+      "source_anchor": "presença silenciosa, ameaçadora e autocontida no eixo Gaara inicial; individualidade própria deve prevalecer. | Gaara inicial em função narrativa e presença, não cópia de trajetória.",
+      "reference_characters": [
+        "Gaara"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "presença silenciosa, ameaçadora e autocontida no eixo Gaara inicial; individualidade própria deve prevalecer.",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "gaara"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Equipe de Amegakure": {
+      "name": "Equipe de Amegakure",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Sem matriz oficial de voz fechada.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
+    },
+    "Equipe de Kusagakure": {
+      "name": "Equipe de Kusagakure",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Sem matriz oficial de voz fechada.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
+    },
+    "Trio de Sunagakure": {
+      "name": "Trio de Sunagakure",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Sem matriz oficial de voz fechada.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
+    },
+    "Companheiros de Yoshiro": {
+      "name": "Companheiros de Yoshiro",
+      "mapping_status": "unresolved_or_original",
+      "source_anchor": "Sem matriz oficial de voz fechada.",
+      "reference_characters": [],
+      "transfer_scope": "original",
+      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
+      "baseline": "",
+      "relations": "Consultar character_get para o estado e conhecimento.",
+      "dossier_differences": "Não importar resultados da obra.",
+      "source_files": [
+        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+      ],
+      "reference_source_ids": [],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "group"
     }
   }
 }
