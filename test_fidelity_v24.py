@@ -32,8 +32,8 @@ class FidelityTests(unittest.TestCase):
         self.assertTrue(p['scene_cards']);self.assertTrue(all(c['not_rp_event'] for c in p['scene_cards']))
     def test_phase_filter(self):
         p=evidence_packet('Renji','Hana','equipe em combate')
-        self.assertTrue(all(c['episode_ceiling']<=37 for c in p['scene_cards']))
-        self.assertIn('shikamaru_tactics',p['later_scene_ids_excluded'])
+        self.assertTrue(all(c['episode_ceiling']<=51 for c in p['scene_cards']))
+        self.assertNotIn('shikamaru_tactics',p['later_scene_ids_excluded'])
     def test_technical_reference_is_not_voice(self):
         self.assertTrue(evidence_packet('Kaito','Kaede','conversa')['voice_from_own_dossier'])
         self.assertEqual(catalog()['characters']['Kaito Shimura']['transfer_scope'],'technical_or_function_only')
@@ -72,7 +72,7 @@ class FidelityTests(unittest.TestCase):
     def test_empty_scene_never_passes(self):
         self.assertEqual(validate_turn_packet({})['status'],'needs_evidence')
     def test_health_is_coverage_not_quality(self):
-        r=health();self.assertTrue(r['ok']);self.assertFalse(r['full_manga_read']);self.assertFalse(r['br_dub_verified']);self.assertEqual(r['version'],'v24.1.0');self.assertTrue(r['supports_active_npcs'])
+        r=health();self.assertTrue(r['ok']);self.assertFalse(r['full_manga_read']);self.assertFalse(r['br_dub_verified']);self.assertEqual(r['version'],'v25.0.0');self.assertTrue(r['supports_active_npcs'])
     def test_active_npcs_allow_background_presence(self):
         p=example();p['scene']['present'] += ['Saya Haruno','Kazuma Uzumaki'];p['scene']['active_npcs']=['Iruka Umino']
         self.assertEqual(validate_turn_packet(p)['status'],'reviewable')
@@ -82,6 +82,10 @@ class FidelityTests(unittest.TestCase):
     def test_group_cannot_be_active_persona(self):
         p=example();p['scene']['present'].append('Equipe de Amegakure');p['scene']['active_npcs']=['Iruka Umino','Equipe de Amegakure']
         self.assertIn('non_persona_entity_cannot_be_active:Equipe de Amegakure',validate_turn_packet(p)['issues'])
+    def test_preliminary_phase_reference_ceiling(self):
+        r=health();self.assertEqual(r['reference_episode_ceiling'],51);self.assertEqual(r['acting_bible_version'],'v25.0.0')
+        p=evidence_packet('Shin','Amatsu','preliminares rivalidade provocação')
+        self.assertTrue(any(x['id']=='kiba_naruto_public_rivalry' for x in p['scene_cards']),p)
     def test_newly_researched_scene_is_accepted(self):
         p=example()
         p['external_reference_cards']=[{'id':'external:iruka-check','references':['Iruka'],'episode_ceiling':37,'source_url':'https://naruto-official.com/en/news/01_1788','locator':'capítulo 64','observed_summary':'Iruka orienta os candidatos na torre.','acting_inference':'Explicar com objetivo concreto.','checked_at':'2026-09-28','dialogue_evidence':'official_editorial_or_synopsis'}]
