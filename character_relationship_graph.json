@@ -1,10 +1,10 @@
 {
   "meta": {
-    "version": "v25.0.1",
+    "version": "v25.0.2",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
-    "directional_edges": 485,
+    "directional_edges": 357,
     "characters": 97
   },
   "edges": {
@@ -26,16 +26,13 @@
       },
       "Kazuma Uzumaki": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 7.",
-          "Both are explicitly identified with Uzumaki."
+          "Same current team: Time 7."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -137,8 +134,7 @@
           "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha.",
-          "Both are explicitly identified with Uzumaki."
+          "Both are explicitly identified with Uchiha."
         ],
         "roles": [
           "same_clan_context"
@@ -163,42 +159,12 @@
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Shūsei Uchiha — cofundador (histórico)": {
         "sources": [
           "shared_clan_context"
         ],
         "facts": [
           "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Chihaya Uzumaki — figura histórica": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
         ],
         "roles": [
           "same_clan_context"
@@ -266,17 +232,14 @@
       "Amatsu Uchiha": {
         "sources": [
           "canon_data.teams",
-          "shared_clan_context",
           "character_acting_bibles.explicit_override"
         ],
         "facts": [
           "Same current team: Time 7.",
-          "Both are explicitly identified with Uzumaki.",
           "Peer/rival axis. He can argue, provoke and sustain full exchanges when the subject matters; economy is about relevance, not word count."
         ],
         "roles": [
           "teammate",
-          "same_clan_context",
           "explicit_acting_override"
         ],
         "familiarity": "explicit",
@@ -314,21 +277,6 @@
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
       },
-      "Takeru Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Chihaya Uzumaki — figura histórica": {
         "sources": [
           "shared_clan_context"
@@ -348,16 +296,13 @@
     "Kaede Uchiha": {
       "Kaito Shimura": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -366,16 +311,13 @@
       },
       "Nao Kurusu": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -384,16 +326,13 @@
       },
       "Sayuri Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Sayuri Hyūga is sensei of Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Sayuri Hyūga is sensei of Time 4."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -402,19 +341,19 @@
       },
       "Amatsu Uchiha": {
         "sources": [
-          "shared_clan_context",
-          "character_acting_bibles.explicit_override"
+          "character_acting_bibles.explicit_override",
+          "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha.",
           "Academy-era dislike is established. Kaede regarded Amatsu's pranks/reputation as a public disgrace to the Uchiha name.",
           "Seijūrō's family guidance reinforced distance from Amatsu.",
           "She is colder, harsher and more critical toward Amatsu than a neutral classmate; this history remains active until changed by repeated live experience.",
-          "Cold, clipped and exact. Her hostility is usually expressed by distance, dismissiveness and precise cutting remarks rather than Shin's open explosiveness."
+          "Cold, clipped and exact. Her hostility is usually expressed by distance, dismissiveness and precise cutting remarks rather than Shin's open explosiveness.",
+          "Both are explicitly identified with Uchiha."
         ],
         "roles": [
-          "same_clan_context",
-          "explicit_acting_override"
+          "explicit_acting_override",
+          "same_clan_context"
         ],
         "familiarity": "explicit",
         "hierarchy": "as_documented",
@@ -511,21 +450,6 @@
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Shūsei Uchiha — cofundador (histórico)": {
         "sources": [
           "shared_clan_context"
@@ -540,81 +464,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Reika Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hiromasa Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Kaito Shimura": {
       "Kaede Uchiha": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -623,16 +484,13 @@
       },
       "Nao Kurusu": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -641,96 +499,30 @@
       },
       "Sayuri Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Sayuri Hyūga is sensei of Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Sayuri Hyūga is sensei of Time 4."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Reika Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hiromasa Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Nao Kurusu": {
       "Kaede Uchiha": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -739,16 +531,13 @@
       },
       "Kaito Shimura": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Same current team: Time 4."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -757,81 +546,18 @@
       },
       "Sayuri Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Sayuri Hyūga is sensei of Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Sayuri Hyūga is sensei of Time 4."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Reika Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hiromasa Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Aki Senju": {
@@ -1221,19 +947,19 @@
       },
       "Amatsu Uchiha": {
         "sources": [
-          "shared_clan_context",
-          "character_acting_bibles.explicit_override"
+          "character_acting_bibles.explicit_override",
+          "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha.",
           "Academy-era hostility is established: Shin openly repeated family prejudice against Amatsu and treated his behavior/reputation as a disgrace to the Uchiha name.",
           "Shin confronts Amatsu more openly than Kaede; their friction is not a fresh rivalry invented at the Chūnin Exam.",
           "This relationship must evolve slowly through lived events; a few competent feats do not erase prior contempt.",
-          "Openly hostile, competitive and physically confrontational. He does not answer Amatsu with Kaede-like cold restraint."
+          "Openly hostile, competitive and physically confrontational. He does not answer Amatsu with Kaede-like cold restraint.",
+          "Both are explicitly identified with Uchiha."
         ],
         "roles": [
-          "same_clan_context",
-          "explicit_acting_override"
+          "explicit_acting_override",
+          "same_clan_context"
         ],
         "familiarity": "explicit",
         "hierarchy": "as_documented",
@@ -1316,21 +1042,6 @@
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Kiyomasa Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kurama — Nove-Caudas": {
         "sources": [
           "shared_clan_context"
         ],
@@ -1536,16 +1247,13 @@
     "Mio Inuzuka": {
       "Ayame Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -1554,16 +1262,13 @@
       },
       "Seki Aburame": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -1572,16 +1277,13 @@
       },
       "Tōma Aburame": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Tōma Aburame is sensei of Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Tōma Aburame is sensei of Time 8."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -1665,66 +1367,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shigen Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hotaru Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Mina Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Ayame Hyūga": {
       "Mio Inuzuka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -1733,16 +1387,13 @@
       },
       "Seki Aburame": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -1751,79 +1402,31 @@
       },
       "Tōma Aburame": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Tōma Aburame is sensei of Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Tōma Aburame is sensei of Time 8."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
       },
-      "Kaede Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kaito Shimura": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Nao Kurusu": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Reika Hyūga": {
         "sources": [
-          "shared_clan_context",
-          "character_acting_bibles.explicit_override"
+          "character_acting_bibles.explicit_override",
+          "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Hyūga.",
-          "Sōke-conditioned hierarchy is real. Ayame expects deference more readily than she admits; condescension can surface in word choice and posture."
+          "Sōke-conditioned hierarchy is real. Ayame expects deference more readily than she admits; condescension can surface in word choice and posture.",
+          "Both are explicitly identified with Hyūga."
         ],
         "roles": [
-          "same_clan_context",
-          "explicit_acting_override"
+          "explicit_acting_override",
+          "same_clan_context"
         ],
         "familiarity": "explicit",
         "hierarchy": "as_documented",
@@ -1874,66 +1477,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shigen Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hotaru Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Mina Aburame": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Seki Aburame": {
       "Mio Inuzuka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -1942,16 +1497,13 @@
       },
       "Ayame Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Same current team: Time 8."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2025,16 +1577,13 @@
     "Reika Hyūga": {
       "Tetsu Iwagane": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2043,16 +1592,13 @@
       },
       "Riku Fūma": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2061,79 +1607,31 @@
       },
       "Masaru Fūma": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Masaru Fūma is sensei of Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Masaru Fūma is sensei of Time 9."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
       },
-      "Kaede Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kaito Shimura": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Nao Kurusu": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Ayame Hyūga": {
         "sources": [
-          "shared_clan_context",
-          "character_acting_bibles.explicit_override"
+          "character_acting_bibles.explicit_override",
+          "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Hyūga.",
-          "Bunke/Sōke tension is personal and embodied. Reika may comply, resist, go precise/cold or choose silence depending audience; she is not simply Neji's fatalism."
+          "Bunke/Sōke tension is personal and embodied. Reika may comply, resist, go precise/cold or choose silence depending audience; she is not simply Neji's fatalism.",
+          "Both are explicitly identified with Hyūga."
         ],
         "roles": [
-          "same_clan_context",
-          "explicit_acting_override"
+          "explicit_acting_override",
+          "same_clan_context"
         ],
         "familiarity": "explicit",
         "hierarchy": "as_documented",
@@ -2189,16 +1687,13 @@
     "Tetsu Iwagane": {
       "Reika Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2207,16 +1702,13 @@
       },
       "Riku Fūma": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2225,16 +1717,13 @@
       },
       "Masaru Fūma": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Masaru Fūma is sensei of Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Masaru Fūma is sensei of Time 9."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -2245,16 +1734,13 @@
     "Riku Fūma": {
       "Reika Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2263,16 +1749,13 @@
       },
       "Tetsu Iwagane": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Same current team: Time 9."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2301,16 +1784,13 @@
     "Renji Nara": {
       "Hana Yamanaka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2319,16 +1799,13 @@
       },
       "Daichi Akimichi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2337,16 +1814,13 @@
       },
       "Akihiko Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Akihiko Sarutobi is sensei of Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Akihiko Sarutobi is sensei of Time 10."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -2397,141 +1871,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Jun Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shōma Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daizen Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kenzō Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Miharu Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Keisuke Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Hana Yamanaka": {
       "Renji Nara": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2540,16 +1891,13 @@
       },
       "Daichi Akimichi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2558,16 +1906,13 @@
       },
       "Akihiko Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Akihiko Sarutobi is sensei of Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Akihiko Sarutobi is sensei of Time 10."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -2618,141 +1963,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Jun Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shōma Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daizen Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kenzō Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Miharu Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Keisuke Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Daichi Akimichi": {
       "Renji Nara": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2761,16 +1983,13 @@
       },
       "Hana Yamanaka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 10."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2779,16 +1998,13 @@
       },
       "Akihiko Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Akihiko Sarutobi is sensei of Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Akihiko Sarutobi is sensei of Time 10."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -2839,141 +2055,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Jun Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shōma Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daizen Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kenzō Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Miharu Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Keisuke Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Arata Senju": {
       "Natsuki Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -2982,16 +2075,13 @@
       },
       "Jun Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -3000,16 +2090,13 @@
       },
       "Shōma Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Shōma Sarutobi is sensei of Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Shōma Sarutobi is sensei of Time 11."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
@@ -3105,141 +2192,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Akihiko Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daizen Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kenzō Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Miharu Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Keisuke Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Natsuki Hyūga": {
       "Arata Senju": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -3248,16 +2212,13 @@
       },
       "Jun Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -3266,66 +2227,18 @@
       },
       "Shōma Sarutobi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Shōma Sarutobi is sensei of Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Shōma Sarutobi is sensei of Time 11."
         ],
         "roles": [
-          "student_to_sensei",
-          "same_clan_context"
+          "student_to_sensei"
         ],
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
-      },
-      "Kaede Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kaito Shimura": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Nao Kurusu": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Ayame Hyūga": {
         "sources": [
@@ -3386,141 +2299,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Akihiko Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daizen Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kenzō Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Miharu Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Keisuke Sarutobi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Jun Sarutobi": {
       "Arata Senju": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -3529,16 +2319,13 @@
       },
       "Natsuki Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Same current team: Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Same current team: Time 11."
         ],
         "roles": [
-          "teammate",
-          "same_clan_context"
+          "teammate"
         ],
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
@@ -3562,51 +2349,6 @@
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
         "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
-      },
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Akihiko Sarutobi": {
         "sources": [
@@ -3734,16 +2476,13 @@
     "Sayuri Hyūga": {
       "Kaede Uchiha": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Kaede Uchiha is a student in Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Kaede Uchiha is a student in Time 4."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -3752,16 +2491,13 @@
       },
       "Kaito Shimura": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Kaito Shimura is a student in Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Kaito Shimura is a student in Time 4."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -3770,16 +2506,13 @@
       },
       "Nao Kurusu": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Nao Kurusu is a student in Time 4.",
-          "Both are explicitly identified with Hyūga."
+          "Nao Kurusu is a student in Time 4."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -3944,16 +2677,13 @@
     "Tōma Aburame": {
       "Mio Inuzuka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Mio Inuzuka is a student in Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Mio Inuzuka is a student in Time 8."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -3962,16 +2692,13 @@
       },
       "Ayame Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Ayame Hyūga is a student in Time 8.",
-          "Both are explicitly identified with Aburame."
+          "Ayame Hyūga is a student in Time 8."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4045,16 +2772,13 @@
     "Masaru Fūma": {
       "Reika Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Reika Hyūga is a student in Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Reika Hyūga is a student in Time 9."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4063,16 +2787,13 @@
       },
       "Tetsu Iwagane": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Tetsu Iwagane is a student in Time 9.",
-          "Both are explicitly identified with Fūma."
+          "Tetsu Iwagane is a student in Time 9."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4101,16 +2822,13 @@
     "Akihiko Sarutobi": {
       "Renji Nara": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Renji Nara is a student in Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Renji Nara is a student in Time 10."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4119,16 +2837,13 @@
       },
       "Hana Yamanaka": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Hana Yamanaka is a student in Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Hana Yamanaka is a student in Time 10."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4137,51 +2852,18 @@
       },
       "Daichi Akimichi": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Daichi Akimichi is a student in Time 10.",
-          "Both are explicitly identified with Sarutobi."
+          "Daichi Akimichi is a student in Time 10."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
         "default_filter": "role_dependent",
         "rule": "Instructor authority is established; affection/trust is not automatic."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Jun Sarutobi": {
         "sources": [
@@ -4277,16 +2959,13 @@
     "Shōma Sarutobi": {
       "Arata Senju": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Arata Senju is a student in Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Arata Senju is a student in Time 11."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4295,16 +2974,13 @@
       },
       "Natsuki Hyūga": {
         "sources": [
-          "canon_data.teams",
-          "shared_clan_context"
+          "canon_data.teams"
         ],
         "facts": [
-          "Natsuki Hyūga is a student in Time 11.",
-          "Both are explicitly identified with Sarutobi."
+          "Natsuki Hyūga is a student in Time 11."
         ],
         "roles": [
-          "sensei_to_student",
-          "same_clan_context"
+          "sensei_to_student"
         ],
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
@@ -4328,51 +3004,6 @@
         "hierarchy": "instructor_to_student",
         "default_filter": "role_dependent",
         "rule": "Instructor authority is established; affection/trust is not automatic."
-      },
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Akihiko Sarutobi": {
         "sources": [
@@ -4452,81 +3083,6 @@
     },
     "Iruka Umino": {},
     "Daizen Sarutobi": {
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Jun Sarutobi": {
         "sources": [
           "shared_clan_context"
@@ -4724,21 +3280,6 @@
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Shūsei Uchiha — cofundador (histórico)": {
         "sources": [
           "shared_clan_context"
@@ -4847,21 +3388,6 @@
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Kiyomasa Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kurama — Nove-Caudas": {
         "sources": [
           "shared_clan_context"
         ],
@@ -4998,21 +3524,6 @@
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Shūsei Uchiha — cofundador (histórico)": {
         "sources": [
           "shared_clan_context"
@@ -5030,51 +3541,6 @@
       }
     },
     "Hiromasa Hyūga": {
-      "Kaede Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kaito Shimura": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Nao Kurusu": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Hyūga."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Ayame Hyūga": {
         "sources": [
           "shared_clan_context"
@@ -5278,36 +3744,6 @@
       }
     },
     "Shigen Aburame": {
-      "Mio Inuzuka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Seki Aburame": {
         "sources": [
           "shared_clan_context"
@@ -5447,81 +3883,6 @@
       }
     },
     "Kenzō Sarutobi": {
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Jun Sarutobi": {
         "sources": [
           "shared_clan_context"
@@ -5805,8 +4166,7 @@
           "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha.",
-          "Both are explicitly identified with Uzumaki."
+          "Both are explicitly identified with Uchiha."
         ],
         "roles": [
           "same_clan_context"
@@ -5906,57 +4266,12 @@
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Shūsei Uchiha — cofundador (histórico)": {
         "sources": [
           "shared_clan_context"
         ],
         "facts": [
           "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kazuma Uzumaki": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Chihaya Uzumaki — figura histórica": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
         ],
         "roles": [
           "same_clan_context"
@@ -6059,21 +4374,6 @@
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       },
       "Takeru Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kurama — Nove-Caudas": {
         "sources": [
           "shared_clan_context"
         ],
@@ -6225,174 +4525,8 @@
     "Sanza Kurohito": {},
     "Mukuha": {},
     "Kureto Nabatame": {},
-    "Kurama — Nove-Caudas": {
-      "Amatsu Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kaede Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shin Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Masato Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Seijūrō Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daigo Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Takeru Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kiyomasa Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Shūsei Uchiha — cofundador (histórico)": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      }
-    },
+    "Kurama — Nove-Caudas": {},
     "Hotaru Aburame": {
-      "Mio Inuzuka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Seki Aburame": {
         "sources": [
           "shared_clan_context"
@@ -6818,36 +4952,6 @@
     },
     "Tora": {},
     "Mina Aburame": {
-      "Mio Inuzuka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Ayame Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Aburame."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Seki Aburame": {
         "sources": [
           "shared_clan_context"
@@ -6910,81 +5014,6 @@
       }
     },
     "Miharu Sarutobi": {
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Jun Sarutobi": {
         "sources": [
           "shared_clan_context"
@@ -7077,81 +5106,6 @@
       }
     },
     "Keisuke Sarutobi": {
-      "Renji Nara": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Hana Yamanaka": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Daichi Akimichi": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Arata Senju": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Natsuki Hyūga": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Sarutobi."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Jun Sarutobi": {
         "sources": [
           "shared_clan_context"
@@ -7616,55 +5570,10 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Kurama — Nove-Caudas": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uchiha."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
       }
     },
     "Chihaya Uzumaki — figura histórica": {
-      "Amatsu Uchiha": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
       "Kazuma Uzumaki": {
-        "sources": [
-          "shared_clan_context"
-        ],
-        "facts": [
-          "Both are explicitly identified with Uzumaki."
-        ],
-        "roles": [
-          "same_clan_context"
-        ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
-      },
-      "Takeru Uchiha": {
         "sources": [
           "shared_clan_context"
         ],
