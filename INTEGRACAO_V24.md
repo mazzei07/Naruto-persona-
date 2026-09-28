@@ -1,4 +1,4 @@
-# Integração v24 — evidência antes da atuação
+# Integração v24.1 — evidência antes da atuação
 
 A fase ativa continua `classico_floresta_da_morte`. Esta atualização trata da interpretação; não avança a história, não altera fichas de combate e não canoniza exemplos.
 
@@ -22,7 +22,8 @@ Exemplo de formato, **não é evento ou estado atual do RP**. Substituir todos o
   "user_action": "Como funciona o exame?",
   "scene": {
     "location": "torre",
-    "present": ["Amatsu Uchiha", "Iruka Umino"],
+    "present": ["Amatsu Uchiha", "Iruka Umino", "Saya Haruno", "Kazuma Uzumaki"],
+    "active_npcs": ["Iruka Umino"],
     "positions": {},
     "physical_state": {},
     "knowledge": {"Iruka Umino": ["regras da prova"]}
@@ -38,7 +39,7 @@ Exemplo de formato, **não é evento ou estado atual do RP**. Substituir todos o
 }
 ```
 
-`user_action` precisa coincidir exatamente com `action` no Gemini. Todo NPC presente precisa de ficha no pacote; isso não o obriga a falar. Não escrever ficha de atuação para Amatsu. `known_facts` é um subconjunto do conhecimento documentado no estado. Campos vazios de posição/corpo só servem se o estado vigente também estiver vazio: nunca apagar dados para passar no gate.
+`user_action` precisa coincidir exatamente com `action` no Gemini. Em v24.1, `present` guarda quem está fisicamente na cena e `active_npcs` guarda apenas quem terá decisão/fala/ação/reação material gerada neste beat. Só `active_npcs` exige actor card. Se `active_npcs` for omitido, permanece o comportamento legado de exigir card de todo indivíduo presente. Não escrever ficha de atuação para Amatsu. `known_facts` é um subconjunto do conhecimento documentado no estado. Campos vazios de posição/corpo só servem se o estado vigente também estiver vazio: nunca apagar dados para passar no gate.
 
 No Canoney, `proposed.turn_packet` recebe o mesmo pacote; `proposed.dialogue` usa objetos `{actor, interlocutor, text}`. O estado separado mantém os demais campos mecânicos exigidos, como `scrolls`.
 
@@ -68,6 +69,8 @@ O código valida formato, fonte declarada, ator e fase. **Não acessa a URL nem 
 | `revision_required` | Há problemas de voz/atuação; corrigir antes de mostrar. |
 | `review_failed` | Revisor retornou saída inválida; rascunho retido. |
 | `blocked` | Contradição de agência, estado ou outra regra objetiva. |
+| `rate_limited` | Gemini foi limitado pelo provedor; pacote continua válido e o ChatGPT pode prosseguir com Canoney + Persona sem inventar evidência. |
+| `provider_error` | Falha operacional do provedor; não é aprovação nem reprovação semântica. |
 
 ## Cobertura e limites
 
@@ -78,3 +81,22 @@ O catálogo é uma seleção auditável, não a obra completa. `REFERENCIAS_V24.
 Python: `python3 -m unittest -v test_fidelity_v24.py`.
 Gemini: `npm test` (modelos simulados, sem cobrança de API).
 Os casos cobrem relação Saya→Kazuma, negação de perigo, limites de palavras, fase, agência, fontes incompatíveis, conhecimento, reparo e retenção de saída reprovada. Os testes não medem qualidade estética universal.
+
+
+## Entidades e atores
+
+O catálogo v24.1 distingue `individual`, `ninken`, `historical`, `group` e `unresolved_identity`.
+- `ninken`: pode agir/reagir, mas não recebe fala humana.
+- `historical`: não atua no presente sem flashback/fonte legítima.
+- `group`: é agregado e nunca vira uma única personalidade falante.
+- `unresolved_identity`: não recebe voz inventada.
+
+No Persona, os atores individuais/ninken/históricos com ficha própria são separados de agregados de equipe. No Gemini e Canoney, o catálogo completo continua útil para validação de presença e escopo.
+
+## Ferramentas sem gasto de modelo
+
+- Persona: `persona_evidence`, `persona_validate_turn_packet`, `persona_fidelity_health`.
+- Canoney: `character_evidence`, `turn_packet_validate`, `fidelity_healthcheck`.
+- Gemini: `gemini_preflight`, `gemini_packet_example`, `gemini_healthcheck`.
+
+Use preflight/health antes de gastar uma chamada Gemini quando houver dúvida de pacote ou deploy.
