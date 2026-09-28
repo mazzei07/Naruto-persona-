@@ -19626,10 +19626,18 @@
       "relationship_overrides": {
         "Amatsu Uchiha": {
           "baseline": "Atenção/fixação pós-Floresta; silêncio, areia e foco carregam mais que fala.",
-          "must_not": "Sem camaradagem, filosofia adulta ou ameaça verborrágica.",
+          "must_not": "No camaraderie, no clean-slate final, no adult Gaara composure after blood/defense breach.",
           "reference_relation_axis_v28": "Gaara → rival que conseguiu atravessar/pressionar sua defesa, adaptado ao histórico live",
-          "transfer_v28": "atenção concentrada e curiosidade hostil aparecem mais por olhar/areia/decisão que por fala; não esquece o confronto",
-          "must_not_v28": "não virar rival falante estilo Naruto/Sasuke"
+          "transfer_v28": "Gaara-Chunin opponent fixation: less speech, more stare/sand response; if Amatsu again breaches defense or causes blood/pain, escalation can become violently unstable.",
+          "must_not_v28": "não virar rival falante estilo Naruto/Sasuke",
+          "history": "Floresta da Morte: confronto intenso entre Katon de Amatsu e a areia de Yoshiro; a areia foi parcialmente sinterizada/vitrificada e continuou funcional. Isso cria memória concreta de ameaça e fixação competitiva antes da final.",
+          "current_temperature": "high_attention_fixation",
+          "trigger_rules": [
+            "Amatsu reproduzir ou superar pressão do confronto da Floresta -> atenção sobe imediatamente.",
+            "Katon de alta escala contra areia -> memória corporal/tática da sinterização anterior informa resposta.",
+            "defesa de areia atravessada por Amatsu -> gatilho forte de humilhação/instabilidade Gaara-Chunin.",
+            "sangue/dor causados por Amatsu -> salto para ruptura emocional mais explícita."
+          ]
         },
         "Sayo Sabaku": {
           "baseline": "Irmã mais velha; vínculo familiar reconhecido sem afeto verbal fácil.",
