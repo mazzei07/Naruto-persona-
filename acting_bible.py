@@ -106,7 +106,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
     return {
         "status":"ok","version":base["version"],"actor":base["name"],"interlocutor":rel.get("interlocutor"),
         "identity":b.get("identity",{}),"canon_memory":b.get("canon_memory",{}),"voice":b.get("voice",{}),
-        "acting":b.get("acting",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
+        "acting":b.get("acting",{}),"reference_relationship_matrix":b.get("reference_relationship_matrix",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
         "escalation":esc,"stimulus":stimulus,"situation":situation,"prior_exchange":prior_exchange,
         "pressure":pressure,"audience":audience,"body_state":body_state,
         "generation_directive":[
