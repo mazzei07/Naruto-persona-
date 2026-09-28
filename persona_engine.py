@@ -604,8 +604,12 @@ def _sayability_gate_v22(
     entity_type = mapping.get("entity_type", "individual")
     if entity_type == "ninken":
         return {"verdict": "must_not_speak", "reason": "ninken_nonverbal_human_dialogue_blocked", "reasons": ["use_body_sound_scent_action"]}
-    if entity_type == "historical" and not any(x in _norm(situation) for x in ["flashback", "memoria", "lembranca", "registro historico", "historia narrada"]):
-        return {"verdict": "must_not_speak", "reason": "historical_actor_requires_legitimate_flashback_source", "reasons": []}
+    if entity_type == "historical":
+        situation_n = _norm(situation)
+        flashback_cue = any(x in situation_n for x in ["flashback", "memoria", "lembranca", "registro historico", "historia narrada"])
+        negated_flashback = bool(re.search(r"\b(?:sem|nao ha|nao existe)\s+(?:um\s+|uma\s+)?(?:flashback|memoria|lembranca|registro historico|historia narrada)\b", situation_n))
+        if not flashback_cue or negated_flashback:
+            return {"verdict": "must_not_speak", "reason": "historical_actor_requires_legitimate_flashback_source", "reasons": []}
     text = _norm(" ".join(relation_lines + baseline))
     event = _norm(f"{stimulus} {situation}")
     objective_n = _norm(objective)
