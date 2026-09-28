@@ -39,7 +39,7 @@ mcp = MCPServer(
     instructions=(
         "Especialista read-only v25: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada e auditoria anti-genérica antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
-        "vocativo, morfossintaxe, silêncio e reação. Aplica o contrato v24 antes das heurísticas de registro, formalidade e relação; não força microgestos nem bordões. Família de voz só vale para inspiração de personalidade documentada. Canoney/estado live continuam sendo "
+        "vocativo, morfossintaxe, silêncio e reação. Aplica o contrato v25 antes das heurísticas de registro, formalidade e relação; não força microgestos nem bordões. Família de voz só vale para inspiração de personalidade documentada. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
     ),
 )
@@ -155,7 +155,7 @@ def persona_sayability(
     prior_exchange: str = "",
     relationship_state: str = "",
 ) -> dict[str, Any]:
-    """Resolve fala/silêncio com evidência v24.1, endereçamento e formalidade contextual."""
+    """Resolve fala/silêncio com Bíblia v25, histórico relacional, endereçamento e formalidade contextual."""
     return _sayability(
         name=name,
         interlocutor=interlocutor,
@@ -203,19 +203,19 @@ def persona_evidence(
     situation: str = "",
     stimulus: str = "",
 ) -> dict[str, Any]:
-    """Retrieve v24.1 reference evidence for one actor/beat without generating prose."""
+    """Retrieve v25 phase/reference evidence for one actor/beat without generating prose."""
     return _evidence(name, interlocutor, situation, stimulus)
 
 
 @mcp.tool()
 def persona_validate_turn_packet(packet: dict[str, Any]) -> dict[str, Any]:
-    """Validate the shared v24.1 evidence envelope before Gemini drafting."""
+    """Validate the shared v25 evidence/acting envelope before Gemini drafting."""
     return _validate_turn_packet(packet)
 
 
 @mcp.tool()
 def persona_fidelity_health() -> dict[str, Any]:
-    """Check only the v24.1 evidence catalog and actor-scope contract."""
+    """Check the v25 evidence catalog and actor-scope contract."""
     return _fidelity_health()
 
 
