@@ -342,21 +342,59 @@ def _formality_profile_v23(
     }
     score = base_by_family.get(family, 2.0)
     cues: List[str] = [f"reference_family:{family}"]
-    text = _norm(" ".join(baseline + relation_lines))
 
-    if any(x in text for x in ["correto-formal", "formalidade alta", "cerimonial", "muito formal"]):
+    def _is_directional_voice_line(line: str) -> bool:
+        n = _norm(line).strip(" *-:")
+        return n.startswith("com ") or n.startswith("eixo ") or "→" in line
+
+    baseline_style = [line for line in baseline if not _is_directional_voice_line(line)]
+    baseline_text = _norm(" ".join(baseline_style))
+    relation_text = _norm(" ".join(relation_lines))
+    text = _norm(" ".join(baseline_style + relation_lines))
+
+    if any(x in baseline_text for x in ["correto-formal", "formalidade alta", "cerimonial", "muito formal"]):
         score += 1.2; cues.append("explicit_formal_baseline")
-    elif any(x in text for x in ["mais formal", "fala formal", "registro formal", "polido", "respeitoso", "corretividade alta", "mais correta com", "mais organizado com"]):
+    elif any(x in baseline_text for x in ["fala formal", "registro formal", "polido", "corretividade alta"]):
         score += 0.6; cues.append("formal_or_polite_baseline")
-    if any(x in text for x in ["coloquial", "oralidade", "rude", "baixo filtro", "provoc", "explos"]):
-        score -= 0.35; cues.append("oral_or_low_filter_baseline")
-    if any(x in text for x in ["economico", "pouca fala", "silencio"]):
+    if any(x in baseline_text for x in ["coloquial", "oralidade", "rude", "provoc", "explos"]):
+        score -= 0.35; cues.append("oral_baseline")
+    if any(x in baseline_text for x in ["economico", "pouca fala", "silencio"]):
         cues.append("economical_voice_not_equivalent_to_informal")
 
+    if any(x in relation_text for x in ["mais formal", "mais polid", "mais correta", "mais organizado", "respeitoso", "o senhor", "a senhora"]):
+        score += 0.45; cues.append("directional_respect_shift")
+    if any(x in relation_text for x in ["mais casual", "intimidade", "familiar", "proximidade", "reduz formalidade", "velho", "velhote"]):
+        score -= 0.55; cues.append("directional_intimacy_shift")
+
+    actor_identity = _norm(_extract_field(profile, "Identificação", "Identificacao")) if profile else ""
     target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
+
+    def _rank_level(identity: str) -> int:
+        if "hokage" in identity or re.search(r"\bkage\b", identity):
+            return 6
+        if "jonin" in identity or "jounin" in identity:
+            return 4
+        if "chunin" in identity:
+            return 3
+        if "genin" in identity:
+            return 2
+        if "academ" in identity and ("aluno" in identity or "estudante" in identity):
+            return 1
+        return 0
+
+    actor_rank = _rank_level(actor_identity)
+    target_rank = _rank_level(target_identity)
+    target_self_role = any(x in target_identity for x in [
+        "professor da academia", "instrutor", "hokage", "chefe do cla", "chefe de cla", "comandante"
+    ])
+    relation_marks_superior = any(x in relation_text for x in [
+        "superior", "autoridade", "o senhor", "a senhora", "sensei", "hokage-sama"
+    ])
     authority_target = (
-        any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka", "hokage"])
-        or any(x in target_identity for x in ["hokage", "sensei", "jonin", "jounin", "professor", "instrutor", "chefe"])
+        target_rank > actor_rank
+        or target_self_role
+        or relation_marks_superior
+        or any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka"])
     )
     if authority_target:
         hierarchy_sensitivity = 1.0
@@ -372,9 +410,6 @@ def _formality_profile_v23(
             hierarchy_sensitivity -= 0.2
         score += hierarchy_sensitivity
         cues.append(f"authority_target_shift:{round(hierarchy_sensitivity,2)}")
-
-    if any(x in text for x in ["intimidade", "familiar", "proximidade", "reduz formalidade", "velho", "velhote"]):
-        score -= 0.65; cues.append("directional_intimacy_reduces_distance")
 
     if filter_level == "high":
         score += 0.45; cues.append("high_social_filter")
@@ -754,7 +789,7 @@ def healthcheck() -> Dict[str, Any]:
         "external_research_policy": "only_when_reference_cache_is_insufficient_or_scene_is_exceptional",
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
-        "formality_calibration": "v23.1-target-specific",
+        "formality_calibration": "v23.2-rank-and-relation",
     }
 
 
