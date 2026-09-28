@@ -98,4 +98,7 @@ def persona_sayability(
         "addressing_plan_v22": packet.get("addressing_plan_v22"),
         "actor_beat_v22": packet.get("actor_beat_v22"),
         "microexpression_plan_v22": packet.get("microexpression_plan_v22"),
+        "reference_voice_family_v23": packet.get("reference_voice_family_v23"),
+        "formality_profile_v23": packet.get("formality_profile_v23"),
+        "universal_language_v23": packet.get("universal_language_v23"),
     }
