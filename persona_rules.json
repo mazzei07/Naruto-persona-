@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.4.0-v22",
+  "version": "0.5.0-v23",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -240,7 +240,11 @@
     "Se o personagem não precisaria falar, usar silêncio/corpo.",
     "A fala deve pertencer simultaneamente ao universo Naruto e ao registro individual.",
     "Relação, idade, fase, hierarquia e audiência devem alterar a superfície.",
-    "O leitor não deve perceber as regras; deve perceber o personagem."
+    "O leitor não deve perceber as regras; deve perceber o personagem.",
+    "Antes de aprovar a linha, resolver explicitamente o nível de formalidade e o motivo.",
+    "A mesma proposição deve mudar de superfície se o interlocutor mudar.",
+    "Nenhum personagem pode escapar do registro universal de Naruto; nenhum personagem pode ser achatado por ele.",
+    "Vocabulário e complexidade precisam caber na idade, experiência e assunto dominado pelo personagem."
   ],
   "sayability_gate_v22": {
     "mandatory": true,
@@ -347,5 +351,174 @@
     "bound": "bloquear conhecimento/fase/comportamento que não cabe",
     "enact": "converter em corpo/voz/ação situados",
     "critic": "comparar com referência, relação e histórico e corrigir drift"
+  },
+  "naruto_universal_language_v23": {
+    "mandatory": true,
+    "principle": "Toda fala nasce primeiro dentro de um idioma ficcional comum de Naruto Clássico em PT-BR; depois é deformada pelo personagem, relação, hierarquia, fase, emoção e pressão. O universal não apaga o idioleto.",
+    "invariant_register": {
+      "world": "Naruto Clássico / shinobi shōnen",
+      "portuguese": "PT-BR natural e performável",
+      "allowed": [
+        "oralidade cotidiana compatível com idade e relação",
+        "contrações como tá/tô/pra quando o falante e o contexto permitem",
+        "imperativos diretos, interrupções, hesitações, elipses e repetições quando motivadas",
+        "honoríficos/títulos preservados quando carregam relação social",
+        "léxico institucional shinobi: sensei, Hokage, missão, exame, jutsu, clã, patente",
+        "mudança real de registro entre pares, superiores, família, rival, romance e combate"
+      ],
+      "forbidden": [
+        "internetês, memes e gíria contemporânea externa ao universo",
+        "terapia-speak, linguagem de sistema, HUD ou análise de roteiro",
+        "burocratês moderno, corporativês e tecnicismo sem motivo do personagem",
+        "fantasia medieval genérica",
+        "todo NPC falando em frases curtas inteligentes",
+        "formalidade automática só porque a gramática está correta",
+        "casualidade automática só porque os personagens têm a mesma idade"
+      ]
+    },
+    "generation_layers": [
+      "UNIVERSO_NARUTO",
+      "FAMILIA_DE_VOZ_DA_REFERENCIA",
+      "PERSONAGEM_DO_REBOOT",
+      "RELACAO_DIRECIONAL",
+      "HIERARQUIA_E_AUDIENCIA",
+      "FASE_E_IDADE",
+      "ESTADO_EMOCIONAL_E_CORPORAL",
+      "PRESSAO",
+      "BEAT_DE_ATUACAO",
+      "FALA_GESTO_OU_SILENCIO"
+    ],
+    "kishimoto_method": [
+      "escrever mentalmente a linha sem estilo",
+      "entortar a linha para o personagem",
+      "remover palavras que o personagem não dominaria ou não escolheria",
+      "ajustar nome/título/honorífico",
+      "ajustar comprimento, elipse, interrupção e ritmo",
+      "testar se a fala ainda pertence ao mesmo universo de Naruto"
+    ],
+    "lexical_rule": "Complexidade lexical depende de idade, experiência, educação e domínio do assunto. Criança/prodígio pode ser tecnicamente precisa em área aprendida sem ganhar vocabulário adulto universal."
+  },
+  "formality_gate_v23": {
+    "mandatory": true,
+    "rule": "Formalidade é resolvida antes da redação da fala; nunca é inferida apenas de 'ser superior' ou 'ser amigo'.",
+    "axes": [
+      "base_formality",
+      "grammar_correctness",
+      "contraction_rate",
+      "honorific_density",
+      "title_preference",
+      "sentence_completeness",
+      "lexical_complexity",
+      "directness",
+      "interruption_tolerance",
+      "hierarchy_sensitivity",
+      "public_private_shift",
+      "pressure_shift"
+    ],
+    "scale": {
+      "0": "rough_plain — muito direto/rude, pouca autocorreção",
+      "1": "casual_plain — cotidiano entre próximos/pares",
+      "2": "colloquial_correct — natural, correto sem soar formal",
+      "3": "polite — deferência perceptível, maior completude e títulos",
+      "4": "formal_institutional — missão/autoridade/cerimônia; sem grandiloquência automática"
+    },
+    "resolution_order": [
+      "registro basal do personagem",
+      "referência e fase exata",
+      "relação direcional",
+      "diferença de status/hierarquia",
+      "público versus privado",
+      "objetivo social atual",
+      "emoção",
+      "perigo/pressão"
+    ],
+    "hard_rules": [
+      "correto != formal",
+      "curto != informal",
+      "respeitoso != honorífico obrigatório",
+      "superioridade hierárquica não força polidez em personagem cuja referência estabeleça rudeza",
+      "personagem socialmente adaptativo pode mudar fortemente de registro conforme interlocutor",
+      "pressão tende a comprimir sintaxe, mas não apaga hábitos de tratamento sem causa",
+      "em PT-BR, títulos como Iruka-sensei/Kakashi-sensei/Hokage-sama são tratados como marcadores relacionais, não decoração"
+    ]
+  },
+  "reference_voice_families_v23": {
+    "rule": "A referência canônica fornece uma família de realização; o personagem do reboot herda mecanismos de fala, não biografia.",
+    "families": {
+      "rough_youthful": {
+        "examples": [
+          "Naruto jovem",
+          "Kiba jovem"
+        ],
+        "surface": "baixo filtro, vocabulário concreto, reação rápida, oralidade alta, pouca deferência automática"
+      },
+      "clipped_plain": {
+        "examples": [
+          "Sasuke inicial",
+          "Neji inicial"
+        ],
+        "surface": "fala econômica, correta/plana, nomes raros, baixa redundância, respeito mais comportamental que honorífico"
+      },
+      "socially_adaptive_youthful": {
+        "examples": [
+          "Sakura inicial",
+          "Ino jovem"
+        ],
+        "surface": "registro muda bastante por interlocutor; expressiva com pares, mais polida/autoconsciente com crush/superior"
+      },
+      "relaxed_adult": {
+        "examples": [
+          "Kakashi Clássico"
+        ],
+        "surface": "coloquial-correto, relaxado, frases completas; sob seriedade fica mais quente/direto sem virar outra pessoa"
+      },
+      "expressive_teacher": {
+        "examples": [
+          "Iruka Clássico"
+        ],
+        "surface": "coloquial-correto, bronca rápida, imperativos claros, nome funcional, afeto aparece por ação e depois da bronca"
+      },
+      "warm_authority": {
+        "examples": [
+          "Hiruzen Part I"
+        ],
+        "surface": "correto-formal flexível, frases completas, autoridade calma; intimidade reduz distância sem apagar cargo"
+      },
+      "low_energy_plain": {
+        "examples": [
+          "Shikamaru jovem"
+        ],
+        "surface": "pouca energia, casual, economia verbal; quando engajado analiticamente pode falar mais e melhor"
+      },
+      "sparse_unsettling": {
+        "examples": [
+          "Gaara Part I"
+        ],
+        "surface": "baixa frequência, pouca explicação, silêncio e corpo pesam mais; instabilidade não vira monólogo"
+      },
+      "direct_confident": {
+        "examples": [
+          "Temari Part I"
+        ],
+        "surface": "rápida, confiante, cortante, leitura prática; formalidade depende do alvo"
+      },
+      "reactive_irritable": {
+        "examples": [
+          "Kankurō Part I"
+        ],
+        "surface": "mais verbal e reativo, irritação fácil; medo/hierarquia podem interromper ou autocensurar"
+      }
+    }
+  },
+  "translation_to_ptbr_v23": {
+    "rule": "Traduzir função pragmática, não decalcar gramática japonesa.",
+    "mappings": [
+      "plain Japanese -> PT-BR direto/casual conforme personagem, não necessariamente erro gramatical",
+      "teinei/keigo -> maior corretividade, títulos, distância e completude; evitar português cerimonioso artificial",
+      "rough masculine markers -> imperativo, escolha lexical, contração e ritmo; não encher de palavrão",
+      "sentence-final particles -> prosódia, ordem, repetição, vocativo ou omissão conforme contexto",
+      "honorific -> manter quando identidade relacional importa; omitir quando o próprio personagem canônico não o usaria",
+      "catchphrase -> preservar função e frequência, nunca espalhar como bordão obrigatório"
+    ]
   }
 }
