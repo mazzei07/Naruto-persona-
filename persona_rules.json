@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.9.0-v34",
+  "version": "0.9.1-v36",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -48,7 +48,11 @@
     "Quando evidência de referência for insuficiente, marcar research_required em vez de inventar.",
     "Reference Essence v34 é obrigatório: recuperar personagem oficial + fase exata + núcleo dominante + gatilho de quebra + corpo/voz + anti-regressão antes da fala/ação.",
     "Referência mista NÃO soma personalidades; source_anchor/transfer_scope decide o eixo primário e os secundários.",
-    "Quando um gatilho canônico de quebra ocorre, não preservar calma artificial só porque a baseline do personagem é silenciosa."
+    "Quando um gatilho canônico de quebra ocorre, não preservar calma artificial só porque a baseline do personagem é silenciosa.",
+    "Somente a Continuidade Clássica é cronologia ativa.",
+    "Mesmo personagem em outra continuidade não transfere biografia, idade, patente, relações, romance, poderes, conhecimento ou eventos.",
+    "Pais de Amatsu estão mortos; Takeru é o único familiar direto vivo e é nukenin/Tenkai.",
+    "Não expor ausências familiares já estabelecidas sem função real na cena."
   ],
   "voice_gates": [
     "falaria_agora",
@@ -240,6 +244,7 @@
     "gesto decorativo sem impulso comum com a fala"
   ],
   "mandatory_final_gates": [
+    "continuity_firewall_v36",
     "Avaliar identidade no conjunto de decisões e relações; uma frase funcional compartilhada não exige bordão, insulto ou reescrita.",
     "Se o personagem não precisaria falar, usar silêncio/corpo.",
     "A fala deve pertencer simultaneamente ao universo Naruto e ao registro individual.",
@@ -709,5 +714,14 @@
       "Sayo": "Temari Chunin: blunt, confident, sardonic/debochada, tactically sharp, sometimes cruel; cautious/fearful around unstable Yoshiro.",
       "Kuroto": "Kankuro Chunin: cocky, irritable, rough puppeteer, taunts from advantage; fear of Yoshiro can abruptly suppress swagger."
     }
+  },
+  "continuity_firewall_v36": {
+    "version": "v36",
+    "mandatory": true,
+    "active_continuity_id": "classico_floresta_da_morte",
+    "legacy_chronology_import": "forbidden",
+    "character_carryover": "existência somente quando revalidada; biografia/status/relação/poder/conhecimento/eventos devem vir desta continuidade",
+    "amatsu_family": "pais mortos; Takeru Uchiha é o único familiar direto vivo e é nukenin/Tenkai",
+    "narration": "não transformar ausência familiar já estabelecida em exposição automática"
   }
 }
