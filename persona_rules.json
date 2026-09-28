@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.7.0-v25",
+  "version": "0.8.0-v33",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -39,6 +39,7 @@
     "Silêncio fiel vence fala de preenchimento.",
     "Personalidade deve aparecer em superfície: latência, corpo, cadência, volume, vocativo, completude, interrupção e silêncio.",
     "Correto não significa formal; casual não significa gíria moderna.",
+    "Tratamento, título e honorífico são estado relacional: devem ser resolvidos por referência, fase, hierarquia, intimidade e situação antes da redação da fala.",
     "Morfossintaxe faz parte da voz.",
     "Bordão é microassinatura, não muleta.",
     "Comédia física é válida somente quando contexto, relação e pressão permitirem.",
@@ -305,9 +306,9 @@
     "hierarchy_rule": "Com superior, alguns personagens aumentam corretividade, postura e uso de título; outros preservam rudeza/ausência de honorífico se isso for traço estabelecido.",
     "character_calibrations": {
       "Saya Haruno": {
-        "authority": "alta probabilidade de nome+título/sensei, fala mais correta, menor interrupção gratuita; em surpresa/pressa pode chamar apenas 'sensei!'",
-        "Kazuma Uzumaki": "Kazuma-kun é permitido e funcional quando admiração, apelo, autoconsciência ou investimento social estiverem ativos; não automático.",
-        "Amatsu Uchiha": "nome no início em bronca/alerta; baixo filtro; honorífico normalmente ausente."
+        "authority": "Forte preferência por tratamento respeitoso com superiores: em fala direta e segura usar nome+título quando natural (ex.: Kagetsu-sensei) ou título institucional; com Hokage usar Hokage-sama/Senhor(a) Hokage/Grande Hokage conforme a superfície PT-BR estabelecida. Sob urgência pode comprimir para 'sensei!'/'Hokage!' sem perder respeito.",
+        "Kazuma Uzumaki": "Na fase inicial de interesse equivalente Sakura→Sasuke, Kazuma-kun é a forma preferencial de endereçamento direto; nome nu surge por urgência, irritação forte ou mudança relacional live. Não tratar -kun como ornamento aleatório.",
+        "Amatsu Uchiha": "Amatsu sem honorífico é o padrão; nome no início em bronca/alerta, frequentemente omitido em discussão contínua."
       },
       "Kazuma Uzumaki": {
         "default": "nomes pouco frequentes; honoríficos não são default, refletindo eixo Sasuke inicial; respeito aparece mais por comportamento/contexto que por sufixo.",
@@ -507,6 +508,18 @@
           "Kankurō Part I"
         ],
         "surface": "mais verbal e reativo, irritação fácil; medo/hierarquia podem interromper ou autocensurar"
+      },
+      "polite_reserved_youthful": {
+        "examples": [
+          "Hinata jovem"
+        ],
+        "surface": "polida, baixa agressividade basal, autoconsciente; títulos e honoríficos relacionais persistem com mais força que em pares rudes"
+      },
+      "earnest_deferential_youthful": {
+        "examples": [
+          "Rock Lee jovem"
+        ],
+        "surface": "energético e correto; deferência a mestre/superior é explícita, -sensei forte; respeito entre pares pode usar -san quando sustentado"
       }
     }
   },
@@ -583,5 +596,96 @@
     "character_bend",
     "genericity_audit",
     "final_surface"
-  ]
+  ],
+  "addressing_honorific_gate_v33": {
+    "mandatory": true,
+    "principle": "Título/honorífico não é decoração japonesa. É uma decisão social do personagem e pode mudar a mesma proposição sem mudar seu conteúdo.",
+    "resolution_order": [
+      "relação direcional explícita",
+      "referência canônica e fase exata",
+      "cargo/hierarquia do interlocutor",
+      "idade e educação social do falante",
+      "intimidade/hostilidade/romance",
+      "público versus privado",
+      "urgência/perigo",
+      "forma PT-BR já estabelecida para aquela relação"
+    ],
+    "title_classes": {
+      "teacher": "sensei ou Nome-sensei; default forte para personagens cuja referência preserva deferência a professor",
+      "kage": "Hokage-sama/Kage-sama ou equivalente PT-BR funcional como Senhor(a) Hokage/Grande Hokage quando estabelecido; não usar nome nu por default em personagem respeitoso",
+      "clan_or_military_superior": "título/cargo ou forma respeitosa quando a ficha/relação sustenta; não importar keigo cerimonial"
+    },
+    "social_suffixes": {
+      "kun": "marcador relacional, comum quando a referência o usa com determinado par; não aplicar a todos os meninos",
+      "san": "distância/respeito entre pares quando a referência/relação sustenta",
+      "chan": "afeto/intimidade/registro social quando estabelecido; nunca infantilização automática",
+      "omission": "forma legítima quando intimidade, hostilidade, urgência ou voz da referência favorecem nome nu"
+    },
+    "reference_defaults": {
+      "socially_adaptive_youthful": {
+        "examples": [
+          "Sakura inicial",
+          "Ino jovem"
+        ],
+        "authority": "hierarchy_sensitive_strong",
+        "teacher": "prefer_name_sensei_or_sensei",
+        "kage": "prefer_kage_title_with_deference",
+        "invested_peer": "preserve_reference_supported_suffix (ex.: Sakura→Sasuke-kun); suppress only for urgency, anger or changed relationship",
+        "rule": "expressividade com pares não cancela polidez com superior"
+      },
+      "polite_reserved_youthful": {
+        "examples": [
+          "Hinata jovem"
+        ],
+        "authority": "hierarchy_sensitive_strong",
+        "teacher": "sensei default forte",
+        "invested_peer": "-kun pode ser parte estável do vínculo quando a referência o sustenta (ex.: Naruto-kun)",
+        "rule": "timidez altera volume/latência, não apaga tratamento"
+      },
+      "earnest_deferential_youthful": {
+        "examples": [
+          "Rock Lee jovem"
+        ],
+        "authority": "very_strong",
+        "teacher": "Nome-sensei/sensei como default relacional",
+        "peers": "-san quando a referência/relação sustenta respeito; nome nu não é default universal",
+        "rule": "entusiasmo não elimina deferência"
+      },
+      "rough_youthful": {
+        "examples": [
+          "Naruto jovem",
+          "Kiba jovem"
+        ],
+        "authority": "mixed",
+        "teacher": "sensei continua natural para professor, salvo apelido/relação explicitamente estabelecida",
+        "kage": "pode quebrar formalidade por traço relacional (ex.: apelido/intimidade); não inferir respeito alto só do cargo"
+      },
+      "clipped_plain": {
+        "examples": [
+          "Sasuke inicial",
+          "Neji inicial"
+        ],
+        "authority": "selective",
+        "rule": "economia e frieza não autorizam apagar títulos que a relação explicitamente preserva; caso contrário nome/omissão podem dominar"
+      },
+      "low_energy_plain": {
+        "examples": [
+          "Shikamaru jovem"
+        ],
+        "authority": "moderate",
+        "teacher": "sensei natural quando endereça professor; baixa energia muda cadência, não necessariamente o título"
+      }
+    },
+    "direct_address_rule": "Se o nome/título aparece como vocativo direto, usar a forma preferida da relação. Menções em terceira pessoa podem ter forma diferente.",
+    "urgency_rule": "Perigo pode comprimir Nome-sensei para 'sensei!' e Hokage-sama para 'Hokage!', mas não deve converter automaticamente uma personagem respeitosa em fala casual.",
+    "ptbr_rule": "Preservar função social. Honorífico japonês pode permanecer quando já é parte do registro do RP; equivalente PT-BR é válido se mantiver hierarquia sem soar cerimonial artificial.",
+    "anti_patterns": [
+      "todo mundo usa -kun/-san por estética",
+      "todo superior recebe o mesmo tratamento",
+      "personagem Sakura-like chama sensei pelo nome nu sem gatilho",
+      "pressão apaga todos os títulos",
+      "usar honorífico em toda frase",
+      "confundir gramática correta com formalidade"
+    ]
+  }
 }
