@@ -1,11 +1,11 @@
 {
   "meta": {
-    "version": "v25.0.2",
+    "version": "v26.0.0",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
-    "directional_edges": 357,
-    "characters": 97
+    "directional_edges": 363,
+    "characters": 99
   },
   "edges": {
     "Amatsu Uchiha": {
@@ -5594,10 +5594,117 @@
     "Equipe de Amegakure — primeiro confronto": {},
     "Equipe de Kusagakure — Ravina Seca": {},
     "Informante das cartas — identidade pendente": {},
-    "Yoshiro Sabaku": {},
+    "Yoshiro Sabaku": {
+      "Sayo Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Sayo is Yoshiro's older sister.",
+          "Same Sunagakure trio."
+        ],
+        "roles": [
+          "younger_brother_to_older_sister",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "sibling_older_younger_not_command",
+        "default_filter": "sparse_family_caution",
+        "rule": "Family is established; do not infer open affection. Shukaku instability raises caution."
+      },
+      "Kuroto Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Kuroto is Yoshiro's older brother.",
+          "Same Sunagakure trio."
+        ],
+        "roles": [
+          "younger_brother_to_older_brother",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "sibling_older_younger_not_command",
+        "default_filter": "sparse_family_caution",
+        "rule": "Family is established; do not infer comic warmth during danger."
+      }
+    },
     "Equipe de Amegakure": {},
     "Equipe de Kusagakure": {},
     "Trio de Sunagakure": {},
-    "Companheiros de Yoshiro": {}
+    "Companheiros de Yoshiro": {},
+    "Sayo Sabaku": {
+      "Yoshiro Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Yoshiro is Sayo's younger brother.",
+          "Yoshiro is Shukaku's Jinchūriki."
+        ],
+        "roles": [
+          "older_sister_to_younger_brother",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "older_sibling",
+        "default_filter": "protective_cautious",
+        "rule": "Protection and caution coexist; instability compresses speech."
+      },
+      "Kuroto Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Kuroto is Sayo's younger brother.",
+          "Same Sunagakure trio."
+        ],
+        "roles": [
+          "older_sister_to_younger_brother",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "older_sibling",
+        "default_filter": "casual_sibling",
+        "rule": "Bickering is allowed but task/pressure can override it."
+      }
+    },
+    "Kuroto Sabaku": {
+      "Yoshiro Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Yoshiro is Kuroto's younger brother.",
+          "Yoshiro is Shukaku's Jinchūriki."
+        ],
+        "roles": [
+          "older_brother_to_younger_brother",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "older_sibling",
+        "default_filter": "irritable_cautious",
+        "rule": "Irritation does not erase caution or loyalty."
+      },
+      "Sayo Sabaku": {
+        "sources": [
+          "user_canon_2026_09_28"
+        ],
+        "facts": [
+          "Sayo is Kuroto's older sister.",
+          "Same Sunagakure trio."
+        ],
+        "roles": [
+          "younger_brother_to_older_sister",
+          "teammate"
+        ],
+        "familiarity": "family",
+        "hierarchy": "older_sibling",
+        "default_filter": "casual_sibling",
+        "rule": "He pushes back verbally; no automatic obedience or hostility."
+      }
+    }
   }
 }
