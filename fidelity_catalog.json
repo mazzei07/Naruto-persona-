@@ -1712,7 +1712,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": true,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Naruto jovem + identidade própria Uchiha-Uzumaki.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Saya Haruno": {
       "name": "Saya Haruno",
@@ -1739,7 +1745,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Sakura inicial.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kazuma Uzumaki": {
       "name": "Kazuma Uzumaki",
@@ -1767,7 +1779,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Sasuke inicial.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kaede Uchiha": {
       "name": "Kaede Uchiha",
@@ -1796,7 +1814,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Sasuke acadêmico + disciplina Uchiha própria.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kaito Shimura": {
       "name": "Kaito Shimura",
@@ -1822,7 +1846,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Tenten/Temari funcional, identidade própria.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Nao Kurusu": {
       "name": "Nao Kurusu",
@@ -1847,7 +1877,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kurenai jovem/Genjutsu observacional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Aki Senju": {
       "name": "Aki Senju",
@@ -1893,7 +1929,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "original com eixo Yamato embrionário.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tōru Senju": {
       "name": "Tōru Senju",
@@ -1951,7 +1993,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Sasuke + agressividade Kiba/Lee.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Koharu Inuzuka": {
       "name": "Koharu Inuzuka",
@@ -1977,7 +2025,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kiba funcional, mais pragmática.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Hibiki Shirogane": {
       "name": "Hibiki Shirogane",
@@ -2003,7 +2057,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shino funcional sem enxame.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Mio Inuzuka": {
       "name": "Mio Inuzuka",
@@ -2035,7 +2095,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kiba + assertividade Sakura/Ino.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Ayame Hyūga": {
       "name": "Ayame Hyūga",
@@ -2060,7 +2126,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "posição Sōke + certeza de Neji.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Seki Aburame": {
       "name": "Seki Aburame",
@@ -2086,7 +2158,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shino inicial.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Reika Hyūga": {
       "name": "Reika Hyūga",
@@ -2111,7 +2189,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Neji inicial em excelência técnica.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tetsu Iwagane": {
       "name": "Tetsu Iwagane",
@@ -2158,7 +2242,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Tenten + Temari funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Renji Nara": {
       "name": "Renji Nara",
@@ -2184,7 +2274,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shikamaru jovem.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Hana Yamanaka": {
       "name": "Hana Yamanaka",
@@ -2210,7 +2306,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Ino jovem.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Daichi Akimichi": {
       "name": "Daichi Akimichi",
@@ -2235,7 +2337,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Chōji jovem.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Arata Senju": {
       "name": "Arata Senju",
@@ -2264,7 +2372,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Hashirama/Yamato só no eixo técnico; voz própria.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Natsuki Hyūga": {
       "name": "Natsuki Hyūga",
@@ -2292,7 +2406,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Hinata/Neji intermediário.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Jun Sarutobi": {
       "name": "Jun Sarutobi",
@@ -2318,7 +2438,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Asuma/Sarutobi difuso.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kagetsu Shiranui": {
       "name": "Kagetsu Shiranui",
@@ -2344,7 +2470,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kakashi Clássico.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Sayuri Hyūga": {
       "name": "Sayuri Hyūga",
@@ -2371,7 +2503,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kurenai/Guy em função, voz própria Hyūga.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Fuyumi Kisaragi": {
       "name": "Fuyumi Kisaragi",
@@ -2396,7 +2534,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Yamato/ANBU de suporte.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shigure Namikado": {
       "name": "Shigure Namikado",
@@ -2425,7 +2569,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Asuma/Kakashi campo.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tōma Aburame": {
       "name": "Tōma Aburame",
@@ -2453,7 +2603,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kurenai função + Shino registro.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Masaru Fūma": {
       "name": "Masaru Fūma",
@@ -2478,7 +2634,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Guy função docente, voz própria.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Akihiko Sarutobi": {
       "name": "Akihiko Sarutobi",
@@ -2504,7 +2666,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Asuma.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shōma Sarutobi": {
       "name": "Shōma Sarutobi",
@@ -2533,7 +2701,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Asuma + Kakashi foco de equipe.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Iruka Umino": {
       "name": "Iruka Umino",
@@ -2559,7 +2733,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Iruka Clássico.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Daizen Sarutobi": {
       "name": "Daizen Sarutobi",
@@ -2585,7 +2765,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Hiruzen Part I.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Masato Uchiha": {
       "name": "Masato Uchiha",
@@ -2610,7 +2796,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Fugaku + chefe político próprio.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Seijūrō Uchiha": {
       "name": "Seijūrō Uchiha",
@@ -2635,7 +2827,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Fugaku-like paterno.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Daigo Uchiha": {
       "name": "Daigo Uchiha",
@@ -2682,7 +2880,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Hiashi.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shikō Nara": {
       "name": "Shikō Nara",
@@ -2707,7 +2911,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shikaku.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Genzaburō Akimichi": {
       "name": "Genzaburō Akimichi",
@@ -2730,7 +2940,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Chōza.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kohana Yamanaka": {
       "name": "Kohana Yamanaka",
@@ -2753,7 +2969,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Inoichi.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shigen Aburame": {
       "name": "Shigen Aburame",
@@ -2776,7 +2998,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shibi.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Hanae Inuzuka": {
       "name": "Hanae Inuzuka",
@@ -2799,7 +3027,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Tsume Inuzuka.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kenzō Sarutobi": {
       "name": "Kenzō Sarutobi",
@@ -2825,7 +3059,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "patriarca Sarutobi/Hiruzen doméstico.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Masamichi Senju": {
       "name": "Masamichi Senju",
@@ -2852,7 +3092,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "pragmatismo administrativo tipo Tobirama, sem copiar.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shōzen Arakawa": {
       "name": "Shōzen Arakawa",
@@ -2877,7 +3123,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Jiraiya.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kiyomi Senju": {
       "name": "Kiyomi Senju",
@@ -2902,7 +3154,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Tsunade.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kairen Tsukishiro": {
       "name": "Kairen Tsukishiro",
@@ -2928,7 +3186,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Orochimaru.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Takeru Uchiha": {
       "name": "Takeru Uchiha",
@@ -2953,7 +3217,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Itachi função + identidade própria.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kiyomasa Uchiha": {
       "name": "Kiyomasa Uchiha",
@@ -3003,7 +3273,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Pain/Nagato.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tatsuma": {
       "name": "Tatsuma",
@@ -3051,7 +3327,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Konan funcional + identidade própria.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Saigen": {
       "name": "Saigen",
@@ -3082,7 +3364,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Obito/Zetsu/Danzō funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Itsurō Kisaragi": {
       "name": "Itsurō Kisaragi",
@@ -3107,7 +3395,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Itachi ritmo/precisão sem dōjutsu.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Gazan Kurosame": {
       "name": "Gazan Kurosame",
@@ -3132,7 +3426,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kisame funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kōmei Bakuhara": {
       "name": "Kōmei Bakuhara",
@@ -3159,7 +3459,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Deidara funcional técnico.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shunrei Kajiwara": {
       "name": "Shunrei Kajiwara",
@@ -3186,7 +3492,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Sasori funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Gensai Arakida": {
       "name": "Gensai Arakida",
@@ -3213,7 +3525,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kakuzu funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Sanza Kurohito": {
       "name": "Sanza Kurohito",
@@ -3240,7 +3558,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Hidan funcional.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Mukuha": {
       "name": "Mukuha",
@@ -3265,7 +3589,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Zetsu funcional, duas consciências.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kureto Nabatame": {
       "name": "Kureto Nabatame",
@@ -3293,7 +3623,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Orochimaru/Kabuto pesquisa.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kurama — Nove-Caudas": {
       "name": "Kurama — Nove-Caudas",
@@ -3316,7 +3652,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kurama.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Hotaru Aburame": {
       "name": "Hotaru Aburame",
@@ -3342,7 +3684,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shino funcional.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kanna Mochizuki": {
       "name": "Kanna Mochizuki",
@@ -3433,7 +3781,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shikamaru/Shikaku, mais sociável.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Emi Nara": {
       "name": "Emi Nara",
@@ -3479,7 +3833,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Chōji mais seguro.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Chiyo Akimichi": {
       "name": "Chiyo Akimichi",
@@ -3526,7 +3886,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Ino mais disciplinada.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Sora Yamanaka": {
       "name": "Sora Yamanaka",
@@ -3573,7 +3939,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kiba mais treinado/menos impulsivo.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tora": {
       "name": "Tora",
@@ -3620,7 +3992,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Shino + sarcasmo seco.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Miharu Sarutobi": {
       "name": "Miharu Sarutobi",
@@ -3671,7 +4049,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Asuma/Hiruzen/Konohamaru difuso.",
+        "transfer_scope": "technical_or_function_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Gakuji Aramori": {
       "name": "Gakuji Aramori",
@@ -3696,7 +4080,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Zabuza Clássico (inspiração estrutural no dossiê)",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Nagi Sazanami": {
       "name": "Nagi Sazanami",
@@ -3721,7 +4111,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Haku Clássico (inspiração estrutural no dossiê)",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Genjirō Takemura": {
       "name": "Genjirō Takemura",
@@ -3745,7 +4141,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "ranzinza, prático, orgulhoso do trabalho; afeto aparece por cobrança e ação. | Tazuna em função, sem cópia 1:1.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Genzō Kaneda": {
       "name": "Genzō Kaneda",
@@ -3769,7 +4171,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "cruel quando protegido por poder econômico, menos seguro diante de ameaça física real. | Gatō em função.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Yoru": {
       "name": "Yoru",
@@ -3793,7 +4201,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "ninken"
+      "entity_type": "ninken",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Função estrutural de Akamaru, com personalidade animal própria. Reações devem vir por postura, faro, som, hesitação, rosnado, proximidade e ação — não por diálogo humano.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kuro": {
       "name": "Kuro",
@@ -3817,7 +4231,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "ninken"
+      "entity_type": "ninken",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Função de Akamaru em estágio mais jovem, sem copiar comportamento 1:1.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Arashi Senju — Primeiro Hokage (histórico)": {
       "name": "Arashi Senju — Primeiro Hokage (histórico)",
@@ -3843,7 +4263,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "historical"
+      "entity_type": "historical",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Figura histórica; usar somente quando uma fonte/flashback legítimo estabelecer comportamento. | Hashirama no eixo histórico, sem cópia automática de cada técnica/feito.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Shūsei Uchiha — cofundador (histórico)": {
       "name": "Shūsei Uchiha — cofundador (histórico)",
@@ -3869,7 +4295,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "historical"
+      "entity_type": "historical",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Só mediante flashback/fonte legítima. | Madara no eixo de cofundador/rival, sem importação automática de trajetória/poderes.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Chihaya Uzumaki — figura histórica": {
       "name": "Chihaya Uzumaki — figura histórica",
@@ -3893,7 +4325,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "historical"
+      "entity_type": "historical",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Não estabelecida o bastante para fala live sem fonte. | eixo histórico Mito/Kushina como Uzumaki receptáculo, com identidade própria.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Tetsuma Kanzaki": {
       "name": "Tetsuma Kanzaki",
@@ -3918,7 +4356,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Ibiki Morino no eixo funcional, sem copiar aparência, falas ou trajetória. Voz: controlada, punitiva, econômica; não precisa soar como 'carrasco' em toda frase.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Renka": {
       "name": "Renka",
@@ -3943,7 +4387,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Anko no eixo funcional/energético, mas não 'sádica homicida'. Deve ser provocadora, intensa, confortável com risco e teatral na medida certa.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Equipe de Amegakure — primeiro confronto": {
       "name": "Equipe de Amegakure — primeiro confronto",
@@ -4031,7 +4481,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Gaara Part I / Exame Chūnin — presença, areia, silêncio e instabilidade.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Equipe de Amegakure": {
       "name": "Equipe de Amegakure",
@@ -4137,7 +4593,13 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Temari Part I / Exame Chūnin — confiança, Fūton/tessen e leitura tática.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     },
     "Kuroto Sabaku": {
       "name": "Kuroto Sabaku",
@@ -4163,7 +4625,18 @@
       "auto_import_biography": false,
       "auto_import_techniques": false,
       "player_controlled": false,
-      "entity_type": "individual"
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kankurō Part I / Exame Chūnin — Kugutsu, blefe e irritabilidade.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      }
     }
+  },
+  "meta": {
+    "reference_essence_protocol": "v34.0-reference-essence",
+    "reference_essence_source": "REFERENCE_ESSENCE_V34.json",
+    "reference_rule": "Exact phase + documented transfer axes; dominant core and break triggers are acting mechanics, not biography/power imports."
   }
 }
