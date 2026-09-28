@@ -293,6 +293,7 @@ def _reference_voice_family_v23(profile: Dict[str, Any], baseline: List[str]) ->
         ("sparse_unsettling", ["gaara"]),
         ("direct_confident", ["temari"]),
         ("reactive_irritable", ["kankuro"]),
+        ("polite_reserved_youthful", ["hinata"]),
         ("rough_youthful", ["naruto", "kiba"]),
         ("clipped_plain", ["sasuke", "neji"]),
         ("socially_adaptive_youthful", ["sakura", "ino"]),
@@ -335,6 +336,8 @@ def _formality_profile_v23(
         "rough_youthful": 1.0,
         "clipped_plain": 1.7,
         "socially_adaptive_youthful": 2.0,
+        "polite_reserved_youthful": 2.5,
+        "earnest_deferential_youthful": 2.6,
         "relaxed_adult": 2.1,
         "expressive_teacher": 2.2,
         "warm_authority": 3.1,
@@ -405,7 +408,11 @@ def _formality_profile_v23(
         if family in {"rough_youthful", "clipped_plain", "sparse_unsettling"}:
             hierarchy_sensitivity = 0.25
         elif family == "socially_adaptive_youthful":
-            hierarchy_sensitivity = 1.0
+            hierarchy_sensitivity = 1.25
+        elif family == "polite_reserved_youthful":
+            hierarchy_sensitivity = 1.35
+        elif family == "earnest_deferential_youthful":
+            hierarchy_sensitivity = 1.5
         elif family in {"warm_authority", "expressive_teacher"}:
             hierarchy_sensitivity = 0.8
         if filter_level == "high":
@@ -458,7 +465,7 @@ def _formality_profile_v23(
         4: "complete_institutional_without_grandiloquence",
     }[level]
     lexical = "age_and_experience_bounded"
-    if family in {"rough_youthful", "socially_adaptive_youthful", "clipped_plain", "low_energy_plain"}:
+    if family in {"rough_youthful", "socially_adaptive_youthful", "polite_reserved_youthful", "earnest_deferential_youthful", "clipped_plain", "low_energy_plain"}:
         lexical = "juvenile_concrete_unless_subject_is_studied_or_technical"
     elif family in {"relaxed_adult", "expressive_teacher", "warm_authority"}:
         lexical = "adult_natural_no_bureaucratic_padding"
@@ -678,57 +685,151 @@ def _sayability_gate_v22(
 def _addressing_plan_v22(
     actor: str,
     interlocutor: str,
+    profile: Dict[str, Any],
+    interlocutor_profile: Dict[str, Any],
     relation_lines: List[str],
     baseline: List[str],
     tags: List[str],
     pressure: str,
+    formality: Dict[str, Any],
 ) -> Dict[str, Any]:
+    """Resolve vocative/title/honorific as relational state (v33), retaining the v22 key for compatibility."""
     combined = relation_lines + baseline
     notes = _extract_labels(combined, [
         "vocativo", "nome", "sensei", "kun", "san", "sama", "senhor",
         "senhora", "titulo", "honorifico", "abertura", "fechamento"
     ])
+    resolved_actor = resolve_fidelity_name(actor)
+    mapping = fidelity_catalog().get("characters", {}).get(resolved_actor, {})
+    refs = [str(x) for x in mapping.get("reference_characters", [])]
+    refs_n = {_norm(x) for x in refs}
+    family = (formality.get("reference_family") or {}).get("family", "profile_driven")
+
+    actor_sensei = str(profile.get("sensei") or "")
+    if not actor_sensei:
+        actor_sensei = str(_extract_field(profile, "Sensei") or "")
+    is_own_teacher = bool(actor_sensei and _norm(actor_sensei) == _norm(interlocutor))
+
+    target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
+    target_name = _norm(interlocutor)
+    is_kage = bool(
+        "hokage" in target_identity
+        or re.search(r"\bkage\b", target_identity)
+        or "hokage" in target_name
+        or any(x in target_name for x in ["daizen sarutobi"])
+    )
+    relation_text = _norm(" ".join(relation_lines))
+    is_teacher = bool(
+        is_own_teacher
+        or "sensei" in relation_text
+        or "professor" in target_identity
+        or "instrutor" in target_identity
+    )
+    urgent = pressure == "high" or "danger" in tags
+    respect_family = family in {
+        "socially_adaptive_youthful", "polite_reserved_youthful",
+        "earnest_deferential_youthful", "warm_authority", "expressive_teacher"
+    }
+    teacher_title_strength = "strong_default" if respect_family else "contextual_default"
+
     plan = {
+        "version": "v33-relational-addressing",
         "actor": actor,
         "interlocutor": interlocutor or None,
         "notes": notes,
-        "rule": "address form is functional, not decorative",
+        "rule": "address form is relational state, not decoration; resolve reference + phase + hierarchy + intimacy + urgency before wording",
         "placement": "omit_if_conversation_already_clear",
-        "honorific_policy": "profile_and_relation_specific",
+        "honorific_policy": "profile_reference_relation_specific",
+        "reference_characters": refs,
+        "reference_family": family,
+        "authority_target": bool(formality.get("authority_target")),
+        "urgency_compression": urgent,
     }
-    if actor == "Saya Haruno":
-        if interlocutor == "Kazuma Uzumaki":
+
+    # Explicit reboot relation always outranks family defaults.
+    if actor == "Saya Haruno" and interlocutor == "Kazuma Uzumaki":
+        plan.update({
+            "preferred_forms": ["Kazuma-kun", "Kazuma"],
+            "default_form": "Kazuma-kun",
+            "honorific_strength": "strong_relational_default",
+            "honorific_policy": "early Sakura→Sasuke-like investment preserves -kun in ordinary direct address; bare Kazuma is licensed by urgency, sharp irritation, or later live relationship change",
+            "placement": "ending for appeal/checking; beginning for alert; may be omitted when turn is already obvious"
+        })
+        return plan
+    if actor == "Saya Haruno" and interlocutor == "Amatsu Uchiha":
+        plan.update({
+            "preferred_forms": ["Amatsu"],
+            "default_form": "Amatsu",
+            "honorific_strength": "none_by_default",
+            "honorific_policy": "bare name/omission is the established peer-conflict surface",
+            "placement": "beginning for reprimand/alert; often omitted during continuous argument"
+        })
+        return plan
+
+    # Teacher/superior titles survive casual personality when the reference does.
+    if is_teacher:
+        first = _first_name(interlocutor)
+        plan.update({
+            "preferred_forms": [f"{first}-sensei", "sensei"],
+            "default_form": "sensei" if urgent else f"{first}-sensei",
+            "honorific_strength": teacher_title_strength,
+            "honorific_policy": "teacher title is relational; urgency may compress Name-sensei to sensei! but should not erase respect automatically",
+            "placement": "name+title in ordinary direct address; title alone when turn is established or urgent"
+        })
+        # Rough/clipped youths may have explicit nickname/bare-name exceptions in relation rules.
+        if family in {"rough_youthful", "clipped_plain", "sparse_unsettling"} and not any(
+            x in relation_text for x in ["sensei", "respeit", "formal", "autoridade"]
+        ):
+            plan["honorific_strength"] = "contextual_default"
+        return plan
+
+    if is_kage:
+        if respect_family or "sakura" in refs_n or "ino" in refs_n or "hinata" in refs_n or "lee" in refs_n:
             plan.update({
-                "preferred_forms": ["Kazuma", "Kazuma-kun"],
-                "honorific_policy": "Kazuma-kun only when admiration/appeal/self-conscious investment is active",
-                "placement": "ending for appeal/checking; beginning for alert"
+                "preferred_forms": ["Hokage-sama", "Senhor(a) Hokage", "Grande Hokage"],
+                "default_form": "Hokage-sama",
+                "honorific_strength": "strong_authority_default",
+                "honorific_policy": "use a deferential Kage title; choose Japanese or established PT-BR equivalent by scene register, not at random",
+                "placement": "title in direct address; omission only when grammar does not require vocative"
             })
-        elif interlocutor == "Amatsu Uchiha":
+        else:
             plan.update({
-                "preferred_forms": ["Amatsu"],
-                "honorific_policy": "normally none",
-                "placement": "beginning for reprimand/alert; often omitted during continuous argument"
+                "preferred_forms": ["Hokage", "Hokage-sama", "Senhor(a) Hokage"],
+                "honorific_strength": "profile_dependent",
+                "honorific_policy": "rank alone does not erase actor-specific rudeness/intimacy; explicit relation may override"
             })
-        elif interlocutor:
-            # Saya is comparatively overt about teacher/superior titles.
-            if any(x in _norm(interlocutor) for x in ["iruka", "kagetsu", "kakashi"]):
-                plan.update({
-                    "preferred_forms": [f"{_first_name(interlocutor)}-sensei", "sensei"],
-                    "honorific_policy": "highly natural with teacher/superior; can become just 'sensei!' under urgency",
-                    "placement": "name+title in direct address; title alone when turn is already established"
-                })
+        return plan
+
+    # Canonical-reference social suffix tendencies. They never license blanket suffix insertion.
+    if "hinata" in refs_n and any(x in relation_text for x in ["admira", "romanc", "interesse", "afei", "proxim"]):
+        first = _first_name(interlocutor)
+        plan.update({
+            "preferred_forms": [f"{first}-kun", first],
+            "default_form": f"{first}-kun",
+            "honorific_strength": "relationship_stable_when_supported",
+            "honorific_policy": "Hinata-like -kun is preserved only for the mapped emotionally invested relation, never for every male peer"
+        })
+    elif "lee" in refs_n and any(x in relation_text for x in ["respeit", "admira", "colega", "par"]):
+        first = _first_name(interlocutor)
+        plan.update({
+            "preferred_forms": [f"{first}-san", first],
+            "honorific_strength": "contextual_respect",
+            "honorific_policy": "Lee-like -san requires the corresponding respectful peer relation; do not universalize"
+        })
     elif actor == "Kazuma Uzumaki":
         plan.update({
-            "honorific_policy": "do not insert honorifics mechanically; Sasuke-initial axis favors bare names or omission",
+            "honorific_policy": "do not insert honorifics mechanically; Sasuke-initial axis favors bare names or omission unless an explicit teacher/authority/relation rule applies",
+            "honorific_strength": "low_by_default",
             "placement": "name rare; beginning only for real alert/challenge/call"
         })
     elif actor == "Iruka Umino":
         plan.update({
             "honorific_policy": "students usually addressed by first name",
+            "honorific_strength": "teacher_to_student_no_suffix_default",
             "placement": "student name first in reprimand/urgent correction"
         })
-    return plan
 
+    return plan
 
 def _actor_beat_v22(
     actor: str,
@@ -1042,7 +1143,10 @@ def character_turn_packet(
         "actor_beat_v22": actor_beat_v22,
         "actor_state_v29": actor_state_v29,
         "addressing_plan_v22": _addressing_plan_v22(
-            actor, interlocutor_resolved or interlocutor or "", rel_lines, baseline, tags, plev
+            actor, interlocutor_resolved or interlocutor or "", p, ip, rel_lines, baseline, tags, plev, formality_v23
+        ),
+        "addressing_plan_v33": _addressing_plan_v22(
+            actor, interlocutor_resolved or interlocutor or "", p, ip, rel_lines, baseline, tags, plev, formality_v23
         ),
         "microexpression_plan_v22": _microexpression_plan_v22(
             actor, interlocutor_resolved or interlocutor or "", rel_lines, baseline, plev
