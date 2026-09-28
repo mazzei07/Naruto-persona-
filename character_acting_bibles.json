@@ -99,7 +99,14 @@
             "sem auto-dodge",
             "sem cópia de Kekkei Genkai",
             "pré-requisitos continuam valendo"
-          ]
+          ],
+          "effective_overlay": {
+            "perception_active": "A-",
+            "kinetic_reading_prediction": "A-",
+            "ocular_genjutsu": "B",
+            "copying": "B+ conditional",
+            "note": "conditional; base IC 32.5 and physical Speed 5.5 unchanged"
+          }
         }
       },
       "voice": {
