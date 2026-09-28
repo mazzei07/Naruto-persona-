@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v26.0.1-anime-performance",
+    "version": "v31.0-relational-performance",
     "continuity_id": "classico_floresta_da_morte",
     "name": "Naruto Reboot Character Acting Bible",
     "created_at": "2026-09-28",
@@ -27,8 +27,11 @@
       "live user corrections through 2026-09-28"
     ],
     "rule": "A line is never generated from 'personality' alone. Resolve history + interlocutor + trigger + audience + body + objective + prior exchange, then bend the semantic intent into the actor.",
-    "dialogue_flow_version": "v27-dialogue-flow",
-    "reference_relation_matrix_version": "v28"
+    "dialogue_flow_version": "v27",
+    "reference_relation_matrix_version": "v28",
+    "actor_state_version": "v29",
+    "scene_scheduler_version": "v30",
+    "generation_kernel_version": "v31"
   },
   "characters": {
     "Amatsu Uchiha": {
