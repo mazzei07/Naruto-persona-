@@ -5600,34 +5600,34 @@
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Sayo is Yoshiro's older sister.",
-          "Same Sunagakure trio."
+          "Sayo é irmã mais velha de Yoshiro.",
+          "Mesmo trio de Sunagakure."
         ],
         "roles": [
           "younger_brother_to_older_sister",
           "teammate"
         ],
         "familiarity": "family",
-        "hierarchy": "sibling_older_younger_not_command",
+        "hierarchy": "older_sibling_not_command",
         "default_filter": "sparse_family_caution",
-        "rule": "Family is established; do not infer open affection. Shukaku instability raises caution."
+        "rule": "Família estabelecida; não inferir afeto verbal aberto. Instabilidade de Shukaku eleva cautela."
       },
       "Kuroto Sabaku": {
         "sources": [
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Kuroto is Yoshiro's older brother.",
-          "Same Sunagakure trio."
+          "Kuroto é irmão mais velho de Yoshiro.",
+          "Mesmo trio de Sunagakure."
         ],
         "roles": [
           "younger_brother_to_older_brother",
           "teammate"
         ],
         "familiarity": "family",
-        "hierarchy": "sibling_older_younger_not_command",
+        "hierarchy": "older_sibling_not_command",
         "default_filter": "sparse_family_caution",
-        "rule": "Family is established; do not infer comic warmth during danger."
+        "rule": "Família estabelecida; sem rotina cômica quando risco/instabilidade está ativo."
       }
     },
     "Equipe de Amegakure": {},
@@ -5640,8 +5640,8 @@
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Yoshiro is Sayo's younger brother.",
-          "Yoshiro is Shukaku's Jinchūriki."
+          "Yoshiro é irmão caçula de Sayo.",
+          "Yoshiro é Jinchūriki de Shukaku."
         ],
         "roles": [
           "older_sister_to_younger_brother",
@@ -5650,15 +5650,15 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "protective_cautious",
-        "rule": "Protection and caution coexist; instability compresses speech."
+        "rule": "Proteção e cautela coexistem; instabilidade comprime a fala."
       },
       "Kuroto Sabaku": {
         "sources": [
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Kuroto is Sayo's younger brother.",
-          "Same Sunagakure trio."
+          "Kuroto é irmão mais novo de Sayo.",
+          "Mesmo trio de Sunagakure."
         ],
         "roles": [
           "older_sister_to_younger_brother",
@@ -5667,7 +5667,7 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "casual_sibling",
-        "rule": "Bickering is allowed but task/pressure can override it."
+        "rule": "Atrito fraterno permitido; tarefa/pressão pode suprimir brincadeira."
       }
     },
     "Kuroto Sabaku": {
@@ -5676,8 +5676,8 @@
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Yoshiro is Kuroto's younger brother.",
-          "Yoshiro is Shukaku's Jinchūriki."
+          "Yoshiro é irmão caçula de Kuroto.",
+          "Yoshiro é Jinchūriki de Shukaku."
         ],
         "roles": [
           "older_brother_to_younger_brother",
@@ -5686,15 +5686,15 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "irritable_cautious",
-        "rule": "Irritation does not erase caution or loyalty."
+        "rule": "Irritação não apaga cautela ou lealdade."
       },
       "Sayo Sabaku": {
         "sources": [
           "user_canon_2026_09_28"
         ],
         "facts": [
-          "Sayo is Kuroto's older sister.",
-          "Same Sunagakure trio."
+          "Sayo é irmã mais velha de Kuroto.",
+          "Mesmo trio de Sunagakure."
         ],
         "roles": [
           "younger_brother_to_older_sister",
@@ -5703,7 +5703,7 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "casual_sibling",
-        "rule": "He pushes back verbally; no automatic obedience or hostility."
+        "rule": "Ele rebate verbalmente; sem obediência automática nem hostilidade genérica."
       }
     }
   }
