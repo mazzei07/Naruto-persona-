@@ -20,17 +20,18 @@ from persona_api import (
     persona_relation as _relation,
     persona_turn as _turn,
     persona_check as _check,
+    persona_sayability as _sayability,
 )
 
 PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.3.0",
+    version="0.4.0",
     instructions=(
         "Especialista read-only de interpretação do Naruto Reboot — Continuidade Clássica. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
-        "vocativo, morfossintaxe, silêncio e reação. Aplica obrigatoriamente Registro de Universo + Microassinaturas + Lavagem/Pente-Fino v21. Canoney/estado live continuam sendo "
+        "vocativo, morfossintaxe, silêncio e reação. Aplica obrigatoriamente Gate de Falabilidade + Beat de Atuação + Matriz de Endereçamento + Microexpressões v22. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
     ),
 )
@@ -42,7 +43,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -114,6 +115,34 @@ def persona_turn(
     body/voice/silence tendencies. It does not write final RP prose or control Amatsu.
     """
     return _turn(
+        name=name,
+        interlocutor=interlocutor,
+        stimulus=stimulus,
+        situation=situation,
+        pressure=pressure,
+        audience=audience,
+        body_state=body_state,
+        objective=objective,
+        perception_constraint=perception_constraint,
+        knowledge_constraint=knowledge_constraint,
+    )
+
+
+@mcp.tool()
+def persona_sayability(
+    name: str,
+    interlocutor: str = "",
+    stimulus: str = "",
+    situation: str = "",
+    pressure: str = "normal",
+    audience: str = "",
+    body_state: str = "",
+    objective: str = "",
+    perception_constraint: str = "",
+    knowledge_constraint: str = "",
+) -> dict[str, Any]:
+    """Decide whether the actor should speak at all and return v22 acting/addressing cues."""
+    return _sayability(
         name=name,
         interlocutor=interlocutor,
         stimulus=stimulus,
