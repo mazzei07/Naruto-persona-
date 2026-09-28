@@ -3,6 +3,7 @@
 Each function returns JSON-serializable dictionaries and can be exposed by an MCP/plugin wrapper.
 No LLM call is performed in the core path.
 """
+from fidelity_core import evidence_packet as fidelity_evidence_packet, validate_turn_packet, health as fidelity_health
 from persona_engine import (
     healthcheck,
     persona_get,
@@ -101,4 +102,21 @@ def persona_sayability(
         "reference_voice_family_v23": packet.get("reference_voice_family_v23"),
         "formality_profile_v23": packet.get("formality_profile_v23"),
         "universal_language_v23": packet.get("universal_language_v23"),
+        "evidence_v24": packet.get("evidence_v24"),
+        "semantic_review_required": packet.get("semantic_review_required", True),
     }
+
+
+def persona_evidence(name: str, interlocutor: str = "", situation: str = "", stimulus: str = ""):
+    """Return v24.1 phase-scoped evidence cards without generating prose."""
+    return fidelity_evidence_packet(name, interlocutor, situation, stimulus)
+
+
+def persona_validate_turn_packet(packet: dict):
+    """Validate the shared v24.1 turn packet used by Persona/Canoney/Gemini."""
+    return validate_turn_packet(packet)
+
+
+def persona_fidelity_health():
+    """Report the evidence catalog separately from the persona registry."""
+    return fidelity_health()
