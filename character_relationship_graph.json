@@ -1,11 +1,15 @@
 {
   "meta": {
-    "version": "v28-reference-relations",
+    "version": "v36-classic-continuity-firewall",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
     "directional_edges": 363,
-    "characters": 99
+    "characters": 99,
+    "continuity_firewall_v36": {
+      "active_continuity_id": "classico_floresta_da_morte",
+      "rule": "Relations are Classic-only. Shared identity across continuities never transfers old relationship history."
+    }
   },
   "edges": {
     "Amatsu Uchiha": {
@@ -131,18 +135,22 @@
       },
       "Takeru Uchiha": {
         "sources": [
-          "shared_clan_context"
+          "classic_family_state_v36",
+          "current Classic dossier"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha."
+          "Takeru Uchiha is Amatsu's older brother.",
+          "Takeru is a Konoha nukenin and member of Tenkai.",
+          "His real motive for desertion and current feelings toward Amatsu remain restricted/unknown unless established live."
         ],
         "roles": [
-          "same_clan_context"
+          "younger_brother_to_older_brother",
+          "relative_to_nukenin"
         ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+        "familiarity": "family_history_exists_but_current_emotional_state_not_assumed",
+        "hierarchy": "older_sibling_but_not_household_authority",
+        "default_filter": "derive_from_current_live_evidence",
+        "rule": "Do not import adult-continuity family scenes, affection, mentorship, reconciliation, hostility, promises or shared events. Do not narrate Takeru's absence as novelty."
       },
       "Kiyomasa Uchiha": {
         "sources": [
@@ -4244,18 +4252,22 @@
     "Takeru Uchiha": {
       "Amatsu Uchiha": {
         "sources": [
-          "shared_clan_context"
+          "classic_family_state_v36",
+          "current Classic dossier"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha."
+          "Amatsu Uchiha is Takeru's younger brother.",
+          "Takeru is a Konoha nukenin and member of Tenkai.",
+          "Takeru's current feelings, plans and motives involving Amatsu are not inferred from another continuity or from Itachi."
         ],
         "roles": [
-          "same_clan_context"
+          "older_brother_to_younger_brother",
+          "nukenin_relative"
         ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+        "familiarity": "family_history_exists_but_current_emotional_state_not_assumed",
+        "hierarchy": "older_sibling_without_current_household_authority",
+        "default_filter": "restricted_until_live_evidence",
+        "rule": "Sibling identity is canon; emotional history beyond current Classic evidence is not."
       },
       "Kaede Uchiha": {
         "sources": [
