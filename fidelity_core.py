@@ -12,7 +12,7 @@ from functools import lru_cache
 from pathlib import Path
 from urllib.parse import urlparse
 
-VERSION = 'v24.0.0'
+VERSION = 'v24.1.0'
 CONTINUITY = 'classico_floresta_da_morte'
 ROOT = Path(__file__).resolve().parent
 
@@ -93,6 +93,7 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
         'later_scene_ids_excluded':out_of_phase,'missing_evidence':missing,
         'research_required':bool(missing),'suggested_query':query,
         'voice_from_own_dossier':own_voice,
+        'entity_type':mapping.get('entity_type','individual'),
         'reference_check_required_every_turn':True,
         'semantic_review_required':True,'br_dub_verified':False,
         'rule':'Consultar estas evidências antes de cada geração. Cena de referência não é acontecimento do RP; sinopse não prova redação, prosódia nem dublagem. Se faltar referência material, pesquisar antes de fechar a atuação.',
@@ -192,13 +193,43 @@ def validate_turn_packet(packet):
         if not isinstance(declared,list):issues.append(name+':invalid_scene_knowledge')
         elif not isinstance(a.get('known_facts',[]),list):issues.append(name+':invalid_known_facts')
         elif any(f not in declared for f in a.get('known_facts',[])):issues.append(name+':knowledge_without_channel')
-    for name in scene.get('present',[]) if isinstance(scene.get('present'),list) else []:
+    present = scene.get('present',[]) if isinstance(scene.get('present'),list) else []
+    active_supplied = 'active_npcs' in scene
+    active = scene.get('active_npcs',[]) if active_supplied else None
+    if active_supplied and not isinstance(active,list):
+        issues.append('invalid_scene:active_npcs'); active=[]
+    for name in present:
         resolved=resolve(name)
-        if not resolved:issues.append('unknown_present_actor:'+str(name))
-        elif resolved!='Amatsu Uchiha' and resolved not in covered:issues.append('missing_actor_card:'+resolved)
-    return {'status':'needs_evidence' if issues else 'reviewable','issues':issues,'semantic_review_required':True}
+        if not resolved:
+            issues.append('unknown_present_actor:'+str(name))
+    if active_supplied:
+        required=[]
+        for name in active:
+            resolved=resolve(name)
+            if not resolved:
+                issues.append('unknown_active_actor:'+str(name)); continue
+            if resolved not in [resolve(x) for x in present]:
+                issues.append('active_actor_not_present:'+resolved); continue
+            kind=catalog()['characters'][resolved].get('entity_type','individual')
+            if kind in ('group','unresolved_identity'):
+                issues.append('non_persona_entity_cannot_be_active:'+resolved); continue
+            if resolved!='Amatsu Uchiha':
+                required.append(resolved)
+        for resolved in required:
+            if resolved not in covered:issues.append('missing_actor_card:'+resolved)
+    else:
+        for name in present:
+            resolved=resolve(name)
+            if not resolved or resolved=='Amatsu Uchiha':continue
+            kind=catalog()['characters'][resolved].get('entity_type','individual')
+            if kind in ('group','unresolved_identity'):continue
+            if resolved not in covered:issues.append('missing_actor_card:'+resolved)
+    return {'status':'needs_evidence' if issues else 'reviewable','issues':issues,'semantic_review_required':True,'active_actor_policy':'active_npcs' if active_supplied else 'legacy_all_present'}
 
 def health():
     d=catalog();ids={c['id'] for c in d['scene_cards']}
     bad=[s for c in d['scene_cards'] for s in c['source_ids'] if s not in d['sources']]
-    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'scene_cards':len(ids),'source_records':len(d['sources']),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True}
+    kinds={}
+    for m in d['characters'].values():
+        kind=m.get('entity_type','individual');kinds[kind]=kinds.get(kind,0)+1
+    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True}
