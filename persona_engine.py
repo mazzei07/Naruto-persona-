@@ -708,6 +708,11 @@ def _addressing_plan_v22(
     actor_sensei = str(profile.get("sensei") or "")
     if not actor_sensei:
         actor_sensei = str(_extract_field(profile, "Sensei") or "")
+    if not actor_sensei:
+        actor_bible = acting_character_bible(actor)
+        actor_sensei = str(
+            ((actor_bible.get("bible") or {}).get("identity") or {}).get("sensei") or ""
+        )
     is_own_teacher = bool(actor_sensei and _norm(actor_sensei) == _norm(interlocutor))
 
     target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
