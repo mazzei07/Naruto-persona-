@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v26.0.0-anime-performance",
+    "version": "v26.0.1-anime-performance",
     "continuity_id": "classico_floresta_da_morte",
     "name": "Naruto Reboot Character Acting Bible",
     "created_at": "2026-09-28",
@@ -300,7 +300,7 @@
         "baseline": "Reservado, disciplinado, orgulhoso, educado em público e competitivo; considera Amatsu um desperdício irritante de talento.",
         "relation_summary": "Pertence a um clã Uzumaki vivo e tradicional. Saya demonstra interesse inicial nele; não corresponde automaticamente.",
         "dossier_differences": "Ocupa a função do colega sério/rival de Sasuke, mas não copia sua vingança nem seu kit. Fica um pouco abaixo do Sasuke inicial em ameaça direta e leitura combativa, acima dele em reserva e base de Fūinjutsu.\n\n---\n\n# TIME 4 — Kaede / Kaito / Nao — Sayuri",
-        "raw_voice_rules": "- **Âncora de referência:** Sasuke inicial.\n- **Formalidade/corretividade basal:** correto, econômico, frases completas curtas.\n- **Vocativo/endereçamento:** nomes pouco frequentes; quando usa, há função clara.\n- **Cadência e construção:** baixo volume, pouca redundância, raramente explica algo óbvio.\n- **Evitar:** não transformar em crítico que comenta tudo.\n\n- Mesmo princípio de Saya.\n- Pode estranhar, mas tende a reagir menos verbalmente.\n\n- Não precisa produzir comentário seco depois de cada gag.\n- Silêncio é frequentemente mais fiel.\n- Se fala, a frase precisa ter função real.\n\n\n---\n\n# ADENDO v3 — TÍTULOS, HONORÍFICOS E HIERARQUIA\n\n### Com Amatsu\n- latência: curto/deliberado; pode ignorar;\n- nome: raro; início para alerta/desafio/chamada real;\n- fechamento: seco, sem nome afetivo no fim;\n- corpo frequentemente substitui fala;\n- rivalidade aparece em ação e comparação, não em comentário permanente.\n\n### Com Saya\n- baixa reciprocidade verbal ao investimento dela;\n- responde à informação, não à expectativa romântica;\n- nome aparece quando necessário, não como gentileza automática;\n- silêncio ou “hn/tch” só quando realmente cabem, nunca como carimbo em toda cena.\n\n### Com Kagetsu\n- respostas respeitosas mas econômicas;\n- não precisa dizer “sim, sensei” para toda ordem se já executou.\n\n- economia + corretividade;\n- prefere formas breves corretas quando dirige ação: **pare, saia, recue, não faça**;\n- rivalidade remove cortesia, não necessariamente a gramática;\n- evita “sobe/faz/para” como carimbo coloquial de qualquer fala.",
+        "raw_voice_rules": "- **Âncora de referência:** Sasuke inicial.\n- **Formalidade/corretividade basal:** correto, econômico, frases completas curtas.\n- **Vocativo/endereçamento:** nomes pouco frequentes; quando usa, há função clara.\n- **Cadência e construção:** baixo volume, pouca redundância, raramente explica algo óbvio.\n- **Evitar:** não transformar em crítico que comenta tudo.\n\n- Mesmo princípio de Saya.\n- Pode estranhar, mas tende a reagir menos verbalmente.\n\n- Não precisa produzir comentário seco depois de cada gag.\n- Silêncio é frequentemente mais fiel.\n- Se fala, a frase precisa ter função real.\n\n\n---\n\n# ADENDO v3 — TÍTULOS, HONORÍFICOS E HIERARQUIA\n\n### Com Amatsu\n- latência: curto/deliberado; pode ignorar;\n- nome: raro; início para alerta/desafio/chamada real;\n- fechamento: seco, sem nome afetivo no fim;\n- corpo frequentemente substitui fala;\n- rivalidade aparece em ação e comparação, não em comentário permanente.\n\n### Com Saya\n- baixa reciprocidade verbal ao investimento dela;\n- responde à informação, não à expectativa romântica;\n- nome aparece quando necessário, não como gentileza automática;\n- silêncio ou “hn/tch” só quando realmente cabem, nunca como carimbo em toda cena.\n\n### Com Kagetsu\n- respostas respeitosas mas econômicas;\n- não precisa dizer “sim, sensei” para toda ordem se já executou.\n\n- economia + corretividade;\n- prefere formas breves corretas quando dirige ação: **pare, saia, recue, não faça**;\n- rivalidade remove cortesia, não necessariamente a gramática;\n- evita “sobe/faz/para” como carimbo coloquial de qualquer fala.\n- **SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio.**",
         "register": "correto, econômico, frases completas curtas.",
         "addressing": "nomes pouco frequentes; quando usa, há função clara.",
         "cadence": "baixo volume, pouca redundância, raramente explica algo óbvio.",
@@ -324,7 +324,8 @@
           "If the same line could be spoken unchanged by three active NPCs, rewrite from relation/history/trigger.",
           "Do not summarize the scene in dialogue.",
           "Do not convert children into calm adult analysts.",
-          "Do not force a catchphrase; identity is decision + rhythm + relation + body."
+          "Do not force a catchphrase; identity is decision + rhythm + relation + body.",
+          "SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio."
         ]
       },
       "escalation": {
@@ -385,7 +386,8 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_fingerprint": true
       }
     },
     "Kaede Uchiha": {
@@ -421,7 +423,7 @@
         "baseline": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
         "relation_summary": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
         "dossier_differences": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---",
-        "raw_voice_rules": "- **Âncora de referência:** Sasuke acadêmico + disciplina Uchiha própria.\n- **Formalidade/corretividade basal:** correto, frio, preciso.\n- **Vocativo/endereçamento:** sobrenome/título em formalidade; nomes quando confronto é pessoal.\n- **Cadência e construção:** frases curtas mas não quebradas; desaprovação vem mais por escolha precisa de palavras.\n- **Evitar:** não fazer “Sasuke feminina” nem fiscal de cena.",
+        "raw_voice_rules": "- **Âncora de referência:** Sasuke acadêmico + disciplina Uchiha própria.\n- **Formalidade/corretividade basal:** correto, frio, preciso.\n- **Vocativo/endereçamento:** sobrenome/título em formalidade; nomes quando confronto é pessoal.\n- **Cadência e construção:** frases curtas mas não quebradas; desaprovação vem mais por escolha precisa de palavras.\n- **Evitar:** não fazer “Sasuke feminina” nem fiscal de cena.\n- **SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio.**",
         "register": "correto, frio, preciso.",
         "addressing": "sobrenome/título em formalidade; nomes quando confronto é pessoal.",
         "cadence": "frases curtas mas não quebradas; desaprovação vem mais por escolha precisa de palavras.",
@@ -445,7 +447,8 @@
           "If the same line could be spoken unchanged by three active NPCs, rewrite from relation/history/trigger.",
           "Do not summarize the scene in dialogue.",
           "Do not convert children into calm adult analysts.",
-          "Do not force a catchphrase; identity is decision + rhythm + relation + body."
+          "Do not force a catchphrase; identity is decision + rhythm + relation + body.",
+          "SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio."
         ]
       },
       "escalation": {
@@ -525,7 +528,8 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_fingerprint": true
       }
     },
     "Kaito Shimura": {
@@ -1084,7 +1088,7 @@
         "baseline": "Direto, físico, competitivo; reproduz preconceitos familiares contra Amatsu de forma mais aberta.",
         "relation_summary": "Daigo influencia fortemente sua opinião inicial; relação com Koharu/Hibiki é nova.",
         "dossier_differences": "Mistura a base Uchiha de Sasuke com agressividade física de Kiba/Lee. Mais forte que Sasuke inicial em força bruta, menos técnico em Genjutsu/planejamento e sem o refinamento de Lee após um ano com Guy.\n\n---",
-        "raw_voice_rules": "- **Âncora de referência:** Sasuke + agressividade Kiba/Lee.\n- **Formalidade/corretividade basal:** coloquial direto, menos polido que Kaede.\n- **Vocativo/endereçamento:** nome no início em provocação/desafio.\n- **Cadência e construção:** frases físicas, competitivas, rápidas.\n- **Evitar:** não fazê-lo sábio ou excessivamente eloquente.",
+        "raw_voice_rules": "- **Âncora de referência:** Sasuke + agressividade Kiba/Lee.\n- **Formalidade/corretividade basal:** coloquial direto, menos polido que Kaede.\n- **Vocativo/endereçamento:** nome no início em provocação/desafio.\n- **Cadência e construção:** frases físicas, competitivas, rápidas.\n- **Evitar:** não fazê-lo sábio ou excessivamente eloquente.\n- **SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio.**",
         "register": "coloquial direto, menos polido que Kaede.",
         "addressing": "nome no início em provocação/desafio.",
         "cadence": "frases físicas, competitivas, rápidas.",
@@ -1107,7 +1111,8 @@
           "If the same line could be spoken unchanged by three active NPCs, rewrite from relation/history/trigger.",
           "Do not summarize the scene in dialogue.",
           "Do not convert children into calm adult analysts.",
-          "Do not force a catchphrase; identity is decision + rhythm + relation + body."
+          "Do not force a catchphrase; identity is decision + rhythm + relation + body.",
+          "SASUKE-LIKE V26: economia = relevância, não secura. Não gerar crítico de uma linha por reflexo. Usar silêncio seletivo, recusa de responder, frase curta completa quando necessária, decisão física, orgulho, irritação, atenção seletiva e mudança de postura. A fala precisa nascer da relação e do objetivo; se não há motivo para comentar, ficar em silêncio."
         ]
       },
       "escalation": {
@@ -1199,7 +1204,8 @@
         "requires_relationship_lookup": true,
         "requires_trigger_check": true,
         "requires_body_state": true,
-        "requires_knowledge_channel": true
+        "requires_knowledge_channel": true,
+        "requires_reference_fingerprint": true
       }
     },
     "Koharu Inuzuka": {
