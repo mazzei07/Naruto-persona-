@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v26.0.0",
+    "version": "v28-reference-relations",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
@@ -192,7 +192,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "Do not turn her into a permanently sensible girl who only sighs or rolls her eyes."
+        "rule": "Do not turn her into a permanently sensible girl who only sighs or rolls her eyes.",
+        "reference_relation_axis_v28": "Sakura jovem → Naruto",
+        "reference_relation_transfer_v28": "brusca/relacional com baixa paciência para exibicionismo; cuidado aparece em risco real",
+        "reference_relation_must_not_v28": "não usar o filtro que ela usa com Kazuma"
       },
       "Kazuma Uzumaki": {
         "sources": [
@@ -210,7 +213,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "Do not use the same aggressive register she uses with Amatsu."
+        "rule": "Do not use the same aggressive register she uses with Amatsu.",
+        "reference_relation_axis_v28": "Sakura jovem → Sasuke",
+        "reference_relation_transfer_v28": "mais autocontrole de imagem, atenção ao julgamento dele, tom mais suavizado",
+        "reference_relation_must_not_v28": "não usar bronca de Amatsu"
       },
       "Kagetsu Shiranui": {
         "sources": [
@@ -225,7 +231,10 @@
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
-        "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
+        "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence.",
+        "reference_relation_axis_v28": "Sakura jovem → Kakashi",
+        "reference_relation_transfer_v28": "respeito de aluna com espaço para reclamar/questionar",
+        "reference_relation_must_not_v28": "não tratar como par"
       }
     },
     "Kazuma Uzumaki": {
@@ -245,7 +254,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "No automatic 'hn', no one-line critic commentary every beat."
+        "rule": "No automatic 'hn', no one-line critic commentary every beat.",
+        "reference_relation_axis_v28": "Sasuke jovem → Naruto",
+        "reference_relation_transfer_v28": "rivalidade, irritação, comparação silenciosa, orgulho ferido; reconhecimento raramente é elogio limpo",
+        "reference_relation_must_not_v28": "não comentar tudo nem virar crítico seco"
       },
       "Saya Haruno": {
         "sources": [
@@ -260,7 +272,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Sasuke jovem → Sakura",
+        "reference_relation_transfer_v28": "baixa reciprocidade afetiva; responde ao conteúdo/tarefa, não ao flerte",
+        "reference_relation_must_not_v28": "não tratá-la como rival"
       },
       "Kagetsu Shiranui": {
         "sources": [
@@ -275,7 +290,10 @@
         "familiarity": "developing",
         "hierarchy": "student_to_instructor",
         "default_filter": "higher_with_authority",
-        "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence."
+        "rule": "Teacher hierarchy is established; personal closeness must come from live/dossier evidence.",
+        "reference_relation_axis_v28": "Sasuke jovem → Kakashi",
+        "reference_relation_transfer_v28": "respeito técnico, economia e atenção ao ensino comprovado",
+        "reference_relation_must_not_v28": "não usar sarcasmo de igual"
       },
       "Chihaya Uzumaki — figura histórica": {
         "sources": [
@@ -358,7 +376,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "No warm teasing, no quick friendship, no generic tsundere softness, no spectator-commentator voice."
+        "rule": "No warm teasing, no quick friendship, no generic tsundere softness, no spectator-commentator voice.",
+        "reference_relation_axis_v28": "Sasuke jovem → Naruto + histórico Uchiha próprio mais hostil",
+        "reference_relation_transfer_v28": "competição e atenção relutante ao crescimento, mas com distância mais fria",
+        "reference_relation_must_not_v28": "não virar camaradagem ou elogio fácil"
       },
       "Shin Uchiha": {
         "sources": [
@@ -964,7 +985,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "No adult composure, no therapist-like self-control, no elegant clan speech, no long explanation of his feelings."
+        "rule": "No adult composure, no therapist-like self-control, no elegant clan speech, no long explanation of his feelings.",
+        "reference_relation_axis_v28": "Kiba → Naruto + Sasuke→Naruto + fisicalidade Lee",
+        "reference_relation_transfer_v28": "provocação aberta, volume, corpo, impulso de provar superioridade; pai/clã são gatilhos fortes",
+        "reference_relation_must_not_v28": "não usar compostura adulta ou frieza de Kaede"
       },
       "Kaede Uchiha": {
         "sources": [
@@ -1195,6 +1219,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+      },
+      "Amatsu Uchiha": {
+        "sources": [],
+        "facts": [],
+        "roles": [],
+        "familiarity": "derive",
+        "hierarchy": "derive",
+        "default_filter": "derive",
+        "rule": "",
+        "reference_relation_axis_v28": "Kiba → Naruto",
+        "reference_relation_transfer_v28": "competição direta, pouca cerimônia, confiança no próprio estilo",
+        "reference_relation_must_not_v28": "não virar fã ou analista"
       }
     },
     "Hibiki Shirogane": {
@@ -1367,6 +1403,18 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+      },
+      "Amatsu Uchiha": {
+        "sources": [],
+        "facts": [],
+        "roles": [],
+        "familiarity": "derive",
+        "hierarchy": "derive",
+        "default_filter": "derive",
+        "rule": "",
+        "reference_relation_axis_v28": "Kiba→Naruto + expressividade social Ino/Sakura sem romance",
+        "reference_relation_transfer_v28": "provocação, competição, curiosidade e fisicalidade; risco real corta brincadeira",
+        "reference_relation_must_not_v28": "não importar romance futuro"
       }
     },
     "Ayame Hyūga": {
@@ -1431,7 +1479,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "Do not make her neutral/equalitarian by default; change must be earned."
+        "rule": "Do not make her neutral/equalitarian by default; change must be earned.",
+        "reference_relation_axis_v28": "Neji/Hinata apenas como mecanismo de hierarquia clânica, direção própria",
+        "reference_relation_transfer_v28": "formalidade clânica e condescendência Sōke→Bunke",
+        "reference_relation_must_not_v28": "não copiar biografia/fatalismo"
       },
       "Natsuki Hyūga": {
         "sources": [
@@ -1636,7 +1687,10 @@
         "familiarity": "explicit",
         "hierarchy": "as_documented",
         "default_filter": "override",
-        "rule": "Do not import Neji's exact ideology or speeches."
+        "rule": "Do not import Neji's exact ideology or speeches.",
+        "reference_relation_axis_v28": "Neji/Hinata apenas como mecanismo de pressão clânica",
+        "reference_relation_transfer_v28": "controle externo e resistência precisa à condescendência",
+        "reference_relation_must_not_v28": "não copiar timidez/fatalismo"
       },
       "Natsuki Hyūga": {
         "sources": [
@@ -1795,7 +1849,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Shikamaru → Ino",
+        "reference_relation_transfer_v28": "reclama da energia dela, humor seco, cooperação quase automática",
+        "reference_relation_must_not_v28": "não transformar tudo em bordão de preguiça"
       },
       "Daichi Akimichi": {
         "sources": [
@@ -1810,7 +1867,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Shikamaru → Choji",
+        "reference_relation_transfer_v28": "amizade confortável, defesa rápida e baixa necessidade de explicar",
+        "reference_relation_must_not_v28": "não usar distância emocional"
       },
       "Akihiko Sarutobi": {
         "sources": [
@@ -1887,7 +1947,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Ino → Shikamaru",
+        "reference_relation_transfer_v28": "familiaridade antiga, cobrança, interrupção, confiança prática",
+        "reference_relation_must_not_v28": "não tratar como estranho"
       },
       "Daichi Akimichi": {
         "sources": [
@@ -1902,7 +1965,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Ino → Choji",
+        "reference_relation_transfer_v28": "familiaridade protetora e liberdade para repreender",
+        "reference_relation_must_not_v28": "não reduzir a comida/corpo"
       },
       "Akihiko Sarutobi": {
         "sources": [
@@ -1979,7 +2045,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Choji → Shikamaru",
+        "reference_relation_transfer_v28": "confiança simples e antiga; segue plano por confiança, não submissão",
+        "reference_relation_must_not_v28": "não idolatrar"
       },
       "Hana Yamanaka": {
         "sources": [
@@ -1994,7 +2063,10 @@
         "familiarity": "new_or_developing",
         "hierarchy": "peer",
         "default_filter": "peer_context",
-        "rule": "Current teammates; do not assume deep intimacy beyond lived RP."
+        "rule": "Current teammates; do not assume deep intimacy beyond lived RP.",
+        "reference_relation_axis_v28": "Choji → Ino",
+        "reference_relation_transfer_v28": "aceita bronca com familiaridade e pode retrucar quando necessário",
+        "reference_relation_must_not_v28": "não ficar passivo sempre"
       },
       "Akihiko Sarutobi": {
         "sources": [
@@ -2440,7 +2512,10 @@
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
         "default_filter": "role_dependent",
-        "rule": "Instructor authority is established; affection/trust is not automatic."
+        "rule": "Instructor authority is established; affection/trust is not automatic.",
+        "reference_relation_axis_v28": "Kakashi → Naruto jovem",
+        "reference_relation_transfer_v28": "tolerância, correção prática e humor seco; corta rápido sob perigo",
+        "reference_relation_must_not_v28": "não virar pai/terapeuta"
       },
       "Saya Haruno": {
         "sources": [
@@ -2455,7 +2530,10 @@
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
         "default_filter": "role_dependent",
-        "rule": "Instructor authority is established; affection/trust is not automatic."
+        "rule": "Instructor authority is established; affection/trust is not automatic.",
+        "reference_relation_axis_v28": "Kakashi → Sakura jovem",
+        "reference_relation_transfer_v28": "reconhece controle/inteligência e cobra iniciativa",
+        "reference_relation_must_not_v28": "não infantilizar"
       },
       "Kazuma Uzumaki": {
         "sources": [
@@ -2470,7 +2548,10 @@
         "familiarity": "developing",
         "hierarchy": "instructor_to_student",
         "default_filter": "role_dependent",
-        "rule": "Instructor authority is established; affection/trust is not automatic."
+        "rule": "Instructor authority is established; affection/trust is not automatic.",
+        "reference_relation_axis_v28": "Kakashi → Sasuke jovem",
+        "reference_relation_transfer_v28": "cobrança precisa, leitura silenciosa do orgulho e talento",
+        "reference_relation_must_not_v28": "não falar como com Amatsu"
       }
     },
     "Sayuri Hyūga": {
@@ -5610,7 +5691,10 @@
         "familiarity": "family",
         "hierarchy": "older_sibling_not_command",
         "default_filter": "sparse_family_caution",
-        "rule": "Família estabelecida; não inferir afeto verbal aberto. Instabilidade de Shukaku eleva cautela."
+        "rule": "Família estabelecida; não inferir afeto verbal aberto. Instabilidade de Shukaku eleva cautela.",
+        "reference_relation_axis_v28": "Gaara → Temari (Chūnin Exams)",
+        "reference_relation_transfer_v28": "reconhece vínculo sem buscar aprovação; baixa responsividade verbal",
+        "reference_relation_must_not_v28": "não virar irmão caloroso"
       },
       "Kuroto Sabaku": {
         "sources": [
@@ -5627,7 +5711,22 @@
         "familiarity": "family",
         "hierarchy": "older_sibling_not_command",
         "default_filter": "sparse_family_caution",
-        "rule": "Família estabelecida; sem rotina cômica quando risco/instabilidade está ativo."
+        "rule": "Família estabelecida; sem rotina cômica quando risco/instabilidade está ativo.",
+        "reference_relation_axis_v28": "Gaara → Kankurō (Chūnin Exams)",
+        "reference_relation_transfer_v28": "distância e economia; familiaridade não gera banter",
+        "reference_relation_must_not_v28": "não fazer rotina cômica"
+      },
+      "Amatsu Uchiha": {
+        "sources": [],
+        "facts": [],
+        "roles": [],
+        "familiarity": "derive",
+        "hierarchy": "derive",
+        "default_filter": "derive",
+        "rule": "",
+        "reference_relation_axis_v28": "Gaara → rival capaz de pressionar sua defesa, adaptado ao live",
+        "reference_relation_transfer_v28": "atenção hostil/curiosidade mais por olhar, areia e decisão que por fala",
+        "reference_relation_must_not_v28": "não virar rival falante"
       }
     },
     "Equipe de Amegakure": {},
@@ -5650,7 +5749,10 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "protective_cautious",
-        "rule": "Proteção e cautela coexistem; instabilidade comprime a fala."
+        "rule": "Proteção e cautela coexistem; instabilidade comprime a fala.",
+        "reference_relation_axis_v28": "Temari → Gaara (Chūnin Exams)",
+        "reference_relation_transfer_v28": "cuidado + cautela real; reduz provocação sob instabilidade",
+        "reference_relation_must_not_v28": "não tratar como irmão caçula normal"
       },
       "Kuroto Sabaku": {
         "sources": [
@@ -5667,7 +5769,10 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "casual_sibling",
-        "rule": "Atrito fraterno permitido; tarefa/pressão pode suprimir brincadeira."
+        "rule": "Atrito fraterno permitido; tarefa/pressão pode suprimir brincadeira.",
+        "reference_relation_axis_v28": "Temari → Kankurō",
+        "reference_relation_transfer_v28": "corta enrolação, corrige e discute sem perder confiança operacional",
+        "reference_relation_must_not_v28": "não maternalizar"
       }
     },
     "Kuroto Sabaku": {
@@ -5686,7 +5791,10 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "irritable_cautious",
-        "rule": "Irritação não apaga cautela ou lealdade."
+        "rule": "Irritação não apaga cautela ou lealdade.",
+        "reference_relation_axis_v28": "Kankurō → Gaara (Chūnin Exams)",
+        "reference_relation_transfer_v28": "cuidado misturado a medo/tensão; filtra irritação quando Yoshiro desestabiliza",
+        "reference_relation_must_not_v28": "não provocar Shukaku por piada"
       },
       "Sayo Sabaku": {
         "sources": [
@@ -5703,7 +5811,10 @@
         "familiarity": "family",
         "hierarchy": "older_sibling",
         "default_filter": "casual_sibling",
-        "rule": "Ele rebate verbalmente; sem obediência automática nem hostilidade genérica."
+        "rule": "Ele rebate verbalmente; sem obediência automática nem hostilidade genérica.",
+        "reference_relation_axis_v28": "Kankurō → Temari",
+        "reference_relation_transfer_v28": "rebate e reclama; coordena quando a situação aperta",
+        "reference_relation_must_not_v28": "não virar subordinado"
       }
     }
   }
