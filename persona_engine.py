@@ -9,6 +9,13 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 from fidelity_core import evidence_packet as evidence_v24, lint as lint_v24, classify as classify_v24, health as fidelity_health, catalog as fidelity_catalog, resolve as resolve_fidelity_name
+from acting_bible import (
+    character_bible as acting_character_bible,
+    relationship_bible as acting_relationship_bible,
+    compile_acting_packet as acting_compile_packet,
+    audit_line as acting_audit_line,
+    health as acting_health,
+)
 
 ROOT = Path(__file__).resolve().parent
 CHARACTERS_PATH = ROOT / "character_registry_seed.json"
@@ -796,7 +803,8 @@ def healthcheck() -> Dict[str, Any]:
         "llm_required_for_core": False,
         "external_research_policy": "verify_reference_every_turn_and_research_missing_evidence",
         "fidelity_v24": fidelity_health(),
-        "fidelity_protocol": "v24.1",
+        "fidelity_protocol": "v25.0.0",
+        "acting_bible_v25": acting_health(),
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
         "formality_calibration": "v23.3-audit-and-low-filter",
@@ -819,7 +827,7 @@ def persona_get(name: str) -> Dict[str, Any]:
         "relations_knowledge": _extract_field(p, "Relações e conhecimento"),
         "combat_identity": _extract_field(p, "Identidade de combate"),
         "reference": ref,
-        "evidence_v24": evidence,
+        "acting_bible_v25": acting_character_bible(resolved).get("bible"),
         "voice_baseline": _baseline_voice_lines(p.get("voice_raw", "")),
         "raw_voice_rules": p.get("voice_raw", ""),
         "arc_specific": bool(p.get("arc_specific")),
@@ -901,6 +909,8 @@ def character_turn_packet(
     objective: str = "",
     perception_constraint: str = "",
     knowledge_constraint: str = "",
+    prior_exchange: str = "",
+    relationship_state: str = "",
 ) -> Dict[str, Any]:
     actor = resolve_name(name)
     if not actor:
@@ -915,8 +925,21 @@ def character_turn_packet(
     p = _profile(actor)
     interlocutor_resolved = resolve_name(interlocutor) if interlocutor else None
     ip = _profile(interlocutor_resolved) if interlocutor_resolved else {}
+    acting_v25 = acting_compile_packet(
+        actor, interlocutor_resolved or interlocutor or "", stimulus, situation,
+        prior_exchange, pressure, audience, body_state
+    )
     baseline = _baseline_voice_lines(p.get("voice_raw", ""))
     rel_lines = _relation_lines(p.get("voice_raw", ""), interlocutor_resolved or "")
+    rel_v25 = acting_v25.get("relationship", {}) if acting_v25.get("status") == "ok" else {}
+    if rel_v25:
+        rel_lines = _uniq(rel_lines + [
+            *(rel_v25.get("history", []) if isinstance(rel_v25.get("history"), list) else []),
+            rel_v25.get("baseline", ""),
+            rel_v25.get("address", ""),
+            rel_v25.get("must_not", ""),
+            *[str(x.get("response", "")) for x in rel_v25.get("trigger_rules", []) if isinstance(x, dict)]
+        ])
     tags = _classify_situation(stimulus, situation)
     plev = _pressure_level(pressure)
     ref = _infer_reference(p)
@@ -966,6 +989,15 @@ def character_turn_packet(
         "audience": audience or "unspecified",
         "body_state_input": body_state or "not_provided",
         "objective_input": objective or "not_provided",
+        "prior_exchange": prior_exchange or "",
+        "relationship_state_input": relationship_state or "",
+        "acting_bible_v25": acting_v25,
+        "escalation_v25": acting_v25.get("escalation", {}) if acting_v25.get("status") == "ok" else {},
+        "dialogue_continuity_v25": {
+            "rule": "Prior exchange is state. Do not reset hostility/intimacy/embarrassment at each reply.",
+            "prior_exchange_supplied": bool(prior_exchange),
+            "relationship_state": relationship_state or "derive from live history + acting bible"
+        },
         "epistemic_constraints": {
             "perception": perception_constraint or "must be supplied by chat/Canoney if material",
             "knowledge": knowledge_constraint or "must be supplied by chat/Canoney if material",
@@ -1016,7 +1048,10 @@ def character_turn_packet(
         "research": research,
         "generation_order": _rules().get("pipeline", []),
         "final_gate": [
-            "Verificar referência v24 por fase, relação e situação; pesquisar lacunas materiais.",
+            "Verificar referência v25 por fase, relação e situação; pesquisar lacunas materiais.",
+            "Aplicar a Bíblia de Atuação v25: histórico relacional e gatilho pessoal vencem personalidade genérica.",
+            "Carregar o prior_exchange; não reiniciar temperatura emocional a cada fala.",
+            "Se a fala puder ser trocada entre três NPCs sem alteração, reescrever.",
             "Uma ordem funcional como Abaixa! pode servir a várias pessoas sem ser um erro.",
             "Avaliar identidade no conjunto de decisões e falas; não forçar bordão, gesto ou insulto.",
             "Ficha própria precede analogia; inspiração técnica não autoriza copiar personalidade.",
@@ -1039,6 +1074,12 @@ def persona_audit(
         return {"pass": False, "packet_status": packet.get("status"), "violations": [packet.get("rule", "invalid actor")], "packet": packet}
     violations = []
     warnings = []
+    acting_review = acting_audit_line(
+        name, interlocutor, candidate_dialogue, candidate_action,
+        candidate_action or candidate_dialogue, "", situation, pressure
+    )
+    violations.extend(acting_review.get("violations", []))
+    warnings.extend(acting_review.get("warnings", []))
     text = f"{candidate_dialogue} {candidate_action}".strip()
     ntext = _norm(text)
     for word in _rules().get("forbidden_modernisms", []):
