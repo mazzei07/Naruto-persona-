@@ -21,13 +21,16 @@ from persona_api import (
     persona_turn as _turn,
     persona_check as _check,
     persona_sayability as _sayability,
+    persona_evidence as _evidence,
+    persona_validate_turn_packet as _validate_turn_packet,
+    persona_fidelity_health as _fidelity_health,
 )
 
 PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.6.0",
+    version="0.6.1",
     instructions=(
         "Especialista read-only v24: recuperar evidências por turno, pesquisar lacunas e nunca tratar pass como certificação semântica. Inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
@@ -43,7 +46,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -141,7 +144,7 @@ def persona_sayability(
     perception_constraint: str = "",
     knowledge_constraint: str = "",
 ) -> dict[str, Any]:
-    """Resolve fala/silêncio e devolve atuação, endereçamento, família de voz e formalidade v23."""
+    """Resolve fala/silêncio com evidência v24.1, endereçamento e formalidade contextual."""
     return _sayability(
         name=name,
         interlocutor=interlocutor,
@@ -174,6 +177,29 @@ def persona_check(
         situation=situation,
         pressure=pressure,
     )
+
+
+@mcp.tool()
+def persona_evidence(
+    name: str,
+    interlocutor: str = "",
+    situation: str = "",
+    stimulus: str = "",
+) -> dict[str, Any]:
+    """Retrieve v24.1 reference evidence for one actor/beat without generating prose."""
+    return _evidence(name, interlocutor, situation, stimulus)
+
+
+@mcp.tool()
+def persona_validate_turn_packet(packet: dict[str, Any]) -> dict[str, Any]:
+    """Validate the shared v24.1 evidence envelope before Gemini drafting."""
+    return _validate_turn_packet(packet)
+
+
+@mcp.tool()
+def persona_fidelity_health() -> dict[str, Any]:
+    """Check only the v24.1 evidence catalog and actor-scope contract."""
+    return _fidelity_health()
 
 
 if __name__ == "__main__":
