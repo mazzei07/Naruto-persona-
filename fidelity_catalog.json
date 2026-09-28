@@ -1,37 +1,39 @@
 {
   "schema_version": "1.0",
   "contract": {
-    "version": "v24.1.0",
+    "version": "v25.0.0",
     "continuity_id": "classico_floresta_da_morte",
-    "reference_episode_ceiling": 37,
-    "coverage_statement": "Catálogo de evidências selecionadas, não leitura integral do mangá, databooks, novels ou dublagem. Verificar fonte por turno e pesquisar lacunas antes de fechar uma atuação.",
+    "reference_episode_ceiling": 51,
+    "coverage_statement": "Catálogo de evidências selecionadas até a fase das preliminares do Exame Chūnin, não leitura integral de toda a obra. A Bíblia de Atuação v25 e a relação live precedem a analogia; pesquisar lacunas materiais antes de fechar atuação.",
     "precedence": [
       "correção explícita atual do usuário",
       "ação exata do jogador",
-      "estado live validado e conhecimento individual",
+      "estado live validado + prior_exchange + relação direcional",
+      "Bíblia de Atuação v25 / gatilho específico",
       "ficha/repertório vigente",
-      "matriz relacional própria",
       "referência oficial na fase correta",
       "inferência editorial sinalizada"
     ],
     "pre_turn": [
       "recuperar estado live; nunca tratar exemplo de teste como evento",
-      "recuperar todos os atores presentes e ficha própria",
+      "recuperar atores ativos e Bíblia de Atuação v25",
+      "recuperar prior_exchange e temperatura relacional; não reiniciar a discussão",
+      "aplicar gatilho específico de clã/família/status/medo/afeto antes de redigir",
       "selecionar cena de referência com fase+relação+situação",
       "distinguir fato observado, inferência e informação ausente",
       "verificar conhecimento, objetivo, cansaço, hierarquia, público e tempo disponível",
       "escolher ação, fala ou silêncio pelo estímulo real",
-      "revisar causalidade, registro e continuidade antes de mostrar"
+      "executar teste anti-genérico/swap antes de mostrar"
     ],
     "post_turn": [
       "nenhuma ação/emoção voluntária de Amatsu foi inventada",
       "sem biografia ou técnica copiada da referência",
-      "a fala responde ao interlocutor e à situação",
-      "não obrigar toda frase a exibir bordão ou assinatura",
+      "a fala responde ao interlocutor, histórico e gatilho atual",
+      "prior_exchange e temperatura emocional foram preservados",
+      "linha/ação não é intercambiável entre vários NPCs quando existe relação específica",
+      "não obrigar bordão ou microgesto",
       "sem rodízio de comentários nem protagonista como centro universal",
-      "didática legítima é permitida; não banir porque ou isso significa mecanicamente",
-      "silêncio, gesto e fala podem coexistir sem quantidade obrigatória",
-      "nenhuma piada implica golpe inevitável no jogador",
+      "didática legítima é permitida quando o papel exige",
       "auditoria automática não certifica fidelidade sem revisão semântica"
     ],
     "hard_limits": [
@@ -59,6 +61,15 @@
       "historical": "Not a live actor unless a legitimate flashback/source establishes the beat.",
       "group": "Aggregate entity; never use as a single speaking persona.",
       "unresolved_identity": "Do not invent identity/voice until established."
+    },
+    "acting_bible": {
+      "version": "v25.0.0",
+      "file": "character_acting_bibles.json",
+      "required_for_active_actor": true,
+      "relation_override_precedence": true,
+      "prior_exchange_required_for_continuous_conflict": true,
+      "trigger_escalation_required": true,
+      "genericity_audit_required": true
     }
   },
   "sources": {
@@ -639,6 +650,66 @@
       "checked_at": "2026-09-28",
       "access": "official_summary_or_column",
       "note": "Sinopse oficial; não constitui transcrição nem verificação da voz dublada.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep22": {
+      "id": "ep22",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_246",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Lee desafia Sasuke; velocidade/taijutsu pressionam Sasuke. Usar apenas para eixo físico/competitivo da fase.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep38": {
+      "id": "ep38",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_262",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Início das preliminares individuais após a Segunda Fase; emoções dos classificados e transição imediata.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep41": {
+      "id": "ep41",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_265",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Preliminares: rivalidade Sakura/Ino entra em combate; útil para rivalidade juvenil com história compartilhada.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep46": {
+      "id": "ep46",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_270",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Hinata vs Neji; tensão Sōke/Bunke e agressividade relacional explícita.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep49": {
+      "id": "ep49",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_273",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Lee vs Gaara continua; escalada física e suporte de mentor sob risco real.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep51": {
+      "id": "ep51",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_275",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Fim das preliminares; limite atual de referência desta fase.",
       "full_work_read": false,
       "br_dub_verified": false
     }
@@ -1276,6 +1347,119 @@
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
       "not_rp_event": true
+    },
+    {
+      "id": "preliminaries_social_temperature",
+      "references": [
+        "Naruto",
+        "Sasuke",
+        "Sakura",
+        "Ino",
+        "Kiba",
+        "Shikamaru",
+        "Neji",
+        "Hinata",
+        "Lee"
+      ],
+      "source_ids": [
+        "ep38",
+        "ep41",
+        "ep44",
+        "ep46",
+        "ep47",
+        "ep49"
+      ],
+      "locator": "Anime eps. 38–49, preliminares do Exame Chūnin",
+      "episode_ceiling": 49,
+      "phase": "chunin_preliminaries",
+      "tags": [
+        "exam",
+        "rivalry",
+        "audience",
+        "public_pressure",
+        "reaction"
+      ],
+      "observed_summary": "As preliminares mantêm história relacional, rivalidades, orgulho e tensão pública ativos; competidores e colegas reagem de modo desigual, não como uma fila homogênea de analistas.",
+      "acting_inference": "Em discussão pública, carregar histórico prévio e orgulho do personagem. Reações específicas de relação vencem comentários genéricos de plateia.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "kiba_naruto_public_rivalry",
+      "references": [
+        "Kiba",
+        "Naruto"
+      ],
+      "source_ids": [
+        "ep44",
+        "ep45"
+      ],
+      "locator": "Anime eps. 44–45",
+      "episode_ceiling": 45,
+      "phase": "chunin_preliminaries",
+      "tags": [
+        "rivalry",
+        "academy_history",
+        "public_loss",
+        "boast",
+        "combat"
+      ],
+      "observed_summary": "Kiba enfrenta Naruto carregando a memória de conhecê-lo como fracassado da Academia e entra com confiança/menosprezo; a luta vira essa expectativa contra ele.",
+      "acting_inference": "História de Academia e status anterior devem permanecer vivos em provocações de rivalidade; perda pública pode atingir orgulho de modo imediato e juvenil.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "hyuga_family_trigger",
+      "references": [
+        "Neji",
+        "Hinata"
+      ],
+      "source_ids": [
+        "ep46",
+        "ep47"
+      ],
+      "locator": "Anime eps. 46–47",
+      "episode_ceiling": 47,
+      "phase": "chunin_preliminaries",
+      "tags": [
+        "family",
+        "clan",
+        "hierarchy",
+        "trigger",
+        "combat"
+      ],
+      "observed_summary": "A luta Neji/Hinata é moldada por parentesco, Sōke/Bunke e hostilidade acumulada; a relação altera intensidade e escolhas.",
+      "acting_inference": "Conflito clânico/familiar não deve ser tratado como simples duelo neutro. Relação e gatilhos podem alterar voz, corpo e agressividade.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "lee_sasuke_physical_challenge",
+      "references": [
+        "Lee",
+        "Sasuke"
+      ],
+      "source_ids": [
+        "ep22"
+      ],
+      "locator": "Anime ep. 22",
+      "episode_ceiling": 22,
+      "phase": "pre_exam",
+      "tags": [
+        "challenge",
+        "rivalry",
+        "physicality",
+        "pride"
+      ],
+      "observed_summary": "Lee desafia Sasuke diretamente e o pressiona fisicamente; habilidade percebida não equivale a capacidade de execução do corpo.",
+      "acting_inference": "Para personagens físicos/competitivos, desafio pode aparecer primeiro em ação, postura e pressão corporal, não em discurso sofisticado.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
     }
   ],
   "characters": {
@@ -1368,9 +1552,9 @@
         "Sasuke"
       ],
       "transfer_scope": "documented_axes_only",
-      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
-      "baseline": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
-      "relations": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
+      "voice_rule": "Usar Sasuke acadêmico apenas como eixo de frieza/competência; a relação própria Kaede→Amatsu e a disciplina social da ficha precedem qualquer cópia.",
+      "baseline": "Disciplinada, orgulhosa, competitiva e fria; com Amatsu a antipatia vem da Academia e da reputação de vergonha pública do clã.",
+      "relations": "Seijūrō reforçou distância. Com Amatsu, tratamento é mais frio, ríspido e crítico que com colega neutro; hostilidade tende a ser precisa/contida, diferente da explosividade de Shin.",
       "dossier_differences": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---",
       "source_files": [
         "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
@@ -1380,7 +1564,8 @@
         "ep28",
         "ep29",
         "ep30",
-        "sasuke"
+        "sasuke",
+        "ep38"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
@@ -1516,9 +1701,9 @@
         "Lee"
       ],
       "transfer_scope": "documented_axes_only",
-      "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
-      "baseline": "Direto, físico, competitivo; reproduz preconceitos familiares contra Amatsu de forma mais aberta.",
-      "relations": "Daigo influencia fortemente sua opinião inicial; relação com Koharu/Hibiki é nova.",
+      "voice_rule": "Sasuke fornece base Uchiha; Kiba/Lee fornecem abertura física/competitiva. Com Amatsu, histórico e gatilhos v25 vencem a família de voz genérica.",
+      "baseline": "Direto, físico, competitivo, explosivo e mais aberto que Kaede; na Academia reproduzia preconceitos familiares contra Amatsu e o tratava como vergonha do clã.",
+      "relations": "Daigo influencia fortemente sua opinião. Com Amatsu há hostilidade prévia de Academia: provocação sobre vergonha do clã, derrota pública ou Daigo/pai aumenta muito a escalada; não usar compostura adulta como padrão.",
       "dossier_differences": "Mistura a base Uchiha de Sasuke com agressividade física de Kiba/Lee. Mais forte que Sasuke inicial em força bruta, menos técnico em Genjutsu/planejamento e sem o refinamento de Lee após um ano com Guy.\n\n---",
       "source_files": [
         "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
@@ -1532,7 +1717,10 @@
         "ep34",
         "ep44",
         "lee",
-        "sasuke"
+        "sasuke",
+        "ep22",
+        "ep45",
+        "ep38"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
