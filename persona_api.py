@@ -132,12 +132,12 @@ def persona_sayability(
 
 
 def persona_evidence(name: str, interlocutor: str = "", situation: str = "", stimulus: str = ""):
-    """Return v24.1 phase-scoped evidence cards without generating prose."""
+    """Return v25 phase-scoped evidence cards without generating prose."""
     return fidelity_evidence_packet(name, interlocutor, situation, stimulus)
 
 
 def persona_validate_turn_packet(packet: dict):
-    """Validate the shared v24.1 turn packet used by Persona/Canoney/Gemini."""
+    """Validate the shared v25 turn packet used by Persona/Canoney/Gemini."""
     return validate_turn_packet(packet)
 
 
