@@ -73,6 +73,19 @@ def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
             level=max(level,2);reasons.append("clan_reputation_trigger")
         if any(x in n for x in ["melhor","prodig","competencia","competência","fraca","fracass"]):
             level=max(level,3);reasons.append("competence_status_trigger")
+    if actor=="Yoshiro Sabaku":
+        blood_terms=["sangue","sangra","sangrou","blood","bleeding","ferimento","ferido","wound","pain","dor"]
+        breach_terms=["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"]
+        shukaku_terms=["shukaku","instabil","perde a compostura","perdeu a compostura","rage","fury"]
+        if any(x in n for x in blood_terms):
+            level=max(level,3);reasons.append("gaara_chunin_blood_or_pain_trigger")
+        if any(x in n for x in breach_terms):
+            level=max(level,3);reasons.append("gaara_chunin_defense_breach_or_humiliation_trigger")
+        if any(x in n for x in shukaku_terms):
+            level=max(level,4);reasons.append("shukaku_instability_trigger")
+    if actor in {"Sayo Sabaku","Kuroto Sabaku"}:
+        if any(x in n for x in ["yoshiro perde","yoshiro com sangue","yoshiro sangra","shukaku","instabilidade de yoshiro","yoshiro instavel","yoshiro instável"]):
+            level=max(level,3);reasons.append("dangerous_sibling_instability_trigger")
     return level,reasons
 
 def escalation_packet(name:str,interlocutor:str="",stimulus:str="",prior_exchange:str="",situation:str="",pressure:str="normal")->dict[str,Any]:
