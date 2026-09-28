@@ -5,9 +5,14 @@ from typing import Any
 
 BASE=Path(__file__).resolve().parent
 BIBLE_PATH=BASE/"character_acting_bibles.json"
+GRAPH_PATH=BASE/"character_relationship_graph.json"
 
 def _load()->dict[str,Any]:
     with BIBLE_PATH.open("r",encoding="utf-8") as f:
+        return json.load(f)
+
+def _graph()->dict[str,Any]:
+    with GRAPH_PATH.open("r",encoding="utf-8") as f:
         return json.load(f)
 
 def _norm(value:str)->str:
@@ -37,13 +42,17 @@ def relationship_bible(name:str,interlocutor:str)->dict[str,Any]:
     if interlocutor and not target:return {"status":"interlocutor_not_found","query":interlocutor}
     entry=_load()["characters"][actor]
     overrides=entry.get("relationship_overrides",{})
-    rel=overrides.get(target or interlocutor,{})
+    explicit=overrides.get(target or interlocutor,{})
+    graph_rel=_graph().get("edges",{}).get(actor,{}).get(target or interlocutor,{})
+    rel=explicit or graph_rel
+    source="explicit_override" if explicit else "relationship_graph" if graph_rel else "fallback_summary"
     return {
         "status":"ok","version":_load()["meta"]["version"],"actor":actor,
         "interlocutor":target or interlocutor or None,
-        "specific":bool(rel),"relationship":rel,
+        "specific":bool(explicit),"graph_known":bool(graph_rel),"relationship_source":source,
+        "relationship":rel,
         "fallback_relation_summary":entry.get("voice",{}).get("relation_summary",""),
-        "rule":"specific relationship history outranks generic personality/reference defaults"
+        "rule":"explicit relationship override > established relationship graph > dossier summary > generic personality/reference"
     }
 
 def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
@@ -97,7 +106,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
     return {
         "status":"ok","version":base["version"],"actor":base["name"],"interlocutor":rel.get("interlocutor"),
         "identity":b.get("identity",{}),"canon_memory":b.get("canon_memory",{}),"voice":b.get("voice",{}),
-        "acting":b.get("acting",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),
+        "acting":b.get("acting",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
         "escalation":esc,"stimulus":stimulus,"situation":situation,"prior_exchange":prior_exchange,
         "pressure":pressure,"audience":audience,"body_state":body_state,
         "generation_directive":[
@@ -133,11 +142,13 @@ def audit_line(name:str,interlocutor:str="",candidate_dialogue:str="",candidate_
     return {"pass":not violations,"violations":violations,"warnings":warnings,"packet":packet}
 
 def health()->dict[str,Any]:
-    d=_load();chars=d.get("characters",{})
+    d=_load();chars=d.get("characters",{});g=_graph()
     missing=[n for n,v in chars.items() if not v.get("acting") or not v.get("voice")]
     relation_overrides=sum(len(v.get("relationship_overrides",{})) for v in chars.values())
+    directional_edges=sum(len(v) for v in g.get("edges",{}).values())
     return {
         "ok":not missing,"version":d.get("meta",{}).get("version"),"characters":len(chars),
-        "relation_overrides":relation_overrides,"missing":missing,
+        "relation_overrides":relation_overrides,"directional_relation_edges":directional_edges,
+        "missing":missing,"supports_relationship_graph":True,
         "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_genericity_audit":True
     }
