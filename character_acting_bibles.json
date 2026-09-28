@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v31.0-relational-performance",
+    "version": "v32.0-chunin-finals",
     "continuity_id": "classico_floresta_da_morte",
     "name": "Naruto Reboot Character Acting Bible",
     "created_at": "2026-09-28",
@@ -31,7 +31,8 @@
     "reference_relation_matrix_version": "v28",
     "actor_state_version": "v29",
     "scene_scheduler_version": "v30",
-    "generation_kernel_version": "v31"
+    "generation_kernel_version": "v31",
+    "finals_month_version": "v32"
   },
   "characters": {
     "Amatsu Uchiha": {
@@ -56,7 +57,22 @@
         "relations": "Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.",
         "combat_identity": "Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso, tentando explorar a primeira resposta errada do adversário.",
         "limitations": "Sem Sharingan; Teamwork baixo; experiência real mínima; Gōka Mekkyaku cobra muito; clones dividem chakra e multiplicam carga cognitiva; fama/talento não apagam erro juvenil.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha-Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui • Jinchūriki de Kurama sem saber.\n\n**2. IC-80.** **28,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3 • Força 4 • Velocidade 4,5 • Stamina 4,5 • Selos 3,5.\n\n**3. Secundários.** Reserva **S** • Controle C+ • Shuriken B+ • Percepção C+ • Improviso B • Furtividade D+ • Teamwork D • Experiência D.\n\n**4. Naturezas.** Katon e Fūton conhecidos. Raiton é afinidade potencial futura e desconhecida no início.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — principal Katon comum; bom domínio juvenil.\n- Katon: Hōsenka no Jutsu — Rank C — funcional; combina com projéteis.\n- Katon: Gōka Mekkyaku — Rank B — aprendido clandestinamente de material reservado Uchiha; execução real, juvenil, cara e muito menor que a de mestres lendários.\n- Magen: Kokoni Arazu no Jutsu — Rank C — primeiro Genjutsu real.\n- Kage Bunshin no Jutsu — Rank B — aprendido no Pergaminho de Selamento; segredo conhecido por Iruka.\n- Fūton: Reppūshō — Rank C — rajada e aceleração de projéteis.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha sem Sharingan despertado. Ascendência materna Uzumaki explica parte da reserva natural excepcional. Kurama permanece selada e separada do IC/reserva-base.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Aprende rápido, mas experiência real ainda é baixa.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu é a única técnica ofensiva de Genjutsu inicial. Kai básico; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu acima da média Genin; sem escola avançada fechada. Kenjutsu ainda não é eixo formal nesta abertura.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu B+; kunai, shuriken e fios combinados com Hōsenka/Reppūshō.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu operacional próprio apesar da herança Uzumaki; o conhecimento de selos não é herdado biologicamente.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin: 1–4 confortável; 5–8 operacional; 9–15 pesado; 16–24 extremo. Kurama não coopera e Amatsu não sabe que ela está nele.\n\n**13. Equipamento.** Kit Genin, kunai, shuriken, fios, Kibaku Fuda e bolsas de campo.\n\n**14. Limitações reais.** Sem Sharingan; Teamwork baixo; experiência real mínima; Gōka Mekkyaku cobra muito; clones dividem chakra e multiplicam carga cognitiva; fama/talento não apagam erro juvenil.\n\n**15. Personalidade / voz.** Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.\n\n**16. Relações e conhecimento.** Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.\n\n**17. Identidade de combate.** Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso, tentando explorar a primeira resposta errada do adversário.\n\n**18. Inspiração e comparação — Naruto Clássico.** Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha-Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui • Jinchūriki de Kurama sem saber.\n\n**2. IC-80.** **28,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3 • Força 4 • Velocidade 4,5 • Stamina 4,5 • Selos 3,5.\n\n**3. Secundários.** Reserva **S** • Controle C+ • Shuriken B+ • Percepção C+ • Improviso B • Furtividade D+ • Teamwork D • Experiência D.\n\n**4. Naturezas.** Katon e Fūton conhecidos. Raiton é afinidade potencial futura e desconhecida no início.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — principal Katon comum; bom domínio juvenil.\n- Katon: Hōsenka no Jutsu — Rank C — funcional; combina com projéteis.\n- Katon: Gōka Mekkyaku — Rank B — aprendido clandestinamente de material reservado Uchiha; execução real, juvenil, cara e muito menor que a de mestres lendários.\n- Magen: Kokoni Arazu no Jutsu — Rank C — primeiro Genjutsu real.\n- Kage Bunshin no Jutsu — Rank B — aprendido no Pergaminho de Selamento; segredo conhecido por Iruka.\n- Fūton: Reppūshō — Rank C — rajada e aceleração de projéteis.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha sem Sharingan despertado. Ascendência materna Uzumaki explica parte da reserva natural excepcional. Kurama permanece selada e separada do IC/reserva-base.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Aprende rápido, mas experiência real ainda é baixa.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu é a única técnica ofensiva de Genjutsu inicial. Kai básico; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu acima da média Genin; sem escola avançada fechada. Kenjutsu ainda não é eixo formal nesta abertura.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu B+; kunai, shuriken e fios combinados com Hōsenka/Reppūshō.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu operacional próprio apesar da herança Uzumaki; o conhecimento de selos não é herdado biologicamente.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin: 1–4 confortável; 5–8 operacional; 9–15 pesado; 16–24 extremo. Kurama não coopera e Amatsu não sabe que ela está nele.\n\n**13. Equipamento.** Kit Genin, kunai, shuriken, fios, Kibaku Fuda e bolsas de campo.\n\n**14. Limitações reais.** Sem Sharingan; Teamwork baixo; experiência real mínima; Gōka Mekkyaku cobra muito; clones dividem chakra e multiplicam carga cognitiva; fama/talento não apagam erro juvenil.\n\n**15. Personalidade / voz.** Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.\n\n**16. Relações e conhecimento.** Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.\n\n**17. Identidade de combate.** Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso, tentando explorar a primeira resposta errada do adversário.\n\n**18. Inspiração e comparação — Naruto Clássico.** Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
+        "current_ic": "32,5",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Katon: Gōkakyū no Jutsu",
+          "Katon: Hōsenka no Jutsu",
+          "Katon: Gōka Mekkyaku",
+          "Magen: Kokoni Arazu no Jutsu",
+          "Kage Bunshin no Jutsu",
+          "Fūton: Reppūshō",
+          "Raiton: Chidori",
+          "Kuchiyose no Jutsu — Corvos-da-Montanha"
+        ]
       },
       "voice": {
         "reference_anchor": "Naruto jovem + identidade própria Uchiha-Uzumaki.",
@@ -165,6 +181,17 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true
+      },
+      "finals_month_v32": {
+        "ic_80": "32,5",
+        "primary": "Ninjutsu 5 • Taijutsu 4 • Genjutsu 1,5 • Inteligência 3,5 • Força 4 • Velocidade 5,5 • Stamina 5 • Selos 4",
+        "secondary": "Reserva S • Controle B • Shuriken B+ • Percepção B- • Improviso B+ • Furtividade D+ • Teamwork D+ • Experiência C-",
+        "new_techniques": [
+          "Raiton: Chidori",
+          "Kuchiyose no Jutsu — Corvos-da-Montanha"
+        ],
+        "training": "Kagetsu: natureza Raiton, aceleração/taijutsu e Chidori. Shōzen Arakawa: controle sob exaustão, contrato dos Corvos-da-Montanha, Kuchiyose progressivo e combate cooperativo com invocação. Consegue corvos pequenos/médios com boa consistência; uma invocação de classe Karasu Tengu exige saída extrema e não é rotina.",
+        "limits": "Chidori é operacional, mas sem Sharingan a investida linear em velocidade máxima sofre o problema clássico de visão/túnel e contra-ataque; Kagetsu treinou rotas de uso com preparação, clone/feint e menor compromisso. Não ganhou Hiraishin, Senjutsu, Rasengan nem cooperação consciente com Kurama."
       }
     },
     "Saya Haruno": {
@@ -189,7 +216,17 @@
         "relations": "Interesse inicial em Kazuma; relação com Amatsu começa conflituosa. Kagetsu ainda precisa conquistar autoridade pessoal, apesar da autoridade formal.",
         "combat_identity": "Ler situação, manter controle e usar precisão em vez de potência.",
         "limitations": "Força, velocidade e experiência abaixo dos prodígios físicos; repertório curto; não possui Iryō Ninjutsu no início.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • família Haruno • Genin • Time 7 • sensei Kagetsu Shiranui.\n\n**2. IC-80.** **24/80** — Ninjutsu 3 • Taijutsu 2,5 • Genjutsu 2,5 • Inteligência 4,5 • Força 2 • Velocidade 2,5 • Stamina 3 • Selos 4.\n\n**3. Secundários.** Reserva C • Controle A- • Percepção C • Concentração B • Teoria B+ • Teamwork C+ • Furtividade C • Experiência D.\n\n**4. Naturezas.** Nenhuma natureza elemental operacional no Dia 0; afinidade será descoberta em treino posterior.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Kai — contragenjutsu básico/alto para a idade.\n- Magen: Kokoni Arazu no Jutsu — Rank C — domínio inicial/teórico-prático.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Sem dōjutsu, Hiden ou Kekkei Genkai.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Controle de chakra é sua competência mais limpa.\n\n**8. Genjutsu / contragenjutsu.** Boa sensibilidade para inconsistências e Kai. Kokoni Arazu é limitado em escala e não é auto-hit.\n\n**9. Taijutsu / armas brancas.** Taijutsu acadêmico funcional; pouca força bruta.\n\n**10. Shurikenjutsu / fios / ferramentas.** Uso correto de kunai/shuriken, sem especialização.\n\n**11. Fūinjutsu / barreiras.** Nenhum Fūinjutsu ou barreira formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin padrão e material de primeiros socorros simples.\n\n**14. Limitações reais.** Força, velocidade e experiência abaixo dos prodígios físicos; repertório curto; não possui Iryō Ninjutsu no início.\n\n**15. Personalidade / voz.** Inteligente, consciente da imagem, temperamental e expressiva; pode acertar Amatsu em contexto cômico/social, nunca comprometendo uma missão séria.\n\n**16. Relações e conhecimento.** Interesse inicial em Kazuma; relação com Amatsu começa conflituosa. Kagetsu ainda precisa conquistar autoridade pessoal, apesar da autoridade formal.\n\n**17. Identidade de combate.** Ler situação, manter controle e usar precisão em vez de potência.\n\n**18. Inspiração e comparação — Naruto Clássico.** É a mais próxima de Sakura Clássica: semelhante no eixo acadêmico/controle e no foco inicial em imagem/romance, porém um pouco mais preparada para campo e Genjutsu já no Dia 0. Continua muito abaixo da Sakura treinada por Tsunade.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • família Haruno • Genin • Time 7 • sensei Kagetsu Shiranui.\n\n**2. IC-80.** **24/80** — Ninjutsu 3 • Taijutsu 2,5 • Genjutsu 2,5 • Inteligência 4,5 • Força 2 • Velocidade 2,5 • Stamina 3 • Selos 4.\n\n**3. Secundários.** Reserva C • Controle A- • Percepção C • Concentração B • Teoria B+ • Teamwork C+ • Furtividade C • Experiência D.\n\n**4. Naturezas.** Nenhuma natureza elemental operacional no Dia 0; afinidade será descoberta em treino posterior.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Kai — contragenjutsu básico/alto para a idade.\n- Magen: Kokoni Arazu no Jutsu — Rank C — domínio inicial/teórico-prático.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Sem dōjutsu, Hiden ou Kekkei Genkai.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Controle de chakra é sua competência mais limpa.\n\n**8. Genjutsu / contragenjutsu.** Boa sensibilidade para inconsistências e Kai. Kokoni Arazu é limitado em escala e não é auto-hit.\n\n**9. Taijutsu / armas brancas.** Taijutsu acadêmico funcional; pouca força bruta.\n\n**10. Shurikenjutsu / fios / ferramentas.** Uso correto de kunai/shuriken, sem especialização.\n\n**11. Fūinjutsu / barreiras.** Nenhum Fūinjutsu ou barreira formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin padrão e material de primeiros socorros simples.\n\n**14. Limitações reais.** Força, velocidade e experiência abaixo dos prodígios físicos; repertório curto; não possui Iryō Ninjutsu no início.\n\n**15. Personalidade / voz.** Inteligente, consciente da imagem, temperamental e expressiva; pode acertar Amatsu em contexto cômico/social, nunca comprometendo uma missão séria.\n\n**16. Relações e conhecimento.** Interesse inicial em Kazuma; relação com Amatsu começa conflituosa. Kagetsu ainda precisa conquistar autoridade pessoal, apesar da autoridade formal.\n\n**17. Identidade de combate.** Ler situação, manter controle e usar precisão em vez de potência.\n\n**18. Inspiração e comparação — Naruto Clássico.** É a mais próxima de Sakura Clássica: semelhante no eixo acadêmico/controle e no foco inicial em imagem/romance, porém um pouco mais preparada para campo e Genjutsu já no Dia 0. Continua muito abaixo da Sakura treinada por Tsunade.\n\n---",
+        "current_ic": "26",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Kai",
+          "Magen: Kokoni Arazu no Jutsu",
+          "Magen: Narakumi no Jutsu"
+        ]
       },
       "voice": {
         "reference_anchor": "Sakura inicial.",
@@ -340,6 +377,16 @@
           "transfer": "respeito de aluna + possibilidade de reclamar/questionar quando frustrada; autoridade reconhecida sem servilismo",
           "must_not": "não usar intimidade de par"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "26",
+        "primary": "Ninjutsu 3,5 • Taijutsu 2,5 • Genjutsu 3 • Inteligência 4,5 • Força 2 • Velocidade 3 • Stamina 3,5 • Selos 4",
+        "secondary": "Reserva C+ • Controle A • Percepção C+ • Concentração B+ • Teoria A- • Teamwork B- • Furtividade C+ • Experiência D+",
+        "new_techniques": [
+          "Magen: Narakumi no Jutsu"
+        ],
+        "training": "Kagetsu dividiu sessões de fundamentos: Kai sob pressão, leitura de discrepâncias, Shunshin limpo e um segundo Genjutsu simples para ampliar opções sem transformar Saya em especialista ocular.",
+        "limits": "Sem Iryō Ninjutsu ou força monstruosa."
       }
     },
     "Kazuma Uzumaki": {
@@ -364,7 +411,18 @@
         "relations": "Pertence a um clã Uzumaki vivo e tradicional. Saya demonstra interesse inicial nele; não corresponde automaticamente.",
         "combat_identity": "Vencer pela preparação: limitar espaço com selos, guardar ferramentas e explorar reserva alta sem desperdiçá-la.",
         "limitations": "Fūinjutsu exige superfície, inscrição e tempo; menor poder imediato que Amatsu/Kaede em troca frontal.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui.\n\n**2. IC-80.** **28/80** — Ninjutsu 4 • Taijutsu 3 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 3,5 • Stamina 5 • Selos 4.\n\n**3. Secundários.** Reserva A+ • Controle B • Fūinjutsu B- • Percepção C+ • Concentração B • Teamwork C • Experiência D • Disciplina A-.\n\n**4. Naturezas.** Nenhuma natureza ofensiva consolidada no Dia 0; potencial Suiton a ser confirmado em treino, sem jutsu elemental inicial.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Kaifū no Jutsu — sem rank formal — abertura simples de selos de armazenamento.\n- Fūinshiki: Kōsoku Fuda — Rank D original — talismã simples de restrição, requer aplicação física.\n- Fūinshiki: Shūnō no In — Rank D original — armazenamento de pequenos objetos em fórmula preparada.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uzumaki; não possui KG automática. Herança cultural de Fūinjutsu e grande reserva, sem acesso infantil a selos de Bijū/Rank S.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Selos de mão e escrita técnica acima da média da turma.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; sem Genjutsu ofensivo próprio.\n\n**9. Taijutsu / armas brancas.** Taijutsu correto e disciplinado, sem especialização.\n\n**10. Shurikenjutsu / fios / ferramentas.** Kunai e tags são usadas como vetores de fórmulas, não como shurikenjutsu de elite.\n\n**11. Fūinjutsu / barreiras.** Fūinjutsu B- juvenil: fórmulas simples, preparadas e condicionais; não improvisa selos complexos em combate.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin, pincéis/tinta de selo, tags e pequenos pergaminhos de armazenamento.\n\n**14. Limitações reais.** Fūinjutsu exige superfície, inscrição e tempo; menor poder imediato que Amatsu/Kaede em troca frontal.\n\n**15. Personalidade / voz.** Reservado, disciplinado, orgulhoso, educado em público e competitivo; considera Amatsu um desperdício irritante de talento.\n\n**16. Relações e conhecimento.** Pertence a um clã Uzumaki vivo e tradicional. Saya demonstra interesse inicial nele; não corresponde automaticamente.\n\n**17. Identidade de combate.** Vencer pela preparação: limitar espaço com selos, guardar ferramentas e explorar reserva alta sem desperdiçá-la.\n\n**18. Inspiração e comparação — Naruto Clássico.** Ocupa a função do colega sério/rival de Sasuke, mas não copia sua vingança nem seu kit. Fica um pouco abaixo do Sasuke inicial em ameaça direta e leitura combativa, acima dele em reserva e base de Fūinjutsu.\n\n---\n\n# TIME 4 — Kaede / Kaito / Nao — Sayuri"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui.\n\n**2. IC-80.** **28/80** — Ninjutsu 4 • Taijutsu 3 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 3,5 • Stamina 5 • Selos 4.\n\n**3. Secundários.** Reserva A+ • Controle B • Fūinjutsu B- • Percepção C+ • Concentração B • Teamwork C • Experiência D • Disciplina A-.\n\n**4. Naturezas.** Nenhuma natureza ofensiva consolidada no Dia 0; potencial Suiton a ser confirmado em treino, sem jutsu elemental inicial.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Kaifū no Jutsu — sem rank formal — abertura simples de selos de armazenamento.\n- Fūinshiki: Kōsoku Fuda — Rank D original — talismã simples de restrição, requer aplicação física.\n- Fūinshiki: Shūnō no In — Rank D original — armazenamento de pequenos objetos em fórmula preparada.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uzumaki; não possui KG automática. Herança cultural de Fūinjutsu e grande reserva, sem acesso infantil a selos de Bijū/Rank S.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Selos de mão e escrita técnica acima da média da turma.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; sem Genjutsu ofensivo próprio.\n\n**9. Taijutsu / armas brancas.** Taijutsu correto e disciplinado, sem especialização.\n\n**10. Shurikenjutsu / fios / ferramentas.** Kunai e tags são usadas como vetores de fórmulas, não como shurikenjutsu de elite.\n\n**11. Fūinjutsu / barreiras.** Fūinjutsu B- juvenil: fórmulas simples, preparadas e condicionais; não improvisa selos complexos em combate.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin, pincéis/tinta de selo, tags e pequenos pergaminhos de armazenamento.\n\n**14. Limitações reais.** Fūinjutsu exige superfície, inscrição e tempo; menor poder imediato que Amatsu/Kaede em troca frontal.\n\n**15. Personalidade / voz.** Reservado, disciplinado, orgulhoso, educado em público e competitivo; considera Amatsu um desperdício irritante de talento.\n\n**16. Relações e conhecimento.** Pertence a um clã Uzumaki vivo e tradicional. Saya demonstra interesse inicial nele; não corresponde automaticamente.\n\n**17. Identidade de combate.** Vencer pela preparação: limitar espaço com selos, guardar ferramentas e explorar reserva alta sem desperdiçá-la.\n\n**18. Inspiração e comparação — Naruto Clássico.** Ocupa a função do colega sério/rival de Sasuke, mas não copia sua vingança nem seu kit. Fica um pouco abaixo do Sasuke inicial em ameaça direta e leitura combativa, acima dele em reserva e base de Fūinjutsu.\n\n---\n\n# TIME 4 — Kaede / Kaito / Nao — Sayuri",
+        "current_ic": "30",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Kaifū no Jutsu",
+          "Fūinshiki: Kōsoku Fuda",
+          "Fūinshiki: Shūnō no In",
+          "Fūinshiki: Kekkai Fuda"
+        ]
       },
       "voice": {
         "reference_anchor": "Sasuke inicial.",
@@ -515,6 +573,16 @@
           "transfer": "respeito técnico, respostas econômicas, atenção quando o sensei prova competência; pode resistir internamente sem teatralizar",
           "must_not": "não usar sarcasmo adolescente de igual para igual"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "30",
+        "primary": "Ninjutsu 4,5 • Taijutsu 3 • Genjutsu 2 • Inteligência 4,5 • Força 2,5 • Velocidade 4 • Stamina 5 • Selos 4,5",
+        "secondary": "Reserva A+ • Controle B+ • Fūinjutsu B • Percepção B- • Concentração B+ • Teamwork C+ • Experiência D+ • Disciplina A",
+        "new_techniques": [
+          "Fūinshiki: Kekkai Fuda"
+        ],
+        "training": "Treino Uzumaki/fūinjutsu: aplicação mais rápida de Kōsoku Fuda, armadilhas encadeadas e Kekkai Fuda — fórmula simples de perímetro/alarme e limitação espacial, não prisão absoluta.",
+        "limits": "Afinidade Suiton é investigada, mas ainda sem Suiton ofensivo operacional."
       }
     },
     "Kaede Uchiha": {
@@ -539,7 +607,19 @@
         "relations": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
         "combat_identity": "Precisão, Katon, projéteis e leitura disciplinada de padrões.",
         "limitations": "Reserva apenas boa; sem dōjutsu; orgulho e rigidez podem reduzir adaptação social.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha • Genin • Time 4 • sensei Sayuri Hyūga • filha de Seijūrō Uchiha.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 3,5 • Inteligência 4,5 • Força 2,5 • Velocidade 4 • Stamina 3,5 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle B+ • Shuriken A- • Precisão A- • Percepção B- • Genjutsu B- • Disciplina A • Teamwork C+ • Experiência D.\n\n**4. Naturezas.** Katon conhecido; demais afinidades não fechadas.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — domínio muito bom para a idade.\n- Katon: Hōsenka no Jutsu — Rank C — bom domínio.\n- Katon: Ryūka no Jutsu — Rank C — funcional.\n- Magen: Kokoni Arazu no Jutsu — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha; **sem Sharingan no início**.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos de Academia muito limpos; execução disciplinada.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu + Kai funcional; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu técnico, sem força bruta extraordinária.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu A- juvenil; fios e ricochetes treinados em contexto Uchiha.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clone físico, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin, shuriken adicionais e fios.\n\n**14. Limitações reais.** Reserva apenas boa; sem dōjutsu; orgulho e rigidez podem reduzir adaptação social.\n\n**15. Personalidade / voz.** Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.\n\n**16. Relações e conhecimento.** Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.\n\n**17. Identidade de combate.** Precisão, Katon, projéteis e leitura disciplinada de padrões.\n\n**18. Inspiração e comparação — Naruto Clássico.** É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha • Genin • Time 4 • sensei Sayuri Hyūga • filha de Seijūrō Uchiha.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 3,5 • Inteligência 4,5 • Força 2,5 • Velocidade 4 • Stamina 3,5 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle B+ • Shuriken A- • Precisão A- • Percepção B- • Genjutsu B- • Disciplina A • Teamwork C+ • Experiência D.\n\n**4. Naturezas.** Katon conhecido; demais afinidades não fechadas.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — domínio muito bom para a idade.\n- Katon: Hōsenka no Jutsu — Rank C — bom domínio.\n- Katon: Ryūka no Jutsu — Rank C — funcional.\n- Magen: Kokoni Arazu no Jutsu — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha; **sem Sharingan no início**.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos de Academia muito limpos; execução disciplinada.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu + Kai funcional; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu técnico, sem força bruta extraordinária.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu A- juvenil; fios e ricochetes treinados em contexto Uchiha.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clone físico, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin, shuriken adicionais e fios.\n\n**14. Limitações reais.** Reserva apenas boa; sem dōjutsu; orgulho e rigidez podem reduzir adaptação social.\n\n**15. Personalidade / voz.** Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.\n\n**16. Relações e conhecimento.** Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.\n\n**17. Identidade de combate.** Precisão, Katon, projéteis e leitura disciplinada de padrões.\n\n**18. Inspiração e comparação — Naruto Clássico.** É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---",
+        "current_ic": "31,5",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Katon: Gōkakyū no Jutsu",
+          "Katon: Hōsenka no Jutsu",
+          "Katon: Ryūka no Jutsu",
+          "Magen: Kokoni Arazu no Jutsu",
+          "Katon: Hōsenka Tsumabeni"
+        ]
       },
       "voice": {
         "reference_anchor": "Sasuke acadêmico + disciplina Uchiha própria.",
@@ -689,6 +769,16 @@
           "transfer": "competição e atenção relutante ao crescimento; respostas precisas, orgulho e distância. O passado da Academia torna o tratamento mais frio que o Sasuke médio com Naruto no início.",
           "must_not": "não virar camaradagem, brincadeira ou elogio aberto só porque Amatsu foi competente"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "31,5",
+        "primary": "Ninjutsu 4,5 • Taijutsu 4 • Genjutsu 3,5 • Inteligência 4,5 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4,5",
+        "secondary": "Reserva B • Controle A- • Shuriken A • Precisão A • Percepção B • Genjutsu B • Disciplina A • Teamwork B- • Experiência D+",
+        "new_techniques": [
+          "Katon: Hōsenka Tsumabeni"
+        ],
+        "training": "Treino Uchiha + Sayuri: velocidade, precisão, fios/ricochetes, Katon encadeado e Hōsenka com projéteis ocultos. Sharingan continua NÃO despertado.",
+        "limits": "Sem Sharingan e sem Chidori; crescimento vem de execução e velocidade, não de dōjutsu."
       }
     },
     "Kaito Shimura": {
@@ -1088,7 +1178,18 @@
         "relations": "Aki costuma frear seus excessos; admira Arata sem querer virar “o outro Senju”.",
         "combat_identity": "Alterar chão, aderência e cobertura até o duelo deixar de ser limpo.",
         "limitations": "Doton depende de superfície plausível; não controla mapa inteiro; tende a testar ideia antes de pensar todas as consequências.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Senju • Genin • Time 5 • sensei Fuyumi Kisaragi.\n\n**2. IC-80.** **27,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3,5 • Força 3 • Velocidade 3,5 • Stamina 4,5 • Selos 4.\n\n**3. Secundários.** Reserva B+ • Controle B • Doton B+ • Suiton C+ • Improviso B • Resistência B • Teamwork B- • Experiência D.\n\n**4. Naturezas.** Doton e Suiton conhecidos.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Doton: Doryū Taiga — Rank C — bom domínio.\n- Doton: Moguragakure no Jutsu — Rank C — funcional.\n- Suiton: Mizurappa — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Senju sem Mokuton.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos sólidos.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; sem ofensiva de Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu competente, melhora quando luta no próprio terreno.\n\n**10. Shurikenjutsu / fios / ferramentas.** Kunai/bastão curto utilitário.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos avançados, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin e bastão curto.\n\n**14. Limitações reais.** Doton depende de superfície plausível; não controla mapa inteiro; tende a testar ideia antes de pensar todas as consequências.\n\n**15. Personalidade / voz.** Direto, obstinado, curioso; prefere experimentar no campo a discutir demais.\n\n**16. Relações e conhecimento.** Aki costuma frear seus excessos; admira Arata sem querer virar “o outro Senju”.\n\n**17. Identidade de combate.** Alterar chão, aderência e cobertura até o duelo deixar de ser limpo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Original. Em função de campo lembra um Yamato muito embrionário, mas sem Mokuton e sem nível Chūnin/Jōnin.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Senju • Genin • Time 5 • sensei Fuyumi Kisaragi.\n\n**2. IC-80.** **27,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3,5 • Força 3 • Velocidade 3,5 • Stamina 4,5 • Selos 4.\n\n**3. Secundários.** Reserva B+ • Controle B • Doton B+ • Suiton C+ • Improviso B • Resistência B • Teamwork B- • Experiência D.\n\n**4. Naturezas.** Doton e Suiton conhecidos.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Doton: Doryū Taiga — Rank C — bom domínio.\n- Doton: Moguragakure no Jutsu — Rank C — funcional.\n- Suiton: Mizurappa — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Senju sem Mokuton.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos sólidos.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; sem ofensiva de Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu competente, melhora quando luta no próprio terreno.\n\n**10. Shurikenjutsu / fios / ferramentas.** Kunai/bastão curto utilitário.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos avançados, Kuchiyose, Senjutsu ou Bijū.\n\n**13. Equipamento.** Kit Genin e bastão curto.\n\n**14. Limitações reais.** Doton depende de superfície plausível; não controla mapa inteiro; tende a testar ideia antes de pensar todas as consequências.\n\n**15. Personalidade / voz.** Direto, obstinado, curioso; prefere experimentar no campo a discutir demais.\n\n**16. Relações e conhecimento.** Aki costuma frear seus excessos; admira Arata sem querer virar “o outro Senju”.\n\n**17. Identidade de combate.** Alterar chão, aderência e cobertura até o duelo deixar de ser limpo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Original. Em função de campo lembra um Yamato muito embrionário, mas sem Mokuton e sem nível Chūnin/Jōnin.\n\n---",
+        "current_ic": "29",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Doton: Doryū Taiga",
+          "Doton: Moguragakure no Jutsu",
+          "Suiton: Mizurappa",
+          "Mizu Bunshin no Jutsu"
+        ]
       },
       "voice": {
         "reference_anchor": "original com eixo Yamato embrionário.",
@@ -1191,6 +1292,16 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true
+      },
+      "finals_month_v32": {
+        "ic_80": "29",
+        "primary": "Ninjutsu 4,5 • Taijutsu 4 • Genjutsu 1,5 • Inteligência 3,5 • Força 3 • Velocidade 4 • Stamina 4,5 • Selos 4",
+        "secondary": "Reserva A- • Controle B+ • Doton A- • Suiton B • Improviso B+ • Resistência B+ • Teamwork B • Experiência D+",
+        "new_techniques": [
+          "Mizu Bunshin no Jutsu"
+        ],
+        "training": "Fuyumi + Aki/Tōru: Mizu Bunshin, terreno molhado como recurso, transição Doryū Taiga→Moguragakure e luta em superfície ruim.",
+        "limits": "Sem Mokuton e sem Doryūheki de escala alta."
       }
     },
     "Tōru Senju": {
@@ -1796,7 +1907,18 @@
         "relations": "Sem romance predeterminado com Amatsu nesta linha. Yoru é seu vínculo principal.",
         "combat_identity": "Rastrear → fechar → cercar → destruir rota de fuga com Yoru.",
         "limitations": "Separação de Yoru reduz muito o kit; Genjutsu e Selos são fracos; impulsividade pode gerar sobreextensão.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Inuzuka • Genin • Time 8 • sensei Tōma Aburame • parceira Yoru.\n\n**2. IC-80.** **25/80** — Ninjutsu 2,5 • Taijutsu 4 • Genjutsu 1,5 • Inteligência 2,5 • Força 3,5 • Velocidade 4 • Stamina 4,5 • Selos 2,5.\n\n**3. Secundários.** Reserva B- • Olfato A- • Rastreamento A- • Coordenação Yoru A- • Percepção B • Sobrevivência B • Teamwork B • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental operacional.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Shikyaku no Jutsu — Rank D — muito bom para a idade.\n- Jūjin Bunshin — Rank D — com Yoru.\n- Tsūga — Rank D — bom domínio.\n- Gatsūga — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Inuzuka.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos + rastreamento.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; baixa aptidão ofensiva em Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu agressivo e móvel.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Yoru é parceira física real, sem telepatia.\n\n**13. Equipamento.** Kit Genin e suprimentos para Yoru.\n\n**14. Limitações reais.** Separação de Yoru reduz muito o kit; Genjutsu e Selos são fracos; impulsividade pode gerar sobreextensão.\n\n**15. Personalidade / voz.** Espontânea, competitiva, curiosa, provocadora e fisicamente expressiva; séria quando risco é real.\n\n**16. Relações e conhecimento.** Sem romance predeterminado com Amatsu nesta linha. Yoru é seu vínculo principal.\n\n**17. Identidade de combate.** Rastrear → fechar → cercar → destruir rota de fuga com Yoru.\n\n**18. Inspiração e comparação — Naruto Clássico.** Funcionalmente Kiba/Akamaru, mas com assertividade social que lembra Sakura/Ino. Em rastreamento já é excelente; em combate ainda abaixo do Kiba do Exame Chūnin por experiência.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Inuzuka • Genin • Time 8 • sensei Tōma Aburame • parceira Yoru.\n\n**2. IC-80.** **25/80** — Ninjutsu 2,5 • Taijutsu 4 • Genjutsu 1,5 • Inteligência 2,5 • Força 3,5 • Velocidade 4 • Stamina 4,5 • Selos 2,5.\n\n**3. Secundários.** Reserva B- • Olfato A- • Rastreamento A- • Coordenação Yoru A- • Percepção B • Sobrevivência B • Teamwork B • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental operacional.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Shikyaku no Jutsu — Rank D — muito bom para a idade.\n- Jūjin Bunshin — Rank D — com Yoru.\n- Tsūga — Rank D — bom domínio.\n- Gatsūga — Rank C — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Inuzuka.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos + rastreamento.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; baixa aptidão ofensiva em Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu agressivo e móvel.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Yoru é parceira física real, sem telepatia.\n\n**13. Equipamento.** Kit Genin e suprimentos para Yoru.\n\n**14. Limitações reais.** Separação de Yoru reduz muito o kit; Genjutsu e Selos são fracos; impulsividade pode gerar sobreextensão.\n\n**15. Personalidade / voz.** Espontânea, competitiva, curiosa, provocadora e fisicamente expressiva; séria quando risco é real.\n\n**16. Relações e conhecimento.** Sem romance predeterminado com Amatsu nesta linha. Yoru é seu vínculo principal.\n\n**17. Identidade de combate.** Rastrear → fechar → cercar → destruir rota de fuga com Yoru.\n\n**18. Inspiração e comparação — Naruto Clássico.** Funcionalmente Kiba/Akamaru, mas com assertividade social que lembra Sakura/Ino. Em rastreamento já é excelente; em combate ainda abaixo do Kiba do Exame Chūnin por experiência.\n\n---",
+        "current_ic": "27",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Shikyaku no Jutsu",
+          "Jūjin Bunshin",
+          "Tsūga",
+          "Gatsūga"
+        ]
       },
       "voice": {
         "reference_anchor": "Kiba + assertividade Sakura/Ino.",
@@ -1932,6 +2054,14 @@
           "transfer": "provocação espontânea, disputa de ego, curiosidade e fisicalidade; quando risco é real, a brincadeira cai rápido",
           "must_not": "não importar paixão da Sakura por Sasuke nem intimidade futura desta continuidade"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "27",
+        "primary": "Ninjutsu 2,5 • Taijutsu 4,5 • Genjutsu 1,5 • Inteligência 2,5 • Força 4 • Velocidade 4,5 • Stamina 5 • Selos 2,5",
+        "secondary": "Reserva B • Olfato A • Rastreamento A • Coordenação Yoru A • Percepção B+ • Sobrevivência B+ • Teamwork A- • Experiência D+",
+        "new_techniques": [],
+        "training": "Treino Inuzuka/Yoru: Gatsūga com mudanças de eixo, reacoplamento após separação, rastreamento sob fumaça/cheiros falsos e pressão contínua sem perder coordenação.",
+        "limits": "Sem Garōga ou transformação avançada."
       }
     },
     "Ayame Hyūga": {
@@ -1956,7 +2086,17 @@
         "relations": "Espera deferência de Reika em contextos clânicos apesar de Reika ser um ano mais velha; isso gera tensão real.",
         "combat_identity": "Ver fluxo → entrar → fechar tenketsu → controlar ritmo.",
         "limitations": "Ponto cego, necessidade de alcance, Kaiten curto/oneroso; rigidez cultural pode prejudicar teamwork.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Hyūga Sōke • Genin • Time 8 • sensei Tōma Aburame.\n\n**2. IC-80.** **28/80** — Ninjutsu 3,5 • Taijutsu 5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 4 • Stamina 3,5 • Selos 3,5.\n\n**3. Secundários.** Reserva B- • Controle A- • Percepção A • Precisão A • Tenketsu A- • Disciplina A • Teamwork C+ • Experiência D.\n\n**4. Naturezas.** Nenhuma natureza elemental operacional; Jūken domina o treino.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — Hiden/Jūken, sem rank formal — forma inicial das 32 Palmas.\n- Hakkeshō Kaiten — Hiden/Jūken, sem rank formal — versão curta e cara; não defesa absoluta.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan funcional + Jūken; Sōke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos e doutrina Hyūga.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; Byakugan pode perceber fluxo anômalo, não quebra Genjutsu sozinho.\n\n**9. Taijutsu / armas brancas.** Jūken é sua especialidade; curta distância.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas pouco centrais.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego, necessidade de alcance, Kaiten curto/oneroso; rigidez cultural pode prejudicar teamwork.\n\n**15. Personalidade / voz.** Formal com hierarquia, orgulhosa e inicialmente condescendente com Bunke; não caricaturalmente cruel.\n\n**16. Relações e conhecimento.** Espera deferência de Reika em contextos clânicos apesar de Reika ser um ano mais velha; isso gera tensão real.\n\n**17. Identidade de combate.** Ver fluxo → entrar → fechar tenketsu → controlar ritmo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Combina a posição social de Hinata (Sōke) com ortodoxia/confiança mais próxima de Neji. É muito mais assertiva que Hinata inicial, mas abaixo de Neji após um ano de treino em refinamento e repertório.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Hyūga Sōke • Genin • Time 8 • sensei Tōma Aburame.\n\n**2. IC-80.** **28/80** — Ninjutsu 3,5 • Taijutsu 5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 4 • Stamina 3,5 • Selos 3,5.\n\n**3. Secundários.** Reserva B- • Controle A- • Percepção A • Precisão A • Tenketsu A- • Disciplina A • Teamwork C+ • Experiência D.\n\n**4. Naturezas.** Nenhuma natureza elemental operacional; Jūken domina o treino.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — Hiden/Jūken, sem rank formal — forma inicial das 32 Palmas.\n- Hakkeshō Kaiten — Hiden/Jūken, sem rank formal — versão curta e cara; não defesa absoluta.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan funcional + Jūken; Sōke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos e doutrina Hyūga.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; Byakugan pode perceber fluxo anômalo, não quebra Genjutsu sozinho.\n\n**9. Taijutsu / armas brancas.** Jūken é sua especialidade; curta distância.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas pouco centrais.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego, necessidade de alcance, Kaiten curto/oneroso; rigidez cultural pode prejudicar teamwork.\n\n**15. Personalidade / voz.** Formal com hierarquia, orgulhosa e inicialmente condescendente com Bunke; não caricaturalmente cruel.\n\n**16. Relações e conhecimento.** Espera deferência de Reika em contextos clânicos apesar de Reika ser um ano mais velha; isso gera tensão real.\n\n**17. Identidade de combate.** Ver fluxo → entrar → fechar tenketsu → controlar ritmo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Combina a posição social de Hinata (Sōke) com ortodoxia/confiança mais próxima de Neji. É muito mais assertiva que Hinata inicial, mas abaixo de Neji após um ano de treino em refinamento e repertório.\n\n---",
+        "current_ic": "30",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Hakke Sanjūni Shō",
+          "Hakkeshō Kaiten",
+          "Hakke Rokujūyon Shō"
+        ]
       },
       "voice": {
         "reference_anchor": "posição Sōke + certeza de Neji.",
@@ -2075,6 +2215,16 @@
           "transfer": "formalidade clânica, condescendência inicial e cobrança de deferência; tensão explode mais por status familiar que por competição comum",
           "must_not": "não copiar fatalismo/biografia de Neji nem inverter automaticamente os papéis"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "30",
+        "primary": "Ninjutsu 3,5 • Taijutsu 5,5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4",
+        "secondary": "Reserva B • Controle A • Percepção A • Precisão A • Tenketsu A • Disciplina A • Teamwork B- • Experiência D+",
+        "new_techniques": [
+          "Hakke Rokujūyon Shō"
+        ],
+        "training": "Treino da Sōke: transição 32→64 golpes, Kaiten sob pressão e entrada contra adversário que tenta negar o alcance do Jūken.",
+        "limits": "Rokujūyon Shō é operacional juvenil, ainda abaixo da limpeza/refinamento de Reika."
       }
     },
     "Seki Aburame": {
@@ -2229,7 +2379,17 @@
         "relations": "Ayame é eixo da tensão Sōke/Bunke; relação muda somente por experiência vivida.",
         "combat_identity": "Ler → fechar → cortar tenketsu antes que o adversário estabilize o duelo.",
         "limitations": "Ponto cego; alcance curto; sem grande ataque de área; condicionamento emocional da Bunke afeta escolhas sociais.",
-        "full_dossier": "**1. Identificação.** 13 anos • Konoha • Hyūga Bunke • Genin veterana • Time 9 • sensei Masaru Fūma.\n\n**2. IC-80.** **31/80** — Ninjutsu 4 • Taijutsu 5,5 • Genjutsu 2 • Inteligência 4,5 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle A • Percepção A+ • Precisão A+ • Tenketsu A • Disciplina A • Teamwork B • Experiência C.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — sem rank formal — especialista juvenil.\n- Hakke Rokujūyon Shō — sem rank formal — em consolidação; exige sequência legítima.\n- Hakkeshō Kaiten — sem rank formal — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan + Jūken; Bunke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos de um ano de missões D/C.\n\n**8. Genjutsu / contragenjutsu.** Kai bom; Byakugan não é detector universal de Genjutsu.\n\n**9. Taijutsu / armas brancas.** Jūken avançado para Genin; melhor curta distância da geração jovem atual.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego; alcance curto; sem grande ataque de área; condicionamento emocional da Bunke afeta escolhas sociais.\n\n**15. Personalidade / voz.** Observadora, precisa, inteligente, competitiva sem transformar tudo em disputa.\n\n**16. Relações e conhecimento.** Ayame é eixo da tensão Sōke/Bunke; relação muda somente por experiência vivida.\n\n**17. Identidade de combate.** Ler → fechar → cortar tenketsu antes que o adversário estabilize o duelo.\n\n**18. Inspiração e comparação — Naruto Clássico.** É o paralelo mais forte de Neji: um ano acima, Bunke e prodígio. Começa **ligeiramente abaixo de Neji no Exame Chūnin** em refinamento máximo, mas suficientemente perto para ser tratada como uma das Genin mais perigosas de Konoha.\n\n---"
+        "full_dossier": "**1. Identificação.** 13 anos • Konoha • Hyūga Bunke • Genin veterana • Time 9 • sensei Masaru Fūma.\n\n**2. IC-80.** **31/80** — Ninjutsu 4 • Taijutsu 5,5 • Genjutsu 2 • Inteligência 4,5 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle A • Percepção A+ • Precisão A+ • Tenketsu A • Disciplina A • Teamwork B • Experiência C.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — sem rank formal — especialista juvenil.\n- Hakke Rokujūyon Shō — sem rank formal — em consolidação; exige sequência legítima.\n- Hakkeshō Kaiten — sem rank formal — funcional.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan + Jūken; Bunke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos de um ano de missões D/C.\n\n**8. Genjutsu / contragenjutsu.** Kai bom; Byakugan não é detector universal de Genjutsu.\n\n**9. Taijutsu / armas brancas.** Jūken avançado para Genin; melhor curta distância da geração jovem atual.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego; alcance curto; sem grande ataque de área; condicionamento emocional da Bunke afeta escolhas sociais.\n\n**15. Personalidade / voz.** Observadora, precisa, inteligente, competitiva sem transformar tudo em disputa.\n\n**16. Relações e conhecimento.** Ayame é eixo da tensão Sōke/Bunke; relação muda somente por experiência vivida.\n\n**17. Identidade de combate.** Ler → fechar → cortar tenketsu antes que o adversário estabilize o duelo.\n\n**18. Inspiração e comparação — Naruto Clássico.** É o paralelo mais forte de Neji: um ano acima, Bunke e prodígio. Começa **ligeiramente abaixo de Neji no Exame Chūnin** em refinamento máximo, mas suficientemente perto para ser tratada como uma das Genin mais perigosas de Konoha.\n\n---",
+        "current_ic": "32,5",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Hakke Sanjūni Shō",
+          "Hakke Rokujūyon Shō",
+          "Hakkeshō Kaiten"
+        ]
       },
       "voice": {
         "reference_anchor": "Neji inicial em excelência técnica.",
@@ -2349,6 +2509,14 @@
           "transfer": "controle externo, atenção a hierarquia e resistência à condescendência; resposta precisa em vez de submissão automática",
           "must_not": "não copiar timidez de Hinata nem fatalismo de Neji"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "32,5",
+        "primary": "Ninjutsu 4 • Taijutsu 6 • Genjutsu 2 • Inteligência 4,5 • Força 2,5 • Velocidade 5 • Stamina 4 • Selos 4,5",
+        "secondary": "Reserva B • Controle A • Percepção A+ • Precisão A+ • Tenketsu A+ • Disciplina A • Teamwork B • Experiência C+",
+        "new_techniques": [],
+        "training": "Treino Bunke focado em velocidade de entrada, leitura dos ombros/quadril, Kaiten mais curto e 64 golpes com menos telegraph.",
+        "limits": "Sem Kūshō ou técnicas Shippuden."
       }
     },
     "Tetsu Iwagane": {
@@ -2776,7 +2944,16 @@
         "relations": "Renji/Daichi são parceiros de formação tradicional; família Yamanaka incentiva coordenação do trio.",
         "combat_identity": "Esperar a janela certa e transformar uma abertura criada pelos outros em controle decisivo.",
         "limitations": "Shintenshin pode deixar corpo exposto; alvo móvel exige previsão; pouca força direta.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Yamanaka • Genin • Time 10 • sensei Akihiko Sarutobi.\n\n**2. IC-80.** **25/80** — Ninjutsu 3,5 • Taijutsu 2,5 • Genjutsu 3,5 • Inteligência 4,5 • Força 2 • Velocidade 3 • Stamina 3 • Selos 3.\n\n**3. Secundários.** Reserva C • Controle B+ • Precisão mental B • Leitura social B+ • Concentração B • Teamwork B • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Shintenshin no Jutsu — Hiden / sem rank formal — funcional em alvo com janela clara.\n- Kai — contragenjutsu bom para a idade.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Yamanaka.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos.\n\n**8. Genjutsu / contragenjutsu.** Boa defesa mental; Shintenshin é Ninjutsu mental, não Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu básico.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas comuns; prefere ter abertura criada por equipe.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit Genin.\n\n**14. Limitações reais.** Shintenshin pode deixar corpo exposto; alvo móvel exige previsão; pouca força direta.\n\n**15. Personalidade / voz.** Social, perceptiva, competitiva e capaz de ser cortante sem virar cópia de Ino.\n\n**16. Relações e conhecimento.** Renji/Daichi são parceiros de formação tradicional; família Yamanaka incentiva coordenação do trio.\n\n**17. Identidade de combate.** Esperar a janela certa e transformar uma abertura criada pelos outros em controle decisivo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Equivale funcionalmente a Ino. Levemente mais disciplinada no uso tático inicial, mas sem a experiência/alcance mental que Ino desenvolve depois.\n\n---"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Yamanaka • Genin • Time 10 • sensei Akihiko Sarutobi.\n\n**2. IC-80.** **25/80** — Ninjutsu 3,5 • Taijutsu 2,5 • Genjutsu 3,5 • Inteligência 4,5 • Força 2 • Velocidade 3 • Stamina 3 • Selos 3.\n\n**3. Secundários.** Reserva C • Controle B+ • Precisão mental B • Leitura social B+ • Concentração B • Teamwork B • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Shintenshin no Jutsu — Hiden / sem rank formal — funcional em alvo com janela clara.\n- Kai — contragenjutsu bom para a idade.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Yamanaka.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos.\n\n**8. Genjutsu / contragenjutsu.** Boa defesa mental; Shintenshin é Ninjutsu mental, não Genjutsu.\n\n**9. Taijutsu / armas brancas.** Taijutsu básico.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas comuns; prefere ter abertura criada por equipe.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit Genin.\n\n**14. Limitações reais.** Shintenshin pode deixar corpo exposto; alvo móvel exige previsão; pouca força direta.\n\n**15. Personalidade / voz.** Social, perceptiva, competitiva e capaz de ser cortante sem virar cópia de Ino.\n\n**16. Relações e conhecimento.** Renji/Daichi são parceiros de formação tradicional; família Yamanaka incentiva coordenação do trio.\n\n**17. Identidade de combate.** Esperar a janela certa e transformar uma abertura criada pelos outros em controle decisivo.\n\n**18. Inspiração e comparação — Naruto Clássico.** Equivale funcionalmente a Ino. Levemente mais disciplinada no uso tático inicial, mas sem a experiência/alcance mental que Ino desenvolve depois.\n\n---",
+        "current_ic": "27",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Shintenshin no Jutsu",
+          "Kai"
+        ]
       },
       "voice": {
         "reference_anchor": "Ino jovem.",
@@ -2905,6 +3082,14 @@
           "transfer": "familiaridade protetora com liberdade para repreender; sensibilidade a inseguranças sem pisar nelas por descuido",
           "must_not": "não reduzir Daichi a piada de comida"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "27",
+        "primary": "Ninjutsu 4 • Taijutsu 2,5 • Genjutsu 4 • Inteligência 4,5 • Força 2 • Velocidade 3,5 • Stamina 3 • Selos 3,5",
+        "secondary": "Reserva C+ • Controle A- • Precisão mental A- • Leitura social A- • Concentração B+ • Teamwork B+ • Experiência D+",
+        "new_techniques": [],
+        "training": "Treino Yamanaka: reduzir janela de preparação do Shintenshin, recuperar mais rápido após erro, atingir alvo móvel previsível e usar leitura de intenção/posição com menos exposição.",
+        "limits": "Não recebe Shinranshin nem telepatia avançada neste mês."
       }
     },
     "Daichi Akimichi": {
@@ -2929,7 +3114,18 @@
         "relations": "Forma Ino–Shika–Chō com Renji/Hana.",
         "combat_identity": "Criar espaço físico e absorver pressão para a formação funcionar.",
         "limitations": "Técnicas consomem calorias/chakra; expansão aumenta alvo; sem Chō Baika/Modo Borboleta no início.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Akimichi • Genin • Time 10 • sensei Akihiko Sarutobi.\n\n**2. IC-80.** **25,5/80** — Ninjutsu 2,5 • Taijutsu 4 • Genjutsu 1 • Inteligência 3 • Força 4,5 • Velocidade 2,5 • Stamina 5 • Selos 3.\n\n**3. Secundários.** Reserva B+ • Resistência A- • Estabilidade A- • Força funcional A- • Teamwork B+ • Proteção B+ • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Baika no Jutsu — Hiden / sem rank formal — bom domínio.\n- Nikudan Sensha — Hiden / sem rank formal — funcional.\n- Bubun Baika no Jutsu — Hiden / sem rank formal — inicial.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Akimichi.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; Genjutsu é fraqueza.\n\n**9. Taijutsu / armas brancas.** Taijutsu de massa e proteção.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit Genin + suprimentos calóricos.\n\n**14. Limitações reais.** Técnicas consomem calorias/chakra; expansão aumenta alvo; sem Chō Baika/Modo Borboleta no início.\n\n**15. Personalidade / voz.** Afável, seguro, sensível a comentários sobre corpo/comida sem ser definido por isso; protetor.\n\n**16. Relações e conhecimento.** Forma Ino–Shika–Chō com Renji/Hana.\n\n**17. Identidade de combate.** Criar espaço físico e absorver pressão para a formação funcionar.\n\n**18. Inspiração e comparação — Naruto Clássico.** Paralelo de Chōji. Começa um pouco mais confiante fisicamente, mas ainda não possui o pico de pílulas/Modo Borboleta do arco Sasuke Retrieval.\n\n---\n\n# TIME 11 — Arata / Natsuki / Jun — Shōma"
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Akimichi • Genin • Time 10 • sensei Akihiko Sarutobi.\n\n**2. IC-80.** **25,5/80** — Ninjutsu 2,5 • Taijutsu 4 • Genjutsu 1 • Inteligência 3 • Força 4,5 • Velocidade 2,5 • Stamina 5 • Selos 3.\n\n**3. Secundários.** Reserva B+ • Resistência A- • Estabilidade A- • Força funcional A- • Teamwork B+ • Proteção B+ • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Baika no Jutsu — Hiden / sem rank formal — bom domínio.\n- Nikudan Sensha — Hiden / sem rank formal — funcional.\n- Bubun Baika no Jutsu — Hiden / sem rank formal — inicial.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Hiden Akimichi.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos.\n\n**8. Genjutsu / contragenjutsu.** Kai básico; Genjutsu é fraqueza.\n\n**9. Taijutsu / armas brancas.** Taijutsu de massa e proteção.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit Genin + suprimentos calóricos.\n\n**14. Limitações reais.** Técnicas consomem calorias/chakra; expansão aumenta alvo; sem Chō Baika/Modo Borboleta no início.\n\n**15. Personalidade / voz.** Afável, seguro, sensível a comentários sobre corpo/comida sem ser definido por isso; protetor.\n\n**16. Relações e conhecimento.** Forma Ino–Shika–Chō com Renji/Hana.\n\n**17. Identidade de combate.** Criar espaço físico e absorver pressão para a formação funcionar.\n\n**18. Inspiração e comparação — Naruto Clássico.** Paralelo de Chōji. Começa um pouco mais confiante fisicamente, mas ainda não possui o pico de pílulas/Modo Borboleta do arco Sasuke Retrieval.\n\n---\n\n# TIME 11 — Arata / Natsuki / Jun — Shōma",
+        "current_ic": "28",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Baika no Jutsu",
+          "Nikudan Sensha",
+          "Bubun Baika no Jutsu",
+          "Nikudan Hari Sensha"
+        ]
       },
       "voice": {
         "reference_anchor": "Chōji jovem.",
@@ -3057,6 +3253,16 @@
           "transfer": "aceita bronca com familiaridade, pode retrucar quando ela passa do ponto; vínculo de time é dado",
           "must_not": "não ficar passivo em toda troca"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "28",
+        "primary": "Ninjutsu 3 • Taijutsu 4,5 • Genjutsu 1 • Inteligência 3 • Força 5 • Velocidade 3 • Stamina 5,5 • Selos 3",
+        "secondary": "Reserva A- • Resistência A • Estabilidade A • Força funcional A • Teamwork A- • Proteção A- • Experiência D+",
+        "new_techniques": [
+          "Nikudan Hari Sensha"
+        ],
+        "training": "Treino Akimichi: transição Baika→Nikudan, variação espinhosa com kunai/fios e condicionamento para recuperar base após impacto.",
+        "limits": "Sem pílulas coloridas ou Modo Borboleta."
       }
     },
     "Arata Senju": {
@@ -3081,7 +3287,19 @@
         "relations": "Aki/Rin/Tōru o conhecem pelo clã sem formar corte; Shōma quer impedir que sobrenome substitua teamwork.",
         "combat_identity": "Transformar terreno neutro em território próprio pouco a pouco.",
         "limitations": "Mokuton custa muito, escala pequena e exige controle; sem Mokuryū, Mokujin, Jukai Kōtan, Kajukai Kōrin, Shinsu Senju ou supressão automática de Bijū.",
-        "full_dossier": "**1. Identificação.** 12–13 anos • Konoha • Senju • Genin • Time 11 • sensei Shōma Sarutobi • Mokuton natural.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 4,5 • Taijutsu 3,5 • Genjutsu 2 • Inteligência 4 • Força 3,5 • Velocidade 3,5 • Stamina 5 • Selos 3,5.\n\n**3. Secundários.** Reserva A+ • Controle B+ • Mokuton B+ • Suiton B • Doton B • Resistência B+ • Controle de terreno B+ • Teamwork B • Experiência D.\n\n**4. Naturezas.** Suiton e Doton conhecidos; Mokuton natural em escala juvenil.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Suiton: Mizurappa — Rank C — funcional.\n- Doton: Doryūheki — Rank B — versão pequena/juvenil.\n- Mokuton: Nehari no Jutsu — Rank C original — raízes curtas para prender pés/alterar apoio.\n- Mokuton: Kibashira no Jutsu — Rank C original — ergue pilar/cobertura de madeira em pequena escala.\n- Mokuton: Moku Bunshin — Rank B original juvenil — um clone simples, caro e menos autônomo que versões adultas.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Kekkei Genkai Mokuton natural; não herda automaticamente técnicas de Arashi.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos fortes e boa moldagem elemental para a idade.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; Genjutsu é ponto menos desenvolvido.\n\n**9. Taijutsu / armas brancas.** Taijutsu sólido, apoiado em resistência.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas comuns.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal inicial.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Moku Bunshin juvenil; sem Senjutsu/Kuchiyose/Bijū.\n\n**13. Equipamento.** Kit Genin e pequenos pergaminhos Senju.\n\n**14. Limitações reais.** Mokuton custa muito, escala pequena e exige controle; sem Mokuryū, Mokujin, Jukai Kōtan, Kajukai Kōrin, Shinsu Senju ou supressão automática de Bijū.\n\n**15. Personalidade / voz.** Sociável, tranquilo, seguro do próprio nível; detesta ser reduzido a “novo Arashi”.\n\n**16. Relações e conhecimento.** Aki/Rin/Tōru o conhecem pelo clã sem formar corte; Shōma quer impedir que sobrenome substitua teamwork.\n\n**17. Identidade de combate.** Transformar terreno neutro em território próprio pouco a pouco.\n\n**18. Inspiração e comparação — Naruto Clássico.** A referência técnica é Hashirama/Yamato apenas por Mokuton. Em estágio ele é um Genin excepcional, não “Hashirama criança”. Está no topo dos recém-formados, mas ainda abaixo de Neji após um ano em refinamento; matchup de Mokuton pode fazê-lo parecer acima.\n\n---"
+        "full_dossier": "**1. Identificação.** 12–13 anos • Konoha • Senju • Genin • Time 11 • sensei Shōma Sarutobi • Mokuton natural.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 4,5 • Taijutsu 3,5 • Genjutsu 2 • Inteligência 4 • Força 3,5 • Velocidade 3,5 • Stamina 5 • Selos 3,5.\n\n**3. Secundários.** Reserva A+ • Controle B+ • Mokuton B+ • Suiton B • Doton B • Resistência B+ • Controle de terreno B+ • Teamwork B • Experiência D.\n\n**4. Naturezas.** Suiton e Doton conhecidos; Mokuton natural em escala juvenil.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Suiton: Mizurappa — Rank C — funcional.\n- Doton: Doryūheki — Rank B — versão pequena/juvenil.\n- Mokuton: Nehari no Jutsu — Rank C original — raízes curtas para prender pés/alterar apoio.\n- Mokuton: Kibashira no Jutsu — Rank C original — ergue pilar/cobertura de madeira em pequena escala.\n- Mokuton: Moku Bunshin — Rank B original juvenil — um clone simples, caro e menos autônomo que versões adultas.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Kekkei Genkai Mokuton natural; não herda automaticamente técnicas de Arashi.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos fortes e boa moldagem elemental para a idade.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional; Genjutsu é ponto menos desenvolvido.\n\n**9. Taijutsu / armas brancas.** Taijutsu sólido, apoiado em resistência.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas comuns.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal inicial.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Moku Bunshin juvenil; sem Senjutsu/Kuchiyose/Bijū.\n\n**13. Equipamento.** Kit Genin e pequenos pergaminhos Senju.\n\n**14. Limitações reais.** Mokuton custa muito, escala pequena e exige controle; sem Mokuryū, Mokujin, Jukai Kōtan, Kajukai Kōrin, Shinsu Senju ou supressão automática de Bijū.\n\n**15. Personalidade / voz.** Sociável, tranquilo, seguro do próprio nível; detesta ser reduzido a “novo Arashi”.\n\n**16. Relações e conhecimento.** Aki/Rin/Tōru o conhecem pelo clã sem formar corte; Shōma quer impedir que sobrenome substitua teamwork.\n\n**17. Identidade de combate.** Transformar terreno neutro em território próprio pouco a pouco.\n\n**18. Inspiração e comparação — Naruto Clássico.** A referência técnica é Hashirama/Yamato apenas por Mokuton. Em estágio ele é um Genin excepcional, não “Hashirama criança”. Está no topo dos recém-formados, mas ainda abaixo de Neji após um ano em refinamento; matchup de Mokuton pode fazê-lo parecer acima.\n\n---",
+        "current_ic": "32",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Suiton: Mizurappa",
+          "Doton: Doryūheki",
+          "Mokuton: Nehari no Jutsu",
+          "Mokuton: Kibashira no Jutsu",
+          "Mokuton: Moku Bunshin"
+        ]
       },
       "voice": {
         "reference_anchor": "Hashirama/Yamato só no eixo técnico; voz própria.",
@@ -3187,6 +3405,14 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true
+      },
+      "finals_month_v32": {
+        "ic_80": "32",
+        "primary": "Ninjutsu 5 • Taijutsu 4 • Genjutsu 2 • Inteligência 4 • Força 3,5 • Velocidade 4 • Stamina 5,5 • Selos 4",
+        "secondary": "Reserva S- • Controle A- • Mokuton A- • Suiton B+ • Doton B+ • Resistência A- • Controle de terreno A- • Teamwork B+ • Experiência D+",
+        "new_techniques": [],
+        "training": "Treino Senju/Shōma: Moku Bunshin mais estável, pilares usados como cobertura móvel, combinação Suiton+Doton antes do Mokuton e melhor economia de terreno.",
+        "limits": "Sem técnicas de floresta massiva/Hashirama; escala segue juvenil."
       }
     },
     "Natsuki Hyūga": {
@@ -3211,7 +3437,16 @@
         "relations": "Conhece Reika/Ayame de treino clânico; Time 11 cria relações fora do Hyūga.",
         "combat_identity": "Entrar com precisão e sair antes de troca de força.",
         "limitations": "Ponto cego; curta distância; repertório ainda menor que Reika/Ayame.",
-        "full_dossier": "**1. Identificação.** 12–13 anos • Konoha • Hyūga Bunke • Genin • Time 11 • sensei Shōma Sarutobi.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 3,5 • Taijutsu 5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle A- • Percepção A • Precisão A • Tenketsu A- • Disciplina A- • Teamwork B- • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — sem rank formal — bom domínio juvenil.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan + Jūken; Bunke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos fortes.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional.\n\n**9. Taijutsu / armas brancas.** Jūken é eixo; excelente precisão, ainda sem 64 Palmas/Kaiten consolidados.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego; curta distância; repertório ainda menor que Reika/Ayame.\n\n**15. Personalidade / voz.** Controlada, segura e competitiva; menos rígida que Ayame.\n\n**16. Relações e conhecimento.** Conhece Reika/Ayame de treino clânico; Time 11 cria relações fora do Hyūga.\n\n**17. Identidade de combate.** Entrar com precisão e sair antes de troca de força.\n\n**18. Inspiração e comparação — Naruto Clássico.** Fica entre Hinata e Neji como referência: muito mais assertiva/técnica que Hinata inicial, abaixo de Reika/Neji em refinamento por experiência.\n\n---"
+        "full_dossier": "**1. Identificação.** 12–13 anos • Konoha • Hyūga Bunke • Genin • Time 11 • sensei Shōma Sarutobi.\n\n**2. IC-80.** **29,5/80** — Ninjutsu 3,5 • Taijutsu 5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 4,5 • Stamina 4 • Selos 4.\n\n**3. Secundários.** Reserva B- • Controle A- • Percepção A • Precisão A • Tenketsu A- • Disciplina A- • Teamwork B- • Experiência D.\n\n**4. Naturezas.** Sem natureza elemental prioritária.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Hakke Sanjūni Shō — sem rank formal — bom domínio juvenil.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Byakugan + Jūken; Bunke.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos acadêmicos fortes.\n\n**8. Genjutsu / contragenjutsu.** Kai funcional.\n\n**9. Taijutsu / armas brancas.** Jūken é eixo; excelente precisão, ainda sem 64 Palmas/Kaiten consolidados.\n\n**10. Shurikenjutsu / fios / ferramentas.** Ferramentas secundárias.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu formal.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Sem clones físicos/Kuchiyose/Senjutsu/Bijū.\n\n**13. Equipamento.** Kit leve Hyūga.\n\n**14. Limitações reais.** Ponto cego; curta distância; repertório ainda menor que Reika/Ayame.\n\n**15. Personalidade / voz.** Controlada, segura e competitiva; menos rígida que Ayame.\n\n**16. Relações e conhecimento.** Conhece Reika/Ayame de treino clânico; Time 11 cria relações fora do Hyūga.\n\n**17. Identidade de combate.** Entrar com precisão e sair antes de troca de força.\n\n**18. Inspiração e comparação — Naruto Clássico.** Fica entre Hinata e Neji como referência: muito mais assertiva/técnica que Hinata inicial, abaixo de Reika/Neji em refinamento por experiência.\n\n---",
+        "current_ic": "31,5",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Hakke Sanjūni Shō",
+          "Hakkeshō Kaiten"
+        ]
       },
       "voice": {
         "reference_anchor": "Hinata/Neji intermediário.",
@@ -3318,6 +3553,16 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true
+      },
+      "finals_month_v32": {
+        "ic_80": "31,5",
+        "primary": "Ninjutsu 3,5 • Taijutsu 5,5 • Genjutsu 2 • Inteligência 4 • Força 2,5 • Velocidade 5 • Stamina 4,5 • Selos 4,5",
+        "secondary": "Reserva B • Controle A • Percepção A • Precisão A • Tenketsu A- • Disciplina A • Teamwork B • Experiência D+",
+        "new_techniques": [
+          "Hakkeshō Kaiten"
+        ],
+        "training": "Treino Hyūga: Kaiten juvenil, explosão curta de velocidade para entrar/sair do Jūken e melhor cobertura de ponto cego.",
+        "limits": "Ainda não domina 64 golpes; 32 segue sequência principal."
       }
     },
     "Jun Sarutobi": {
@@ -6266,7 +6511,14 @@
         ],
         "rule": "Escalation is actor-specific. Never flatten a personal trigger into a calm generic comeback."
       },
-      "relationship_overrides": {},
+      "relationship_overrides": {
+        "Amatsu Uchiha": {
+          "baseline": "Aluno direto durante o mês pré-final; Shōzen usa método de mestre itinerante, testa reserva/controle e ensina o contrato dos Corvos-da-Montanha.",
+          "must_not": "Não transferir Hiraishin, Senjutsu ou Rasengan neste mês; não revelar pós-timeskip.",
+          "reference_relation_axis_v32": "Jiraiya → Naruto durante o mês pré-final, filtrado pela diferença técnica de Amatsu",
+          "transfer_v32": "provocação/excentricidade pode coexistir com leitura pedagógica séria; treino visa reserva, controle sob exaustão e Kuchiyose; risco calculado pode ser usado como teste, mas não como cópia literal da falésia."
+        }
+      },
       "evidence": {
         "reference_source_ids": [
           "jiraiya"
@@ -6281,6 +6533,13 @@
         "requires_trigger_check": true,
         "requires_body_state": true,
         "requires_knowledge_channel": true
+      },
+      "reference_relationship_matrix": {
+        "Amatsu Uchiha": {
+          "reference_axis": "Jiraiya → Naruto (mês entre preliminares e finais)",
+          "transfer": "mestre excêntrico que identifica a ferramenta certa para a reserva/aluno e cobra por experiência prática; Amatsu aprende mais rápido em controle, então avança mais na consistência do Kuchiyose",
+          "must_not": "não copiar falas/cenas literalmente; não conceder técnicas futuras"
+        }
       }
     },
     "Kiyomi Senju": {
@@ -12045,7 +12304,20 @@
         "relations": "Sayo é irmã mais velha; Kuroto irmão do meio; Amatsu é foco pós-Floresta.",
         "combat_identity": "Defesa/controle de areia, captura e compressão; Shukaku é risco de instabilidade.",
         "limitations": "Repertório e limites vêm da ficha v26; referência não concede técnica nova.",
-        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26."
+        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26.",
+        "current_ic": "32",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Suna no Tate",
+          "Suna no Yoroi",
+          "Suna Shigure",
+          "Sabaku Kyū",
+          "Sabaku Sōsō",
+          "Suna Bunshin"
+        ]
       },
       "voice": {
         "reference_anchor": "Gaara Part I / Exame Chūnin — presença, silêncio, areia e instabilidade.",
@@ -12195,6 +12467,14 @@
           "transfer": "atenção concentrada e curiosidade hostil aparecem mais por olhar/areia/decisão que por fala; não esquece o confronto",
           "must_not": "não virar rival falante estilo Naruto/Sasuke"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "32",
+        "primary": "Ninjutsu 6 • Taijutsu 2,5 • Genjutsu 2 • Inteligência 4 • Força 3 • Velocidade 4 • Stamina 6 • Selos 4,5",
+        "secondary": "Reserva A+ própria • Controle B+ • Areia A+ • Defesa A+ • Percepção B+ • Resistência A- • Teamwork C- • Experiência C",
+        "new_techniques": [],
+        "training": "Treino de Suna: resposta da areia mais curta, distribuição em múltiplos vetores, Suna no Yoroi menos desperdiçadora e recuperação mais rápida após areia pesada/sinterizada.",
+        "limits": "Shukaku continua risco, não ferramenta voluntária; sem transformação completa controlada."
       }
     },
     "Equipe de Amegakure": {
@@ -12681,7 +12961,17 @@
         "relations": "Irmã mais velha; atrito/confiança com Kuroto; proteção e cautela com Yoshiro.",
         "combat_identity": "Fūton/tessen para alcance, direção e controle espacial.",
         "limitations": "Repertório e limites vêm da ficha v26; referência não concede técnica nova.",
-        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26."
+        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26.",
+        "current_ic": "31",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Fūton: Kamaitachi no Jutsu",
+          "Fūton: Daikamaitachi no Jutsu",
+          "Tessenjutsu de Suna"
+        ]
       },
       "voice": {
         "reference_anchor": "Temari Part I / Exame Chūnin — confiança, Fūton/tessen e leitura tática.",
@@ -12818,6 +13108,14 @@
           "transfer": "cuidado existe, mas medo/reserva também; reduz provocação quando percebe instabilidade; fala funcional e mede aproximação",
           "must_not": "não tratá-lo como irmão caçula normal ou fazer sermão afetivo"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "31",
+        "primary": "Ninjutsu 5,5 • Taijutsu 3,5 • Genjutsu 2 • Inteligência 4,5 • Força 3 • Velocidade 4,5 • Stamina 4 • Selos 4",
+        "secondary": "Reserva A- • Controle A- • Fūton A • Tessen A • Tática A- • Percepção A- • Shuriken B+ • Teamwork B+ • Experiência C+",
+        "new_techniques": [],
+        "training": "Treino de Suna: Daikamaitachi com menor preparação, mudança de direção da rajada e uso do tessen em curta distância para recuperar espaço.",
+        "limits": "Sem Kuchiyose/Kamatari ou técnicas futuras."
       }
     },
     "Kuroto Sabaku": {
@@ -12840,7 +13138,19 @@
         "relations": "Irmão do meio; discute com Sayo; cuida de Yoshiro com cautela diante de Shukaku.",
         "combat_identity": "Kugutsu, engano, corpo-falso, fios e armadilhas.",
         "limitations": "Repertório e limites vêm da ficha v26; referência não concede técnica nova.",
-        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26."
+        "full_dossier": "Ver SUNA_SIBLINGS_CANON_V26.md / ficha v26.",
+        "current_ic": "30,5",
+        "current_repertoire": [
+          "Bunshin no Jutsu",
+          "Henge no Jutsu",
+          "Kawarimi no Jutsu",
+          "Shunshin no Jutsu",
+          "Kugutsu no Jutsu",
+          "Kugutsu: Kurokumo",
+          "Kurokumo: Hachijō",
+          "Kurokumo: Senbon-guchi",
+          "Truque de Corpo-Falso"
+        ]
       },
       "voice": {
         "reference_anchor": "Kankurō Part I / Exame Chūnin — Kugutsu, blefe e irritabilidade.",
@@ -12976,6 +13286,14 @@
           "transfer": "cuidado misturado a tensão/medo; irritação fica filtrada quando Yoshiro parece instável; ele observa risco antes de fazer piada",
           "must_not": "não provocar Shukaku por comic relief"
         }
+      },
+      "finals_month_v32": {
+        "ic_80": "30,5",
+        "primary": "Ninjutsu 5 • Taijutsu 3 • Genjutsu 2,5 • Inteligência 5 • Força 3 • Velocidade 4 • Stamina 4 • Selos 4",
+        "secondary": "Reserva A- • Controle A- • Kugutsu A • Engano A • Armadilhas A- • Percepção B+ • Veneno B- • Teamwork B+ • Experiência C+",
+        "new_techniques": [],
+        "training": "Treino de Suna: troca corpo↔marionete mais rápida, fios redundantes, Senbon-guchi com paralítico mais confiável e manutenção sob dano.",
+        "limits": "Sem Karasu/Kuroari copiados; Kurokumo continua marionete principal."
       }
     }
   }
