@@ -65,7 +65,14 @@
           "Mangekyō",
           "auto-dodge",
           "precognição literal"
-        ]
+        ],
+        "effective_overlay": {
+          "perception_active": "A-",
+          "kinetic_reading_prediction": "A-",
+          "ocular_genjutsu": "B",
+          "copying": "B+ technical compatibility dependent",
+          "note": "conditional while Sharingan 3T is active; base IC and physical speed unchanged"
+        }
       }
     },
     "Saya Haruno": {
