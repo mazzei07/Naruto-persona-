@@ -74,14 +74,17 @@ def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
         if any(x in n for x in ["melhor","prodig","competencia","competência","fraca","fracass"]):
             level=max(level,3);reasons.append("competence_status_trigger")
     if actor=="Yoshiro Sabaku":
-        blood_terms=["sangue","sangra","sangrou","blood","bleeding","ferimento","ferido","wound","pain","dor"]
-        breach_terms=["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"]
-        shukaku_terms=["shukaku","instabil","perde a compostura","perdeu a compostura","rage","fury"]
-        if any(x in n for x in blood_terms):
+        blood_or_pain = bool(
+            re.search(r"\\b(sangue|sangra|sangrou|sangrando|ferimento|ferido|ferida|dor|blood|bleeding|wound|wounded|pain)\\b", n)
+            or any(x in n for x in ["sangue visivel","sangue visível","dor real","own blood","real pain"])
+        )
+        breach = any(x in n for x in ["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"])
+        shukaku_break = any(x in n for x in ["shukaku","instabil","perde a compostura","perdeu a compostura"," rage "," fury "])
+        if blood_or_pain:
             level=max(level,3);reasons.append("gaara_chunin_blood_or_pain_trigger")
-        if any(x in n for x in breach_terms):
+        if breach:
             level=max(level,3);reasons.append("gaara_chunin_defense_breach_or_humiliation_trigger")
-        if any(x in n for x in shukaku_terms):
+        if shukaku_break:
             level=max(level,4);reasons.append("shukaku_instability_trigger")
     if actor in {"Sayo Sabaku","Kuroto Sabaku"}:
         if any(x in n for x in ["yoshiro perde","yoshiro com sangue","yoshiro sangra","shukaku","instabilidade de yoshiro","yoshiro instavel","yoshiro instável"]):
