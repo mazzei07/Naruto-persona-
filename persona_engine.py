@@ -1068,15 +1068,20 @@ def persona_audit(
     candidate_action: str = "",
     situation: str = "",
     pressure: str = "normal",
+    stimulus: str = "",
+    prior_exchange: str = "",
 ) -> Dict[str, Any]:
-    packet = character_turn_packet(name, interlocutor, candidate_action or candidate_dialogue, situation, pressure)
+    packet = character_turn_packet(
+        name, interlocutor, stimulus or candidate_action or candidate_dialogue,
+        situation, pressure, prior_exchange=prior_exchange
+    )
     if packet.get("status") != "ok":
         return {"pass": False, "packet_status": packet.get("status"), "violations": [packet.get("rule", "invalid actor")], "packet": packet}
     violations = []
     warnings = []
     acting_review = acting_audit_line(
         name, interlocutor, candidate_dialogue, candidate_action,
-        candidate_action or candidate_dialogue, "", situation, pressure
+        stimulus or candidate_action or candidate_dialogue, prior_exchange, situation, pressure
     )
     violations.extend(acting_review.get("violations", []))
     warnings.extend(acting_review.get("warnings", []))
