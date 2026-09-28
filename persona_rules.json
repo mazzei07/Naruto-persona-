@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.6.0-v24",
+  "version": "0.6.1-v24.1",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -521,6 +521,36 @@
       "catchphrase -> preservar função e frequência, nunca espalhar como bordão obrigatório"
     ]
   },
-  "fidelity_contract": "fidelity_catalog.json",
+  "fidelity_contract": {
+    "0": "f",
+    "1": "i",
+    "2": "d",
+    "3": "e",
+    "4": "l",
+    "5": "i",
+    "6": "t",
+    "7": "y",
+    "8": "_",
+    "9": "c",
+    "10": "a",
+    "11": "t",
+    "12": "a",
+    "13": "l",
+    "14": "o",
+    "15": "g",
+    "16": ".",
+    "17": "j",
+    "18": "s",
+    "19": "o",
+    "20": "n",
+    "version": "v24.1.0",
+    "active_actor_policy": "Use scene.active_npcs to require cards only for NPCs whose decisions are generated in this beat; background presence does not force dialogue or a card.",
+    "entity_policy": "individual/ninken/historical/group/unresolved_identity are distinct; ninken are nonverbal, historical actors require a legitimate flashback/source, groups never become one speaking persona.",
+    "packet_tools": [
+      "persona_evidence",
+      "persona_validate_turn_packet",
+      "persona_fidelity_health"
+    ]
+  },
   "reference_policy": "verify_reference_every_turn_and_research_missing_evidence"
 }
