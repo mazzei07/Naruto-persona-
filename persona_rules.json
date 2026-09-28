@@ -52,7 +52,9 @@
     "Somente a Continuidade Clássica é cronologia ativa.",
     "Mesmo personagem em outra continuidade não transfere biografia, idade, patente, relações, romance, poderes, conhecimento ou eventos.",
     "Pais de Amatsu estão mortos; Takeru é o único familiar direto vivo e é nukenin/Tenkai.",
-    "Não expor ausências familiares já estabelecidas sem função real na cena."
+    "Não expor ausências familiares já estabelecidas sem função real na cena.",
+    "Registro Naruto Clássico: sem palavrões como fala padrão; apenas exceções explicitamente autorizadas pelo usuário.",
+    "Se o NPC relevante possui nome estabelecido, usar o nome; cargo/título não apaga a identidade do personagem."
   ],
   "voice_gates": [
     "falaria_agora",
@@ -722,6 +724,7 @@
     "legacy_chronology_import": "forbidden",
     "character_carryover": "existência somente quando revalidada; biografia/status/relação/poder/conhecimento/eventos devem vir desta continuidade",
     "amatsu_family": "pais mortos; Takeru Uchiha é o único familiar direto vivo e é nukenin/Tenkai",
-    "narration": "não transformar ausência familiar já estabelecida em exposição automática"
+    "narration": "não transformar ausência familiar já estabelecida em exposição automática",
+    "live_point": "19:30 após o encerramento do Exame Chūnin; Amatsu deitado na cama; nenhum outro NPC presente estabelecido."
   }
 }
