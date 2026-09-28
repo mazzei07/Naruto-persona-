@@ -909,7 +909,8 @@ def healthcheck() -> Dict[str, Any]:
         "acting_bible_v25": acting_health(),
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
-        "formality_calibration": "v23.3-audit-and-low-filter",
+        "addressing_protocol": "v33",
+        "formality_calibration": "v33-relational-honorifics",
     }
 
 
