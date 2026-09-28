@@ -90,6 +90,20 @@ def main():
     kaz_address = ka["addressing_plan_v22"]
     assert "mechanically" in kaz_address["honorific_policy"] or "default" in kaz_address["honorific_policy"]
 
+    for actor, teacher, expected_strength in [
+        ("Hana Yamanaka", "Akihiko Sarutobi", "strong_default"),
+        ("Natsuki Hyūga", "Shōma Sarutobi", "strong_default"),
+        ("Kaede Uchiha", "Sayuri Hyūga", "contextual_default"),
+        ("Shin Uchiha", "Shigure Namikado", "contextual_default"),
+    ]:
+        pkt = persona_turn(actor, teacher, stimulus="instrução do sensei", situation="treino seguro", pressure="baixa")
+        plan = pkt["addressing_plan_v33"]
+        assert "sensei" in " ".join(plan.get("preferred_forms", [])).casefold(), (actor, plan)
+        assert plan.get("honorific_strength") == expected_strength, (actor, plan)
+
+    hana_peer = persona_turn("Hana Yamanaka", "Daichi Akimichi", stimulus="conversa de equipe", situation="pausa segura", pressure="baixa")
+    assert not any("-kun" in x or "-san" in x for x in hana_peer["addressing_plan_v33"].get("preferred_forms", [])), hana_peer["addressing_plan_v33"]
+
     saya_to_iruka_formality = saya_authority["formality_profile_v23"]
     saya_to_amatsu_formality = sa["formality_profile_v23"]
     assert saya_to_iruka_formality["level"] >= saya_to_amatsu_formality["level"], (
