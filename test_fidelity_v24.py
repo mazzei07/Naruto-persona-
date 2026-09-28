@@ -72,7 +72,16 @@ class FidelityTests(unittest.TestCase):
     def test_empty_scene_never_passes(self):
         self.assertEqual(validate_turn_packet({})['status'],'needs_evidence')
     def test_health_is_coverage_not_quality(self):
-        r=health();self.assertTrue(r['ok']);self.assertFalse(r['full_manga_read']);self.assertFalse(r['br_dub_verified'])
+        r=health();self.assertTrue(r['ok']);self.assertFalse(r['full_manga_read']);self.assertFalse(r['br_dub_verified']);self.assertEqual(r['version'],'v24.1.0');self.assertTrue(r['supports_active_npcs'])
+    def test_active_npcs_allow_background_presence(self):
+        p=example();p['scene']['present'] += ['Saya Haruno','Kazuma Uzumaki'];p['scene']['active_npcs']=['Iruka Umino']
+        self.assertEqual(validate_turn_packet(p)['status'],'reviewable')
+    def test_active_npc_still_needs_card(self):
+        p=example();p['scene']['present'].append('Saya Haruno');p['scene']['active_npcs']=['Iruka Umino','Saya Haruno']
+        self.assertIn('missing_actor_card:Saya Haruno',validate_turn_packet(p)['issues'])
+    def test_group_cannot_be_active_persona(self):
+        p=example();p['scene']['present'].append('Equipe de Amegakure');p['scene']['active_npcs']=['Iruka Umino','Equipe de Amegakure']
+        self.assertIn('non_persona_entity_cannot_be_active:Equipe de Amegakure',validate_turn_packet(p)['issues'])
     def test_newly_researched_scene_is_accepted(self):
         p=example()
         p['external_reference_cards']=[{'id':'external:iruka-check','references':['Iruka'],'episode_ceiling':37,'source_url':'https://naruto-official.com/en/news/01_1788','locator':'capítulo 64','observed_summary':'Iruka orienta os candidatos na torre.','acting_inference':'Explicar com objetivo concreto.','checked_at':'2026-09-28','dialogue_evidence':'official_editorial_or_synopsis'}]
