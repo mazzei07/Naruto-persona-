@@ -75,7 +75,7 @@ def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
             level=max(level,3);reasons.append("competence_status_trigger")
     if actor=="Yoshiro Sabaku":
         blood_or_pain = bool(
-            re.search(r"\\b(sangue|sangra|sangrou|sangrando|ferimento|ferido|ferida|dor|blood|bleeding|wound|wounded|pain)\\b", n)
+            re.search(r"\b(sangue|sangra|sangrou|sangrando|ferimento|ferido|ferida|dor|blood|bleeding|wound|wounded|pain)\b", n)
             or any(x in n for x in ["sangue visivel","sangue visível","dor real","own blood","real pain"])
         )
         breach = any(x in n for x in ["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"])
