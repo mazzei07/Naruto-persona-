@@ -1,4 +1,4 @@
-# Mapa de referências v24
+# Mapa de referências v24.1
 
 Catálogo de evidências selecionadas, não leitura integral do mangá, databooks, novels ou dublagem. Verificar fonte por turno e pesquisar lacunas antes de fechar uma atuação.
 
@@ -86,6 +86,23 @@ Inspiração técnica, função narrativa e voz são campos diferentes. Nomes n�
 | Keisuke Sarutobi | Asuma/Hiruzen/Konohamaru difuso. | technical_or_function_only |
 | Gakuji Aramori | Zabuza Clássico (inspiração estrutural no dossiê) | documented_axes_only |
 | Nagi Sazanami | Haku Clássico (inspiração estrutural no dossiê) | documented_axes_only |
+| Genjirō Takemura | ranzinza, prático, orgulhoso do trabalho; afeto aparece por cobrança e ação. ; Tazuna em função, sem cópia 1:1. | documented_axes_only |
+| Genzō Kaneda | cruel quando protegido por poder econômico, menos seguro diante de ameaça física real. ; Gatō em função. | documented_axes_only |
+| Yoru | Função estrutural de Akamaru, com personalidade animal própria. Reações devem vir por postura, faro, som, hesitação, rosnado, proximidade e ação — não por diálogo humano. | documented_axes_only |
+| Kuro | Função de Akamaru em estágio mais jovem, sem copiar comportamento 1:1. | documented_axes_only |
+| Arashi Senju — Primeiro Hokage (histórico) | Figura histórica; usar somente quando uma fonte/flashback legítimo estabelecer comportamento. ; Hashirama no eixo histórico, sem cópia automática de cada técnica/feito. | documented_axes_only |
+| Shūsei Uchiha — cofundador (histórico) | Só mediante flashback/fonte legítima. ; Madara no eixo de cofundador/rival, sem importação automática de trajetória/poderes. | documented_axes_only |
+| Chihaya Uzumaki — figura histórica | Não estabelecida o bastante para fala live sem fonte. ; eixo histórico Mito/Kushina como Uzumaki receptáculo, com identidade própria. | documented_axes_only |
+| Tetsuma Kanzaki | Ibiki Morino no eixo funcional, sem copiar aparência, falas ou trajetória. Voz: controlada, punitiva, econômica; não precisa soar como 'carrasco' em toda frase. | documented_axes_only |
+| Renka | Anko no eixo funcional/energético, mas não 'sádica homicida'. Deve ser provocadora, intensa, confortável com risco e teatral na medida certa. | documented_axes_only |
+| Equipe de Amegakure — primeiro confronto | Equipe original do reboot; não copiar uma célula canônica específica. | original |
+| Equipe de Kusagakure — Ravina Seca | Original; motivação imediata é sobrevivência/recursos, não 'vilania genérica'. | original |
+| Informante das cartas — identidade pendente | Função semelhante ao informante experiente do exame clássico, porém com identidade própria. | original |
+| Yoshiro Sabaku | presença silenciosa, ameaçadora e autocontida no eixo Gaara inicial; individualidade própria deve prevalecer. ; Gaara inicial em função narrativa e presença, não cópia de trajetória. | documented_axes_only |
+| Equipe de Amegakure | Sem matriz oficial de voz fechada. | original |
+| Equipe de Kusagakure | Sem matriz oficial de voz fechada. | original |
+| Trio de Sunagakure | Sem matriz oficial de voz fechada. | original |
+| Companheiros de Yoshiro | Sem matriz oficial de voz fechada. | original |
 
 ## Fontes consultadas
 
@@ -155,3 +172,8 @@ RoleLLM, InCharacter e PingPong orientam a estrutura de recuperação e avaliaç
 ## Complemento — prova escrita
 
 - [Episódio 24](https://naruto-official.com/en/anime/naruto1/list/01_248) e [episódio 25](https://naruto-official.com/en/anime/naruto1/list/01_249): sinopses oficiais consultadas em 2026-09-28. Cartão `ibiki_exam_pressure`: intimidação orientada à avaliação e explicação de regras; não sadismo constante. Inferência de atuação separada da descrição observada.
+
+
+## Sincronização v24.1
+
+O catálogo compartilhado possui 97 entidades mapeadas. O Persona mantém perfis atuáveis separados de agregados de equipe/identidades pendentes; esses agregados continuam no catálogo para validação, mas não viram uma única voz.
