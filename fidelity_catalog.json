@@ -1751,7 +1751,7 @@
       "voice_rule": "Usar apenas os eixos explicitamente documentados e a relação atual.",
       "baseline": "Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.",
       "relations": "Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.",
-      "dossier_differences": "Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
+      "dossier_differences": "Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. A reserva natural/base de Amatsu é literalmente equivalente à de Naruto no Naruto Clássico desta fase; o chakra de Kurama permanece separado, selado e não cooperativo; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
       "source_files": [
         "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
         "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
@@ -1787,6 +1787,11 @@
         "technical_reference_packet": null,
         "secondary_packets": {},
         "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      },
+      "classic_live_corrections_v36": {
+        "amatsu_base_reserve": "literalmente equivalente à reserva natural/base de Naruto no Naruto Clássico desta fase",
+        "kurama": "separada, selada, não cooperativa",
+        "family": "pais mortos; Takeru Uchiha único familiar direto vivo, nukenin/Tenkai"
       }
     },
     "Saya Haruno": {
