@@ -123,6 +123,47 @@
         "camera: existe gesto/posição/timing que deveria carregar parte da resposta?",
         "anime: a cena tem variação de ritmo, ou virou linha-linha-linha?"
       ]
+    },
+    "technique_research_impression_gate_v35": {
+      "mandatory": true,
+      "research_before_exact_mechanics": true,
+      "fields": [
+        "rank",
+        "nature",
+        "range_shape",
+        "hand_seals",
+        "canonical_users",
+        "canonical_demonstration",
+        "limitations_counters",
+        "rarity_access",
+        "chakra_burden",
+        "specific_execution_scale"
+      ],
+      "impression_levels": [
+        "0 routine",
+        "1 attention",
+        "2 impressive",
+        "3 striking",
+        "4 astonishing",
+        "5 incredible_for_context"
+      ],
+      "observer_factors": [
+        "knowledge",
+        "experience/rank",
+        "prior familiarity",
+        "expectation delta",
+        "relationship",
+        "composure",
+        "personal danger"
+      ],
+      "rules": [
+        "rank is one factor, never the whole reaction",
+        "impression and threat are independent axes",
+        "recognition requires a legitimate knowledge channel",
+        "canonical legendary-user output is not auto-scaled onto a reboot user",
+        "hand seals affect cast timing/telegraph and must be verified",
+        "reaction queue remains forbidden"
+      ]
     }
   },
   "sources": {
