@@ -1,0 +1,140 @@
+{
+  "version": "v31.0-rp-generation-kernel",
+  "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
+  "stages": [
+    {
+      "id": "S0",
+      "name": "Canon Snapshot",
+      "does": [
+        "recover exact live scene",
+        "positions/geometry",
+        "physical state",
+        "knowledge channels",
+        "user-controlled boundaries",
+        "active unresolved actions"
+      ]
+    },
+    {
+      "id": "S1",
+      "name": "Memory ASBE",
+      "does": [
+        "ANCHOR identity/relation/current objective",
+        "SELECT only relevant lived memories",
+        "BOUND by perception and knowledge",
+        "ENACT memory as changed behavior, never exposition"
+      ]
+    },
+    {
+      "id": "S2",
+      "name": "Reference Triangulation",
+      "does": [
+        "lock exact Naruto phase",
+        "lock directional relation A→B",
+        "retrieve functionally equivalent scenes",
+        "extract decision patterns and frequency, not quotes"
+      ]
+    },
+    {
+      "id": "S3",
+      "name": "Behavior Frequency Ledger",
+      "does": [
+        "classify candidate reactions as typical/possible/rare/forbidden",
+        "track repetition count in current sequence",
+        "apply actor-specific activation threshold"
+      ]
+    },
+    {
+      "id": "S4",
+      "name": "ActorState Compiler",
+      "does": [
+        "objective",
+        "obstacle",
+        "private impulse",
+        "social filter",
+        "public/private pressure",
+        "body state",
+        "attention",
+        "silence prior",
+        "reference relation",
+        "verbal register"
+      ]
+    },
+    {
+      "id": "S5",
+      "name": "Contrastive Decision Set",
+      "does": [
+        "generate multiple decision categories internally",
+        "include silence/body-only candidate",
+        "reject options based on catchphrase imitation or wrong threshold",
+        "choose decision before wording"
+      ]
+    },
+    {
+      "id": "S6",
+      "name": "Parallel Agenda Scheduler",
+      "does": [
+        "keep every relevant NPC agenda active",
+        "resolve timing/geometry/line-of-sight",
+        "no reaction queue",
+        "no frozen spectators",
+        "no retroactive counters"
+      ]
+    },
+    {
+      "id": "S7",
+      "name": "Performance Realization",
+      "does": [
+        "action first where natural",
+        "body and voice from same impulse",
+        "relationship-specific vocative/syntax",
+        "Naruto Classic PT-BR register",
+        "no copied canonical dialogue"
+      ]
+    },
+    {
+      "id": "S8",
+      "name": "Destructive Verification",
+      "does": [
+        "interlocutor swap",
+        "speaker transplant",
+        "threshold/frequency test",
+        "silence test",
+        "memory integration test",
+        "camera/show-dont-explain test",
+        "age/register test",
+        "canon/knowledge test"
+      ]
+    },
+    {
+      "id": "S9",
+      "name": "Player Window",
+      "does": [
+        "never choose Amatsu voluntary action",
+        "stop at real defense/decision windows",
+        "preserve simultaneous causal state for next turn"
+      ]
+    }
+  ],
+  "behavior_frequency_ledger": {
+    "typical": "Default under matching conditions; may still be suppressed by pressure/relation.",
+    "possible": "Allowed only when a specific trigger/goal justifies it.",
+    "rare": "Needs strong contextual trigger and should not recur casually.",
+    "forbidden": "Contradicts phase, relation, knowledge, repertoire, or established characterization."
+  },
+  "contrastive_decision_rule": "At important beats compare at least: silence/body-only; minimal functional response; active relational response. Choose by objective + threshold + reference decision pattern, not by stylistic resemblance.",
+  "research_rule": "Search 'how X reacts to Y when Z happens' in the correct phase. Extract behavioral evidence, thresholds and frequency. Never search only 'personality of X' when a relation-specific decision matters.",
+  "narrator_rule": "Prefer observable action -> body/perception -> necessary speech -> immediate consequence. Internal thought only when focalization truly warrants it.",
+  "combat_rule": "position -> simultaneous intentions -> perception -> timing -> response attempt -> collision -> consequence -> next actionable window.",
+  "anti_patterns": [
+    "trait-to-line generation",
+    "catchphrase mimicry",
+    "one-word dialogue as generic coolness",
+    "everyone comments",
+    "NPC explains own psychology",
+    "narrator explains recognition that body can show",
+    "same voice across interlocutors",
+    "possible behavior used at constant frequency",
+    "reference biography imported into OC",
+    "Amatsu auto-action"
+  ]
+}
