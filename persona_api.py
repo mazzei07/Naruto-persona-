@@ -64,3 +64,38 @@ def persona_check(
     pressure: str = "normal",
 ):
     return persona_audit(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
+
+
+def persona_sayability(
+    name: str,
+    interlocutor: str = "",
+    stimulus: str = "",
+    situation: str = "",
+    pressure: str = "normal",
+    audience: str = "",
+    body_state: str = "",
+    objective: str = "",
+    perception_constraint: str = "",
+    knowledge_constraint: str = "",
+):
+    packet = character_turn_packet(
+        name=name,
+        interlocutor=interlocutor,
+        stimulus=stimulus,
+        situation=situation,
+        pressure=pressure,
+        audience=audience,
+        body_state=body_state,
+        objective=objective,
+        perception_constraint=perception_constraint,
+        knowledge_constraint=knowledge_constraint,
+    )
+    return {
+        "status": packet.get("status"),
+        "actor": packet.get("actor"),
+        "interlocutor": packet.get("interlocutor"),
+        "sayability_gate_v22": packet.get("sayability_gate_v22"),
+        "addressing_plan_v22": packet.get("addressing_plan_v22"),
+        "actor_beat_v22": packet.get("actor_beat_v22"),
+        "microexpression_plan_v22": packet.get("microexpression_plan_v22"),
+    }
