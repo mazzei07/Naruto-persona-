@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 from fidelity_core import evidence_packet as evidence_v24, lint as lint_v24, classify as classify_v24, health as fidelity_health, catalog as fidelity_catalog, resolve as resolve_fidelity_name
+from actor_state_compiler import compile_actor_state
 from acting_bible import (
     character_bible as acting_character_bible,
     relationship_bible as acting_relationship_bible,
@@ -963,6 +964,31 @@ def character_turn_packet(
     universal_voice_v23 = _universal_language_contract_v23(
         p, rel_lines, baseline, filter_level, plev, formality_v23
     )
+    sayability_v22 = _sayability_gate_v22(
+        actor, stimulus, situation, objective, rel_lines, baseline, plev, audience, knowledge_constraint
+    )
+    actor_beat_v22 = _actor_beat_v22(
+        actor, interlocutor_resolved or interlocutor or "", stimulus, situation, objective,
+        body_state, filter_level, plev, rel_lines, baseline
+    )
+    actor_state_v29 = compile_actor_state(
+        actor=actor,
+        interlocutor=interlocutor_resolved or interlocutor or "",
+        stimulus=stimulus,
+        situation=situation,
+        pressure=plev,
+        audience=audience or "unspecified",
+        body_state=body_state or "not_provided",
+        objective=objective or "",
+        perception_constraint=perception_constraint or "",
+        knowledge_constraint=knowledge_constraint or "",
+        prior_exchange=prior_exchange or "",
+        relationship_state=relationship_state or "",
+        acting_packet=acting_v25,
+        sayability=sayability_v22,
+        actor_beat=actor_beat_v22,
+        formality=formality_v23,
+    )
 
     private_public = {
         "private_impulse": "derive_from_stimulus_and_character; do not invent facts outside scene",
@@ -1012,13 +1038,9 @@ def character_turn_packet(
         "reference_voice_family_v23": formality_v23.get("reference_family"),
         "formality_profile_v23": formality_v23,
         "universal_language_v23": universal_voice_v23,
-        "sayability_gate_v22": _sayability_gate_v22(
-            actor, stimulus, situation, objective, rel_lines, baseline, plev, audience, knowledge_constraint
-        ),
-        "actor_beat_v22": _actor_beat_v22(
-            actor, interlocutor_resolved or interlocutor or "", stimulus, situation, objective,
-            body_state, filter_level, plev, rel_lines, baseline
-        ),
+        "sayability_gate_v22": sayability_v22,
+        "actor_beat_v22": actor_beat_v22,
+        "actor_state_v29": actor_state_v29,
         "addressing_plan_v22": _addressing_plan_v22(
             actor, interlocutor_resolved or interlocutor or "", rel_lines, baseline, tags, plev
         ),
@@ -1048,6 +1070,7 @@ def character_turn_packet(
         "research": research,
         "generation_order": _rules().get("pipeline", []),
         "final_gate": [
+            "ActorState v29 must be compiled before wording.",
             "Verificar referência v25 por fase, relação e situação; pesquisar lacunas materiais.",
             "Aplicar a Bíblia de Atuação v25: histórico relacional e gatilho pessoal vencem personalidade genérica.",
             "Carregar o prior_exchange; não reiniciar temperatura emocional a cada fala.",
