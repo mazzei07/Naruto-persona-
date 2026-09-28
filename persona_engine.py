@@ -276,13 +276,12 @@ def _research_packet(profile: Dict[str, Any], interlocutor_profile: Dict[str, An
 def _reference_voice_family_v23(profile: Dict[str, Any], baseline: List[str]) -> Dict[str, Any]:
     """Infer a Naruto speech-family from the explicit reference/profile, with a profile-driven fallback."""
     ref = _infer_reference(profile)
-    source = _norm(" ".join([
-        ref.get("primary_reference", ""),
+    primary = _norm(ref.get("primary_reference", ""))
+    fallback = _norm(" ".join([
         ref.get("source_summary", ""),
         " ".join(baseline),
     ]))
     ordered = [
-        ("socially_adaptive_youthful", ["sakura", "ino"]),
         ("relaxed_adult", ["kakashi"]),
         ("expressive_teacher", ["iruka"]),
         ("warm_authority", ["hiruzen"]),
@@ -292,14 +291,19 @@ def _reference_voice_family_v23(profile: Dict[str, Any], baseline: List[str]) ->
         ("reactive_irritable", ["kankuro"]),
         ("rough_youthful", ["naruto", "kiba"]),
         ("clipped_plain", ["sasuke", "neji"]),
+        ("socially_adaptive_youthful", ["sakura", "ino"]),
     ]
     family = "profile_driven"
     matched = []
-    for fam, keys in ordered:
-        hits = [k for k in keys if k in source]
-        if hits:
-            family = fam
-            matched = hits
+    # Primary reference always wins over incidental names in comparison text.
+    for search_space in (primary, fallback):
+        for fam, keys in ordered:
+            hits = [k for k in keys if k in search_space]
+            if hits:
+                family = fam
+                matched = hits
+                break
+        if matched:
             break
     return {
         "family": family,
@@ -342,7 +346,7 @@ def _formality_profile_v23(
 
     if any(x in text for x in ["correto-formal", "formalidade alta", "cerimonial", "muito formal"]):
         score += 1.2; cues.append("explicit_formal_baseline")
-    elif any(x in text for x in ["formal", "polido", "respeitoso", "corretividade alta"]):
+    elif any(x in text for x in ["mais formal", "fala formal", "registro formal", "polido", "respeitoso", "corretividade alta", "mais correta com", "mais organizado com"]):
         score += 0.6; cues.append("formal_or_polite_baseline")
     if any(x in text for x in ["coloquial", "oralidade", "rude", "baixo filtro", "provoc", "explos"]):
         score -= 0.35; cues.append("oral_or_low_filter_baseline")
@@ -350,24 +354,28 @@ def _formality_profile_v23(
         cues.append("economical_voice_not_equivalent_to_informal")
 
     target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
-    target_voice = _norm(interlocutor_profile.get("voice_raw", "")) if interlocutor_profile else ""
     authority_target = (
         "authority" in tags
         or any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka", "hokage"])
-        or any(x in target_identity + " " + target_voice for x in ["hokage", "sensei", "jonin", "jounin", "professor", "instrutor", "chefe"])
+        or any(x in target_identity for x in ["hokage", "sensei", "jonin", "jounin", "professor", "instrutor", "chefe"])
     )
     if authority_target:
         hierarchy_sensitivity = 1.0
         if family in {"rough_youthful", "clipped_plain", "sparse_unsettling"}:
             hierarchy_sensitivity = 0.25
-        elif family in {"socially_adaptive_youthful", "warm_authority", "expressive_teacher"}:
-            hierarchy_sensitivity = 1.25
+        elif family == "socially_adaptive_youthful":
+            hierarchy_sensitivity = 1.0
+        elif family in {"warm_authority", "expressive_teacher"}:
+            hierarchy_sensitivity = 0.8
         if filter_level == "high":
             hierarchy_sensitivity += 0.4
         elif filter_level == "low":
             hierarchy_sensitivity -= 0.2
         score += hierarchy_sensitivity
         cues.append(f"authority_target_shift:{round(hierarchy_sensitivity,2)}")
+
+    if any(x in text for x in ["intimidade", "familiar", "proximidade", "reduz formalidade", "velho", "velhote"]):
+        score -= 0.65; cues.append("directional_intimacy_reduces_distance")
 
     if filter_level == "high":
         score += 0.45; cues.append("high_social_filter")
@@ -380,7 +388,16 @@ def _formality_profile_v23(
         score -= 0.15
 
     score = max(0.0, min(4.0, score))
-    level = int(round(score))
+    if score < 0.75:
+        level = 0
+    elif score < 1.5:
+        level = 1
+    elif score < 2.6:
+        level = 2
+    elif score < 3.5:
+        level = 3
+    else:
+        level = 4
     labels = {
         0: "rough_plain",
         1: "casual_plain",
