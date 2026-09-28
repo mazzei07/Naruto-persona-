@@ -1,5 +1,5 @@
 {
-  "version": "v31.0-rp-generation-kernel",
+  "version": "v31.1-addressing-v33",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -60,6 +60,19 @@
       ]
     },
     {
+      "id": "S4A",
+      "name": "Addressing / Honorific Gate v33",
+      "does": [
+        "resolve direct-address form before wording",
+        "apply directional relation before generic hierarchy",
+        "preserve teacher/Kage titles when the reference and relation support them",
+        "preserve stable peer suffixes such as -kun/-san only in licensed relationships",
+        "allow urgency to compress titles without automatically erasing respect",
+        "select one consistent PT-BR/Japanese surface for the scene",
+        "reject decorative blanket honorifics"
+      ]
+    },
+    {
       "id": "S5",
       "name": "Contrastive Decision Set",
       "does": [
@@ -86,6 +99,7 @@
       "does": [
         "action first where natural",
         "body and voice from same impulse",
+        "apply addressing/honorific plan v33 before final wording",
         "relationship-specific vocative/syntax",
         "Naruto Classic PT-BR register",
         "no copied canonical dialogue"
@@ -102,7 +116,8 @@
         "memory integration test",
         "camera/show-dont-explain test",
         "age/register test",
-        "canon/knowledge test"
+        "canon/knowledge test",
+        "addressing/honorific relation test"
       ]
     },
     {
@@ -135,6 +150,38 @@
     "same voice across interlocutors",
     "possible behavior used at constant frequency",
     "reference biography imported into OC",
-    "Amatsu auto-action"
-  ]
+    "Amatsu auto-action",
+    "blanket honorific suffixes as anime decoration",
+    "authority title erased despite reference/relation",
+    "stable relational suffix erased without trigger"
+  ],
+  "addressing_honorific_gate_v33": {
+    "mandatory": true,
+    "resolution_order": [
+      "directional relationship",
+      "exact reference and phase",
+      "target hierarchy/role",
+      "speaker social education",
+      "intimacy/hostility/romantic investment",
+      "public/private audience",
+      "urgency/pressure",
+      "established PT-BR surface"
+    ],
+    "canonical_examples": {
+      "Saya Haruno→Kazuma Uzumaki": "Kazuma-kun is the ordinary direct-address default in the early Sakura→Sasuke-like invested relation; bare Kazuma needs urgency, sharp irritation, or live relationship change.",
+      "Saya Haruno→Amatsu Uchiha": "bare Amatsu/omission; no automatic suffix.",
+      "Saya Haruno→Kagetsu Shiranui": "Kagetsu-sensei in ordinary safe address; sensei! is valid compression under urgency.",
+      "Sakura/Ino-like→Kage": "deferential Kage title; do not default to bare personal name.",
+      "Hinata-like invested peer": "-kun can be stable when that exact relationship is mapped.",
+      "Lee-like teacher": "-sensei is a strong relational default."
+    },
+    "anti_patterns": [
+      "all boys receive -kun",
+      "all peers receive -san",
+      "all superiors receive identical wording",
+      "pressure deletes every title",
+      "honorific repeated in every sentence",
+      "bare-name teacher/Kage from a hierarchy-sensitive character without a trigger"
+    ]
+  }
 }
