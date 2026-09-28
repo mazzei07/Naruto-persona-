@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.8.0-v33",
+  "version": "0.9.0-v34",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -45,7 +45,10 @@
     "Comédia física é válida somente quando contexto, relação e pressão permitirem.",
     "Perigo comprime linguagem, mas não transforma criança em comandante adulto.",
     "Conhecimento e percepção são fornecidos pelo Canoney/chat; este motor não concede informação nova.",
-    "Quando evidência de referência for insuficiente, marcar research_required em vez de inventar."
+    "Quando evidência de referência for insuficiente, marcar research_required em vez de inventar.",
+    "Reference Essence v34 é obrigatório: recuperar personagem oficial + fase exata + núcleo dominante + gatilho de quebra + corpo/voz + anti-regressão antes da fala/ação.",
+    "Referência mista NÃO soma personalidades; source_anchor/transfer_scope decide o eixo primário e os secundários.",
+    "Quando um gatilho canônico de quebra ocorre, não preservar calma artificial só porque a baseline do personagem é silenciosa."
   ],
   "voice_gates": [
     "falaria_agora",
@@ -687,5 +690,24 @@
       "usar honorífico em toda frase",
       "confundir gramática correta com formalidade"
     ]
+  },
+  "reference_essence_gate_v34": {
+    "mandatory": true,
+    "source_file": "REFERENCE_ESSENCE_V34.json",
+    "fields": [
+      "dominant_core",
+      "social_surface",
+      "combat_pressure",
+      "break_trigger",
+      "body_voice",
+      "must_not"
+    ],
+    "precedence": "live reboot dossier/relation/body/knowledge > exact mapped reference phase > generic family",
+    "mixed_reference_rule": "source_anchor and transfer_scope define which axis transfers; never average every reference",
+    "sand_examples": {
+      "Yoshiro": "Gaara Chunin: silence/ruthlessness baseline; own blood, real pain, defense breach, humiliation or Shukaku pressure can produce shouting, disturbed grin/laugh, trembling and fixation.",
+      "Sayo": "Temari Chunin: blunt, confident, sardonic/debochada, tactically sharp, sometimes cruel; cautious/fearful around unstable Yoshiro.",
+      "Kuroto": "Kankuro Chunin: cocky, irritable, rough puppeteer, taunts from advantage; fear of Yoshiro can abruptly suppress swagger."
+    }
   }
 }
