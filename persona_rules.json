@@ -15,6 +15,7 @@
     "pesquisa externa apenas como calibração"
   ],
   "pipeline": [
+    "continuity_firewall_v36",
     "stimulus",
     "perception_constraint",
     "legitimate_knowledge_constraint",
@@ -718,13 +719,11 @@
     }
   },
   "continuity_firewall_v36": {
-    "version": "v36",
     "mandatory": true,
     "active_continuity_id": "classico_floresta_da_morte",
-    "legacy_chronology_import": "forbidden",
-    "character_carryover": "existência somente quando revalidada; biografia/status/relação/poder/conhecimento/eventos devem vir desta continuidade",
-    "amatsu_family": "pais mortos; Takeru Uchiha é o único familiar direto vivo e é nukenin/Tenkai",
-    "narration": "não transformar ausência familiar já estabelecida em exposição automática",
-    "live_point": "19:30 após o encerramento do Exame Chūnin; Amatsu deitado na cama; nenhum outro NPC presente estabelecido."
+    "rule": "Persona must never import chronology, relationships, family state, powers, ranks, knowledge or future maturity from another reboot continuity.",
+    "carryover": "A revalidated character may preserve entity existence and only Classic-source fields.",
+    "amatsu_family": "parents dead; only living direct relative is Takeru Uchiha, nukenin/Tenkai",
+    "narration": "Do not turn already-established family absences into repetitive exposition."
   }
 }
