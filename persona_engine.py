@@ -318,6 +318,188 @@ def _v21_voice_contract(profile: Dict[str, Any], relation_lines: List[str], base
     }
 
 
+
+def _sayability_gate_v22(
+    actor: str,
+    stimulus: str,
+    situation: str,
+    objective: str,
+    relation_lines: List[str],
+    baseline: List[str],
+    pressure: str,
+    audience: str,
+    knowledge_constraint: str,
+) -> Dict[str, Any]:
+    """Decide whether this actor should speak before any wording is generated."""
+    if actor == "Amatsu Uchiha":
+        return {"verdict": "must_not_speak", "reason": "player_control"}
+    text = _norm(" ".join(relation_lines + baseline))
+    event = _norm(f"{stimulus} {situation}")
+    objective_n = _norm(objective)
+    reasons: List[str] = []
+
+    direct = bool(stimulus.strip()) and any(x in event for x in [
+        _norm(_first_name(actor)), "responde", "pergunta", "chama", "diz", "fala",
+        "ataca", "atinge", "provoca", "olha", "ordem", "alerta"
+    ])
+    if direct:
+        reasons.append("directly_affected_or_addressed")
+
+    functional_objective = bool(objective_n and objective_n not in {"not_provided", "nao fornecido"})
+    if functional_objective:
+        reasons.append("explicit_scene_objective")
+
+    economy = any(x in text for x in [
+        "pouca fala", "baixa frequencia", "silencio", "pode ignorar",
+        "economico", "raramente explica"
+    ])
+    expressive = any(x in text for x in [
+        "explos", "reacao rapida", "interromp", "fala rapida", "grito",
+        "assertiv", "provoc"
+    ])
+
+    high = pressure == "high"
+    if economy and not direct and not functional_objective:
+        return {
+            "verdict": "prefer_body_or_silence",
+            "reason": "economical_profile_without_verbal_need",
+            "reasons": reasons,
+        }
+    if high and direct:
+        return {
+            "verdict": "may_speak",
+            "reason": "pressure_allows_only_functional_compressed_speech",
+            "reasons": reasons,
+        }
+    if direct and expressive:
+        return {
+            "verdict": "may_speak",
+            "reason": "direct_stimulus_matches_expressive_profile",
+            "reasons": reasons,
+        }
+    if direct or functional_objective:
+        return {
+            "verdict": "may_speak",
+            "reason": "scene_has_legitimate_verbal_motive",
+            "reasons": reasons,
+        }
+    return {
+        "verdict": "prefer_body_or_silence",
+        "reason": "no_clear_verbal_motive",
+        "reasons": reasons,
+    }
+
+
+def _addressing_plan_v22(
+    actor: str,
+    interlocutor: str,
+    relation_lines: List[str],
+    baseline: List[str],
+    tags: List[str],
+    pressure: str,
+) -> Dict[str, Any]:
+    combined = relation_lines + baseline
+    notes = _extract_labels(combined, [
+        "vocativo", "nome", "sensei", "kun", "san", "sama", "senhor",
+        "senhora", "titulo", "honorifico", "abertura", "fechamento"
+    ])
+    plan = {
+        "actor": actor,
+        "interlocutor": interlocutor or None,
+        "notes": notes,
+        "rule": "address form is functional, not decorative",
+        "placement": "omit_if_conversation_already_clear",
+        "honorific_policy": "profile_and_relation_specific",
+    }
+    if actor == "Saya Haruno":
+        if interlocutor == "Kazuma Uzumaki":
+            plan.update({
+                "preferred_forms": ["Kazuma", "Kazuma-kun"],
+                "honorific_policy": "Kazuma-kun only when admiration/appeal/self-conscious investment is active",
+                "placement": "ending for appeal/checking; beginning for alert"
+            })
+        elif interlocutor == "Amatsu Uchiha":
+            plan.update({
+                "preferred_forms": ["Amatsu"],
+                "honorific_policy": "normally none",
+                "placement": "beginning for reprimand/alert; often omitted during continuous argument"
+            })
+        elif interlocutor:
+            # Saya is comparatively overt about teacher/superior titles.
+            if any(x in _norm(interlocutor) for x in ["iruka", "kagetsu", "kakashi"]):
+                plan.update({
+                    "preferred_forms": [f"{_first_name(interlocutor)}-sensei", "sensei"],
+                    "honorific_policy": "highly natural with teacher/superior; can become just 'sensei!' under urgency",
+                    "placement": "name+title in direct address; title alone when turn is already established"
+                })
+    elif actor == "Kazuma Uzumaki":
+        plan.update({
+            "honorific_policy": "do not insert honorifics mechanically; Sasuke-initial axis favors bare names or omission",
+            "placement": "name rare; beginning only for real alert/challenge/call"
+        })
+    elif actor == "Iruka Umino":
+        plan.update({
+            "honorific_policy": "students usually addressed by first name",
+            "placement": "student name first in reprimand/urgent correction"
+        })
+    return plan
+
+
+def _actor_beat_v22(
+    actor: str,
+    interlocutor: str,
+    stimulus: str,
+    situation: str,
+    objective: str,
+    body_state: str,
+    filter_level: str,
+    pressure: str,
+    relation_lines: List[str],
+    baseline: List[str],
+) -> Dict[str, Any]:
+    combined = relation_lines + baseline
+    return {
+        "given_circumstances": situation or "current scene",
+        "target_person": interlocutor or "scene/world",
+        "immediate_objective": objective or "derive from established role/relation; do not invent plot motive",
+        "obstacle": "derive only from current stimulus, body, hierarchy and legitimate knowledge",
+        "private_impulse": "derive from stimulus + established persona",
+        "social_mask": filter_level,
+        "action_verb": "choose a playable verb such as warn, dismiss, impress, challenge, soothe, conceal, test, command, deflect; never an abstract thesis",
+        "subtext": "what the actor wants the other person to feel/do without explaining it aloud",
+        "physical_score": _extract_labels(combined, ["corpo", "olhar", "postura", "punho", "passo", "gesto", "distancia"]),
+        "vocal_score": _extract_labels(combined, ["volume", "tom", "cadencia", "latencia", "oralidade", "formalidade"]),
+        "breath_phrase_shape": "pressure compresses phrasing; calm allows fuller breath groups; do not punctuate as AI cadence",
+        "exit_beat": "leave a causal opening for the next actor/player response",
+    }
+
+
+def _microexpression_plan_v22(
+    actor: str,
+    interlocutor: str,
+    relation_lines: List[str],
+    baseline: List[str],
+    pressure: str,
+) -> Dict[str, Any]:
+    combined = relation_lines + baseline
+    established = _extract_labels(combined, [
+        "olhar", "sobrancelha", "boca", "sorriso", "punho", "postura",
+        "passo", "corpo", "rubor", "vergonha", "gesto"
+    ])
+    plan: Dict[str, Any] = {
+        "established_cues": established,
+        "rule": "use at most the cues caused by the same impulse; no decorative gesture quota",
+    }
+    if actor == "Saya Haruno":
+        if interlocutor == "Amatsu Uchiha":
+            plan["relation_bias"] = "faster visible leakage: eyes/brows/posture can react before verbal self-control"
+        elif interlocutor == "Kazuma Uzumaki":
+            plan["relation_bias"] = "self-monitoring rises: posture/voice may correct, hesitation or repair can precede/interrupt line"
+        else:
+            plan["relation_bias"] = "with teachers/superiors, respect can surface as quick posture/voice correction and title use"
+    return plan
+
+
 def healthcheck() -> Dict[str, Any]:
     data = _characters()
     rules = _rules()
@@ -498,6 +680,19 @@ def character_turn_packet(
             "rules": rel_lines,
             "social_filter": filter_level,
         },
+        "sayability_gate_v22": _sayability_gate_v22(
+            actor, stimulus, situation, objective, rel_lines, baseline, plev, audience, knowledge_constraint
+        ),
+        "actor_beat_v22": _actor_beat_v22(
+            actor, interlocutor_resolved or interlocutor or "", stimulus, situation, objective,
+            body_state, filter_level, plev, rel_lines, baseline
+        ),
+        "addressing_plan_v22": _addressing_plan_v22(
+            actor, interlocutor_resolved or interlocutor or "", rel_lines, baseline, tags, plev
+        ),
+        "microexpression_plan_v22": _microexpression_plan_v22(
+            actor, interlocutor_resolved or interlocutor or "", rel_lines, baseline, plev
+        ),
         "private_public": private_public,
         "decision_surface": {
             "speech": speech,
@@ -528,7 +723,11 @@ def character_turn_packet(
             "Does the line sound like a person in Naruto rather than an AI explaining the scene?",
             "If the line were assigned to three other NPCs, would it still work? If yes, rewrite or cut it.",
             "Is the grammar/orality/vocative placement specific to this actor and interlocutor?",
-            "Can the line be mentally heard in the exact-phase reference voice without copying canon dialogue?"
+            "Can the line be mentally heard in the exact-phase reference voice without copying canon dialogue?",
+            "Did the sayability gate authorize speech at all? If not, delete the line.",
+            "Does address form (bare name/title/honorific/omission) match this exact relationship and hierarchy?",
+            "Is every microexpression caused by the same playable impulse rather than decoration?",
+            "Does phrasing sound breathed and reactive rather than evenly segmented AI prose?"
         ],
     }
 
@@ -571,6 +770,17 @@ def persona_audit(
         aggressive = any(x in ntext for x in ["idiota", "burro", "cala a boca", "imbecil"])
         if aggressive and "danger" not in packet["situation_tags"]:
             warnings.append("Saya→Kazuma aggressive casual register requires a strong filter-breaking cause")
+    sayability = packet.get("sayability_gate_v22", {})
+    if candidate_dialogue and sayability.get("verdict") in {"prefer_body_or_silence", "must_not_speak"}:
+        warnings.append("sayability_gate_prefers_no_dialogue")
+    if candidate_dialogue and packet.get("actor") == "Kazuma Uzumaki":
+        if any(x in ntext for x in ["sensei", "-kun", "-san"]) and not packet.get("addressing_plan_v22", {}).get("notes"):
+            warnings.append("kazuma_honorific_requires_specific_live_evidence")
+    if candidate_dialogue and packet.get("actor") == "Saya Haruno":
+        target = packet.get("interlocutor")
+        if target and any(x in _norm(target) for x in ["iruka", "kagetsu", "kakashi"]):
+            if "sensei" not in ntext and len(candidate_dialogue.split()) > 5:
+                warnings.append("Saya_to_teacher_may_need_title_or_more_respectful_register")
     return {
         "pass": not violations,
         "actor": packet["actor"],
