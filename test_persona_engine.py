@@ -4,7 +4,9 @@ from persona_api import persona_healthcheck, persona_relation, persona_turn, per
 
 def main():
     h = persona_healthcheck()
-    assert h["characters"] == 80, h
+    assert h["characters"] == 90, h
+    assert h["evidence_entities"] == 97, h
+    assert h["fidelity_protocol"] == "v24.1", h
     assert h["continuity_id"] == "classico_floresta_da_morte"
     assert h["universal_language_protocol"] == "v23"
     assert h["formality_protocol"] == "v23"
@@ -86,6 +88,31 @@ def main():
     )
     assert iruka_turn["reference_voice_family_v23"]["family"] == "expressive_teacher"
     assert iruka_turn["voice_contract_v23"]["universal_naruto_register"]["language"] == "PT-BR Naruto Clássico"
+
+    yoshiro_turn = persona_turn(
+        "Yoshiro Sabaku", "Amatsu Uchiha",
+        stimulus="Yoshiro reencontra Amatsu após o confronto",
+        situation="torre do Exame Chūnin; tensão controlada",
+        pressure="média"
+    )
+    assert yoshiro_turn["status"] == "ok", yoshiro_turn
+    assert yoshiro_turn["reference_voice_family_v23"]["family"] == "sparse_unsettling"
+
+    yoru_turn = persona_turn(
+        "Yoru", "Mio Inuzuka",
+        stimulus="Mio para e Yoru percebe um cheiro",
+        situation="corredor seguro",
+        pressure="baixa"
+    )
+    assert yoru_turn["sayability_gate_v22"]["verdict"] == "must_not_speak", yoru_turn
+
+    historical_turn = persona_turn(
+        "Arashi Senju — Primeiro Hokage (histórico)", "Shūsei Uchiha — cofundador (histórico)",
+        stimulus="nome citado numa conversa atual",
+        situation="presente, sem flashback",
+        pressure="baixa"
+    )
+    assert historical_turn["sayability_gate_v22"]["verdict"] == "must_not_speak", historical_turn
 
     print(json.dumps({
         "healthcheck": h,
