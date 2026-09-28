@@ -355,8 +355,7 @@ def _formality_profile_v23(
 
     target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
     authority_target = (
-        "authority" in tags
-        or any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka", "hokage"])
+        any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka", "hokage"])
         or any(x in target_identity for x in ["hokage", "sensei", "jonin", "jounin", "professor", "instrutor", "chefe"])
     )
     if authority_target:
@@ -755,6 +754,7 @@ def healthcheck() -> Dict[str, Any]:
         "external_research_policy": "only_when_reference_cache_is_insufficient_or_scene_is_exceptional",
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
+        "formality_calibration": "v23.1-target-specific",
     }
 
 
