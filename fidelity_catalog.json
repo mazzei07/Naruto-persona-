@@ -172,8 +172,8 @@
       "mandatory": true,
       "active_continuity_id": "classico_floresta_da_morte",
       "legacy_chronology_import": "forbidden",
-      "character_carryover": "entity existence only if revalidated; other fields must come from Classic sources",
-      "amatsu_family": "parents dead; Takeru Uchiha only living direct relative; nukenin/Tenkai",
+      "character_carryover": "entity existence only when revalidated; every biography/status/relation/power/knowledge field must come from Classic sources",
+      "amatsu_family": "parents dead; Takeru Uchiha is the only living direct relative and is nukenin/Tenkai",
       "narration": "do not exposit established absences unless materially relevant"
     }
   },
