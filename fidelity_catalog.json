@@ -94,6 +94,35 @@
       "sasuke_family_correction": "Sasuke-like não significa crítico monótono. Usar silêncio, recusa de responder, frases curtas completas, decisão física, orgulho, irritação e atenção seletiva. Evitar comentário seco inteligente a cada beat.",
       "naruto_classic_narration": "Beats causais curtos, verbos concretos, ação e fala intercaladas, explicação esparsa; olhar, demora da resposta, giro de corpo e escolha de ataque podem carregar personalidade.",
       "output_contract": "Bots fornecem evidência e restrições; a prosa final exige passagem humana de performance antes de ser exibida."
+    },
+    "dialogue_flow_v27": {
+      "version": "v27-dialogue-flow",
+      "core": "Nenhuma fala é escrita como resposta isolada por padrão. Construir microturno: estímulo percebido -> impulso -> relação -> reação corporal/latência -> frase conectada -> efeito/abertura.",
+      "default_rules": [
+        "Evitar resposta de uma palavra como padrão; só usar quando o isolamento tiver função dramática específica.",
+        "Não encadear pergunta curta + resposta curta + réplica curta em pingue-pongue artificial.",
+        "Quando o personagem fala, a frase deve carregar pelo menos uma função real: contestar, provocar, esconder, pressionar, pedir, negar, corrigir, desafiar, aliviar, avisar ou encerrar.",
+        "Conectores e partículas discursivas surgem da voz: mas, só que, então, ei, espera, qual é, e daí, olha, porque, mesmo assim, ainda, já, afinal; nunca por quota.",
+        "Uma fala pode começar no corpo e terminar na palavra; narração e fala pertencem ao mesmo impulso.",
+        "Se o personagem-base tende ao silêncio, preferir silêncio com comportamento significativo a uma frase seca apenas para marcar presença.",
+        "Se a relação é íntima/conflitiva, a fala deve lembrar a troca anterior; não reiniciar neutralidade.",
+        "A resposta deve soar pronunciável em cena, não como legenda de estado mental."
+      ],
+      "family_overrides": {
+        "sasuke_like": "Não reduzir a monossílabo/diagnóstico frio. Sasuke jovem alterna silêncio, explosão pontual, orgulho, recusa, ordem curta e ação. Se fala, geralmente há alvo e tensão concretos.",
+        "sakura_like": "Mais oral e relacional: interrupções, imperativos, irritação, vergonha, competição e mudança rápida de tom conforme interlocutor; não transformar em adulta sensata.",
+        "gaara_like": "Silêncio e ação carregam ameaça; fala rara e simples. Não criar frase seca apenas para parecer frio.",
+        "temari_like": "Confiança aparece em timing, provocação e controle do espaço; frases completas curtas, não relatório tático.",
+        "kankuro_like": "Reatividade, irritação e blefe criam fluxo; sob nervosismo fala mais, mas não vira comediante de bordões.",
+        "original_oc": "Derivar conectivos, latência e tamanho de frase da ficha/relacionamento; não preencher lacuna com voz genérica."
+      },
+      "scene_tests": [
+        "read_aloud: a troca soa como pessoas reagindo uma à outra?",
+        "continuity: a segunda fala responde à primeira de verdade?",
+        "swap: a frase sobreviveria igual na boca de outro NPC? Se sim, reescrever.",
+        "camera: existe gesto/posição/timing que deveria carregar parte da resposta?",
+        "anime: a cena tem variação de ritmo, ou virou linha-linha-linha?"
+      ]
     }
   },
   "sources": {
