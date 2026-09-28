@@ -987,6 +987,16 @@ def relation_get(speaker: str, interlocutor: str, situation: str = "", pressure:
         return {"status": "interlocutor_not_found", "interlocutor": interlocutor}
     pa, pb = _profile(a), _profile(b)
     rel_lines = _relation_lines(pa.get("voice_raw", ""), b)
+    relationship_bible_v36 = acting_relationship_bible(a, b)
+    graph_relation_v36 = relationship_bible_v36.get("relationship", {}) if relationship_bible_v36.get("status") == "ok" else {}
+    if graph_relation_v36:
+        rel_lines = _uniq(rel_lines + [
+            *(graph_relation_v36.get("facts", []) if isinstance(graph_relation_v36.get("facts"), list) else []),
+            str(graph_relation_v36.get("rule") or ""),
+            str(graph_relation_v36.get("reference_relation_axis_v28") or ""),
+            str(graph_relation_v36.get("reference_relation_transfer_v28") or ""),
+            str(graph_relation_v36.get("reference_relation_must_not_v28") or "")
+        ])
     baseline = _baseline_voice_lines(pa.get("voice_raw", ""))
     ref = _infer_reference(pa)
     tags = _classify_situation("", situation)
@@ -1004,6 +1014,7 @@ def relation_get(speaker: str, interlocutor: str, situation: str = "", pressure:
         "social_filter": _filter_level(rel_lines),
         "baseline_voice": baseline,
         "relationship_rules": rel_lines,
+        "relationship_bible_v36": relationship_bible_v36,
         "latency_notes": _extract_labels(rel_lines + baseline, ["latência", "reação rápida", "deliberada", "instantânea"]),
         "vocative_notes": _extract_labels(rel_lines + baseline, ["vocativo", "nome", "abertura", "fechamento", "sensei", "hokage"]),
         "morphosyntax_notes": _extract_labels(rel_lines + baseline, ["oralidade", "imperativo", "corretividade", "forma", "para", "pare", "suba", "sobe"]),
