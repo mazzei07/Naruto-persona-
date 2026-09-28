@@ -26,11 +26,11 @@ PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.2.0",
+    version="0.3.0",
     instructions=(
         "Especialista read-only de interpretação do Naruto Reboot — Continuidade Clássica. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
-        "vocativo, morfossintaxe, silêncio e reação. Canoney/estado live continuam sendo "
+        "vocativo, morfossintaxe, silêncio e reação. Aplica obrigatoriamente Registro de Universo + Microassinaturas + Lavagem/Pente-Fino v21. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
     ),
 )
@@ -42,7 +42,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
