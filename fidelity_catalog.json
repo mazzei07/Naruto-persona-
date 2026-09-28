@@ -15,6 +15,7 @@
       "inferência editorial sinalizada"
     ],
     "pre_turn": [
+      "aplicar continuity firewall v36 antes de recuperar memória de personagem",
       "recuperar estado live; nunca tratar exemplo de teste como evento",
       "recuperar atores ativos e Bíblia de Atuação v25",
       "recuperar prior_exchange e temperatura relacional; não reiniciar a discussão",
@@ -34,7 +35,8 @@
       "não obrigar bordão ou microgesto",
       "sem rodízio de comentários nem protagonista como centro universal",
       "didática legítima é permitida quando o papel exige",
-      "auditoria automática não certifica fidelidade sem revisão semântica"
+      "auditoria automática não certifica fidelidade sem revisão semântica",
+      "nenhum fato de outra continuidade foi importado porque o personagem existe nas duas linhas"
     ],
     "hard_limits": [
       "inspiracao_tecnica_nao_e_personalidade",
@@ -42,7 +44,8 @@
       "agencia_integral_amatsu",
       "sem_conhecimento_sem_canal",
       "sem_maturidade_futura",
-      "sem_canonizacao_de_rascunho"
+      "sem_canonizacao_de_rascunho",
+      "continuity_classic_only_v36"
     ],
     "research_policy": "retrieve_reference_every_turn; browse_on_missing_scene_or_user_correction; never_claim_unread_material",
     "translation_policy": "PT-BR original e falável, respeitando função social e idade. Sinopses em inglês não comprovam vocativos ou redação da dublagem BR.",
@@ -164,6 +167,14 @@
         "hand seals affect cast timing/telegraph and must be verified",
         "reaction queue remains forbidden"
       ]
+    },
+    "continuity_firewall_v36": {
+      "mandatory": true,
+      "active_continuity_id": "classico_floresta_da_morte",
+      "legacy_chronology_import": "forbidden",
+      "character_carryover": "entity existence only if revalidated; other fields must come from Classic sources",
+      "amatsu_family": "parents dead; Takeru Uchiha only living direct relative; nukenin/Tenkai",
+      "narration": "do not exposit established absences unless materially relevant"
     }
   },
   "sources": {
