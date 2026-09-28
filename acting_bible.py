@@ -74,12 +74,22 @@ def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
         if any(x in n for x in ["melhor","prodig","competencia","competência","fraca","fracass"]):
             level=max(level,3);reasons.append("competence_status_trigger")
     if actor=="Yoshiro Sabaku":
-        blood_or_pain = bool(
-            re.search(r"\b(sangue|sangra|sangrou|sangrando|ferimento|ferido|ferida|dor|blood|bleeding|wound|wounded|pain)\b", n)
-            or any(x in n for x in ["sangue visivel","sangue visível","dor real","own blood","real pain"])
+        trigger_n = re.sub(
+            r"\b(?:sem|nenhum[ao]?|nao)\s+(?:qualquer\s+)?(?:sangue(?:\s+visivel)?|dor(?:\s+real)?|ferimento|ferida?|blood|pain|wound)\b",
+            " ",
+            n,
         )
-        breach = any(x in n for x in ["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"])
-        shukaku_break = any(x in n for x in ["shukaku","instabil","perde a compostura","perdeu a compostura"," rage "," fury "])
+        trigger_n = re.sub(
+            r"\bnao\s+(?:sangra|sangrou|sangrando|esta\s+ferid[oa]|tem\s+sangue|sente\s+dor)\b",
+            " ",
+            trigger_n,
+        )
+        blood_or_pain = bool(
+            re.search(r"\b(sangue|sangra|sangrou|sangrando|ferimento|ferido|ferida|dor|blood|bleeding|wound|wounded|pain)\b", trigger_n)
+            or any(x in trigger_n for x in ["sangue visivel","dor real","own blood","real pain"])
+        )
+        breach = any(x in trigger_n for x in ["defesa atravess","defesa romp","areia atravess","defense breached","sand defense breached","humilh","invulner"])
+        shukaku_break = any(x in trigger_n for x in ["shukaku","instabil","perde a compostura","perdeu a compostura"," rage "," fury "])
         if blood_or_pain:
             level=max(level,3);reasons.append("gaara_chunin_blood_or_pain_trigger")
         if breach:
