@@ -1,5 +1,5 @@
 {
-  "version": "v31.1-addressing-v33",
+  "version": "v31.2-reference-essence-v34",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -73,6 +73,18 @@
       ]
     },
     {
+      "id": "S4B",
+      "name": "Reference Essence Gate v34",
+      "does": [
+        "load the actor's exact official reference character(s) and the phase named by source_anchor",
+        "extract dominant core, social surface, combat-pressure behavior, break trigger, body/voice signature and anti-regression",
+        "apply only documented transfer axes; never average all references blindly",
+        "let reboot dossier, live relationship, legitimate knowledge and body state outrank generic reference traits",
+        "under a trigger, use the reference's actual break behavior rather than preserving artificial calm",
+        "for mixed references, use primary anchor first and secondary references only for explicitly mapped axes"
+      ]
+    },
+    {
       "id": "S5",
       "name": "Contrastive Decision Set",
       "does": [
@@ -97,6 +109,7 @@
       "id": "S7",
       "name": "Performance Realization",
       "does": [
+        "apply Reference Essence v34 before final dialogue/body realization",
         "action first where natural",
         "body and voice from same impulse",
         "apply addressing/honorific plan v33 before final wording",
@@ -117,7 +130,8 @@
         "camera/show-dont-explain test",
         "age/register test",
         "canon/knowledge test",
-        "addressing/honorific relation test"
+        "addressing/honorific relation test",
+        "reference essence / phase / break-trigger regression test"
       ]
     },
     {
@@ -153,7 +167,11 @@
     "Amatsu auto-action",
     "blanket honorific suffixes as anime decoration",
     "authority title erased despite reference/relation",
-    "stable relational suffix erased without trigger"
+    "stable relational suffix erased without trigger",
+    "reference character reduced to one adjective while its break triggers disappear",
+    "later/adult phase personality imported into Chunin/Part I anchor",
+    "mixed-reference character receives all traits from all references at once",
+    "triggered character remains generically calm against canonical break behavior"
   ],
   "addressing_honorific_gate_v33": {
     "mandatory": true,
@@ -183,5 +201,25 @@
       "honorific repeated in every sentence",
       "bare-name teacher/Kage from a hierarchy-sensitive character without a trigger"
     ]
+  },
+  "reference_essence_gate_v34": {
+    "mandatory": true,
+    "source_file": "REFERENCE_ESSENCE_V34.json",
+    "fields": [
+      "dominant_core",
+      "social_surface",
+      "combat_pressure",
+      "break_trigger",
+      "body_voice",
+      "must_not"
+    ],
+    "rule": "Reference characters are acting mechanics, not vague inspiration. Exact phase matters. Reboot biography/powers/plot remain separate.",
+    "examples": {
+      "Yoshiro Sabaku": "Gaara Chunin baseline silence + ruthlessness; own blood/pain/defense breach can break into shouting, disturbed laughter/grin, trembling and violent fixation. No Kazekage maturity.",
+      "Sayo Sabaku": "Temari Chunin blunt confidence, deboche, tactical sharpness and cruel edge; real caution around unstable Yoshiro.",
+      "Kuroto Sabaku": "Kankuro Chunin cocky/irritable puppeteer, rough hostility and fear of provoking Yoshiro.",
+      "Saya Haruno": "Sakura early social adaptation: authority respect, Kazuma filter, Amatsu explosiveness, insecurity/protectiveness under pressure.",
+      "Kaede/Kazuma": "Sasuke early economy/pride; affection leaks through action; competence/family triggers sharpen rather than produce adult speeches."
+    }
   }
 }
