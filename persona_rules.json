@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.3.0-v21",
+  "version": "0.4.0-v22",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -241,5 +241,111 @@
     "A fala deve pertencer simultaneamente ao universo Naruto e ao registro individual.",
     "Relação, idade, fase, hierarquia e audiência devem alterar a superfície.",
     "O leitor não deve perceber as regras; deve perceber o personagem."
-  ]
+  ],
+  "sayability_gate_v22": {
+    "mandatory": true,
+    "rule": "Nenhuma fala é gerada antes de decidir se o personagem realmente falaria neste beat. Se gesto, silêncio ou ação forem mais fiéis, descartar a fala.",
+    "checks": [
+      "foi diretamente afetado pelo estímulo?",
+      "tem objetivo real que exige verbalização?",
+      "a relação com o interlocutor favorece fala ou contenção?",
+      "possui conhecimento legítimo para dizer isso?",
+      "a referência na fase exata falaria ou deixaria o corpo/silêncio responder?",
+      "a audiência/hierarquia altera autocensura?",
+      "o estado corporal permite o tamanho e a energia da fala?",
+      "a fala muda causalmente a cena ou é comentário de plateia?"
+    ],
+    "verdicts": [
+      "must_speak",
+      "may_speak",
+      "prefer_body_or_silence",
+      "must_not_speak"
+    ]
+  },
+  "actor_beat_v22": {
+    "inspiration": [
+      "Stanislavski: given circumstances/objective/obstacle/action",
+      "Meisner: listen/react moment-to-moment",
+      "voice acting: physicalization + breath/phrasing"
+    ],
+    "fields": [
+      "given_circumstances",
+      "target_person",
+      "immediate_objective",
+      "obstacle",
+      "private_impulse",
+      "chosen_action_verb",
+      "subtext",
+      "social_mask",
+      "physical_score",
+      "vocal_score",
+      "breath_phrase_shape",
+      "exit_beat"
+    ],
+    "rule": "O texto nasce do beat de atuação; não escrever uma frase e depois colar personalidade."
+  },
+  "dynamic_persona_v22": {
+    "stable_layer": "identidade, criação, valores, referência-base, registro linguístico, hábitos de voz",
+    "relationship_layer": "histórico direcional, intimidade, hierarquia, ressentimento, confiança, imagem social acumulada",
+    "beat_layer": "emoção imediata, pressão, corpo, objetivo, percepção, estímulo atual",
+    "rule": "Traço estável não pode virar rigidez emocional; o beat muda a superfície sem trocar a identidade."
+  },
+  "addressing_matrix_v22": {
+    "rule": "Nome, título e honorífico são parte da atuação e são resolvidos por personagem + relação + situação; nunca universais.",
+    "placement": {
+      "beginning": "alerta, bronca, seleção explícita do interlocutor, desafio",
+      "ending": "apelo, checagem de concordância, tentativa de aproximação, respeito afetivo quando natural",
+      "title_only": "hierarquia já estabelecida ou resposta rápida a superior",
+      "omitted": "interlocutor óbvio, intimidade, economia, irritação ou estilo pessoal"
+    },
+    "hierarchy_rule": "Com superior, alguns personagens aumentam corretividade, postura e uso de título; outros preservam rudeza/ausência de honorífico se isso for traço estabelecido.",
+    "character_calibrations": {
+      "Saya Haruno": {
+        "authority": "alta probabilidade de nome+título/sensei, fala mais correta, menor interrupção gratuita; em surpresa/pressa pode chamar apenas 'sensei!'",
+        "Kazuma Uzumaki": "Kazuma-kun é permitido e funcional quando admiração, apelo, autoconsciência ou investimento social estiverem ativos; não automático.",
+        "Amatsu Uchiha": "nome no início em bronca/alerta; baixo filtro; honorífico normalmente ausente."
+      },
+      "Kazuma Uzumaki": {
+        "default": "nomes pouco frequentes; honoríficos não são default, refletindo eixo Sasuke inicial; respeito aparece mais por comportamento/contexto que por sufixo.",
+        "authority": "não inserir -sensei mecanicamente; usar apenas se ficha/relação live justificar."
+      },
+      "Iruka Umino": {
+        "students": "primeiro nome é natural; nome no início em bronca; tom de professor e vínculo modulam corretividade."
+      }
+    }
+  },
+  "microexpression_v22": {
+    "rule": "Microexpressão só entra se nascer do mesmo impulso da fala/ação. Não preencher cena com olhar/sobrancelha/mão aleatórios.",
+    "selectors": [
+      "eyes_focus_or_avoidance",
+      "brow_tension",
+      "mouth_tension_or_smile",
+      "posture_open_close",
+      "hand_self_control",
+      "distance_change",
+      "breath_hold_release",
+      "head_angle",
+      "voice_volume_shift"
+    ],
+    "sakura_axis": [
+      "com autoridade: tendência a corrigir postura/registro e usar título quando busca parecer respeitosa",
+      "com crush/equivalente: autoconsciência corporal aumenta; pode reparar fala, suavizar voz, repetir início ou usar nome/honorífico com mais investimento",
+      "com Naruto/Amatsu-equivalente: reação facial e corporal chega mais rápido à superfície; bronca pode preceder autocensura",
+      "em perigo real: gestos cômicos cedem a foco funcional; preocupação pode sair ríspida"
+    ]
+  },
+  "memory_enactment_v22": {
+    "stages": [
+      "anchor",
+      "select",
+      "bound",
+      "enact",
+      "critic"
+    ],
+    "anchor": "recuperar fatos/persona/relação relevantes",
+    "select": "escolher só o que importa para este beat",
+    "bound": "bloquear conhecimento/fase/comportamento que não cabe",
+    "enact": "converter em corpo/voz/ação situados",
+    "critic": "comparar com referência, relação e histórico e corrigir drift"
+  }
 }
