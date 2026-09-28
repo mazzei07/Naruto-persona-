@@ -12,6 +12,7 @@ from mcp.server.mcpserver import MCPServer
 from mcp.server.transport_security import TransportSecuritySettings
 from starlette.requests import Request
 from starlette.responses import JSONResponse
+from scene_agenda_scheduler import compile_scene_agendas
 
 from persona_api import (
     persona_healthcheck as _healthcheck,
@@ -35,7 +36,7 @@ PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.7.0-v25",
+    version="0.8.0-v31",
     instructions=(
         "Especialista read-only v25: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada e auditoria anti-genérica antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
@@ -51,7 +52,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.7.0-v25",
+            "version": "0.8.0-v31",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -67,7 +68,7 @@ async def health(_: Request) -> JSONResponse:
         {
             "status": "ok" if result.get("ok") else "degraded",
             "service": "Naruto Persona Engine",
-            "version": "0.7.0-v25",
+            "version": "0.8.0-v31",
             "persona_engine": result,
         },
         status_code=200 if result.get("ok") else 503,
@@ -256,6 +257,74 @@ def persona_dialogue_audit_v25(
 ) -> dict[str, Any]:
     """Audit genericity, relation drift and missed trigger escalation."""
     return _dialogue_audit_v25(name, interlocutor, candidate_dialogue, candidate_action, stimulus, prior_exchange, situation, pressure)
+
+@mcp.tool()
+def persona_generation_preflight(
+    scene: dict[str, Any],
+    actors: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Compile all active NPC ActorStates plus parallel scene agendas before any RP prose."""
+    packets = []
+    issues = []
+    for item in actors:
+        if not isinstance(item, dict):
+            issues.append("invalid_actor_item")
+            continue
+        name = str(item.get("name") or item.get("actor") or "")
+        if not name:
+            issues.append("actor_name_missing")
+            continue
+        if name == "Amatsu Uchiha":
+            packets.append({
+                "actor": name,
+                "status": "player_controlled",
+                "rule": "No voluntary action/reaction may be generated."
+            })
+            continue
+        packet = _turn(
+            name=name,
+            interlocutor=str(item.get("interlocutor") or ""),
+            stimulus=str(item.get("stimulus") or scene.get("stimulus") or ""),
+            situation=str(item.get("situation") or scene.get("situation") or scene.get("location") or ""),
+            pressure=str(item.get("pressure") or scene.get("pressure") or "normal"),
+            audience=str(item.get("audience") or scene.get("audience") or ""),
+            body_state=str(item.get("body_state") or ""),
+            objective=str(item.get("objective") or ""),
+            perception_constraint=str(item.get("perception_constraint") or ""),
+            knowledge_constraint=str(item.get("knowledge_constraint") or ""),
+            prior_exchange=str(item.get("prior_exchange") or scene.get("prior_exchange") or ""),
+            relationship_state=str(item.get("relationship_state") or ""),
+        )
+        packets.append(packet)
+        if packet.get("status") != "ok":
+            issues.append(f"{name}:{packet.get('status')}")
+        elif not packet.get("actor_state_v29"):
+            issues.append(f"{name}:actor_state_v29_missing")
+    agenda_input = []
+    for item in actors:
+        if isinstance(item, dict):
+            agenda_input.append({
+                "actor": item.get("name") or item.get("actor"),
+                "player_controlled": (item.get("name") or item.get("actor")) == "Amatsu Uchiha",
+                "position": item.get("position"),
+                "body_state": item.get("body_state"),
+                "perception": item.get("perception_constraint"),
+                "knowledge": item.get("knowledge_constraint"),
+                "objective": item.get("objective"),
+                "current_action": item.get("current_action"),
+                "attention_target": item.get("interlocutor"),
+                "urgency": item.get("urgency", "normal"),
+            })
+    scheduler = compile_scene_agendas(scene, agenda_input)
+    return {
+        "status": "needs_evidence" if issues else "reviewable",
+        "version": "v31-preflight",
+        "issues": issues,
+        "actor_packets": packets,
+        "scene_scheduler_v30": scheduler,
+        "rule": "No prose before ActorState + scene agenda compilation."
+    }
+
 
 @mcp.tool()
 def persona_acting_health() -> dict[str, Any]:
