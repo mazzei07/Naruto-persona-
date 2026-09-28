@@ -110,12 +110,16 @@
         "narration_rule": "Não introduzir rotina familiar de outra continuidade nem expor ausências antigas sem relevância."
       },
       "chakra_reference_v36": {
-        "natural_base_reserve": "literalmente equivalente à de Naruto no Naruto Clássico desta fase",
-        "kurama": "separada; selada; não cooperativa; não conscientemente conhecida por Amatsu"
+        "natural_base_reserve": "literalmente equivalente à reserva natural/base de Naruto no Naruto Clássico desta fase",
+        "kurama": "separada, selada, não cooperativa e fora da reserva-base consciente"
       },
       "continuity_firewall_v36": {
         "continuity_id": "classico_floresta_da_morte",
-        "rule": "Não importar biografia, relações, poderes ou eventos de outra continuidade."
+        "parents": "mortos; Amatsu não possui pai ou mãe vivos",
+        "living_direct_relative": "Takeru Uchiha",
+        "takeru_status": "irmão mais velho; nukenin de Konoha; membro da Tenkai",
+        "carryover_rule": "Outra continuidade não fornece biografia, eventos, relações, poderes, patentes, conhecimentos ou estados.",
+        "narration_rule": "Não expositar ausências familiares antigas sem relevância concreta para o beat."
       },
       "current_live_state_v36": {
         "time": "19:30",
@@ -126,6 +130,12 @@
           "Amatsu Uchiha"
         ],
         "rule": "Nenhum outro NPC presente estabelecido; não inventar ação, pensamento, emoção ou decisão voluntária de Amatsu."
+      },
+      "kage_bunshin_v36": {
+        "fixed_cap_24": false,
+        "confirmed_live_feat": 200,
+        "simple_work_compatible_about": 100,
+        "absolute_maximum": "not_established"
       }
     },
     "Saya Haruno": {
@@ -4342,8 +4352,6 @@
     "continuity_id": "classico_floresta_da_morte",
     "note": "Persona registry synced with Canoney for individual/ninken/historical actors needed by v24.1; group placeholders remain non-persona entities.",
     "acting_bible_version": "v25.0.0",
-    "continuity_firewall_v36": {
-      "rule": "Somente a Continuidade Clássica é cronologia ativa; existência reaproveitada de personagem não transfere biografia de outra linha."
-    }
+    "continuity_firewall_v36": "classic-only"
   }
 }
