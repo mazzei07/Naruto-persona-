@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.6.1-v24.1",
+  "version": "0.7.0-v25",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -543,14 +543,45 @@
     "18": "s",
     "19": "o",
     "20": "n",
-    "version": "v24.1.0",
+    "version": "v25.0.0",
     "active_actor_policy": "Use scene.active_npcs to require cards only for NPCs whose decisions are generated in this beat; background presence does not force dialogue or a card.",
     "entity_policy": "individual/ninken/historical/group/unresolved_identity are distinct; ninken are nonverbal, historical actors require a legitimate flashback/source, groups never become one speaking persona.",
     "packet_tools": [
       "persona_evidence",
       "persona_validate_turn_packet",
       "persona_fidelity_health"
+    ],
+    "acting_bible": "Every active actor resolves character_acting_bibles.json before wording.",
+    "relation_memory": "prior_exchange and directional relationship history persist across turns; do not reset emotional temperature.",
+    "trigger_escalation": "Personal clan/family/status/loyalty triggers can override generic calmness; actor-specific rules decide surface behavior.",
+    "anti_generic": "Reject lines/actions swappable across multiple actors when relation/history can differentiate them.",
+    "reference_phase": "Official reference may extend through the same preliminary-exam phase; biography/powers are never imported.",
+    "interfaces": [
+      "persona_bible",
+      "persona_relationship_bible",
+      "persona_acting_packet",
+      "persona_dialogue_audit_v25",
+      "persona_acting_health"
     ]
   },
-  "reference_policy": "verify_reference_every_turn_and_research_missing_evidence"
+  "reference_policy": "verify_reference_every_turn_and_research_missing_evidence",
+  "pipeline_v25": [
+    "live_state",
+    "character_bible",
+    "prior_exchange",
+    "directional_relation",
+    "trigger_escalation",
+    "perception",
+    "legitimate_knowledge",
+    "exact_phase_reference",
+    "objective",
+    "private_impulse",
+    "social_filter",
+    "body_state",
+    "sayability",
+    "semantic_intent",
+    "character_bend",
+    "genericity_audit",
+    "final_surface"
+  ]
 }
