@@ -1,5 +1,5 @@
 {
-  "version": "v31.2-reference-essence-v34",
+  "version": "v31.3-technique-impression-v35",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -85,6 +85,19 @@
       ]
     },
     {
+      "id": "S4C",
+      "name": "Technique Research + Impression Gate v35",
+      "does": [
+        "whenever a named jutsu is declared, research/verify canonical name, rank, nature, range/shape, exact hand seals, known users, canonical demonstrations, limitations/counters and access/rarity status before narrating exact mechanics",
+        "separate canonical technique mechanics from the current user's execution scale; Madara-level output does not transfer automatically",
+        "calculate observer impression from rank + rarity + prestige + execution difficulty + visible scale + chakra burden + expectation violation + observer knowledge/familiarity",
+        "track threat/fear separately from astonishment; being impressed does not force panic",
+        "resolve recognition per observer knowledge channel; a novice may be stunned by scale without knowing the name, while an expert may identify difficulty with little outward reaction",
+        "apply experience/composure mainly to outward reaction, not to objective recognition of an extraordinary feat",
+        "select only materially relevant spectator reactions; never create a reaction queue"
+      ]
+    },
+    {
       "id": "S5",
       "name": "Contrastive Decision Set",
       "does": [
@@ -153,7 +166,7 @@
   "contrastive_decision_rule": "At important beats compare at least: silence/body-only; minimal functional response; active relational response. Choose by objective + threshold + reference decision pattern, not by stylistic resemblance.",
   "research_rule": "Search 'how X reacts to Y when Z happens' in the correct phase. Extract behavioral evidence, thresholds and frequency. Never search only 'personality of X' when a relation-specific decision matters.",
   "narrator_rule": "Prefer observable action -> body/perception -> necessary speech -> immediate consequence. Internal thought only when focalization truly warrants it.",
-  "combat_rule": "position -> simultaneous intentions -> perception -> timing -> response attempt -> collision -> consequence -> next actionable window.",
+  "combat_rule": "position -> named-technique research gate -> simultaneous intentions -> perception -> timing/hand-seal telegraph -> response attempt -> collision -> consequence -> impression/threat update -> next actionable window.",
   "anti_patterns": [
     "trait-to-line generation",
     "catchphrase mimicry",
@@ -221,5 +234,52 @@
       "Saya Haruno": "Sakura early social adaptation: authority respect, Kazuma filter, Amatsu explosiveness, insecurity/protectiveness under pressure.",
       "Kaede/Kazuma": "Sasuke early economy/pride; affection leaks through action; competence/family triggers sharpen rather than produce adult speeches."
     }
+  },
+  "technique_research_impression_gate_v35": {
+    "mandatory": true,
+    "trigger": "any declared named jutsu when exact mechanics or reactions matter",
+    "research_fields": [
+      "canonical_name_and_aliases",
+      "classification_and_nature",
+      "rank",
+      "range_and_shape",
+      "hand_seals_and_cast_sequence",
+      "known_canonical_users",
+      "relevant_canonical_use",
+      "mechanical_behavior",
+      "documented_limitations_or_counters",
+      "rarity_or_access_status",
+      "chakra_burden_relative_to_user",
+      "scale_of_specific_execution"
+    ],
+    "impression_levels": {
+      "0": "routine_or_unremarkable",
+      "1": "attention",
+      "2": "impressive",
+      "3": "striking",
+      "4": "astonishing",
+      "5": "incredible_for_context"
+    },
+    "observer_axes": [
+      "legitimate perception channel",
+      "exact/partial/no technique knowledge",
+      "rank and rarity knowledge",
+      "experience/patent/background",
+      "prior familiarity",
+      "expectation of this actor",
+      "personal relation",
+      "current danger",
+      "composure"
+    ],
+    "core_rules": [
+      "rank alone never determines reaction",
+      "surprise/impression != fear/threat",
+      "one-hand-seal or short-sequence casting changes telegraph/timing but does not itself raise rank",
+      "legendary known user association only matters to an observer who legitimately knows that association",
+      "clan-restricted or reserved access raises prestige only when that status is established in canon/reboot evidence",
+      "large chakra cost becomes especially impressive when the observer understands the user's age/reserve/fatigue and prior expenditures",
+      "an unknown technique can still produce high visual astonishment from scale; exact identification remains blocked",
+      "do not force all spectators to speak"
+    ]
   }
 }
