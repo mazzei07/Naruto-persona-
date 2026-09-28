@@ -67,6 +67,14 @@ def _rules() -> Dict[str, Any]:
     with RULES_PATH.open(encoding="utf-8") as f:
         return json.load(f)
 
+def _continuity_firewall_v36() -> Dict[str, Any]:
+    return _rules().get("continuity_firewall_v36", {
+        "version": "v36",
+        "active_continuity_id": "classico_floresta_da_morte",
+        "legacy_chronology_import": "forbidden",
+        "character_carryover": "entity existence only if revalidated",
+    })
+
 
 def resolve_name(name: str) -> Optional[str]:
     if not isinstance(name, str) or not name.strip():
@@ -917,6 +925,7 @@ def healthcheck() -> Dict[str, Any]:
         "addressing_protocol": "v33",
         "reference_essence_protocol": "v34",
         "formality_calibration": "v33-relational-honorifics",
+        "continuity_firewall_v36": _continuity_firewall_v36(),
     }
 
 
@@ -941,6 +950,7 @@ def persona_get(name: str) -> Dict[str, Any]:
         "raw_voice_rules": p.get("voice_raw", ""),
         "arc_specific": bool(p.get("arc_specific")),
         "evidence_v24": evidence_v24(resolved),
+        "continuity_firewall_v36": _continuity_firewall_v36(),
     }
 
 
@@ -1004,6 +1014,7 @@ def relation_get(speaker: str, interlocutor: str, situation: str = "", pressure:
             a, b, pa, pb, rel_lines, baseline, tags, plev, _filter_level(rel_lines)
         ),
         "research": _research_packet(pa, pb, rel_lines, situation, ""),
+        "continuity_firewall_v36": _continuity_firewall_v36(),
     }
 
 
@@ -1178,9 +1189,12 @@ def character_turn_packet(
             "rule": "body and voice must arise from the same impulse; do not add random microgestures for decoration"
         },
         "forbidden_or_avoid": forb,
+        "continuity_firewall_v36": _continuity_firewall_v36(),
         "research": research,
         "generation_order": _rules().get("pipeline", []),
         "final_gate": [
+            "Continuity firewall v36: use only classico_floresta_da_morte; never import chronology/relations/powers from another continuity.",
+            "Amatsu family state: parents dead; Takeru is the only living direct relative and is nukenin/Tenkai; do not exposit absence without scene relevance.",
             "ActorState v29 must be compiled before wording.",
             "Verificar referência v25 por fase, relação e situação; pesquisar lacunas materiais.",
             "Aplicar a Bíblia de Atuação v25: histórico relacional e gatilho pessoal vencem personalidade genérica.",
