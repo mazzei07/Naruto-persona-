@@ -272,8 +272,228 @@ def _research_packet(profile: Dict[str, Any], interlocutor_profile: Dict[str, An
 
 
 
+
+def _reference_voice_family_v23(profile: Dict[str, Any], baseline: List[str]) -> Dict[str, Any]:
+    """Infer a Naruto speech-family from the explicit reference/profile, with a profile-driven fallback."""
+    ref = _infer_reference(profile)
+    source = _norm(" ".join([
+        ref.get("primary_reference", ""),
+        ref.get("source_summary", ""),
+        " ".join(baseline),
+    ]))
+    ordered = [
+        ("socially_adaptive_youthful", ["sakura", "ino"]),
+        ("relaxed_adult", ["kakashi"]),
+        ("expressive_teacher", ["iruka"]),
+        ("warm_authority", ["hiruzen"]),
+        ("low_energy_plain", ["shikamaru"]),
+        ("sparse_unsettling", ["gaara"]),
+        ("direct_confident", ["temari"]),
+        ("reactive_irritable", ["kankuro"]),
+        ("rough_youthful", ["naruto", "kiba"]),
+        ("clipped_plain", ["sasuke", "neji"]),
+    ]
+    family = "profile_driven"
+    matched = []
+    for fam, keys in ordered:
+        hits = [k for k in keys if k in source]
+        if hits:
+            family = fam
+            matched = hits
+            break
+    return {
+        "family": family,
+        "matched_reference_cues": matched,
+        "reference": ref.get("primary_reference"),
+        "rule": "reference family shapes delivery mechanisms, never imports biography, knowledge or powers",
+    }
+
+
+def _formality_profile_v23(
+    actor: str,
+    interlocutor: str,
+    profile: Dict[str, Any],
+    interlocutor_profile: Dict[str, Any],
+    relation_lines: List[str],
+    baseline: List[str],
+    tags: List[str],
+    pressure: str,
+    filter_level: str,
+) -> Dict[str, Any]:
+    """Resolve situational formality before dialogue wording."""
+    family_packet = _reference_voice_family_v23(profile, baseline)
+    family = family_packet["family"]
+    base_by_family = {
+        "rough_youthful": 1.0,
+        "clipped_plain": 1.7,
+        "socially_adaptive_youthful": 2.0,
+        "relaxed_adult": 2.1,
+        "expressive_teacher": 2.2,
+        "warm_authority": 3.1,
+        "low_energy_plain": 1.3,
+        "sparse_unsettling": 1.5,
+        "direct_confident": 1.8,
+        "reactive_irritable": 1.4,
+        "profile_driven": 2.0,
+    }
+    score = base_by_family.get(family, 2.0)
+    cues: List[str] = [f"reference_family:{family}"]
+    text = _norm(" ".join(baseline + relation_lines))
+
+    if any(x in text for x in ["correto-formal", "formalidade alta", "cerimonial", "muito formal"]):
+        score += 1.2; cues.append("explicit_formal_baseline")
+    elif any(x in text for x in ["formal", "polido", "respeitoso", "corretividade alta"]):
+        score += 0.6; cues.append("formal_or_polite_baseline")
+    if any(x in text for x in ["coloquial", "oralidade", "rude", "baixo filtro", "provoc", "explos"]):
+        score -= 0.35; cues.append("oral_or_low_filter_baseline")
+    if any(x in text for x in ["economico", "pouca fala", "silencio"]):
+        cues.append("economical_voice_not_equivalent_to_informal")
+
+    target_identity = _norm(_extract_field(interlocutor_profile, "Identificação", "Identificacao")) if interlocutor_profile else ""
+    target_voice = _norm(interlocutor_profile.get("voice_raw", "")) if interlocutor_profile else ""
+    authority_target = (
+        "authority" in tags
+        or any(x in _norm(interlocutor) for x in ["daizen", "kagetsu", "iruka", "hokage"])
+        or any(x in target_identity + " " + target_voice for x in ["hokage", "sensei", "jonin", "jounin", "professor", "instrutor", "chefe"])
+    )
+    if authority_target:
+        hierarchy_sensitivity = 1.0
+        if family in {"rough_youthful", "clipped_plain", "sparse_unsettling"}:
+            hierarchy_sensitivity = 0.25
+        elif family in {"socially_adaptive_youthful", "warm_authority", "expressive_teacher"}:
+            hierarchy_sensitivity = 1.25
+        if filter_level == "high":
+            hierarchy_sensitivity += 0.4
+        elif filter_level == "low":
+            hierarchy_sensitivity -= 0.2
+        score += hierarchy_sensitivity
+        cues.append(f"authority_target_shift:{round(hierarchy_sensitivity,2)}")
+
+    if filter_level == "high":
+        score += 0.45; cues.append("high_social_filter")
+    elif filter_level == "low":
+        score -= 0.35; cues.append("low_social_filter")
+
+    if pressure == "high":
+        score -= 0.45; cues.append("pressure_compresses_surface")
+    elif pressure == "medium":
+        score -= 0.15
+
+    score = max(0.0, min(4.0, score))
+    level = int(round(score))
+    labels = {
+        0: "rough_plain",
+        1: "casual_plain",
+        2: "colloquial_correct",
+        3: "polite",
+        4: "formal_institutional",
+    }
+    contraction = {
+        0: "high_if_character_supports",
+        1: "moderate_to_high",
+        2: "contextual",
+        3: "low_to_contextual",
+        4: "low",
+    }[level]
+    completeness = {
+        0: "fragment_or_direct_sentence",
+        1: "short_natural",
+        2: "natural_complete_with_ellipsis_when_characteristic",
+        3: "more_complete_and_self_monitored",
+        4: "complete_institutional_without_grandiloquence",
+    }[level]
+    lexical = "age_and_experience_bounded"
+    if family in {"rough_youthful", "socially_adaptive_youthful", "clipped_plain", "low_energy_plain"}:
+        lexical = "juvenile_concrete_unless_subject_is_studied_or_technical"
+    elif family in {"relaxed_adult", "expressive_teacher", "warm_authority"}:
+        lexical = "adult_natural_no_bureaucratic_padding"
+
+    return {
+        "score": round(score, 2),
+        "level": level,
+        "register": labels[level],
+        "reference_family": family_packet,
+        "authority_target": authority_target,
+        "social_filter": filter_level,
+        "pressure": pressure,
+        "contraction_policy": contraction,
+        "sentence_completeness": completeness,
+        "lexical_complexity": lexical,
+        "grammar_rule": "correctness and formality are independent; preserve character-specific grammar/orality",
+        "honorific_rule": "resolve from directional relation and addressing plan; never add merely to sound like anime",
+        "cues": cues,
+    }
+
+
+def _universal_language_contract_v23(
+    profile: Dict[str, Any],
+    relation_lines: List[str],
+    baseline: List[str],
+    filter_level: str,
+    pressure: str,
+    formality: Dict[str, Any],
+) -> Dict[str, Any]:
+    combined = relation_lines + baseline
+    return {
+        "version": "v23",
+        "universal_naruto_register": {
+            "language": "PT-BR Naruto Clássico",
+            "invariants": [
+                "natural shonen dialogue; performable aloud",
+                "no internet slang/memes/therapy-speak/system language",
+                "no modern corporate/bureaucratic register",
+                "no generic medieval fantasy register",
+                "shinobi institutional vocabulary is natural when context calls for it",
+                "honorifics/titles carry relationship, not decoration",
+                "plain speech may still be grammatically correct",
+                "polite speech must not become artificial ceremonial Portuguese",
+            ],
+            "translation_rule": "translate pragmatic function from Japanese role-language into Brazilian Portuguese rather than copying Japanese grammar mechanically",
+        },
+        "individual_transform": {
+            "baseline": baseline,
+            "relationship_shift": relation_lines,
+            "social_filter": filter_level,
+            "pressure": pressure,
+            "formality_profile": formality,
+            "correction_orality": _extract_labels(combined, ["formalidade", "corretividade", "coloquial", "oralidade", "imperativo"]),
+            "vocative_position": _extract_labels(combined, ["vocativo", "nome", "abertura", "fechamento", "sensei", "kun", "san", "sama"]),
+            "latency_cadence": _extract_labels(combined, ["latência", "cadência", "interrup", "silêncio", "pouca fala", "rápida"]),
+            "body_prosody": _extract_labels(combined, ["corpo", "olhar", "postura", "volume", "tom", "punho", "passo", "gesto"]),
+        },
+        "kishimoto_bend_line": [
+            "draft semantic intent plainly",
+            "bend grammar and rhythm into the actor",
+            "remove vocabulary/complexity the actor would not own",
+            "resolve bare-name/title/honorific/omission",
+            "reshape sentence length, interruption, ellipsis and breath",
+            "delete dialogue if body/silence is truer",
+            "verify it still sounds born inside Naruto",
+        ],
+        "performance_wash": [
+            "reference_exact_phase", "reboot_divergence", "directional_relation",
+            "private_impulse", "social_filter", "body_state", "formality_gate",
+            "speech_or_silence", "micro_signature", "subtext",
+        ],
+        "dialogue_refinement": [
+            "write_semantic_line_then_bend_into_character",
+            "formality_must_be_resolved_before_wording",
+            "remove_explanation_the_character_would_not_say",
+            "place_name_or_honorific_where_this_relation_naturally_uses_it",
+            "prefer_body_or_silence_when_more_faithful",
+            "swap_test_three_other_NPCs",
+            "mental_read_aloud_test",
+        ],
+        "anti_ai": [
+            "no scene summary in dialogue", "no self-psychology explanation",
+            "no narrator thesis in NPC mouth", "no obligatory reaction line",
+            "no decorative microgesture", "no trailer aphorism",
+        ],
+    }
+
+
 def _v21_voice_contract(profile: Dict[str, Any], relation_lines: List[str], baseline: List[str], filter_level: str, pressure: str) -> Dict[str, Any]:
-    """Shared Naruto-universe + individual-register contract (v21)."""
+    """Legacy wrapper retained for compatibility; canonical contract is v23."""
     combined = relation_lines + baseline
     return {
         "version": "v21",
@@ -516,6 +736,8 @@ def healthcheck() -> Dict[str, Any]:
         "missing_dossier": missing_dossier,
         "llm_required_for_core": False,
         "external_research_policy": "only_when_reference_cache_is_insufficient_or_scene_is_exceptional",
+        "universal_language_protocol": "v23",
+        "formality_protocol": "v23",
     }
 
 
@@ -597,6 +819,9 @@ def relation_get(speaker: str, interlocutor: str, situation: str = "", pressure:
         "body_notes": _extract_labels(rel_lines + baseline, ["corpo", "punho", "olhar", "postura", "avanço", "passo", "fisic"]),
         "silence_notes": _extract_labels(rel_lines + baseline, ["silêncio", "calar", "ignorar", "não precisa", "pouca fala"]),
         "forbidden_or_avoid": _extract_labels(rel_lines + baseline, ["evitar", "proibido", "bloqueio", "não transformar", "não fazer"]),
+        "formality_profile_v23": _formality_profile_v23(
+            a, b, pa, pb, rel_lines, baseline, tags, plev, _filter_level(rel_lines)
+        ),
         "research": _research_packet(pa, pb, rel_lines, situation, ""),
     }
 
@@ -643,6 +868,13 @@ def character_turn_packet(
     speech = _speech_tendency(actor, rel_lines, baseline, tags, plev)
     comedy = _physical_comedy(actor, rel_lines, tags, plev)
     research = _research_packet(p, ip, rel_lines, situation, stimulus)
+    formality_v23 = _formality_profile_v23(
+        actor, interlocutor_resolved or interlocutor or "", p, ip, rel_lines, baseline,
+        tags, plev, filter_level
+    )
+    universal_voice_v23 = _universal_language_contract_v23(
+        p, rel_lines, baseline, filter_level, plev, formality_v23
+    )
 
     private_public = {
         "private_impulse": "derive_from_stimulus_and_character; do not invent facts outside scene",
@@ -680,6 +912,9 @@ def character_turn_packet(
             "rules": rel_lines,
             "social_filter": filter_level,
         },
+        "reference_voice_family_v23": formality_v23.get("reference_family"),
+        "formality_profile_v23": formality_v23,
+        "universal_language_v23": universal_voice_v23,
         "sayability_gate_v22": _sayability_gate_v22(
             actor, stimulus, situation, objective, rel_lines, baseline, plev, audience, knowledge_constraint
         ),
@@ -706,7 +941,8 @@ def character_turn_packet(
             "morphosyntax": morph,
             "pressure_rule": "high pressure compresses language and prioritizes functional speech; it does not grant adult command vocabulary",
         },
-        "voice_contract_v21": _v21_voice_contract(p, rel_lines, baseline, filter_level, plev),
+        "voice_contract_v23": universal_voice_v23,
+        "voice_contract_v21_legacy": _v21_voice_contract(p, rel_lines, baseline, filter_level, plev),
         "body_realization": {
             "tendencies": body,
             "rule": "body and voice must arise from the same impulse; do not add random microgestures for decoration"
@@ -727,7 +963,11 @@ def character_turn_packet(
             "Did the sayability gate authorize speech at all? If not, delete the line.",
             "Does address form (bare name/title/honorific/omission) match this exact relationship and hierarchy?",
             "Is every microexpression caused by the same playable impulse rather than decoration?",
-            "Does phrasing sound breathed and reactive rather than evenly segmented AI prose?"
+            "Does phrasing sound breathed and reactive rather than evenly segmented AI prose?",
+            "Was formality explicitly resolved from actor+relation+hierarchy+pressure?",
+            "Could the same proposition be re-realized differently for another interlocutor? If not, relationship modulation is too weak.",
+            "Does vocabulary fit the actor's age, education, experience and knowledge of this exact subject?",
+            "Does the line obey Naruto's shared universe register without flattening the actor's idiolect?"
         ],
     }
 
@@ -770,6 +1010,14 @@ def persona_audit(
         aggressive = any(x in ntext for x in ["idiota", "burro", "cala a boca", "imbecil"])
         if aggressive and "danger" not in packet["situation_tags"]:
             warnings.append("Saya→Kazuma aggressive casual register requires a strong filter-breaking cause")
+    formality_profile = packet.get("formality_profile_v23", {})
+    formality_level = int(formality_profile.get("level", 2))
+    contractions = [" tá ", " tô ", " pra ", " cê ", " pro "]
+    padded = f" {ntext} "
+    if candidate_dialogue and formality_level >= 3 and any(x in padded for x in contractions) and packet.get("pressure") != "high":
+        warnings.append("dialogue_may_be_too_contracted_for_resolved_formality")
+    if candidate_dialogue and formality_level <= 1 and any(x in padded for x in [" por gentileza ", " gostaria de ", " o senhor poderia "]):
+        warnings.append("dialogue_may_be_too_formal_for_resolved_register")
     sayability = packet.get("sayability_gate_v22", {})
     if candidate_dialogue and sayability.get("verdict") in {"prefer_body_or_silence", "must_not_speak"}:
         warnings.append("sayability_gate_prefers_no_dialogue")
@@ -794,6 +1042,9 @@ def persona_audit(
             "speech_vs_silence",
             "vocative_function",
             "morphosyntax",
+            "universal_naruto_register",
+            "formality_gate",
+            "reference_voice_family",
             "body_voice_consistency",
             "modernism",
             "player_control"
