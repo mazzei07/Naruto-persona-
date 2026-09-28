@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v32.0-chunin-finals",
+    "version": "v36.0-classic-continuity-firewall",
     "continuity_id": "classico_floresta_da_morte",
     "name": "Naruto Reboot Character Acting Bible",
     "created_at": "2026-09-28",
@@ -36,7 +36,13 @@
     "reference_essence_version": "v34.1-per-character",
     "reference_essence_mapped_characters": 78,
     "compiled_reference_essence": "v34.1-character-specific",
-    "actor_essence_version": "v34.2-actor-specific-essence"
+    "actor_essence_version": "v34.2-actor-specific-essence",
+    "continuity_firewall_v36": {
+      "active_continuity_id": "classico_floresta_da_morte",
+      "rule": "Somente a Continuidade Clássica é cronologia ativa. A existência reaproveitada de um personagem nunca importa biografia, idade, patente, romance, relação, poder, conhecimento ou eventos de outra linha.",
+      "amatsu_family": "Pais mortos; Takeru Uchiha é o único familiar direto vivo, nukenin de Konoha e membro da Tenkai.",
+      "scene_rule": "Não expor ausências familiares já estabelecidas sem relevância material."
+    }
   },
   "characters": {
     "Amatsu Uchiha": {
@@ -61,7 +67,7 @@
         "relations": "Iruka sabe do Kage Bunshin aprendido no Pergaminho de Selamento, mas não do Gōka Mekkyaku aprendido de material reservado Uchiha.",
         "combat_identity": "Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso; com Sharingan ativo, somar leitura de precursores/selos/chakra, cópia compatível e Genjutsu ocular sem substituir timing, geometria ou capacidade física.",
         "limitations": "Sharingan 3T secreto até a QF1; não é precognição literal nem auto-dodge, não ignora pré-requisitos nem copia Kekkei Genkai. Uso prolongado e Genjutsu ocular cobram fadiga/chakra. Teamwork baixo e experiência real ainda importam.",
-        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha-Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui • Jinchūriki de Kurama sem saber.\n\n**2. IC-80.** **28,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3 • Força 4 • Velocidade 4,5 • Stamina 4,5 • Selos 3,5.\n\n**3. Secundários.** Reserva **S** • Controle C+ • Shuriken B+ • Percepção C+ • Improviso B • Furtividade D+ • Teamwork D • Experiência D.\n\n**4. Naturezas.** Katon e Fūton conhecidos. Raiton é afinidade potencial futura e desconhecida no início.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — principal Katon comum; bom domínio juvenil.\n- Katon: Hōsenka no Jutsu — Rank C — funcional; combina com projéteis.\n- Katon: Gōka Mekkyaku — Rank B — aprendido clandestinamente de material/pergaminho reservado Uchiha acessado no mesmo episódio/período em que Amatsu aprendeu Kage Bunshin no Pergaminho de Selamento; são fontes distintas. Execução real, juvenil, cara e muito menor que a de mestres lendários.\n- Magen: Kokoni Arazu no Jutsu — Rank C — primeiro Genjutsu real.\n- Kage Bunshin no Jutsu — Rank B — aprendido no Pergaminho de Selamento; segredo conhecido por Iruka.\n- Fūton: Reppūshō — Rank C — rajada e aceleração de projéteis.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha sem Sharingan despertado. Ascendência materna Uzumaki explica parte da reserva natural excepcional. Kurama permanece selada e separada do IC/reserva-base.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Aprende rápido, mas experiência real ainda é baixa.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu é a única técnica ofensiva de Genjutsu inicial. Kai básico; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu acima da média Genin; sem escola avançada fechada. Kenjutsu ainda não é eixo formal nesta abertura.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu B+; kunai, shuriken e fios combinados com Hōsenka/Reppūshō.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu operacional próprio apesar da herança Uzumaki; o conhecimento de selos não é herdado biologicamente.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin: 1–4 confortável; 5–8 operacional; 9–15 pesado; 16–24 extremo. Kurama não coopera e Amatsu não sabe que ela está nele.\n\n**13. Equipamento.** Kit Genin, kunai, shuriken, fios, Kibaku Fuda e bolsas de campo.\n\n**14. Limitações reais.** Sem Sharingan; Teamwork baixo; experiência real mínima; Gōka Mekkyaku cobra muito; clones dividem chakra e multiplicam carga cognitiva; fama/talento não apagam erro juvenil.\n\n**15. Personalidade / voz.** Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.\n\n**16. Relações e conhecimento.** Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.\n\n**17. Identidade de combate.** Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso, tentando explorar a primeira resposta errada do adversário.\n\n**18. Inspiração e comparação — Naruto Clássico.** Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
+        "full_dossier": "**1. Identificação.** 12 anos • Konoha • Uchiha-Uzumaki • Genin • Time 7 • sensei Kagetsu Shiranui • Jinchūriki de Kurama sem saber.\n\n**2. IC-80.** **28,5/80** — Ninjutsu 4 • Taijutsu 3,5 • Genjutsu 1,5 • Inteligência 3 • Força 4 • Velocidade 4,5 • Stamina 4,5 • Selos 3,5.\n\n**3. Secundários.** Reserva **S** • Controle C+ • Shuriken B+ • Percepção C+ • Improviso B • Furtividade D+ • Teamwork D • Experiência D.\n\n**4. Naturezas.** Katon e Fūton conhecidos. Raiton é afinidade potencial futura e desconhecida no início.\n\n**5. Repertório nomeado.**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — exige timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico; domínio juvenil nos Genin.\n- Katon: Gōkakyū no Jutsu — Rank C — principal Katon comum; bom domínio juvenil.\n- Katon: Hōsenka no Jutsu — Rank C — funcional; combina com projéteis.\n- Katon: Gōka Mekkyaku — Rank B — aprendido clandestinamente de material/pergaminho reservado Uchiha acessado no mesmo episódio/período em que Amatsu aprendeu Kage Bunshin no Pergaminho de Selamento; são fontes distintas. Execução real, juvenil, cara e muito menor que a de mestres lendários.\n- Magen: Kokoni Arazu no Jutsu — Rank C — primeiro Genjutsu real.\n- Kage Bunshin no Jutsu — Rank B — aprendido no Pergaminho de Selamento; segredo conhecido por Iruka.\n- Fūton: Reppūshō — Rank C — rajada e aceleração de projéteis.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Uchiha com Sharingan bilateral de 3 tomoe, pré-existente e revelado publicamente na QF1 contra Kaede. Ascendência materna Uzumaki compõe sua reserva natural; a reserva natural/base nesta fase é literalmente equivalente à de Naruto no Naruto Clássico. Kurama permanece selada e separada do IC/reserva-base.\n\n**7. Fundamentos / Ninjutsu básico.** Bunshin, Henge, Kawarimi e Shunshin. Aprende rápido, mas experiência real ainda é baixa.\n\n**8. Genjutsu / contragenjutsu.** Kokoni Arazu é a única técnica ofensiva de Genjutsu inicial. Kai básico; sem Genjutsu ocular.\n\n**9. Taijutsu / armas brancas.** Taijutsu acima da média Genin; sem escola avançada fechada. Kenjutsu ainda não é eixo formal nesta abertura.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shurikenjutsu B+; kunai, shuriken e fios combinados com Hōsenka/Reppūshō.\n\n**11. Fūinjutsu / barreiras.** Sem Fūinjutsu operacional próprio apesar da herança Uzumaki; o conhecimento de selos não é herdado biologicamente.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin não possui teto operacional fixo de 24. Feito live confirmado: 200 clones simultâneos; cerca de 100 em trabalho simples também é compatível. O teto absoluto permanece não estabelecido. Kurama não coopera e Amatsu não sabe que ela está nele.\n\n**13. Equipamento.** Kit Genin, kunai, shuriken, fios, Kibaku Fuda e bolsas de campo.\n\n**14. Limitações reais.** Sharingan 3T não é precognição literal nem auto-dodge; Teamwork baixo e experiência real ainda importam; Gōka Mekkyaku cobra muito; clones dividem chakra e multiplicam carga cognitiva; fama/talento não apagam erro juvenil.\n\n**15. Personalidade / voz.** Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.\n\n**16. Relações e conhecimento.** Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.\n\n**17. Identidade de combate.** Criar várias perguntas táticas com projéteis, Katon/Fūton, clones e improviso, tentando explorar a primeira resposta errada do adversário.\n\n**18. Inspiração e comparação — Naruto Clássico.** Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. A reserva natural/base de Amatsu é literalmente equivalente à de Naruto no Naruto Clássico desta fase; o chakra de Kurama permanece separado, selado e não cooperativo; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
         "current_ic": "32,5",
         "current_repertoire": [
           "Bunshin no Jutsu",
@@ -125,7 +131,7 @@
         "transfer_scope": "documented_axes_only",
         "baseline": "Controlado 100% pelo usuário. Estrutura social mais Naruto jovem: provocador, barulhento, carente de reconhecimento e inventivo; contexto e talentos próprios de Uchiha-Uzumaki.",
         "relation_summary": "Iruka é figura paterna; Takeru é irmão nukenin/Tenkai; Kagetsu será sensei; Saya e Kazuma ainda não têm intimidade. Iruka sabe do Kage Bunshin, não do Gōka Mekkyaku.",
-        "dossier_differences": "Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. Em reserva natural está na mesma categoria excepcional de Naruto; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
+        "dossier_differences": "Socialmente ocupa o eixo de Naruto, mas tecnicamente começa acima do Naruto do episódio 1 e com instinto Uchiha. A reserva natural/base de Amatsu é literalmente equivalente à de Naruto no Naruto Clássico desta fase; o chakra de Kurama permanece separado, selado e não cooperativo; em controle/teoria é melhor, mas em experiência e domínio de enxame de clones ainda é muito inferior ao Naruto que já atravessou o Exame Chūnin.\n\n---",
         "raw_voice_rules": "- **Âncora de referência:** Naruto jovem + identidade própria Uchiha-Uzumaki.\n- **Formalidade/corretividade basal:** coloquial, impulsivo e variável; frases podem quebrar, provocar ou exagerar.\n- **Vocativo/endereçamento:** usa nomes/títulos conforme o usuário decidir; IA não gera fala dele.\n- **Cadência e construção:** barulhento e irreverente, mas tecnicamente mais articulado que Naruto quando fala de jutsu.\n- **Evitar:** controle 100% do usuário; perfil serve apenas como referência, nunca para gerar fala.",
         "register": "coloquial, impulsivo e variável; frases podem quebrar, provocar ou exagerar.",
         "addressing": "usa nomes/títulos conforme o usuário decidir; IA não gera fala dele.",
@@ -320,6 +326,21 @@
         ],
         "training": "Kagetsu: natureza Raiton, aceleração/taijutsu e Chidori. Shōzen Arakawa: controle sob exaustão, contrato dos Corvos-da-Montanha, Kuchiyose progressivo e combate cooperativo com invocação. Consegue corvos pequenos/médios com boa consistência; uma invocação de classe Karasu Tengu exige saída extrema e não é rotina.",
         "limits": "Chidori foi treinado por Kagetsu sob a crença de que Amatsu não possuía Sharingan. Com Sharingan 3T ativo, a leitura ocular compensa a deficiência perceptiva clássica da carga máxima; sem ele, o risco retorna. Sharingan é pré-existente e secreto, não ganho neste mês."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
+      },
+      "family_state_v36": {
+        "parents": "mortos; nenhum pai ou mãe vivo",
+        "living_direct_relative": "Takeru Uchiha",
+        "takeru_status": "nukenin de Konoha; membro da Tenkai",
+        "narration_rule": "Não introduzir rotina familiar antiga nem comentar ausência como novidade sem motivo de cena."
+      },
+      "chakra_reference_v36": {
+        "natural_base_reserve": "literalmente equivalente à de Naruto no Naruto Clássico desta fase",
+        "kurama": "separada; selada; não cooperativa; não conscientemente conhecida por Amatsu"
       }
     },
     "Saya Haruno": {
@@ -599,6 +620,11 @@
         ],
         "training": "Kagetsu dividiu sessões de fundamentos: Kai sob pressão, leitura de discrepâncias, Shunshin limpo e um segundo Genjutsu simples para ampliar opções sem transformar Saya em especialista ocular.",
         "limits": "Sem Iryō Ninjutsu ou força monstruosa."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kazuma Uzumaki": {
@@ -879,6 +905,11 @@
         ],
         "training": "Treino Uzumaki/fūinjutsu: aplicação mais rápida de Kōsoku Fuda, armadilhas encadeadas e Kekkai Fuda — fórmula simples de perímetro/alarme e limitação espacial, não prisão absoluta.",
         "limits": "Afinidade Suiton é investigada, mas ainda sem Suiton ofensivo operacional."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kaede Uchiha": {
@@ -1172,6 +1203,11 @@
         ],
         "training": "Treino Uchiha + Sayuri: velocidade, precisão, fios/ricochetes, Katon encadeado e Hōsenka com projéteis ocultos. Sharingan continua NÃO despertado.",
         "limits": "Sem Sharingan e sem Chidori; crescimento vem de execução e velocidade, não de dōjutsu."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kaito Shimura": {
@@ -1417,6 +1453,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Nao Kurusu": {
@@ -1627,6 +1668,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Aki Senju": {
@@ -1757,6 +1803,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Rin Senju": {
@@ -1990,6 +2041,11 @@
         ],
         "training": "Fuyumi + Aki/Tōru: Mizu Bunshin, terreno molhado como recurso, transição Doryū Taiga→Moguragakure e luta em superfície ruim.",
         "limits": "Sem Mokuton e sem Doryūheki de escala alta."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tōru Senju": {
@@ -2120,6 +2176,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shin Uchiha": {
@@ -2472,6 +2533,11 @@
           "transfer": "provoca mais abertamente, reage com corpo, sobe o volume, quer provar superioridade; insulto sobre pai/clã atinge identidade e acelera explosão",
           "must_not": "não responder com compostura adulta, ironia fina ou frieza de Kaede"
         }
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Koharu Inuzuka": {
@@ -2699,6 +2765,11 @@
           "transfer": "competição direta, confiança no próprio estilo e pouca cerimônia; respeito só cresce por experiência vista",
           "must_not": "não virar fã nem analista"
         }
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Hibiki Shirogane": {
@@ -2913,6 +2984,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Mio Inuzuka": {
@@ -3239,6 +3315,11 @@
         "new_techniques": [],
         "training": "Treino Inuzuka/Yoru: Gatsūga com mudanças de eixo, reacoplamento após separação, rastreamento sob fumaça/cheiros falsos e pressão contínua sem perder coordenação.",
         "limits": "Sem Garōga ou transformação avançada."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Ayame Hyūga": {
@@ -3486,6 +3567,11 @@
         ],
         "training": "Treino da Sōke: transição 32→64 golpes, Kaiten sob pressão e entrada contra adversário que tenta negar o alcance do Jūken.",
         "limits": "Rokujūyon Shō é operacional juvenil, ainda abaixo da limpeza/refinamento de Reika."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Seki Aburame": {
@@ -3700,6 +3786,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Reika Hyūga": {
@@ -3947,6 +4038,11 @@
         "new_techniques": [],
         "training": "Treino Bunke focado em velocidade de entrada, leitura dos ombros/quadril, Kaiten mais curto e 64 golpes com menos telegraph.",
         "limits": "Sem Kūshō ou técnicas Shippuden."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tetsu Iwagane": {
@@ -4075,6 +4171,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Riku Fūma": {
@@ -4321,6 +4422,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Renji Nara": {
@@ -4559,6 +4665,11 @@
           "transfer": "amizade confortável, baixa necessidade de explicar, defesa rápida quando o parceiro é atacado/menosprezado",
           "must_not": "não usar distância emocional"
         }
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Hana Yamanaka": {
@@ -4813,6 +4924,11 @@
         "new_techniques": [],
         "training": "Treino Yamanaka: reduzir janela de preparação do Shintenshin, recuperar mais rápido após erro, atingir alvo móvel previsível e usar leitura de intenção/posição com menos exposição.",
         "limits": "Não recebe Shinranshin nem telepatia avançada neste mês."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Daichi Akimichi": {
@@ -5070,6 +5186,11 @@
         ],
         "training": "Treino Akimichi: transição Baika→Nikudan, variação espinhosa com kunai/fios e condicionamento para recuperar base após impacto.",
         "limits": "Sem pílulas coloridas ou Modo Borboleta."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Arata Senju": {
@@ -5337,6 +5458,11 @@
         "new_techniques": [],
         "training": "Treino Senju/Shōma: Moku Bunshin mais estável, pilares usados como cobertura móvel, combinação Suiton+Doton antes do Mokuton e melhor economia de terreno.",
         "limits": "Sem técnicas de floresta massiva/Hashirama; escala segue juvenil."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Natsuki Hyūga": {
@@ -5604,6 +5730,11 @@
         ],
         "training": "Treino Hyūga: Kaiten juvenil, explosão curta de velocidade para entrar/sair do Jūken e melhor cobertura de ponto cego.",
         "limits": "Ainda não domina 64 golpes; 32 segue sequência principal."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Jun Sarutobi": {
@@ -5816,6 +5947,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kagetsu Shiranui": {
@@ -6064,6 +6200,11 @@
           "transfer": "reconhece inteligência/controle, cobra iniciativa e trata como membro pleno; menos duelo de ego, mais instrução e confiança prática",
           "must_not": "não infantilizar ou reduzir a suporte"
         }
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Sayuri Hyūga": {
@@ -6309,6 +6450,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Fuyumi Kisaragi": {
@@ -6520,6 +6666,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shigure Namikado": {
@@ -6772,6 +6923,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tōma Aburame": {
@@ -7021,6 +7177,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Masaru Fūma": {
@@ -7232,6 +7393,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Akihiko Sarutobi": {
@@ -7445,6 +7611,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shōma Sarutobi": {
@@ -7695,6 +7866,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Iruka Umino": {
@@ -7915,6 +8091,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Daizen Sarutobi": {
@@ -8132,6 +8313,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Masato Uchiha": {
@@ -8341,6 +8527,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Seijūrō Uchiha": {
@@ -8549,6 +8740,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Daigo Uchiha": {
@@ -8678,6 +8874,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Hiromasa Hyūga": {
@@ -8890,6 +9091,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shikō Nara": {
@@ -9099,6 +9305,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Genzaburō Akimichi": {
@@ -9306,6 +9517,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kohana Yamanaka": {
@@ -9512,6 +9728,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shigen Aburame": {
@@ -9719,6 +9940,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Hanae Inuzuka": {
@@ -9925,6 +10151,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kenzō Sarutobi": {
@@ -10137,6 +10368,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Masamichi Senju": {
@@ -10348,6 +10584,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shōzen Arakawa": {
@@ -10572,6 +10813,11 @@
           "transfer": "mestre excêntrico que identifica a ferramenta certa para a reserva/aluno e cobra por experiência prática; Amatsu aprende mais rápido em controle, então avança mais na consistência do Kuchiyose",
           "must_not": "não copiar falas/cenas literalmente; não conceder técnicas futuras"
         }
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kiyomi Senju": {
@@ -10781,6 +11027,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kairen Tsukishiro": {
@@ -10996,6 +11247,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Takeru Uchiha": {
@@ -11208,6 +11464,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kiyomasa Uchiha": {
@@ -11338,6 +11599,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Sōren": {
@@ -11585,6 +11851,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tatsuma": {
@@ -11715,6 +11986,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Miyori": {
@@ -11927,6 +12203,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Saigen": {
@@ -12205,6 +12486,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Itsurō Kisaragi": {
@@ -12415,6 +12701,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Gazan Kurosame": {
@@ -12625,6 +12916,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kōmei Bakuhara": {
@@ -12836,6 +13132,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shunrei Kajiwara": {
@@ -13048,6 +13349,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Gensai Arakida": {
@@ -13258,6 +13564,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Sanza Kurohito": {
@@ -13470,6 +13781,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Mukuha": {
@@ -13678,6 +13994,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kureto Nabatame": {
@@ -13927,6 +14248,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kurama — Nove-Caudas": {
@@ -14136,6 +14462,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Hotaru Aburame": {
@@ -14349,6 +14680,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kanna Mochizuki": {
@@ -14478,6 +14814,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Itsuki": {
@@ -14607,6 +14948,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Makoto Kurama": {
@@ -14735,6 +15081,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shun Nara": {
@@ -14982,6 +15333,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Emi Nara": {
@@ -15111,6 +15467,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kōta Akimichi": {
@@ -15322,6 +15683,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Chiyo Akimichi": {
@@ -15451,6 +15817,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Aoi Yamanaka": {
@@ -15665,6 +16036,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Sora Yamanaka": {
@@ -15794,6 +16170,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Haru Inuzuka": {
@@ -16006,6 +16387,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tora": {
@@ -16135,6 +16521,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Mina Aburame": {
@@ -16348,6 +16739,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Miharu Sarutobi": {
@@ -16477,6 +16873,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Keisuke Sarutobi": {
@@ -16756,6 +17157,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Gakuji Aramori": {
@@ -16969,6 +17375,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Nagi Sazanami": {
@@ -17182,6 +17593,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Genjirō Takemura": {
@@ -17392,6 +17808,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Genzō Kaneda": {
@@ -17600,6 +18021,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Yoru": {
@@ -17809,6 +18235,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kuro": {
@@ -18018,6 +18449,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Arashi Senju — Primeiro Hokage (histórico)": {
@@ -18227,6 +18663,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Shūsei Uchiha — cofundador (histórico)": {
@@ -18435,6 +18876,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Chihaya Uzumaki — figura histórica": {
@@ -18641,6 +19087,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Tetsuma Kanzaki": {
@@ -18849,6 +19300,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Renka": {
@@ -19058,6 +19514,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Equipe de Amegakure — primeiro confronto": {
@@ -19185,6 +19646,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Equipe de Kusagakure — Ravina Seca": {
@@ -19313,6 +19779,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Informante das cartas — identidade pendente": {
@@ -19439,6 +19910,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Yoshiro Sabaku": {
@@ -19725,6 +20201,11 @@
         "new_techniques": [],
         "training": "Treino de Suna: resposta da areia mais curta, distribuição em múltiplos vetores, Suna no Yoroi menos desperdiçadora e recuperação mais rápida após areia pesada/sinterizada.",
         "limits": "Shukaku continua risco, não ferramenta voluntária; sem transformação completa controlada."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Equipe de Amegakure": {
@@ -19849,6 +20330,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Equipe de Kusagakure": {
@@ -19973,6 +20459,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Trio de Sunagakure": {
@@ -20097,6 +20588,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Companheiros de Yoshiro": {
@@ -20221,6 +20717,11 @@
         "requires_body_state": true,
         "requires_knowledge_channel": true,
         "requires_reference_essence_v34": true
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Sayo Sabaku": {
@@ -20482,6 +20983,11 @@
         "new_techniques": [],
         "training": "Treino de Suna: Daikamaitachi com menor preparação, mudança de direção da rajada e uso do tessen em curta distância para recuperar espaço.",
         "limits": "Sem Kuchiyose/Kamatari ou técnicas futuras."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     },
     "Kuroto Sabaku": {
@@ -20744,6 +21250,11 @@
         "new_techniques": [],
         "training": "Treino de Suna: troca corpo↔marionete mais rápida, fios redundantes, Senbon-guchi com paralítico mais confiável e manutenção sob dano.",
         "limits": "Sem Karasu/Kuroari copiados; Kurokumo continua marionete principal."
+      },
+      "continuity_firewall_v36": {
+        "continuity_id": "classico_floresta_da_morte",
+        "carryover": "entity_existence_only_if_revalidated",
+        "rule": "Use somente memória/relação/estado desta continuidade; nunca herde cronologia de outra versão do mesmo personagem."
       }
     }
   }
