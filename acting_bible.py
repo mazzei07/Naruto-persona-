@@ -120,6 +120,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
         "status":"ok","version":base["version"],"actor":base["name"],"interlocutor":rel.get("interlocutor"),
         "identity":b.get("identity",{}),"canon_memory":b.get("canon_memory",{}),"voice":b.get("voice",{}),
         "acting":b.get("acting",{}),"reference_essence_v34":b.get("acting",{}).get("reference_essence_override_v34") or b.get("acting",{}).get("reference_essence_v34",{}),
+        "actor_essence_v34":b.get("acting",{}).get("actor_essence_v34",{}),
         "reference_relationship_matrix":b.get("reference_relationship_matrix",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
         "escalation":esc,"stimulus":stimulus,"situation":situation,"prior_exchange":prior_exchange,
         "pressure":pressure,"audience":audience,"body_state":body_state,
@@ -166,5 +167,5 @@ def health()->dict[str,Any]:
         "ok":not missing,"version":d.get("meta",{}).get("version"),"reference_essence_protocol":"v34","characters":len(chars),
         "relation_overrides":relation_overrides,"directional_relation_edges":directional_edges,
         "missing":missing,"supports_relationship_graph":True,
-        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_genericity_audit":True
+        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True
     }
