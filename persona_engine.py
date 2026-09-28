@@ -600,6 +600,12 @@ def _sayability_gate_v22(
     """Decide whether this actor should speak before any wording is generated."""
     if actor == "Amatsu Uchiha":
         return {"verdict": "must_not_speak", "reason": "player_control"}
+    mapping = fidelity_catalog().get("characters", {}).get(actor, {})
+    entity_type = mapping.get("entity_type", "individual")
+    if entity_type == "ninken":
+        return {"verdict": "must_not_speak", "reason": "ninken_nonverbal_human_dialogue_blocked", "reasons": ["use_body_sound_scent_action"]}
+    if entity_type == "historical" and not any(x in _norm(situation) for x in ["flashback", "memoria", "lembranca", "registro historico", "historia narrada"]):
+        return {"verdict": "must_not_speak", "reason": "historical_actor_requires_legitimate_flashback_source", "reasons": []}
     text = _norm(" ".join(relation_lines + baseline))
     event = _norm(f"{stimulus} {situation}")
     objective_n = _norm(objective)
@@ -779,11 +785,14 @@ def healthcheck() -> Dict[str, Any]:
         "version": rules.get("version"),
         "continuity_id": rules.get("continuity_id"),
         "characters": len(chars),
+        "persona_profiles": len(chars),
+        "evidence_entities": len(fidelity_catalog().get("characters", {})),
         "missing_voice": missing_voice,
         "missing_dossier": missing_dossier,
         "llm_required_for_core": False,
         "external_research_policy": "verify_reference_every_turn_and_research_missing_evidence",
         "fidelity_v24": fidelity_health(),
+        "fidelity_protocol": "v24.1",
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
         "formality_calibration": "v23.3-audit-and-low-filter",
@@ -806,6 +815,7 @@ def persona_get(name: str) -> Dict[str, Any]:
         "relations_knowledge": _extract_field(p, "Relações e conhecimento"),
         "combat_identity": _extract_field(p, "Identidade de combate"),
         "reference": ref,
+        "evidence_v24": evidence,
         "voice_baseline": _baseline_voice_lines(p.get("voice_raw", "")),
         "raw_voice_rules": p.get("voice_raw", ""),
         "arc_specific": bool(p.get("arc_specific")),
@@ -918,6 +928,7 @@ def character_turn_packet(
     speech = _speech_tendency(actor, rel_lines, baseline, tags, plev)
     comedy = _physical_comedy(actor, rel_lines, tags, plev)
     research = _research_packet(p, ip, rel_lines, situation, stimulus)
+    evidence = evidence_v24(actor, interlocutor_resolved or interlocutor or "", situation, stimulus)
     formality_v23 = _formality_profile_v23(
         actor, interlocutor_resolved or interlocutor or "", p, ip, rel_lines, baseline,
         tags, plev, filter_level
