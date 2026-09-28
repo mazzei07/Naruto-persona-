@@ -6,6 +6,8 @@ def main():
     h = persona_healthcheck()
     assert h["characters"] == 80, h
     assert h["continuity_id"] == "classico_floresta_da_morte"
+    assert h["universal_language_protocol"] == "v23"
+    assert h["formality_protocol"] == "v23"
 
     sa = persona_turn(
         "Saya Haruno", "Amatsu Uchiha",
@@ -66,6 +68,23 @@ def main():
 
     kaz_address = ka["addressing_plan_v22"]
     assert "mechanically" in kaz_address["honorific_policy"] or "default" in kaz_address["honorific_policy"]
+
+    saya_to_iruka_formality = saya_authority["formality_profile_v23"]
+    saya_to_amatsu_formality = sa["formality_profile_v23"]
+    assert saya_to_iruka_formality["level"] >= saya_to_amatsu_formality["level"], (
+        saya_to_iruka_formality, saya_to_amatsu_formality
+    )
+    assert saya_authority["universal_language_v23"]["version"] == "v23"
+    assert saya_authority["reference_voice_family_v23"]["family"] == "socially_adaptive_youthful"
+
+    iruka_turn = persona_turn(
+        "Iruka Umino", "Amatsu Uchiha",
+        stimulus="Amatsu responde casualmente ao professor",
+        situation="conversa segura após o exame",
+        pressure="baixa"
+    )
+    assert iruka_turn["reference_voice_family_v23"]["family"] == "expressive_teacher"
+    assert iruka_turn["voice_contract_v23"]["universal_naruto_register"]["language"] == "PT-BR Naruto Clássico"
 
     print(json.dumps({
         "healthcheck": h,
