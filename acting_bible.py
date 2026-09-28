@@ -163,7 +163,7 @@ def health()->dict[str,Any]:
     relation_overrides=sum(len(v.get("relationship_overrides",{})) for v in chars.values())
     directional_edges=sum(len(v) for v in g.get("edges",{}).values())
     return {
-        "ok":not missing,"version":d.get("meta",{}).get("version"),"characters":len(chars),
+        "ok":not missing,"version":d.get("meta",{}).get("version"),"reference_essence_protocol":"v34","characters":len(chars),
         "relation_overrides":relation_overrides,"directional_relation_edges":directional_edges,
         "missing":missing,"supports_relationship_graph":True,
         "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_genericity_audit":True
