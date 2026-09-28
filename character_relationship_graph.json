@@ -5717,16 +5717,37 @@
         "reference_relation_must_not_v28": "não fazer rotina cômica"
       },
       "Amatsu Uchiha": {
-        "sources": [],
-        "facts": [],
-        "roles": [],
-        "familiarity": "derive",
+        "sources": [
+          "live: Floresta da Morte — Amatsu×Yoshiro",
+          "canon_data: areia parcialmente sinterizada/vitrificada"
+        ],
+        "facts": [
+          "Já lutaram diretamente na Floresta da Morte.",
+          "Amatsu pressionou a defesa de areia com Katon em confronto intenso; o eixo preservado inclui Fūton: Reppūshō + Katon: Gōkakyū.",
+          "Parte da areia exposta de Yoshiro foi termicamente agregada/sinterizada e parcialmente vitrificada; ficou mais pesada/lenta, mas continuou funcional.",
+          "Yoshiro conhece Amatsu como um oponente capaz de forçar sua defesa de areia para além do uso rotineiro.",
+          "A final do Exame Chūnin é reencontro real, não primeiro contato."
+        ],
+        "roles": [
+          "oponente de reencontro",
+          "foco pós-Floresta"
+        ],
+        "familiarity": "direct_combat_history",
         "hierarchy": "derive",
-        "default_filter": "derive",
-        "rule": "",
-        "reference_relation_axis_v28": "Gaara → rival capaz de pressionar sua defesa, adaptado ao live",
-        "reference_relation_transfer_v28": "atenção hostil/curiosidade mais por olhar, areia e decisão que por fala",
-        "reference_relation_must_not_v28": "não virar rival falante"
+        "default_filter": "hostile_fixation",
+        "rule": "O encontro na Floresta deve alterar limiar, atenção e escolha de alvo de Yoshiro. Ele não precisa falar muito sobre isso: memória aparece em fixação, areia, corpo e escalada. Não inventar detalhes do desfecho técnico ausentes do live.",
+        "reference_relation_axis_v28": "Gaara Chūnin → oponente que realmente atravessa/pressiona sua defesa e passa a importar pessoalmente, adaptado ao confronto da Floresta",
+        "reference_relation_transfer_v28": "atenção hostil, excitação de combate e memória corporal da defesa pressionada; mais ação/olhar/areia do que exposição verbal",
+        "reference_relation_must_not_v28": "não tratar como desconhecido, não virar rival falante, não inventar amizade ou desfecho não registrado",
+        "reference_essence_v34": {
+          "phase": "Gaara — Chunin Exams/early Part I",
+          "trigger_memory": [
+            "defesa de areia pressionada por Katon",
+            "areia termicamente degradada",
+            "reencontro com o mesmo oponente"
+          ],
+          "escalation_rule": "Se Amatsu voltar a atravessar a defesa, produzir sangue/dor ou humilhar a sensação de invulnerabilidade, combinar a memória da Floresta com o break-trigger Gaara Chūnin; não preservar calma artificial."
+        }
       }
     },
     "Equipe de Amegakure": {},
