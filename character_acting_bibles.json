@@ -35,7 +35,7 @@
     "finals_month_version": "v32",
     "reference_essence_version": "v34.1-per-character",
     "reference_essence_mapped_characters": 78,
-    "compiled_reference_essence": "v34.2-character-specific-scoped"
+    "compiled_reference_essence": "v34.1-character-specific"
   },
   "characters": {
     "Amatsu Uchiha": {
