@@ -116,6 +116,16 @@
       "continuity_firewall_v36": {
         "continuity_id": "classico_floresta_da_morte",
         "rule": "Não importar biografia, relações, poderes ou eventos de outra continuidade."
+      },
+      "current_live_state_v36": {
+        "time": "19:30",
+        "date_relation": "mesmo dia do encerramento da Fase Final do Exame Chūnin",
+        "location": "quarto de Amatsu",
+        "state": "deitado na cama",
+        "present": [
+          "Amatsu Uchiha"
+        ],
+        "rule": "Nenhum outro NPC presente estabelecido; não inventar ação, pensamento, emoção ou decisão voluntária de Amatsu."
       }
     },
     "Saya Haruno": {
