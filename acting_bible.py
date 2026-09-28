@@ -7,9 +7,38 @@ BASE=Path(__file__).resolve().parent
 BIBLE_PATH=BASE/"character_acting_bibles.json"
 GRAPH_PATH=BASE/"character_relationship_graph.json"
 
+def _apply_continuity_firewall_v36(data:dict[str,Any])->dict[str,Any]:
+    data.setdefault("meta",{})["continuity_firewall_v36"]={
+        "active_continuity_id":"classico_floresta_da_morte",
+        "rule":"Only Classic-continuity biography/status/relations/powers/knowledge may be used. Revalidated entity existence never imports legacy chronology."
+    }
+    amatsu=(data.get("characters") or {}).get("Amatsu Uchiha")
+    if isinstance(amatsu,dict):
+        amatsu["continuity_firewall_v36"]={
+            "parents":"mortos; nenhum pai ou mãe vivo",
+            "living_direct_relative":"Takeru Uchiha",
+            "takeru_status":"nukenin de Konoha; membro da Tenkai",
+            "natural_base_reserve":"literalmente equivalente à reserva natural/base de Naruto no Naruto Clássico desta fase",
+            "kurama":"separada, selada e não cooperativa",
+            "kage_bunshin":"sem teto operacional fixo de 24; feito live confirmado de 200; máximo absoluto não estabelecido",
+            "narration":"Não expositar ausências familiares já estabelecidas sem relevância concreta."
+        }
+        def repl(v):
+            if isinstance(v,str):
+                v=v.replace("Em reserva natural está na mesma categoria excepcional de Naruto","A reserva natural/base de Amatsu é literalmente equivalente à de Naruto no Naruto Clássico desta fase; Kurama permanece separada e não cooperativa")
+                v=v.replace("Kage Bunshin: 1–4 confortável; 5–8 operacional; 9–15 pesado; 16–24 extremo.","Kage Bunshin não possui teto operacional fixo de 24 clones. Feito live confirmado: 200 Kage Bunshin; cerca de 100 em tarefas simples também é compatível; máximo absoluto não estabelecido.")
+                v=v.replace("Kage Bunshin: 1-4 confortável; 5-8 operacional; 9-15 pesado; 16-24 extremo.","Kage Bunshin não possui teto operacional fixo de 24 clones. Feito live confirmado: 200 Kage Bunshin; cerca de 100 em tarefas simples também é compatível; máximo absoluto não estabelecido.")
+                return v
+            if isinstance(v,list): return [repl(x) for x in v]
+            if isinstance(v,dict):
+                for k in list(v): v[k]=repl(v[k])
+            return v
+        repl(amatsu)
+    return data
+
 def _load()->dict[str,Any]:
     with BIBLE_PATH.open("r",encoding="utf-8") as f:
-        return json.load(f)
+        return _apply_continuity_firewall_v36(json.load(f))
 
 def _graph()->dict[str,Any]:
     with GRAPH_PATH.open("r",encoding="utf-8") as f:
