@@ -103,6 +103,26 @@ def compile_actor_state(
         "rule": "A possible behavior is not a constant behavior. Escalate only when stimulus crosses an actor-specific threshold supported by history/body/pressure.",
     }
 
+    behavior_frequency_ledger = {
+        "typical": [
+            voice.get("cadence", ""),
+            relation.get("transfer", "") or relation.get("transfer_v28", ""),
+        ],
+        "possible": [
+            "speech/action patterns licensed by current objective and relationship but not required every turn",
+            escalation.get("surface", ""),
+        ],
+        "rare": [
+            "breaking-point, unusually warm, unusually cruel, or highly exposed behavior requires a strong live trigger and repetition check"
+        ],
+        "forbidden": [
+            voice.get("avoid", ""),
+            relation.get("must_not", "") or relation.get("must_not_v28", ""),
+        ],
+        "repetition_context": prior_exchange or "no prior exchange supplied",
+        "rule": "Frequency is part of characterization. A behavior that is merely possible must not become a default catchphrase or reaction.",
+    }
+
     candidate_surfaces = [
         {
             "mode": "silence_or_body",
@@ -170,6 +190,7 @@ def compile_actor_state(
         "memory_pipeline": memory,
         "reference_relation": relation_axis,
         "reaction_threshold": threshold,
+        "behavior_frequency_ledger": behavior_frequency_ledger,
         "decision_workspace": decision,
         "realization_envelope": realization,
         "verification": verifier,
