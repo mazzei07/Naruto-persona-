@@ -1,12 +1,13 @@
 import json
-from persona_api import persona_healthcheck, persona_relation, persona_turn, persona_check, persona_sayability
+from persona_api import persona_healthcheck, persona_relation, persona_turn, persona_check, persona_sayability, persona_bible, persona_acting_packet, persona_dialogue_audit_v25
 
 
 def main():
     h = persona_healthcheck()
     assert h["characters"] == 90, h
     assert h["evidence_entities"] == 97, h
-    assert h["fidelity_protocol"] == "v24.1", h
+    assert h["fidelity_protocol"] == "v25.0.0", h
+    assert h["acting_bible_v25"]["characters"] == 97, h
     assert h["continuity_id"] == "classico_floresta_da_morte"
     assert h["universal_language_protocol"] == "v23"
     assert h["formality_protocol"] == "v23"
@@ -105,6 +106,29 @@ def main():
         pressure="baixa"
     )
     assert yoru_turn["sayability_gate_v22"]["verdict"] == "must_not_speak", yoru_turn
+
+    shin_trigger = persona_acting_packet(
+        "Shin Uchiha", "Amatsu Uchiha",
+        stimulus="a vergonha do clã vai mostrar pro filhinho prodígio como se faz",
+        prior_exchange="Shin perdeu para Ayame e Amatsu chamou a derrota de patética.",
+        situation="galeria das preliminares",
+        pressure="média"
+    )
+    assert shin_trigger["escalation"]["level"] == 4, shin_trigger
+    assert shin_trigger["relationship_specific"] is True, shin_trigger
+
+    bad_shin = persona_dialogue_audit_v25(
+        "Shin Uchiha", "Amatsu Uchiha",
+        candidate_dialogue="Fala o que quiser. Só não usa meu pai pra tentar parecer maior do que você é.",
+        stimulus="filhinho prodígio de um dos grandes ninjas do clã",
+        prior_exchange="Amatsu devolve a acusação de vergonha do clã.",
+        situation="galeria das preliminares",
+        pressure="média"
+    )
+    assert bad_shin["pass"] is False, bad_shin
+
+    kaede_bible = persona_bible("Kaede Uchiha")
+    assert kaede_bible["bible"]["relationship_overrides"]["Amatsu Uchiha"]["baseline"], kaede_bible
 
     historical_turn = persona_turn(
         "Arashi Senju — Primeiro Hokage (histórico)", "Shūsei Uchiha — cofundador (histórico)",
