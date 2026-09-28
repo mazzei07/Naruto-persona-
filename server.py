@@ -27,11 +27,11 @@ PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.4.0",
+    version="0.5.0",
     instructions=(
         "Especialista read-only de interpretação do Naruto Reboot — Continuidade Clássica. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
-        "vocativo, morfossintaxe, silêncio e reação. Aplica obrigatoriamente Gate de Falabilidade + Beat de Atuação + Matriz de Endereçamento + Microexpressões v22. Canoney/estado live continuam sendo "
+        "vocativo, morfossintaxe, silêncio e reação. Aplica obrigatoriamente Registro Universal de Naruto + Gate de Formalidade v23 + família de voz da referência + Gate de Falabilidade + Beat de Atuação + Matriz de Endereçamento + Microexpressões. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
     ),
 )
@@ -43,7 +43,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -59,7 +59,7 @@ async def health(_: Request) -> JSONResponse:
         {
             "status": "ok" if result.get("ok") else "degraded",
             "service": "Naruto Persona Engine",
-            "version": "0.2.0",
+            "version": "0.5.0",
             "persona_engine": result,
         },
         status_code=200 if result.get("ok") else 503,
@@ -141,7 +141,7 @@ def persona_sayability(
     perception_constraint: str = "",
     knowledge_constraint: str = "",
 ) -> dict[str, Any]:
-    """Decide whether the actor should speak at all and return v22 acting/addressing cues."""
+    """Resolve fala/silêncio e devolve atuação, endereçamento, família de voz e formalidade v23."""
     return _sayability(
         name=name,
         interlocutor=interlocutor,
