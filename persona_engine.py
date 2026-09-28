@@ -271,6 +271,53 @@ def _research_packet(profile: Dict[str, Any], interlocutor_profile: Dict[str, An
     }
 
 
+
+def _v21_voice_contract(profile: Dict[str, Any], relation_lines: List[str], baseline: List[str], filter_level: str, pressure: str) -> Dict[str, Any]:
+    """Shared Naruto-universe + individual-register contract (v21)."""
+    combined = relation_lines + baseline
+    return {
+        "version": "v21",
+        "universe_register": "PT-BR Naruto Clássico: natural, shōnen, sem internetês, sem terapia-speak, sem fala burocrática de IA.",
+        "individual_register": {
+            "baseline": baseline,
+            "relationship_shift": relation_lines,
+            "social_filter": filter_level,
+            "pressure": pressure,
+            "correction_orality": _extract_labels(combined, ["formalidade", "corretividade", "coloquial", "oralidade", "imperativo"]),
+            "vocative_position": _extract_labels(combined, ["vocativo", "nome", "abertura", "fechamento", "sensei", "kun", "san"]),
+            "latency_cadence": _extract_labels(combined, ["latência", "cadência", "interrup", "silêncio", "pouca fala", "rápida"]),
+            "body_prosody": _extract_labels(combined, ["corpo", "olhar", "postura", "volume", "tom", "punho", "passo", "gesto"]),
+        },
+        "performance_wash": [
+            "reference_exact_phase",
+            "reboot_divergence",
+            "directional_relation",
+            "private_impulse",
+            "social_filter",
+            "body_state",
+            "speech_or_silence",
+            "micro_signature",
+            "subtext",
+        ],
+        "dialogue_refinement": [
+            "write_semantic_line_then_bend_into_character",
+            "remove_explanation_the_character_would_not_say",
+            "place_name_or_honorific_where_this_relation_naturally_uses_it",
+            "prefer_body_or_silence_when_more_faithful",
+            "swap_test_three_other_NPCs",
+            "mental_read_aloud_test",
+        ],
+        "anti_ai": [
+            "no scene summary in dialogue",
+            "no self-psychology explanation",
+            "no narrator thesis in NPC mouth",
+            "no obligatory reaction line",
+            "no decorative microgesture",
+            "no trailer aphorism",
+        ],
+    }
+
+
 def healthcheck() -> Dict[str, Any]:
     data = _characters()
     rules = _rules()
@@ -464,6 +511,7 @@ def character_turn_packet(
             "morphosyntax": morph,
             "pressure_rule": "high pressure compresses language and prioritizes functional speech; it does not grant adult command vocabulary",
         },
+        "voice_contract_v21": _v21_voice_contract(p, rel_lines, baseline, filter_level, plev),
         "body_realization": {
             "tendencies": body,
             "rule": "body and voice must arise from the same impulse; do not add random microgestures for decoration"
@@ -476,7 +524,11 @@ def character_turn_packet(
             "Would this line fit three other NPCs unchanged? If yes, add specific cadence/filter/body or use silence.",
             "Is silence more faithful than speaking?",
             "Does age/reference phase match current stage?",
-            "Does the output preserve reboot identity instead of copying canon?"
+            "Does the output preserve reboot identity instead of copying canon?",
+            "Does the line sound like a person in Naruto rather than an AI explaining the scene?",
+            "If the line were assigned to three other NPCs, would it still work? If yes, rewrite or cut it.",
+            "Is the grammar/orality/vocative placement specific to this actor and interlocutor?",
+            "Can the line be mentally heard in the exact-phase reference voice without copying canon dialogue?"
         ],
     }
 
@@ -499,6 +551,18 @@ def persona_audit(
     for word in _rules().get("forbidden_modernisms", []):
         if _norm(word) in ntext:
             violations.append(f"modernism_or_meta_language:{word}")
+    ai_patterns = [
+        "isso significa", "a diferença é que", "você precisa entender",
+        "na verdade o que acontece", "o ponto é que", "não é x, é y",
+        "em outras palavras", "basicamente", "de certa forma"
+    ]
+    for pattern in ai_patterns:
+        if pattern in ntext:
+            warnings.append(f"possible_ai_exposition:{pattern}")
+    if candidate_dialogue and len(candidate_dialogue.split()) > 20:
+        explanatory = sum(1 for x in ["porque", "significa", "diferença", "objetivo", "situação", "estado"] if x in ntext)
+        if explanatory >= 3:
+            warnings.append("dialogue_may_be_explaining_scene_instead_of_living_it")
     if candidate_dialogue and packet["decision_surface"]["speech"]["status"] == "silence_or_short_functional_reply" and len(candidate_dialogue.split()) > 35:
         warnings.append("dialogue_may_be_too_long_for_current_silence/economy_profile")
     if packet["pressure"] == "high" and len(candidate_dialogue.split()) > 45:
