@@ -12,7 +12,7 @@ from functools import lru_cache
 from pathlib import Path
 from urllib.parse import urlparse
 
-VERSION = 'v24.1.0'
+VERSION = 'v25.0.0'
 CONTINUITY = 'classico_floresta_da_morte'
 ROOT = Path(__file__).resolve().parent
 
@@ -187,7 +187,7 @@ def validate_turn_packet(packet):
         for cid in ids:
             card=cards.get(cid) if isinstance(cid,str) else None
             if not card:issues.append(name+':unknown_reference:'+str(cid));continue
-            if card['episode_ceiling']>37:issues.append(name+':future_reference:'+cid)
+            if card['episode_ceiling']>catalog()['contract']['reference_episode_ceiling']:issues.append(name+':future_reference:'+cid)
             if not set(card['references'])&set(m['reference_characters']):issues.append(name+':reference_actor_mismatch:'+cid)
         declared=scene.get('knowledge',{}).get(name,[]) if isinstance(scene.get('knowledge'),dict) else []
         if not isinstance(declared,list):issues.append(name+':invalid_scene_knowledge')
@@ -232,4 +232,4 @@ def health():
     kinds={}
     for m in d['characters'].values():
         kind=m.get('entity_type','individual');kinds[kind]=kinds.get(kind,0)+1
-    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True}
+    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'reference_episode_ceiling':d['contract'].get('reference_episode_ceiling'),'acting_bible_version':d['contract'].get('acting_bible',{}).get('version'),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True}
