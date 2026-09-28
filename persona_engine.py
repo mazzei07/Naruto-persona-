@@ -1159,6 +1159,8 @@ def character_turn_packet(
             "knowledge": knowledge_constraint or "must be supplied by chat/Canoney if material",
             "rule": "Persona Engine never upgrades perception into recognition/knowledge on its own."
         },
+        "continuity_firewall_v36": _rules().get("continuity_firewall_v36", {}),
+        "character_continuity_v36": p.get("continuity_firewall_v36", {}),
         "reference": ref,
         "directional_relationship": {
             "anchor": relation_anchor,
