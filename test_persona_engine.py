@@ -4,13 +4,14 @@ from persona_api import persona_healthcheck, persona_relation, persona_turn, per
 
 def main():
     h = persona_healthcheck()
-    assert h["characters"] == 90, h
-    assert h["evidence_entities"] == 97, h
+    assert h["characters"] == 92, h
+    assert h["evidence_entities"] == 99, h
     assert h["fidelity_protocol"] == "v25.0.0", h
-    assert h["acting_bible_v25"]["characters"] == 97, h
+    assert h["acting_bible_v25"]["characters"] == 99, h
     assert h["continuity_id"] == "classico_floresta_da_morte"
     assert h["universal_language_protocol"] == "v23"
     assert h["formality_protocol"] == "v23"
+    assert h["addressing_protocol"] == "v33"
 
     sa = persona_turn(
         "Saya Haruno", "Amatsu Uchiha",
@@ -69,6 +70,22 @@ def main():
     )
     addressing = saya_authority["addressing_plan_v22"]
     assert "sensei" in " ".join(addressing.get("preferred_forms", [])).casefold(), addressing
+    assert saya_authority["addressing_plan_v33"]["version"] == "v33-relational-addressing"
+
+    saya_kagetsu = persona_turn(
+        "Saya Haruno", "Kagetsu Shiranui",
+        stimulus="Kagetsu corrige Saya durante treino seguro",
+        situation="treino de equipe, sem urgência",
+        pressure="baixa",
+        audience="Time 7"
+    )
+    kag_address = saya_kagetsu["addressing_plan_v33"]
+    assert kag_address["default_form"] == "Kagetsu-sensei", kag_address
+    assert kag_address["honorific_strength"] == "strong_default", kag_address
+
+    kazuma_address = sk["addressing_plan_v33"]
+    assert kazuma_address["default_form"] == "Kazuma-kun", kazuma_address
+    assert kazuma_address["honorific_strength"] == "strong_relational_default", kazuma_address
 
     kaz_address = ka["addressing_plan_v22"]
     assert "mechanically" in kaz_address["honorific_policy"] or "default" in kaz_address["honorific_policy"]
