@@ -24,15 +24,20 @@ from persona_api import (
     persona_evidence as _evidence,
     persona_validate_turn_packet as _validate_turn_packet,
     persona_fidelity_health as _fidelity_health,
+    persona_bible as _bible,
+    persona_relationship_bible as _relationship_bible,
+    persona_acting_packet as _acting_packet,
+    persona_dialogue_audit_v25 as _dialogue_audit_v25,
+    persona_acting_health as _acting_health,
 )
 
 PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.6.1",
+    version="0.7.0-v25",
     instructions=(
-        "Especialista read-only v24: recuperar evidências por turno, pesquisar lacunas e nunca tratar pass como certificação semântica. Inspiração técnica não importa personalidade. "
+        "Especialista read-only v25: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada e auditoria anti-genérica antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
         "vocativo, morfossintaxe, silêncio e reação. Aplica o contrato v24 antes das heurísticas de registro, formalidade e relação; não força microgestos nem bordões. Família de voz só vale para inspiração de personalidade documentada. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
@@ -46,7 +51,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.6.1",
+            "version": "0.7.0-v25",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -62,7 +67,7 @@ async def health(_: Request) -> JSONResponse:
         {
             "status": "ok" if result.get("ok") else "degraded",
             "service": "Naruto Persona Engine",
-            "version": "0.6.0",
+            "version": "0.7.0-v25",
             "persona_engine": result,
         },
         status_code=200 if result.get("ok") else 503,
@@ -111,6 +116,8 @@ def persona_turn(
     objective: str = "",
     perception_constraint: str = "",
     knowledge_constraint: str = "",
+    prior_exchange: str = "",
+    relationship_state: str = "",
 ) -> dict[str, Any]:
     """Build the behavioral packet for one actor in the current scene beat.
 
@@ -128,6 +135,8 @@ def persona_turn(
         objective=objective,
         perception_constraint=perception_constraint,
         knowledge_constraint=knowledge_constraint,
+        prior_exchange=prior_exchange,
+        relationship_state=relationship_state,
     )
 
 
@@ -143,6 +152,8 @@ def persona_sayability(
     objective: str = "",
     perception_constraint: str = "",
     knowledge_constraint: str = "",
+    prior_exchange: str = "",
+    relationship_state: str = "",
 ) -> dict[str, Any]:
     """Resolve fala/silêncio com evidência v24.1, endereçamento e formalidade contextual."""
     return _sayability(
@@ -156,6 +167,8 @@ def persona_sayability(
         objective=objective,
         perception_constraint=perception_constraint,
         knowledge_constraint=knowledge_constraint,
+        prior_exchange=prior_exchange,
+        relationship_state=relationship_state,
     )
 
 
@@ -167,8 +180,10 @@ def persona_check(
     candidate_action: str = "",
     situation: str = "",
     pressure: str = "normal",
+    stimulus: str = "",
+    prior_exchange: str = "",
 ) -> dict[str, Any]:
-    """Audit a proposed line/action against persona, relation, and stage rules."""
+    """Audit a proposed line/action against persona, relation, stage and v25 trigger rules."""
     return _check(
         name=name,
         interlocutor=interlocutor,
@@ -176,6 +191,8 @@ def persona_check(
         candidate_action=candidate_action,
         situation=situation,
         pressure=pressure,
+        stimulus=stimulus,
+        prior_exchange=prior_exchange,
     )
 
 
@@ -200,6 +217,50 @@ def persona_validate_turn_packet(packet: dict[str, Any]) -> dict[str, Any]:
 def persona_fidelity_health() -> dict[str, Any]:
     """Check only the v24.1 evidence catalog and actor-scope contract."""
     return _fidelity_health()
+
+
+@mcp.tool()
+def persona_bible(name: str) -> dict[str, Any]:
+    """Return the full v25 acting bible for one character."""
+    return _bible(name)
+
+@mcp.tool()
+def persona_relationship_bible(name: str, interlocutor: str) -> dict[str, Any]:
+    """Return directional history/voice rules for actor -> interlocutor."""
+    return _relationship_bible(name, interlocutor)
+
+@mcp.tool()
+def persona_acting_packet(
+    name: str,
+    interlocutor: str = "",
+    stimulus: str = "",
+    situation: str = "",
+    prior_exchange: str = "",
+    pressure: str = "normal",
+    audience: str = "",
+    body_state: str = "",
+) -> dict[str, Any]:
+    """Compile v25 acting state with relationship memory, trigger escalation and dialogue momentum."""
+    return _acting_packet(name, interlocutor, stimulus, situation, prior_exchange, pressure, audience, body_state)
+
+@mcp.tool()
+def persona_dialogue_audit_v25(
+    name: str,
+    interlocutor: str = "",
+    candidate_dialogue: str = "",
+    candidate_action: str = "",
+    stimulus: str = "",
+    prior_exchange: str = "",
+    situation: str = "",
+    pressure: str = "normal",
+) -> dict[str, Any]:
+    """Audit genericity, relation drift and missed trigger escalation."""
+    return _dialogue_audit_v25(name, interlocutor, candidate_dialogue, candidate_action, stimulus, prior_exchange, situation, pressure)
+
+@mcp.tool()
+def persona_acting_health() -> dict[str, Any]:
+    """Check v25 acting-bible coverage for the full cast."""
+    return _acting_health()
 
 
 if __name__ == "__main__":
