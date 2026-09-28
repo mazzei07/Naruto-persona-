@@ -915,6 +915,7 @@ def healthcheck() -> Dict[str, Any]:
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
         "addressing_protocol": "v33",
+        "reference_essence_protocol": "v34",
         "formality_calibration": "v33-relational-honorifics",
     }
 
