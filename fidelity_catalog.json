@@ -70,6 +70,30 @@
       "prior_exchange_required_for_continuous_conflict": true,
       "trigger_escalation_required": true,
       "genericity_audit_required": true
+    },
+    "anime_performance_gate_v26": {
+      "mandatory": true,
+      "name": "ANIME_PERFORMANCE_GATE_V26",
+      "principle": "Factual compatibility is necessary but insufficient. Every active NPC beat must be rebuilt from exact-phase reference mechanics + own dossier + directional relation so it feels performed inside Naruto Classic rather than written by a system.",
+      "before_any_draft": [
+        "retrieve at least one exact-phase scene card for every active NPC with a canon reference; if absent, mark research_required",
+        "derive the private intention and immediate playable action before words",
+        "resolve the reference fingerprint: latency, sentence shape, vocative behavior, aggression/softening, humor, silence, body rhythm, exposition tolerance",
+        "apply reboot divergence and directional relationship after the reference fingerprint",
+        "decide speech/body/silence before wording"
+      ],
+      "rejection_tests": [
+        "swap_test: if the line/beat can be moved unchanged to three cast members, revise",
+        "anime_read_aloud_test: if it sounds like an explanation, screenplay note, AI summary or adult analyst, revise",
+        "reference_absence_test: if the reference character's recognizable behavioral mechanics are absent without a relationship/pressure reason, revise",
+        "overcompression_test: clipped characters must not become robotic one-liners; economy means relevance, not dryness",
+        "overexplanation_test: narrator and NPC may not explain what action/body already communicated",
+        "reaction_queue_test: no round-robin comments from spectators",
+        "camera_test: narration should privilege visible action, timing, spatial consequence and reaction over abstract analysis"
+      ],
+      "sasuke_family_correction": "Sasuke-like does not mean monotone critic. Use silence, refusal to answer, short complete sentences, physical decision, pride, irritation and selective attention. Avoid constant clever deadpan commentary.",
+      "naruto_classic_narration": "Short causal beats; concrete verbs; action and dialogue interleave; internal explanation is sparse and only when needed. Let an unfinished glance, delayed reply, body turn or attack choice carry characterization.",
+      "output_contract": "Bots provide evidence/constraints; final prose must undergo a humanized performance pass before display."
     }
   },
   "sources": {
@@ -711,6 +735,56 @@
       "access": "official_summary_or_column",
       "note": "Fim das preliminares; limite atual de referência desta fase.",
       "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep66": {
+      "id": "ep66",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_290",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Temari and Kankuro prioritize operational concerns around their younger brother Gaara during the finals/invasion transition.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep72": {
+      "id": "ep72",
+      "url": "https://naruto-official.com/fr/anime/naruto1/list/01_296",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Temari stays to fight Sasuke while Kankuro buys time for Gaara; useful for sibling operational dynamics, not dialogue wording.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "ep125": {
+      "id": "ep125",
+      "url": "https://naruto-official.com/en/anime/naruto1/list/01_349",
+      "kind": "official_episode_synopsis",
+      "checked_at": "2026-09-28",
+      "access": "official_summary_or_column",
+      "note": "Sand siblings act as distinct specialists: Gaara/sand, Temari/wind, Kankuro/puppetry.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "kishimoto_alive": {
+      "id": "kishimoto_alive",
+      "url": "https://naruto-official.com/en/news/01_2320",
+      "kind": "official_creator_interview",
+      "checked_at": "2026-09-28",
+      "access": "official_interview",
+      "note": "Kishimoto says a good shonen creator must make characters feel alive and get into their heads; Ikemoto describes building personality/how they think before surface design.",
+      "full_work_read": true,
+      "br_dub_verified": false
+    },
+    "localization_world_fit": {
+      "id": "localization_world_fit",
+      "url": "https://naruto-official.com/en/news/01_1401",
+      "kind": "official_editor_translator_interview",
+      "checked_at": "2026-09-28",
+      "access": "official_interview",
+      "note": "Localization/editorial discussion emphasizes expressions that fit the world and Kishimoto's character/world reference material.",
+      "full_work_read": true,
       "br_dub_verified": false
     }
   },
@@ -1458,6 +1532,129 @@
       "observed_summary": "Lee desafia Sasuke diretamente e o pressiona fisicamente; habilidade percebida não equivale a capacidade de execução do corpo.",
       "acting_inference": "Para personagens físicos/competitivos, desafio pode aparecer primeiro em ação, postura e pressão corporal, não em discurso sofisticado.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "gaara_prelim_presence_v26",
+      "references": [
+        "Gaara"
+      ],
+      "source_ids": [
+        "ep34",
+        "ep48",
+        "ep49",
+        "gaara"
+      ],
+      "locator": "Anime eps. 34, 48–49; official Gaara column",
+      "episode_ceiling": 49,
+      "phase": "chunin_preliminaries",
+      "tags": [
+        "exam",
+        "combat",
+        "danger",
+        "silence",
+        "jinchuriki"
+      ],
+      "observed_summary": "Gaara's threat is carried heavily by sand behavior, stillness and the contrast between opponent effort and his minimal movement; Lee can eventually outpace the automatic sand defense.",
+      "acting_inference": "For Yoshiro, prefer sand/body/silence over verbose menace. Defense is powerful but not oniscient or infinitely fast.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "temari_exam_axis_v26",
+      "references": [
+        "Temari"
+      ],
+      "source_ids": [
+        "ep43"
+      ],
+      "locator": "Anime ep. 43 and Chunin-finals summaries",
+      "episode_ceiling": 67,
+      "phase": "chunin_exam",
+      "tags": [
+        "exam",
+        "combat",
+        "weapons",
+        "tactics"
+      ],
+      "observed_summary": "Temari neutralizes a projectile-heavy style with a giant fan and wind, later reads tactical limits in the finals.",
+      "acting_inference": "For Sayo, confidence and tactical speed should appear through choices and short cutting lines, not constant analysis aloud.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "kankuro_exam_axis_v26",
+      "references": [
+        "Kankuro"
+      ],
+      "source_ids": [
+        "ep41"
+      ],
+      "locator": "Anime ep. 41",
+      "episode_ceiling": 41,
+      "phase": "chunin_preliminaries",
+      "tags": [
+        "exam",
+        "combat",
+        "deception",
+        "puppet"
+      ],
+      "observed_summary": "Kankuro wins by making the opponent commit to a false body that is actually his puppet.",
+      "acting_inference": "For Kuroto, identity comes from misdirection, timing and irritated confidence; never explain the puppet trick before it matters.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sand_siblings_operational_v26",
+      "references": [
+        "Gaara",
+        "Temari",
+        "Kankuro"
+      ],
+      "source_ids": [
+        "ep66",
+        "ep72",
+        "ep125"
+      ],
+      "locator": "Anime eps. 66, 72, 125",
+      "episode_ceiling": 125,
+      "phase": "classic_sibling_dynamic_reference",
+      "tags": [
+        "family",
+        "team",
+        "danger",
+        "mission"
+      ],
+      "observed_summary": "The three Sand siblings act as distinct specialists and make operational choices around Gaara while maintaining a real sibling relationship.",
+      "acting_inference": "For the Sabaku trio, sibling relation must alter cadence/filter. Sayo/Kuroto cannot treat Yoshiro as a neutral teammate, especially under Shukaku instability.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "creator_alive_character_method_v26",
+      "references": [
+        "creator_method"
+      ],
+      "source_ids": [
+        "kishimoto_alive",
+        "localization_world_fit"
+      ],
+      "locator": "Official Kishimoto/Ikemoto and Naruto localization interviews",
+      "episode_ceiling": 9999,
+      "phase": "meta_writing_reference",
+      "tags": [
+        "writing",
+        "voice",
+        "characterization"
+      ],
+      "observed_summary": "Official interviews stress getting inside the character's head, developing personality/how they think before surface choices, and keeping expressions congruent with the world.",
+      "acting_inference": "Every generated beat must be simulated from objective/relation/thought-pattern/body first, then voiced; factual correctness alone cannot pass the performance gate.",
+      "dialogue_evidence": "official_creator_editorial_interview",
       "br_dub_verified": false,
       "not_rp_event": true
     }
@@ -3783,21 +3980,24 @@
     "Yoshiro Sabaku": {
       "name": "Yoshiro Sabaku",
       "mapping_status": "documented",
-      "source_anchor": "presença silenciosa, ameaçadora e autocontida no eixo Gaara inicial; individualidade própria deve prevalecer. | Gaara inicial em função narrativa e presença, não cópia de trajetória.",
+      "source_anchor": "Gaara Part I / Exame Chūnin — presença, areia, silêncio e instabilidade.",
       "reference_characters": [
         "Gaara"
       ],
       "transfer_scope": "documented_axes_only",
-      "voice_rule": "Ficha própria e overlay vigente prevalecem; não completar parentesco, técnica ou biografia por analogia.",
-      "baseline": "presença silenciosa, ameaçadora e autocontida no eixo Gaara inicial; individualidade própria deve prevalecer.",
-      "relations": "Consultar character_get para o estado e conhecimento.",
-      "dossier_differences": "Não importar resultados da obra.",
+      "voice_rule": "Ficha própria + relação live prevalecem; usar Gaara apenas nos eixos documentados.",
+      "baseline": "Silencioso, autocontido, inquietante; fala pouco e observa muito.",
+      "relations": "Sayo é irmã mais velha; Kuroto irmão do meio; Amatsu recebeu atenção/fixação após a Floresta.",
+      "dossier_differences": "Jinchūriki de Shukaku e irmão de Sayo/Kuroto nesta continuidade; não importar biografia de Gaara.",
       "source_files": [
-        "Naruto_Reboot_MASTER_ABSOLUTO_DEFINITIVO_v3_FIDELIDADE_ANIME.md"
+        "SUNA_SIBLINGS_CANON_V26.md"
       ],
       "reference_source_ids": [
         "ep34",
-        "gaara"
+        "ep48",
+        "ep49",
+        "gaara",
+        "ep66"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
@@ -3884,6 +4084,57 @@
       "auto_import_techniques": false,
       "player_controlled": false,
       "entity_type": "group"
+    },
+    "Sayo Sabaku": {
+      "name": "Sayo Sabaku",
+      "mapping_status": "documented",
+      "source_anchor": "Temari Part I / Exame Chūnin — confiança, Fūton/tessen e leitura tática.",
+      "reference_characters": [
+        "Temari"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar Temari como mecânica de atuação, não copiar romance, trajetória ou fala.",
+      "baseline": "Confiante, direta, afiada e taticamente rápida; irmã mais velha sem maternalização.",
+      "relations": "Irmã mais velha de Kuroto e Yoshiro; cuidado com Yoshiro inclui cautela real diante de Shukaku.",
+      "dossier_differences": "Irmã mais velha do trio Sabaku; repertório fechado próprio.",
+      "source_files": [
+        "SUNA_SIBLINGS_CANON_V26.md"
+      ],
+      "reference_source_ids": [
+        "ep43",
+        "ep72",
+        "ep125"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
+    },
+    "Kuroto Sabaku": {
+      "name": "Kuroto Sabaku",
+      "mapping_status": "documented",
+      "source_anchor": "Kankurō Part I / Exame Chūnin — kugutsu, blefe e irritabilidade.",
+      "reference_characters": [
+        "Kankuro"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Usar Kankurō como mecânica de atuação; marionete, nome, veneno e fala são próprios.",
+      "baseline": "Reativo, irritável, sardônico e orgulhoso do kugutsu; fala mais quando nervoso.",
+      "relations": "Irmão do meio; bica com Sayo; cuidado e medo contido com Yoshiro.",
+      "dossier_differences": "Irmão do meio do trio Sabaku; usa Kurokumo, não Karasu.",
+      "source_files": [
+        "SUNA_SIBLINGS_CANON_V26.md"
+      ],
+      "reference_source_ids": [
+        "ep41",
+        "ep125"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual"
     }
   }
 }
