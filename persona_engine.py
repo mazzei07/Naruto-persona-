@@ -361,7 +361,7 @@ def _formality_profile_v23(
     if any(x in baseline_text for x in ["economico", "pouca fala", "silencio"]):
         cues.append("economical_voice_not_equivalent_to_informal")
 
-    if any(x in relation_text for x in ["mais formal", "mais polid", "mais correta", "mais organizado", "respeitoso", "o senhor", "a senhora"]):
+    if filter_level != "low" and any(x in relation_text for x in ["mais formal", "mais polid", "mais correta", "mais organizado", "respeitoso", "o senhor", "a senhora"]):
         score += 0.45; cues.append("directional_respect_shift")
     if any(x in relation_text for x in ["mais casual", "intimidade", "familiar", "proximidade", "reduz formalidade", "velho", "velhote"]):
         score -= 0.55; cues.append("directional_intimacy_shift")
@@ -789,7 +789,7 @@ def healthcheck() -> Dict[str, Any]:
         "external_research_policy": "only_when_reference_cache_is_insufficient_or_scene_is_exceptional",
         "universal_language_protocol": "v23",
         "formality_protocol": "v23",
-        "formality_calibration": "v23.2-rank-and-relation",
+        "formality_calibration": "v23.3-audit-and-low-filter",
     }
 
 
@@ -1064,11 +1064,11 @@ def persona_audit(
             warnings.append("Saya→Kazuma aggressive casual register requires a strong filter-breaking cause")
     formality_profile = packet.get("formality_profile_v23", {})
     formality_level = int(formality_profile.get("level", 2))
-    contractions = [" tá ", " tô ", " pra ", " cê ", " pro "]
+    contractions = [" ta ", " to ", " pra ", " ce ", " pro "]
     padded = f" {ntext} "
     if candidate_dialogue and formality_level >= 3 and any(x in padded for x in contractions) and packet.get("pressure") != "high":
         warnings.append("dialogue_may_be_too_contracted_for_resolved_formality")
-    if candidate_dialogue and formality_level <= 1 and any(x in padded for x in [" por gentileza ", " gostaria de ", " o senhor poderia "]):
+    if candidate_dialogue and formality_level <= 2 and any(x in padded for x in [" por gentileza ", " gostaria de ", " o senhor poderia ", " a senhora poderia "]):
         warnings.append("dialogue_may_be_too_formal_for_resolved_register")
     sayability = packet.get("sayability_gate_v22", {})
     if candidate_dialogue and sayability.get("verdict") in {"prefer_body_or_silence", "must_not_speak"}:
@@ -1079,7 +1079,10 @@ def persona_audit(
     if candidate_dialogue and packet.get("actor") == "Saya Haruno":
         target = packet.get("interlocutor")
         if target and any(x in _norm(target) for x in ["iruka", "kagetsu", "kakashi"]):
-            if "sensei" not in ntext and len(candidate_dialogue.split()) > 5:
+            target_first = _norm(_first_name(target))
+            if target_first in ntext and "sensei" not in ntext:
+                warnings.append("Saya_to_teacher_bare_name_is_unusual_without_contextual_reason")
+            elif "sensei" not in ntext and len(candidate_dialogue.split()) > 5:
                 warnings.append("Saya_to_teacher_may_need_title_or_more_respectful_register")
     return {
         "pass": not violations,
