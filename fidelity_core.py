@@ -59,6 +59,11 @@ TAG_WORDS={
  'disagreement':['discorda','discute','contesta'],
  'tracking':['faro','cheiro','rastreio'], 'observe':['observa','espreita'],
  'weapons':['arma','armas','kunai','shuriken'],
+ 'rivalry':['rivalidade','rival','provocacao','provoca','desafio','competitivo','competicao','discussao','briga'],
+ 'family':['familia','familiar','pai','mae','irmao','irma','filho','filha','daigo','seijuro','seijūrō'],
+ 'clan':['cla','uchiha','hyuga','hyūga','soke','sōke','bunke'],
+ 'public_pressure':['publico','publica','plateia','galeria','classificados','observadores','preliminares'],
+ 'public_loss':['perdeu','derrota','eliminado','eliminacao','vergonha','humilhacao','patetica','patetico'],
 }
 def classify(stimulus='',situation=''):
     text=context_text(f'{stimulus}. {situation}')
