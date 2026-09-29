@@ -30,15 +30,17 @@ from persona_api import (
     persona_acting_packet as _acting_packet,
     persona_dialogue_audit_v25 as _dialogue_audit_v25,
     persona_acting_health as _acting_health,
+    persona_voice_fingerprint_v42 as _voice_fingerprint_v42,
+    persona_voice_audit_v42 as _voice_audit_v42,
 )
 
 PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.8.0-v31",
+    version="0.9.2-v42",
     instructions=(
-        "Especialista read-only v25: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada e auditoria anti-genérica antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
+        "Especialista read-only v42: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada, impressão linguística por idade/fase e Epistemic Name Gate antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
         "vocativo, morfossintaxe, silêncio e reação. Aplica o contrato v25 antes das heurísticas de registro, formalidade e relação; não força microgestos nem bordões. Família de voz só vale para inspiração de personalidade documentada. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
@@ -52,7 +54,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.8.0-v31",
+            "version": "0.9.2-v42",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -330,6 +332,29 @@ def persona_generation_preflight(
 def persona_acting_health() -> dict[str, Any]:
     """Check v25 acting-bible coverage for the full cast."""
     return _acting_health()
+
+
+@mcp.tool()
+def persona_voice_fingerprint_v42(
+    name: str,
+    interlocutor: str = "",
+    pressure: str = "normal",
+    audience: str = "",
+) -> dict[str, Any]:
+    """Compile age/phase/register/orality/cadence/vocative/silence fingerprint before dialogue."""
+    return _voice_fingerprint_v42(name, interlocutor, pressure, audience)
+
+
+@mcp.tool()
+def persona_voice_audit_v42(
+    name: str,
+    candidate_dialogue: str,
+    interlocutor: str = "",
+    pressure: str = "normal",
+    audience: str = "",
+) -> dict[str, Any]:
+    """Audit a proposed line for dry/generic/modern surface risks under Voice Fidelity v42."""
+    return _voice_audit_v42(name, candidate_dialogue, interlocutor, pressure, audience)
 
 
 if __name__ == "__main__":
