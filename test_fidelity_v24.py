@@ -117,4 +117,34 @@ class FidelityTests(unittest.TestCase):
         self.assertEqual(acting['source_proximate_v41']['closest']['card_id'],p['closest']['card_id'])
         self.assertTrue(acting_health()['supports_source_proximate_dialogue_v41'])
 
+
+    def test_v41_external_excerpt_is_not_preverified(self):
+        from fidelity_core import source_proximate_match_v41
+        card={'id':'external:kaede','references':['Sasuke'],'episode_ceiling':37,
+              'tags':['danger','protect'],'locator':'capítulo 50',
+              'dialogue_evidence':'official_excerpt','source_url':'https://naruto-official.com/en/news/example',
+              'checked_at':'2026-09-29','provenance':'caller_supplied_research_requires_semantic_review'}
+        p=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','ataque e perigo','proteger companheiro',[card])
+        self.assertEqual(p['closest']['card_id'],'external:kaede')
+        self.assertEqual(p['closest']['source_url'],card['source_url'])
+        self.assertFalse(p['dialogue_mechanics_verified'])
+        weak=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','conversa sem assunto específico','',[card])
+        self.assertEqual(weak['match_quality'],'weak_phase_analogue')
+        self.assertEqual(weak['status'],'needs_evidence')
+
+
+    def test_v41_turn_validation_reads_external_card(self):
+        p=example()
+        p['external_reference_cards']=[{'id':'external:iruka-v41','references':['Iruka'],
+            'episode_ceiling':37,'source_url':'https://naruto-official.com/en/news/01_1788',
+            'locator':'capítulo 64','observed_summary':'Iruka orienta candidatos.',
+            'acting_inference':'Instrução funcional.','checked_at':'2026-09-29',
+            'dialogue_evidence':'official_excerpt','tags':['exam','tower','instruction']}]
+        p['actors'][0]['reference_card_ids']=['external:iruka-v41']
+        result=validate_turn_packet(p)
+        self.assertEqual(result['status'],'reviewable')
+        match=result['source_proximate_v41']['Iruka Umino']
+        self.assertEqual(match['closest']['card_id'],'external:iruka-v41')
+        self.assertFalse(match['dialogue_mechanics_verified'])
+
 if __name__=='__main__':unittest.main()

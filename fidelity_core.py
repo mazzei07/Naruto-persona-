@@ -82,7 +82,6 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
         if card.get('phase')=='later_reference_only' or card.get('episode_ceiling',10**9)>catalog()['contract']['reference_episode_ceiling']:continue
         if not set(mapping.get('reference_characters',[]))&set(card.get('references',[])):continue
         overlap=tags&set(card.get('tags',[]))
-        if not overlap:continue
         relation=card.get('interlocutor_relation')
         relation_match=bool(relation and interlocutor and context_text(interlocutor)==context_text(relation))
         score=10*len(overlap)+int(relation_match)*5
@@ -90,12 +89,13 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
     allowed.sort(key=lambda item:(-item[0],item[1]['id']))
     candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
                  'evidence_kind':c.get('dialogue_evidence','unknown'),'locator':c.get('locator',''),
-                 'source_ids':c.get('source_ids',[])} for score,c,rel in allowed[:3]]
+                 'source_ids':c.get('source_ids',[]),'source_url':c.get('source_url'),
+                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel in allowed[:3]]
     best=candidates[0] if candidates else None
-    verified=bool(best and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
-    return {'status':'reference_available' if best else 'needs_evidence','actor':actor,
+    verified=bool(best and best['provenance']=='catalogue' and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
+    return {'status':'reference_available' if best and best['score'] else 'needs_evidence','actor':actor,
             'interlocutor':interlocutor,'phase':'classic_through_forest',
-            'match_quality':'source_excerpt' if verified else ('phase_situation_synopsis' if best else 'none'),
+            'match_quality':'source_excerpt' if verified else ('phase_situation_synopsis' if best and best['score'] else 'weak_phase_analogue' if best else 'none'),
             'closest':best,'candidates':candidates,'dialogue_mechanics_verified':verified,
             'pragmatic_function':'requires_scene_review','turn_shape':'requires_scene_review',
             'rule':'Live state, own dossier and directional relationship outrank an analogue; synopsis does not prove wording, cadence or dub.'}
@@ -213,7 +213,7 @@ def validate_turn_packet(packet):
         name=resolve(a.get('name'));covered.add(name)
         if not name:issues.append('unknown_actor:'+str(a.get('name')));continue
         if name=='Amatsu Uchiha':continue
-        proximity_by_actor[name]=source_proximate_match_v41(name,a.get('interlocutor',''),str(scene.get('location',''))+' '+str(a.get('objective','')),str(packet.get('user_action','')))
+        proximity_by_actor[name]=source_proximate_match_v41(name,a.get('interlocutor',''),str(scene.get('location',''))+' '+str(a.get('objective','')),str(packet.get('user_action','')),cards.values())
         for key in ['interlocutor','objective','known_facts','reference_card_ids','dossier_source']:
             if key not in a:issues.append(name+':missing_'+key)
         for key in ['interlocutor','objective','dossier_source']:
