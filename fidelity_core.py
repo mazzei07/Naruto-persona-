@@ -207,11 +207,13 @@ def validate_turn_packet(packet):
     actor_cards=packet.get('actors',[])
     if not isinstance(actor_cards,list):actor_cards=[];issues.append('invalid_actors')
     covered=set()
+    proximity_by_actor={}
     for a in actor_cards:
         if not isinstance(a,dict):issues.append('invalid_actor');continue
         name=resolve(a.get('name'));covered.add(name)
         if not name:issues.append('unknown_actor:'+str(a.get('name')));continue
         if name=='Amatsu Uchiha':continue
+        proximity_by_actor[name]=source_proximate_match_v41(name,a.get('interlocutor',''),str(scene.get('location',''))+' '+str(a.get('objective','')),str(packet.get('user_action','')))
         for key in ['interlocutor','objective','known_facts','reference_card_ids','dossier_source']:
             if key not in a:issues.append(name+':missing_'+key)
         for key in ['interlocutor','objective','dossier_source']:
@@ -261,7 +263,7 @@ def validate_turn_packet(packet):
             kind=catalog()['characters'][resolved].get('entity_type','individual')
             if kind in ('group','unresolved_identity'):continue
             if resolved not in covered:issues.append('missing_actor_card:'+resolved)
-    return {'status':'needs_evidence' if issues else 'reviewable','issues':issues,'semantic_review_required':True,'active_actor_policy':'active_npcs' if active_supplied else 'legacy_all_present'}
+    return {'status':'needs_evidence' if issues else 'reviewable','issues':issues,'semantic_review_required':True,'active_actor_policy':'active_npcs' if active_supplied else 'legacy_all_present','source_proximate_v41':proximity_by_actor}
 
 def health():
     d=catalog();ids={c['id'] for c in d['scene_cards']}
