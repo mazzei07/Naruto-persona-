@@ -79,7 +79,7 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
     tags=set(classify(stimulus,situation))
     allowed=[]
     for card in (cards if cards is not None else catalog()['scene_cards']):
-        if card.get('episode_ceiling',10**9)>catalog()['contract']['reference_episode_ceiling']:continue
+        if card.get('phase')=='later_reference_only' or card.get('episode_ceiling',10**9)>catalog()['contract']['reference_episode_ceiling']:continue
         if not set(mapping.get('reference_characters',[]))&set(card.get('references',[])):continue
         overlap=tags&set(card.get('tags',[]))
         if not overlap:continue
@@ -108,7 +108,7 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     candidates=[];out_of_phase=[]
     for card in catalog()['scene_cards']:
         if not set(mapping['reference_characters'])&set(card['references']):continue
-        if card['episode_ceiling']>catalog()['contract']['reference_episode_ceiling']:
+        if card.get('phase')=='later_reference_only' or card['episode_ceiling']>catalog()['contract']['reference_episode_ceiling']:
             out_of_phase.append(card['id']);continue
         score=len(tags&set(card['tags']))
         if score:candidates.append((score,card))
@@ -226,7 +226,7 @@ def validate_turn_packet(packet):
         for cid in ids:
             card=cards.get(cid) if isinstance(cid,str) else None
             if not card:issues.append(name+':unknown_reference:'+str(cid));continue
-            if card['episode_ceiling']>catalog()['contract']['reference_episode_ceiling']:issues.append(name+':future_reference:'+cid)
+            if card.get('phase')=='later_reference_only' or card['episode_ceiling']>catalog()['contract']['reference_episode_ceiling']:issues.append(name+':future_reference:'+cid)
             if not set(card['references'])&set(m['reference_characters']):issues.append(name+':reference_actor_mismatch:'+cid)
         declared=scene.get('knowledge',{}).get(name,[]) if isinstance(scene.get('knowledge'),dict) else []
         if not isinstance(declared,list):issues.append(name+':invalid_scene_knowledge')
