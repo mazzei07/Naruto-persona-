@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any, Dict, List
+from voice_fidelity_v42 import VERSION as VOICE_V42_VERSION, compile_voice_fingerprint
 
 
 VERSION = "v29.0-relational-actor-compiler"
@@ -169,6 +170,7 @@ def compile_actor_state(
         "dialogue_flow": acting.get("dialogue_flow_v27", {}),
         "classic_voice_fidelity_v39": (acting_packet or {}).get("classic_voice_fidelity_v39", {}),
         "source_proximate_v41": (acting_packet or {}).get("source_proximate_v41", {}),
+        "voice_fidelity_v42": compile_voice_fingerprint(actor, bible, interlocutor, pressure, audience),
     }
 
     verifier = {
@@ -182,6 +184,8 @@ def compile_actor_state(
         "oral_fingerprint_v39": "Read aloud in PT-BR. If syntax feels translated, over-complete, too polished, symmetrical, or narrator-like, bend or cut it before output.",
         "source_mechanics_v39": "Check whether the exact-phase reference would speak this much, this neatly, and this explicitly. If not, reduce, interrupt, redirect, or move meaning into body/silence.",
         "source_proximity_v41": "Check the selected card, provenance, phase and relation. Never call a synopsis a verified transcript; request evidence for unsupported cadence or turn shape.",
+        "voice_surface_v42": "Resolve age/phase, grammar, formality, orality, sentence completeness, lexical age, vocative, latency and silence independently; reserved is not robotic.",
+        "epistemic_name_gate_v42": "No NPC may use an unlearned proper name, technique label, organization, diagnosis or secret. Rephrase perceptually or block.",
     }
 
     return {
@@ -210,5 +214,7 @@ def compile_actor_state(
             "APPLY classic_voice_fidelity_v39 before sentence-completeness/formality smoothing",
             "VERIFY oral PT-BR cadence, asymmetry, source mechanics, interlocutor-swap, threshold, silence, memory, and camera tests",
             "VERIFY source_proximate_v41 card and evidence quality; request source review when mechanics are unverified",
+            "APPLY VOICE FIDELITY v42: age/register/orality/completeness/vocative/latency/silence as independent gates",
+            "APPLY EPISTEMIC NAME GATE v42 before every proper-name or technical-label use",
         ],
     }
