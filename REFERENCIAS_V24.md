@@ -176,4 +176,4 @@ RoleLLM, InCharacter e PingPong orientam a estrutura de recuperação e avaliaç
 
 ## Sincronização v24.1
 
-O catálogo compartilhado possui 97 entidades mapeadas e é byte a byte sincronizado entre Canoney, Persona e Gemini. Perfis atuáveis são separados de agregados de equipe/identidades pendentes; agregados continuam disponíveis para validação de estado, mas não viram uma única voz.
+O catálogo compartilhado é sincronizado entre Canoney, Persona e Gemini. Perfis atuáveis são separados de agregados de equipe/identidades pendentes; agregados continuam disponíveis para validação de estado, mas não viram uma única voz. A v38 adiciona Akane Uchiha e Ritsu Uchiha como perfis atuáveis completos, com hierarquia ocular própria (Akane 2T; Ritsu 1T).
