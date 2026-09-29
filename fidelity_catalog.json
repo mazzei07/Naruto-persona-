@@ -6215,12 +6215,131 @@
         "secondary_packets": {},
         "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
       }
+    },
+    "Akane Uchiha": {
+      "name": "Akane Uchiha",
+      "mapping_status": "documented_live_v38",
+      "source_anchor": "Tenten do Naruto Clássico + Temari do Exame Chūnin apenas nos eixos mapeados.",
+      "reference_characters": [
+        "Tenten",
+        "Temari"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Tenten fornece pragmatismo técnico; Temari fornece assertividade social/autoridade de irmã mais velha. Não importar biografia, poderes ou crueldade como padrão.",
+      "baseline": "Composta, assertiva, observadora e exigente; autoridade de irmã mais velha sem maternalização.",
+      "relations": "Filha mais velha de Seijūrō; irmã de Ritsu e Kaede; com Amatsu parte de reserva familiar/clânica e recalibra somente por evidência observada.",
+      "dossier_differences": "Sharingan 2T próprio da ficha; não importar dōjutsu de referências.",
+      "source_files": [
+        "character_profiles.json v38",
+        "character_acting_bibles.json v38"
+      ],
+      "reference_source_ids": [
+        "ep43"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Tenten do Naruto Clássico + assertividade Temari do Exame Chūnin.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      },
+      "compiled_reference_essence_v34": {
+        "primary_reference": "Tenten",
+        "phase_anchor": "Tenten do Naruto Clássico + assertividade Temari do Exame Chūnin.",
+        "transfer_scope": "documented_axes_only",
+        "personality_transfer_allowed": true,
+        "primary_packet": {
+          "dominant_core": "pragmatic, competent, competitive, proud of technical skill",
+          "social_surface": "straightforward, less melodramatic, can tease teammates and react sharply to foolishness",
+          "combat_pressure": "tries to solve range/weapon problems practically and keeps composure until her specialty is invalidated",
+          "break_trigger": "dismissal of her competence, teammate recklessness, humiliating technical mismatch",
+          "body_voice": "ready stance, quick tool handling, exasperated looks more than speeches",
+          "must_not": "do not turn into generic calm weapons analyst"
+        },
+        "technical_reference_packet": null,
+        "secondary_packets": {
+          "Temari": {
+            "dominant_core": "blunt, self-assured, tactically sharp, sardonic and willing to be cruel in Part I",
+            "social_surface": "speaks her mind, can be dismissive/debochada, rarely softens for strangers; older-sibling authority comes naturally",
+            "combat_pressure": "reads distance and opponent habits quickly; confidence becomes cutting when she controls the field",
+            "break_trigger": "loss of tactical control, obvious foolishness, danger/instability from Gaara-like sibling",
+            "body_voice": "smirk, fan-on-shoulder confidence, irritated snap, watchful glance toward dangerous sibling",
+            "must_not": "do not reduce to constant sarcasm or adult diplomat; Chunin Temari has a crueler edge"
+          }
+        },
+        "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      }
+    },
+    "Ritsu Uchiha": {
+      "name": "Ritsu Uchiha",
+      "mapping_status": "documented_live_v38",
+      "source_anchor": "Kiba do Naruto Clássico + Shikamaru apenas em decisão de campo.",
+      "reference_characters": [
+        "Kiba",
+        "Shikamaru"
+      ],
+      "transfer_scope": "documented_axes_only",
+      "voice_rule": "Kiba fornece energia competitiva/fisicalidade; Shikamaru apenas decisão de campo sob pressão. Não importar ninken, preguiça, biografia ou técnicas.",
+      "baseline": "Sociável, competitivo, provocador e fisicamente expressivo; sério quando risco real sobe.",
+      "relations": "Filho do meio de Seijūrō; irmão de Akane e Kaede; com Amatsu tende a observar/testar antes de fechar julgamento.",
+      "dossier_differences": "Sharingan 1T funcional/imaturo é da ficha; não importar poderes das referências.",
+      "source_files": [
+        "character_profiles.json v38",
+        "character_acting_bibles.json v38"
+      ],
+      "reference_source_ids": [
+        "ep34",
+        "ep44",
+        "shikamaru"
+      ],
+      "later_reference_characters": [],
+      "auto_import_biography": false,
+      "auto_import_techniques": false,
+      "player_controlled": false,
+      "entity_type": "individual",
+      "reference_essence_v34": {
+        "source": "REFERENCE_ESSENCE_V34.json",
+        "phase_anchor": "Kiba do Naruto Clássico + decisão de campo Shikamaru, somente nos eixos mapeados.",
+        "transfer_scope": "documented_axes_only",
+        "rule": "Use exact reference phase and only mapped axes; reboot dossier/relation/live state outrank generic reference."
+      },
+      "compiled_reference_essence_v34": {
+        "primary_reference": "Kiba",
+        "phase_anchor": "Kiba do Naruto Clássico + decisão de campo Shikamaru, somente nos eixos mapeados.",
+        "transfer_scope": "documented_axes_only",
+        "personality_transfer_allowed": true,
+        "primary_packet": {
+          "dominant_core": "brash, competitive, short-tempered, instinctive, clan-proud",
+          "social_surface": "loud confidence, teasing, challenges leadership; rough affection with trusted people",
+          "combat_pressure": "likes to fight and can overcommit when agitated; becomes fiercely protective of ninken",
+          "break_trigger": "insult to pride/clan, harm to partner, challenge to leadership",
+          "body_voice": "leans in, bares teeth, points, raises voice; physical proximity escalates",
+          "must_not": "do not make him measured after personal provocation"
+        },
+        "technical_reference_packet": null,
+        "secondary_packets": {
+          "Shikamaru": {
+            "dominant_core": "extremely lazy exterior masking fast strategic intelligence and calm decisiveness",
+            "social_surface": "complains, sighs, avoids effort; dry and understated, not theatrical",
+            "combat_pressure": "maps conditions several steps ahead, uses environment/time, will surrender rationally when resources fail",
+            "break_trigger": "forced responsibility, comrades in danger, impossible workload",
+            "body_voice": "slouch, hands in pockets/head, bored face until eyes sharpen",
+            "must_not": "do not make every line a genius diagnosis"
+          }
+        },
+        "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      }
     }
   },
   "meta": {
     "reference_essence_protocol": "v34.0-reference-essence",
     "reference_essence_source": "REFERENCE_ESSENCE_V34.json",
     "reference_rule": "Exact phase + documented transfer axes; dominant core and break triggers are acting mechanics, not biography/power imports.",
-    "compiled_reference_essence": "v34.2-character-specific-scoped"
+    "compiled_reference_essence": "v34.2-character-specific-scoped",
+    "family_dojutsu_v38": "Seijūrō 3T; Akane 2T; Ritsu 1T; Kaede não despertado. Dōjutsu nunca importa de personagens de referência."
   }
 }
