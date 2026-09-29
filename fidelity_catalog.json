@@ -109,7 +109,10 @@
         "Uma fala pode começar no corpo e terminar na palavra; narração e fala pertencem ao mesmo impulso.",
         "Se o personagem-base tende ao silêncio, preferir silêncio com comportamento significativo a uma frase seca apenas para marcar presença.",
         "Se a relação é íntima/conflitiva, a fala deve lembrar a troca anterior; não reiniciar neutralidade.",
-        "A resposta deve soar pronunciável em cena, não como legenda de estado mental."
+        "A resposta deve soar pronunciável em cena, não como legenda de estado mental.",
+        "Frase curta != frase mutilada: não remover artigo, sujeito ou conectivo apenas para parecer sério/frio; preservar fala completa quando o personagem de referência articula.",
+        "Estruturas telegráficas como 'Técnica suficiente. Liderança, não.' não são padrão de adulto institucional; usar oração natural salvo compressão dramática comprovada.",
+        "Em Hiruzen-like institucional, permitir encadeamento de raciocínio e ressalvas; autoridade não exige secura."
       ],
       "family_overrides": {
         "sasuke_like": "Não reduzir a monossílabo/diagnóstico frio. Sasuke jovem alterna silêncio, explosão pontual, orgulho, recusa, ordem curta e ação. Se fala, geralmente há alvo e tensão concretos.",
@@ -175,6 +178,22 @@
       "character_carryover": "entity existence only when revalidated; every biography/status/relation/power/knowledge field must come from Classic sources",
       "amatsu_family": "parents dead; Takeru Uchiha is the only living direct relative and is nukenin/Tenkai",
       "narration": "do not exposit established absences unless materially relevant"
+    },
+    "conversation_fidelity_patch_v39": {
+      "mandatory": true,
+      "short_sentence_rule": "Frase curta não é frase mutilada. Economia preserva sujeito, artigos, conectivos e oração completa quando a oralidade da referência os exige; fragmento nominal só quando houver função dramática específica.",
+      "institutional_hiruzen_rule": "Em deliberação institucional sem urgência, Hiruzen-like tende a encadear condição, ponderação, ressalva e conclusão; não transformar autoridade em telegrama de NPC.",
+      "relation_rule": "Relação direcional + fase exata + troca anterior precedem personalidade genérica da referência.",
+      "technical_only_rule": "technical_or_function_only nunca autoriza transferência de personalidade/voz.",
+      "evidence_rule": "Catálogo é evidência selecionada; quando faltar cena materialmente equivalente, exigir pesquisa externa em fonte primária/licenciada antes de fechar a atuação.",
+      "final_tests": [
+        "read_aloud",
+        "continuity",
+        "swap",
+        "camera",
+        "anti_report_dialogue",
+        "complete_sentence_when_reference_requires"
+      ]
     }
   },
   "sources": {
@@ -1737,6 +1756,35 @@
       "dialogue_evidence": "official_creator_editorial_interview",
       "br_dub_verified": false,
       "not_rp_event": true
+    },
+    {
+      "id": "chunin_recommendation_room_v39",
+      "references": [
+        "Hiruzen",
+        "Kakashi",
+        "Kurenai",
+        "Asuma",
+        "Iruka"
+      ],
+      "source_ids": [
+        "ep21"
+      ],
+      "locator": "Mangá cap. 35; anime ep. 21",
+      "episode_ceiling": 21,
+      "phase": "classic_chunin_recommendations",
+      "tags": [
+        "authority",
+        "recommendation",
+        "institutional",
+        "disagreement",
+        "sensei",
+        "hokage"
+      ],
+      "observed_summary": "A recomendação dos novatos para o Exame Chūnin coloca jōnin responsáveis e Iruka em uma discussão institucional sob o Hokage. Iruka contesta prontidão/experiência; Kakashi sustenta a indicação. O beat é deliberativo, não urgente.",
+      "acting_inference": "Para reuniões de promoção/avaliação, separar vozes por função e relação: Hiruzen-like modera e encadeia a ideia; Kakashi-like pode ser econômico sem virar frase mutilada; Asuma/Kurenai mantêm registro adulto próprio; Iruka pode objetar com cuidado concreto. Não reduzir todos a 'NPC sério'.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
     }
   ],
   "characters": {
@@ -3183,7 +3231,8 @@
       "reference_source_ids": [
         "classic_later",
         "ep34",
-        "ep40"
+        "ep40",
+        "ep21"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
@@ -3291,7 +3340,8 @@
       ],
       "reference_source_ids": [
         "classic_later",
-        "shikamaru"
+        "shikamaru",
+        "ep21"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
@@ -3450,7 +3500,8 @@
       ],
       "reference_source_ids": [
         "ep37",
-        "iruka"
+        "iruka",
+        "ep21"
       ],
       "later_reference_characters": [],
       "auto_import_biography": false,
@@ -6340,6 +6391,7 @@
     "reference_essence_source": "REFERENCE_ESSENCE_V34.json",
     "reference_rule": "Exact phase + documented transfer axes; dominant core and break triggers are acting mechanics, not biography/power imports.",
     "compiled_reference_essence": "v34.2-character-specific-scoped",
-    "family_dojutsu_v38": "Seijūrō 3T; Akane 2T; Ritsu 1T; Kaede não despertado. Dōjutsu nunca importa de personagens de referência."
+    "family_dojutsu_v38": "Seijūrō 3T; Akane 2T; Ritsu 1T; Kaede não despertado. Dōjutsu nunca importa de personagens de referência.",
+    "dialogue_fidelity_patch": "v39-institutional-evidence"
   }
 }
