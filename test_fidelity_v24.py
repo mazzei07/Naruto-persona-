@@ -132,4 +132,19 @@ class FidelityTests(unittest.TestCase):
         self.assertEqual(weak['match_quality'],'weak_phase_analogue')
         self.assertEqual(weak['status'],'needs_evidence')
 
+
+    def test_v41_turn_validation_reads_external_card(self):
+        p=example()
+        p['external_reference_cards']=[{'id':'external:iruka-v41','references':['Iruka'],
+            'episode_ceiling':37,'source_url':'https://naruto-official.com/en/news/01_1788',
+            'locator':'capítulo 64','observed_summary':'Iruka orienta candidatos.',
+            'acting_inference':'Instrução funcional.','checked_at':'2026-09-29',
+            'dialogue_evidence':'official_excerpt','tags':['exam','tower','instruction']}]
+        p['actors'][0]['reference_card_ids']=['external:iruka-v41']
+        result=validate_turn_packet(p)
+        self.assertEqual(result['status'],'reviewable')
+        match=result['source_proximate_v41']['Iruka Umino']
+        self.assertEqual(match['closest']['card_id'],'external:iruka-v41')
+        self.assertFalse(match['dialogue_mechanics_verified'])
+
 if __name__=='__main__':unittest.main()
