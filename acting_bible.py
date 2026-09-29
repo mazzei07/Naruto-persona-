@@ -277,3 +277,25 @@ def health()->dict[str,Any]:
         "missing":missing,"supports_relationship_graph":True,
         "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True,"supports_classic_voice_fidelity_v39":True
     }
+
+
+# v41 — Source-proximate dialogue fidelity
+SOURCE_PROXIMATE_DIALOGUE_V41 = {
+  "rule": "For every material NPC turn, retrieve the closest manga/anime reference by exact character, phase, interlocutor relation and situation. Transfer pragmatic function, cadence, interruption, latency, body timing and social pressure; never copy copyrighted dialogue verbatim beyond a very short fragment.",
+  "pipeline": [
+    "find_exact_or_nearest_reference_scene",
+    "extract_pragmatic_function_and_turn_shape",
+    "map_directional_relation_and_live_knowledge",
+    "rewrite_into_reboot_character_and_PTBR_orality",
+    "compare_read_aloud_against_source_mechanics",
+    "reject_if_generic_or_over-explained"
+  ],
+  "priority": "exact source scene > same-phase same-relation analogue > same-phase behavioral essence > own dossier",
+  "anti_patterns": [
+    "generic anime comeback",
+    "invented modern phrasing",
+    "long explanatory speech where source used action/silence",
+    "symmetrical banter not present in source mechanics",
+    "verbatim reproduction of copyrighted dialogue"
+  ]
+}
