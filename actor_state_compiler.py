@@ -134,7 +134,7 @@ def compile_actor_state(
         },
         {
             "mode": "fuller_relational_speech",
-            "when": "relationship stakes or emotion justify more than a clipped line without violating age/pressure",
+            "when": "relationship stakes or emotion genuinely require it; do not choose this merely because complete prose sounds polished",
         },
     ]
 
@@ -167,6 +167,7 @@ def compile_actor_state(
         "formality": formality,
         "body_voice_rule": acting.get("body_voice_link", "body and voice must share one impulse"),
         "dialogue_flow": acting.get("dialogue_flow_v27", {}),
+        "classic_voice_fidelity_v39": (acting_packet or {}).get("classic_voice_fidelity_v39", {}),
     }
 
     verifier = {
@@ -177,6 +178,8 @@ def compile_actor_state(
         "memory_check": "Did retrieved history change behavior rather than become exposition?",
         "camera_check": "Can body/action demonstrate the point more faithfully than narrator explanation?",
         "anti_caricature": "Reference character is a decision model, not a bag of catchphrases.",
+        "oral_fingerprint_v39": "Read aloud in PT-BR. If syntax feels translated, over-complete, too polished, symmetrical, or narrator-like, bend or cut it before output.",
+        "source_mechanics_v39": "Check whether the exact-phase reference would speak this much, this neatly, and this explicitly. If not, reduce, interrupt, redirect, or move meaning into body/silence.",
     }
 
     return {
@@ -202,6 +205,7 @@ def compile_actor_state(
             "COMPILE directional relation and threshold",
             "CHOOSE decision/body/silence before words",
             "REALIZE language/body in exact-phase reference fingerprint",
-            "VERIFY with interlocutor-swap, speaker-transplant, threshold, silence, memory, and camera tests",
+            "APPLY classic_voice_fidelity_v39 before sentence-completeness/formality smoothing",
+            "VERIFY oral PT-BR cadence, asymmetry, source mechanics, interlocutor-swap, threshold, silence, memory, and camera tests",
         ],
     }
