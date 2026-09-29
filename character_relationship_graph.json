@@ -1,15 +1,16 @@
 {
   "meta": {
-    "version": "v36-classic-continuity-firewall",
+    "version": "v38-kaede-family-relations",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
-    "directional_edges": 363,
-    "characters": 99,
+    "directional_edges": 378,
+    "characters": 101,
     "continuity_firewall_v36": {
       "active_continuity_id": "classico_floresta_da_morte",
       "rule": "Relations are Classic-only. Shared identity across continuities never transfers old relationship history."
-    }
+    },
+    "family_dojutsu_v38": "Family relation graph now includes Akane/Ritsu and the current ocular hierarchy."
   },
   "edges": {
     "Amatsu Uchiha": {
@@ -493,6 +494,40 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+      },
+      "Akane Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Akane is Kaede's older sister."
+        ],
+        "roles": [
+          "younger_sister_to_older_sister"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "younger_sibling",
+        "default_filter": "relationship_specific",
+        "rule": "Respect exists even when Kaede resists correction; no generic idolization."
+      },
+      "Ritsu Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Ritsu is Kaede's older brother."
+        ],
+        "roles": [
+          "younger_sister_to_older_brother"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "younger_sibling",
+        "default_filter": "relationship_specific",
+        "rule": "Familiar sibling closeness permits irritation/teasing; no sudden exposition of family affection."
       }
     },
     "Kaito Shimura": {
@@ -3403,18 +3438,21 @@
       },
       "Kaede Uchiha": {
         "sources": [
-          "shared_clan_context"
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha."
+          "Kaede is Seijūrō's youngest child."
         ],
         "roles": [
-          "same_clan_context"
+          "father_to_daughter",
+          "parent_to_youngest"
         ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "parent",
+        "default_filter": "relationship_specific",
+        "rule": "Traditional and demanding; family guidance against Amatsu remains established."
       },
       "Shin Uchiha": {
         "sources": [
@@ -3505,6 +3543,42 @@
         "hierarchy": "depends_on_family_structure",
         "default_filter": "derive_from_explicit_relation",
         "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+      },
+      "Akane Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Akane is Seijūrō's eldest child."
+        ],
+        "roles": [
+          "father_to_daughter",
+          "parent_to_eldest"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "parent",
+        "default_filter": "relationship_specific",
+        "rule": "Highest baseline trust for responsibility; expectations remain demanding."
+      },
+      "Ritsu Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Ritsu is Seijūrō's middle child."
+        ],
+        "roles": [
+          "father_to_son",
+          "parent_to_middle_child"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "parent",
+        "default_filter": "relationship_specific",
+        "rule": "Sees solid ability but more informality/less orthodoxy than Akane; do not flatten into disapproval only."
       }
     },
     "Daigo Uchiha": {
@@ -5848,6 +5922,156 @@
         "reference_relation_axis_v28": "Kankurō → Temari",
         "reference_relation_transfer_v28": "rebate e reclama; coordena quando a situação aperta",
         "reference_relation_must_not_v28": "não virar subordinado"
+      }
+    },
+    "Akane Uchiha": {
+      "Seijūrō Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Seijūrō is Akane's father.",
+          "Akane is the eldest of his three children."
+        ],
+        "roles": [
+          "daughter_to_father",
+          "eldest_child"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "child_to_parent",
+        "default_filter": "relationship_specific",
+        "rule": "Respectful/composed; do not make her blindly repeat his judgments."
+      },
+      "Ritsu Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Ritsu is Akane's younger brother.",
+          "They trained together in Time 3."
+        ],
+        "roles": [
+          "older_sister_to_younger_brother",
+          "former_teammates"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "older_sibling_peer_ninja",
+        "default_filter": "relationship_specific",
+        "rule": "High trust; she often acts as tactical brake without maternalizing him."
+      },
+      "Kaede Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Kaede is Akane's youngest sister."
+        ],
+        "roles": [
+          "older_sister_to_younger_sister"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "older_sibling",
+        "default_filter": "relationship_specific",
+        "rule": "Protect through correction/presence; do not infantilize or humiliate Kaede."
+      },
+      "Amatsu Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Akane remembers Amatsu as Kaede's former inseparable childhood friend.",
+          "Family/clan judgment initially made her reserved toward him."
+        ],
+        "roles": [
+          "childhood_acquaintance_through_sibling",
+          "same_clan_context"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "older_peer",
+        "default_filter": "relationship_specific",
+        "rule": "Cool and observant; can recalibrate competence from evidence without instant warmth."
+      }
+    },
+    "Ritsu Uchiha": {
+      "Seijūrō Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Seijūrō is Ritsu's father."
+        ],
+        "roles": [
+          "son_to_father"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "child_to_parent",
+        "default_filter": "relationship_specific",
+        "rule": "Respectful with more friction over rigidity than Akane; do not invent rebellion."
+      },
+      "Akane Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Akane is Ritsu's older sister.",
+          "They trained together in Time 3."
+        ],
+        "roles": [
+          "younger_brother_to_older_sister",
+          "former_teammates"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "younger_sibling_peer_ninja",
+        "default_filter": "relationship_specific",
+        "rule": "High trust; irritation can appear when she over-controls, but not constant bickering."
+      },
+      "Kaede Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Kaede is Ritsu's younger sister."
+        ],
+        "roles": [
+          "older_brother_to_younger_sister"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "older_sibling",
+        "default_filter": "relationship_specific",
+        "rule": "Most openly close sibling relation: teasing + protection without infantilization."
+      },
+      "Amatsu Uchiha": {
+        "sources": [
+          "live_family_v37",
+          "live_dojutsu_v38",
+          "character_acting_bibles.v38"
+        ],
+        "facts": [
+          "Ritsu remembers Amatsu from childhood around Kaede.",
+          "He was less hostile toward Amatsu than Seijūrō."
+        ],
+        "roles": [
+          "childhood_acquaintance_through_sibling",
+          "same_clan_context"
+        ],
+        "familiarity": "explicit_family_or_history",
+        "hierarchy": "older_peer",
+        "default_filter": "relationship_specific",
+        "rule": "Observe/test before fixed judgment; may recalibrate through light provocation, never assume friendship or secret knowledge."
       }
     }
   }
