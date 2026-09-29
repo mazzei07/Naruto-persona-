@@ -48,6 +48,51 @@ def _norm(value:str)->str:
     s=unicodedata.normalize("NFKD",str(value or "").casefold())
     return "".join(c for c in s if not unicodedata.combining(c))
 
+def _classic_voice_fidelity_v39(actor:str,bible:dict[str,Any])->dict[str,Any]:
+    voice=(bible or {}).get("voice",{}) or {}
+    acting=(bible or {}).get("acting",{}) or {}
+    refs=[str(x) for x in (voice.get("reference_characters") or [])]
+    anchor=str(voice.get("reference_anchor") or "")
+    ref_text=_norm(" ".join([anchor,*refs]))
+    shared=[
+        "Write the semantic intent plainly first; then bend syntax, rhythm, interruption, omission and address into the exact reference-phase fingerprint.",
+        "Do not maximize sentence completeness. A performable fragment, grunt, interruption, self-correction, abrupt topic shift or unfinished thought is preferable when the reference behaves that way.",
+        "Do not manufacture symmetrical banter, setup/punchline pairs, polished aphorisms, trailer threats or tidy three-beat exchanges.",
+        "Dialogue must answer the immediately previous beat, not summarize the scene, explain the character, or verbalize the narrator's analysis.",
+        "Use body, timing and silence to carry information that the character would not naturally say aloud.",
+        "Final prose/dialogue surface is Brazilian Portuguese only; internal English labels or evidence language must never leak into RP output.",
+        "When source evidence is missing, keep the own-dossier voice and request research rather than filling the gap with generic anime dialogue."
+    ]
+    profile={"reference_anchor":anchor,"shared_rules":shared,"source_mechanics":[],"anti_patterns":[]}
+    if "jiraiya" in ref_text:
+        profile["source_mechanics"]=[
+            "Jiraiya alternates boisterous/energetic bursts with lazy grunts, brush-offs, complaints, teasing and sudden competence; do not make every line witty or wise.",
+            "With a student, he often gives the minimum useful instruction, lets the student struggle, notices results, and only then comments; he does not narrate every technical inference.",
+            "His humor can be vulgar or shameless, but the joke may simply land and end; avoid neat callback chains and modern stand-up timing.",
+            "When serious, the shift should be sharp and functional rather than solemnly eloquent."
+        ]
+        profile["anti_patterns"]=[
+            "over-complete teacher speech",
+            "constant mentor wisdom",
+            "every reply as punchline",
+            "explaining obvious observations to the student",
+            "polished symmetrical banter"
+        ]
+    if "tsunade" in ref_text:
+        profile["source_mechanics"]=[
+            "Tsunade is blunt, impatient and technically authoritative; she can inspect with silence, a short correction, a challenge or a contemptuous remark instead of a lecture.",
+            "Respect is earned reluctantly. Strong performance may interrupt her mockery, but does not instantly make her warm or complimentary.",
+            "Her temper changes body and timing first; anger compresses language instead of producing long moral speeches."
+        ]
+        profile["anti_patterns"]=[
+            "maternal reassurance by default",
+            "clinical lecture after every observation",
+            "generic calm authority",
+            "instant praise for talent"
+        ]
+    profile["dialogue_flow"]=acting.get("dialogue_flow_v27",{})
+    return profile
+
 def resolve_name(name:str)->str|None:
     q=_norm(name)
     if not q:return None
@@ -166,6 +211,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
         "reference_relationship_matrix":b.get("reference_relationship_matrix",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
         "escalation":esc,"stimulus":stimulus,"situation":situation,"prior_exchange":prior_exchange,
         "pressure":pressure,"audience":audience,"body_state":body_state,
+        "classic_voice_fidelity_v39":_classic_voice_fidelity_v39(base["name"],b),
         "generation_directive":[
             "Carry prior exchange forward; do not reset emotional temperature.",
             "Resolve relation history before generic reference-character behavior.",
@@ -173,6 +219,8 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
             "For mixed references, use the source anchor/explicit transfer axes; never average every reference trait.",
             "Apply trigger escalation before wording; canonical break behavior outranks artificial calm when the trigger is actually present.",
             "Choose speak/body/silence from objective + body + audience, then bend the line into actor rhythm.",
+            "Apply classic_voice_fidelity_v39: exact-phase oral rhythm outranks polished sentence completeness.",
+            "Reject symmetrical banter, narrator-like technical explanation, and tidy setup/punchline exchanges unless source evidence supports them.",
             "Reject a line that could be swapped unchanged onto multiple cast members."
         ]
     }
@@ -209,5 +257,5 @@ def health()->dict[str,Any]:
         "ok":not missing,"version":d.get("meta",{}).get("version"),"reference_essence_protocol":"v34","characters":len(chars),
         "relation_overrides":relation_overrides,"directional_relation_edges":directional_edges,
         "missing":missing,"supports_relationship_graph":True,
-        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True
+        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True,"supports_classic_voice_fidelity_v39":True
     }
