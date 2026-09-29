@@ -111,6 +111,17 @@
       ]
     },
     {
+      "id": "S4E",
+      "name": "Source-Proximate Evidence Gate v41",
+      "does": [
+        "rank phase-safe source cards per material NPC against actor, directional interlocutor relation and situation",
+        "record closest card, score, provenance and evidence quality in acting/evidence packet",
+        "treat synopsis as behavioral analogue, never as proof of exact oral cadence or dialogue shape",
+        "preserve live continuity, reboot dossier and directional relation before documented source mechanics",
+        "request evidence if the draft depends on unverified scene mechanics; reject generic or over-explained lines"
+      ]
+    },
+    {
       "id": "S5",
       "name": "Contrastive Decision Set",
       "does": [
@@ -299,6 +310,14 @@
     "Would this exact-phase reference speak this much, this neatly and this explicitly?",
     "No internal English prompt/evidence wording leaks into final PT-BR.",
     "Technical observation is not automatically verbalized; body/silence/narration may carry it.",
-    "Banter may end asymmetrically; do not manufacture balanced callbacks."
-  ]
+    "Banter may end asymmetrically; do not manufacture balanced callbacks.",
+    "S4E: source_proximate_v41 evidence quality and actor/relation/phase match checked without invented source mechanics"
+  ],
+  "source_proximate_gate_v41": {
+    "enabled": true,
+    "required_field": "source_proximate_v41",
+    "source_quality_rule": "No transcript or prosody claim from editorial synopsis.",
+    "priority": "live state and own dossier/relation > documented source mechanics > phase analogue",
+    "max_additional_model_calls": 0
+  }
 }
