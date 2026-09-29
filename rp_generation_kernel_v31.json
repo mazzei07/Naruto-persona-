@@ -1,5 +1,5 @@
 {
-  "version": "v31.3-technique-impression-v35",
+  "version": "v39.0-classic-oral-fidelity",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -95,6 +95,19 @@
         "resolve recognition per observer knowledge channel; a novice may be stunned by scale without knowing the name, while an expert may identify difficulty with little outward reaction",
         "apply experience/composure mainly to outward reaction, not to objective recognition of an extraordinary feat",
         "select only materially relevant spectator reactions; never create a reaction queue"
+      ]
+    },
+    {
+      "id": "S4D",
+      "name": "Exact-Phase Oral Fingerprint Gate v39",
+      "does": [
+        "load classic_voice_fidelity_v39 before final wording",
+        "prefer exact-phase source rhythm over polished sentence completeness",
+        "allow fragments, grunts, interruptions, omissions, abrupt topic shifts and silence when supported",
+        "reject symmetrical banter, tidy punchline chains, narrator analysis in dialogue and trailer aphorisms",
+        "Jiraiya-like: alternate loud/energetic surface with lazy brush-offs, teasing, complaints, silence and sudden competence",
+        "Tsunade-like: blunt technical authority, reluctant respect, compressed anger; no lecture by default",
+        "mental read-aloud in PT-BR; reject translated-English syntax and English leakage"
       ]
     },
     {
@@ -281,5 +294,11 @@
       "an unknown technique can still produce high visual astonishment from scale; exact identification remains blocked",
       "do not force all spectators to speak"
     ]
-  }
+  },
+  "final_checks": [
+    "Would this exact-phase reference speak this much, this neatly and this explicitly?",
+    "No internal English prompt/evidence wording leaks into final PT-BR.",
+    "Technical observation is not automatically verbalized; body/silence/narration may carry it.",
+    "Banter may end asymmetrically; do not manufacture balanced callbacks."
+  ]
 }
