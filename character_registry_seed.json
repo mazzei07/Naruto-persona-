@@ -1,5 +1,5 @@
 {
-  "registry_version": "2.0",
+  "registry_version": "v38-kaede-family-dojutsu",
   "rp_scope": "Naruto Reboot — Continuidade Clássica",
   "generated_from": [
     "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
@@ -7,7 +7,7 @@
     "Naruto_Reboot_Classico_Base_Canonica_v27.md",
     "Naruto_Reboot_Classico_Fichas_Arco_Gakuji_Nagi_v3.md"
   ],
-  "character_count": 80,
+  "character_count": 94,
   "characters": {
     "Amatsu Uchiha": {
       "name": "Amatsu Uchiha",
@@ -260,7 +260,7 @@
         "Equipamento": "Kit Genin, shuriken adicionais e fios.",
         "Limitações reais": "Reserva apenas boa; sem dōjutsu; orgulho e rigidez podem reduzir adaptação social.",
         "Personalidade / voz": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
-        "Relações e conhecimento": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
+        "Relações e conhecimento": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo. É irmã caçula de Akane Uchiha e Ritsu Uchiha.",
         "Identidade de combate": "Precisão, Katon, projéteis e leitura disciplinada de padrões.",
         "Inspiração e comparação — Naruto Clássico": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---"
       },
@@ -1886,7 +1886,7 @@
         "Naruto_Reboot_Classico_Matriz_de_Registro_Verbal_v8.md"
       ],
       "dossier_fields": {
-        "Identificação": "40 anos • Konoha • Jōnin Elite • pai de Kaede.",
+        "Identificação": "40 anos • Konoha • Jōnin Elite • pai de Akane, Ritsu e Kaede.",
         "IC-80": "**62,5/80** — Ninjutsu 8 • Taijutsu 7,5 • Genjutsu 8 • Inteligência 8,5 • Força 6,5 • Velocidade 8 • Stamina 7,5 • Selos 8,5.",
         "Secundários": "Reserva B+ • Controle S- • Percepção S- • Experiência S- • Genjutsu S- • Shuriken A+ • Disciplina S • Kenjutsu A.",
         "Naturezas": "Katon — Especialista.",
@@ -1901,11 +1901,11 @@
         "Equipamento": "Katana curta e kit Uchiha.",
         "Limitações reais": "Rigidez psicológica prejudica relações; sem MS/Senjutsu/Bijū.",
         "Personalidade / voz": "Exigente, controlado e tradicional.",
-        "Relações e conhecimento": "Orienta Kaede a manter distância de Amatsu no início.",
+        "Relações e conhecimento": "Pai de Akane, Ritsu e Kaede. Exigente e tradicional; expectativas variam conforme conduta/experiência. Orienta Kaede a manter distância de Amatsu no início.",
         "Identidade de combate": "Precisão + disciplina + Genjutsu.",
         "Inspiração e comparação — Naruto Clássico": "Fugaku-like no peso paterno/clânico, mas mais voltado a disciplina técnica e menos a liderança total do clã.\n\n---"
       },
-      "dossier_raw": "**1. Identificação.** 40 anos • Konoha • Jōnin Elite • pai de Kaede.\n\n**2. IC-80.** **62,5/80** — Ninjutsu 8 • Taijutsu 7,5 • Genjutsu 8 • Inteligência 8,5 • Força 6,5 • Velocidade 8 • Stamina 7,5 • Selos 8,5.\n\n**3. Secundários.** Reserva B+ • Controle S- • Percepção S- • Experiência S- • Genjutsu S- • Shuriken A+ • Disciplina S • Kenjutsu A.\n\n**4. Naturezas.** Katon — Especialista.\n\n**5. Repertório nomeado.**\n- Gōkakyū — C — Especialista.\n- Hōsenka — C — Especialista.\n- Ryūka — C — Muito Alta.\n- Gōryūka — B — Muito Alta.\n- Kage Bunshin — B — Alta.\n- Genjutsu ocular/convencional — Muito Alta.\n- Fundamentos + Kai — Especialista.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Sharingan 3T Especialista.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos Uchiha adultos.\n\n**8. Genjutsu / contragenjutsu.** Genjutsu S-.\n\n**9. Taijutsu / armas brancas.** Kenjutsu A.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shuriken A+.\n\n**11. Fūinjutsu / barreiras.** Sem especialização maior.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin.\n\n**13. Equipamento.** Katana curta e kit Uchiha.\n\n**14. Limitações reais.** Rigidez psicológica prejudica relações; sem MS/Senjutsu/Bijū.\n\n**15. Personalidade / voz.** Exigente, controlado e tradicional.\n\n**16. Relações e conhecimento.** Orienta Kaede a manter distância de Amatsu no início.\n\n**17. Identidade de combate.** Precisão + disciplina + Genjutsu.\n\n**18. Inspiração e comparação — Naruto Clássico.** Fugaku-like no peso paterno/clânico, mas mais voltado a disciplina técnica e menos a liderança total do clã.\n\n---",
+      "dossier_raw": "**1. Identificação.** 40 anos • Konoha • Jōnin Elite • pai de Akane, Ritsu e Kaede.\n\n**2. IC-80.** **62,5/80** — Ninjutsu 8 • Taijutsu 7,5 • Genjutsu 8 • Inteligência 8,5 • Força 6,5 • Velocidade 8 • Stamina 7,5 • Selos 8,5.\n\n**3. Secundários.** Reserva B+ • Controle S- • Percepção S- • Experiência S- • Genjutsu S- • Shuriken A+ • Disciplina S • Kenjutsu A.\n\n**4. Naturezas.** Katon — Especialista.\n\n**5. Repertório nomeado.**\n- Gōkakyū — C — Especialista.\n- Hōsenka — C — Especialista.\n- Ryūka — C — Muito Alta.\n- Gōryūka — B — Muito Alta.\n- Kage Bunshin — B — Alta.\n- Genjutsu ocular/convencional — Muito Alta.\n- Fundamentos + Kai — Especialista.\n\n**6. Dōjutsu / Hiden / Kekkei Genkai.** Sharingan 3T Especialista.\n\n**7. Fundamentos / Ninjutsu básico.** Fundamentos Uchiha adultos.\n\n**8. Genjutsu / contragenjutsu.** Genjutsu S-.\n\n**9. Taijutsu / armas brancas.** Kenjutsu A.\n\n**10. Shurikenjutsu / fios / ferramentas.** Shuriken A+.\n\n**11. Fūinjutsu / barreiras.** Sem especialização maior.\n\n**12. Clones / Kuchiyose / Senjutsu / Bijū.** Kage Bunshin.\n\n**13. Equipamento.** Katana curta e kit Uchiha.\n\n**14. Limitações reais.** Rigidez psicológica prejudica relações; sem MS/Senjutsu/Bijū.\n\n**15. Personalidade / voz.** Exigente, controlado e tradicional.\n\n**16. Relações e conhecimento.** Orienta Kaede a manter distância de Amatsu no início.\n\n**17. Identidade de combate.** Precisão + disciplina + Genjutsu.\n\n**18. Inspiração e comparação — Naruto Clássico.** Fugaku-like no peso paterno/clânico, mas mais voltado a disciplina técnica e menos a liderança total do clã.\n\n---",
       "voice_raw": "- **Âncora de referência:** Fugaku-like paterno.\n- **Formalidade/corretividade basal:** formal-correto, austero.\n- **Vocativo/endereçamento:** nome do filho em correção; títulos fora da família.\n- **Cadência e construção:** frases completas, exigentes, raramente coloquiais.\n- **Evitar:** não monologar.",
       "arc_specific": false,
       "reference_essence_v34": {
@@ -4345,6 +4345,108 @@
         "secondary_packets": {},
         "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
       }
+    },
+    "Akane Uchiha": {
+      "name": "Akane Uchiha",
+      "canonical_name": "Akane Uchiha",
+      "source_status": "live_overlay_grounded_v38",
+      "source_files": [
+        "character_profiles.json v38",
+        "character_acting_bibles.json v38",
+        "character_relationship_graph.json v38"
+      ],
+      "dossier_fields": {
+        "Identificação": "14 anos • Konoha • Uchiha • Chūnin • Time 3 • sensei Tadashi Nara • filha mais velha de Seijūrō Uchiha • irmã de Ritsu e Kaede.",
+        "IC-80": "39",
+        "Naturezas": "Katon conhecido; demais afinidades somente se explicitamente estabelecidas na ficha.",
+        "Repertório nomeado": "- Bunshin no Jutsu\n- Henge no Jutsu\n- Kawarimi no Jutsu\n- Shunshin no Jutsu\n- Katon: Gōkakyū no Jutsu\n- Katon: Hōsenka no Jutsu\n- Katon: Ryūka no Jutsu\n- Katon: Gōryūka no Jutsu\n- Katon: Hōsenka Tsumabeni\n- Magen: Kokoni Arazu no Jutsu\n- Magen: Narakumi no Jutsu\n- Kai\n- Sharingan 2T",
+        "Dōjutsu / Hiden / Kekkei Genkai": "Sharingan bilateral 2T — estável e bem treinado. Sem 3T/Mangekyō estabelecidos.",
+        "Limitações reais": "Reserva boa, não excepcional; 2T não é precognição e não substitui velocidade/timing; 3T/Mangekyō exigem progressão própria.",
+        "Personalidade / voz": "Composta, assertiva, observadora e exigente; autoridade natural de irmã mais velha sem maternalização.",
+        "Relações e conhecimento": "Filha mais velha de Seijūrō; irmã de Ritsu e Kaede. Confia em Ritsu mas atua como freio tático; protege Kaede por correção/presença. Com Amatsu parte de reserva familiar/clânica e só recalibra pelo que presencia/recebe.",
+        "Identidade de combate": "Controle de linhas de fuga, shurikenjutsu/fios, Katon, Genjutsu e Sharingan 2T com leitura disciplinada.",
+        "Inspiração e comparação — Naruto Clássico": "Tenten do Naruto Clássico para pragmatismo técnico + Temari do Exame Chūnin apenas para assertividade social/autoridade de irmã mais velha. Não importar biografia, poderes ou crueldade automática."
+      },
+      "dossier_raw": "**Identificação:** 14 anos • Konoha • Uchiha • Chūnin • Time 3 (equipe de formação) • sensei Tadashi Nara • filha mais velha de Seijūrō Uchiha • irmã mais velha de Ritsu e Kaede.\n\n**Aparência:** A mais alta dos três irmãos; cabelo preto curto e em camadas, franja irregular e pequena trança lateral; traços semelhantes aos de Kaede/Ritsu; roupa escura de gola alta. A imagem do usuário é referência visual de rosto/cabelo/porte, não prova de Sharingan ativo.\n\n**Grupo / Equipe / Papel:** TIME 3 — Akane / Ritsu / Sena Aburame — Tadashi Nara. Como Chūnin, recebe destacamentos próprios, mas o Time 3 continua sendo sua equipe de formação e pode ser reunido em missões compatíveis.\n\n**Linhagem / Clã / Condição:** Uchiha. Sharingan bilateral de 2 tomoe. Sem Mangekyō, Senjutsu, Bijū ou técnica espacial.\n\n**Atributos Principais — IC-80:** **39/80** — Ninjutsu 5,5 • Taijutsu 4,5 • Genjutsu 5 • Inteligência 5,5 • Força 3,5 • Velocidade 5 • Stamina 4,5 • Selos 5,5.\n\n**Atributos Secundários:** Reserva B+ • Controle A • Shuriken A+ • Precisão A+ • Percepção A- • Genjutsu A- • Disciplina A+ • Teamwork A- • Experiência C+.\n\n**Naturezas de Chakra:** Katon.\n\n**Repertório Fechado:**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico.\n- Katon: Gōkakyū no Jutsu — Rank C — Muito Alta.\n- Katon: Hōsenka no Jutsu — Rank C — Muito Alta.\n- Katon: Ryūka no Jutsu — Rank C — Alta.\n- Katon: Gōryūka no Jutsu — Rank B — Funcional/Alta; custo relevante para a idade.\n- Katon: Hōsenka Tsumabeni — Alta.\n- Magen: Kokoni Arazu no Jutsu — Rank C — Alta.\n- Magen: Narakumi no Jutsu — Rank D — Alta.\n- Kai — Alta.\n- Sharingan 2T — leitura de precursores/chakra/selos dentro dos limites físicos reais; não é precognição literal.\n\n**Capacidades Técnicas Complementares:** Shurikenjutsu e fios são seu eixo mais refinado. Prefere controlar linhas de fuga, induzir erro e combinar projéteis/Katon/Genjutsu em vez de buscar choque frontal.\n\n**Equipamento:** Kit Chūnin, shuriken adicionais, fios, kunai e tantō curto.\n\n**Limitações Reais:** Reserva boa, não excepcional; uso ocular prolongado cobra fadiga; perfeccionismo pode atrasar adaptação quando o plano é quebrado de forma brusca; força bruta mediana.\n\n**Personalidade / voz:** Composta, assertiva, observadora e exigente. Tem autoridade natural de irmã mais velha sem agir como segunda mãe. Dentro da família permite ironia curta e pequenas provocações, mas não vira personagem maternal ou fria de uma nota só.\n\n**Relações / Conhecimento / Situação:** Respeita Seijūrō e é a filha em quem ele mais confia para tarefas de responsabilidade, mas não repete automaticamente todos os juízos dele. Com Ritsu funciona como freio tático. Com Kaede é protetora por correção e presença, sem humilhá-la ou tratá-la como incapaz. Lembra Amatsu como o antigo amigo inseparável de Kaede, mas não possui conhecimento automático de cenas privadas, segredos ou fatos que não presenciou/recebeu.\n\n**Fama:** Conhecida em Konoha como Chūnin jovem confiável e limpa na execução, especialmente em captura, escolta e contenção. Dentro do clã é vista como a filha que mais reproduz a disciplina de Seijūrō. Não possui epíteto público nem fama nacional.\n\n**Eixo de Inspiração e Matriz de Interpretação:** Tenten do Naruto Clássico para pragmatismo técnico e orgulho de habilidade + Temari do Exame Chūnin apenas para assertividade social/autoridade de irmã mais velha. Não importar biografia, poderes ou crueldade automática.",
+      "voice_raw": "- **Âncora:** Tenten técnico + Temari social do Exame Chūnin, apenas nos eixos mapeados.\n- **Formalidade/corretividade basal:** correto, direto, controlado.\n- **Vocativo/endereçamento:** nomes em família/pares; títulos/sobrenomes conforme hierarquia externa.\n- **Cadência:** frases completas, enxutas e assertivas; crítica vem por precisão, não por monólogo.\n- **Evitar:** maternalização, sarcasmo constante, frieza de uma nota só, 3T/Mangekyō automático.\n\n### Com Kaede\n- corrige e protege sem infantilizar.\n\n### Com Ritsu\n- confiança alta; funciona como freio tático sem agir como mãe.\n\n### Com Amatsu\n- reserva inicial familiar/clânica; observa e recalibra competência apenas por evidência real.",
+      "arc_specific": false,
+      "reference_essence_v34": {
+        "primary_reference": "Tenten",
+        "phase_anchor": "Tenten do Naruto Clássico + assertividade Temari do Exame Chūnin.",
+        "transfer_scope": "documented_axes_only",
+        "personality_transfer_allowed": true,
+        "primary_packet": {
+          "dominant_core": "pragmatic, competent, competitive, proud of technical skill",
+          "social_surface": "straightforward, less melodramatic, can tease teammates and react sharply to foolishness",
+          "combat_pressure": "tries to solve range/weapon problems practically and keeps composure until her specialty is invalidated",
+          "break_trigger": "dismissal of her competence, teammate recklessness, humiliating technical mismatch",
+          "body_voice": "ready stance, quick tool handling, exasperated looks more than speeches",
+          "must_not": "do not turn into generic calm weapons analyst"
+        },
+        "technical_reference_packet": null,
+        "secondary_packets": {
+          "Temari": {
+            "dominant_core": "blunt, self-assured, tactically sharp, sardonic and willing to be cruel in Part I",
+            "social_surface": "speaks her mind, can be dismissive/debochada, rarely softens for strangers; older-sibling authority comes naturally",
+            "combat_pressure": "reads distance and opponent habits quickly; confidence becomes cutting when she controls the field",
+            "break_trigger": "loss of tactical control, obvious foolishness, danger/instability from Gaara-like sibling",
+            "body_voice": "smirk, fan-on-shoulder confidence, irritated snap, watchful glance toward dangerous sibling",
+            "must_not": "do not reduce to constant sarcasm or adult diplomat; Chunin Temari has a crueler edge"
+          }
+        },
+        "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      }
+    },
+    "Ritsu Uchiha": {
+      "name": "Ritsu Uchiha",
+      "canonical_name": "Ritsu Uchiha",
+      "source_status": "live_overlay_grounded_v38",
+      "source_files": [
+        "character_profiles.json v38",
+        "character_acting_bibles.json v38",
+        "character_relationship_graph.json v38"
+      ],
+      "dossier_fields": {
+        "Identificação": "13 anos • Konoha • Uchiha • Chūnin • Time 3 • sensei Tadashi Nara • filho do meio de Seijūrō Uchiha • irmão de Akane e Kaede.",
+        "IC-80": "37",
+        "Naturezas": "Katon conhecido; demais afinidades somente se explicitamente estabelecidas na ficha.",
+        "Repertório nomeado": "- Bunshin no Jutsu\n- Henge no Jutsu\n- Kawarimi no Jutsu\n- Shunshin no Jutsu\n- Katon: Gōkakyū no Jutsu\n- Katon: Hōsenka no Jutsu\n- Katon: Ryūka no Jutsu\n- Katon: Hōsenka Tsumabeni\n- Kai\n- Sharingan 1T",
+        "Dōjutsu / Hiden / Kekkei Genkai": "Sharingan bilateral 1T — funcional, ainda imaturo. Sem 2T/3T/Mangekyō estabelecidos.",
+        "Limitações reais": "1T melhora rastreamento/leitura inicial, mas perceber não implica compreender nem conseguir reagir/defender; Genjutsu ocular refinado não é automático.",
+        "Personalidade / voz": "Sociável, competitivo, provocador e fisicamente expressivo; mais informal que Akane/Kaede, mas sério quando o risco real sobe.",
+        "Relações e conhecimento": "Filho do meio de Seijūrō; irmão mais novo de Akane e mais velho de Kaede. Confia em Akane com atrito quando ela controla demais; é o irmão mais abertamente próximo de Kaede. Com Amatsu tende a observar/testar antes de fechar julgamento.",
+        "Identidade de combate": "Pressão móvel, taijutsu/tantō, Katon, fios/projéteis e adaptação de terreno apoiados por Sharingan 1T.",
+        "Inspiração e comparação — Naruto Clássico": "Kiba do Naruto Clássico para energia competitiva/fisicalidade + Shikamaru apenas no eixo de decisão de campo sob pressão. Não importar ninken, preguiça crônica, biografia ou técnicas."
+      },
+      "dossier_raw": "**Identificação:** 13 anos • Konoha • Uchiha • Chūnin • Time 3 (equipe de formação) • sensei Tadashi Nara • filho do meio de Seijūrō Uchiha • irmão mais novo de Akane e mais velho de Kaede. Graduou-se cedo o bastante para entrar na mesma coorte de Akane.\n\n**Aparência:** Cabelo preto curto, bagunçado e volumoso, com mechas soltas e um pequeno tufo no topo; rosto mais aberto e expressivo que o de Kaede/Akane; roupa escura de gola alta. A imagem do usuário é referência visual de rosto/cabelo/porte, não prova de Sharingan ativo.\n\n**Grupo / Equipe / Papel:** TIME 3 — Akane / Ritsu / Sena Aburame — Tadashi Nara. Como Chūnin, recebe destacamentos próprios e atua muito como segundo homem de campo/elemento de pressão.\n\n**Linhagem / Clã / Condição:** Uchiha; **Sharingan bilateral de 1 tomoe no estado atual**. É funcional, porém ainda imaturo; sua promoção a Chūnin não dependeu do dōjutsu.\n\n**Atributos Principais — IC-80:** **37/80** — Ninjutsu 5 • Taijutsu 5 • Genjutsu 3,5 • Inteligência 4,5 • Força 4 • Velocidade 5,5 • Stamina 5 • Selos 4,5.\n\n**Atributos Secundários:** Reserva B+ • Controle B+ • Shuriken A- • Precisão B+ • Percepção B+ • Taijutsu A- • Teamwork A • Disciplina B • Experiência C.\n\n**Naturezas de Chakra:** Katon.\n\n**Repertório Fechado:**\n- Bunshin no Jutsu — Rank E — Academia.\n- Henge no Jutsu — Rank E — Academia.\n- Kawarimi no Jutsu — Rank E — timing e substituto plausível.\n- Shunshin no Jutsu — Rank D — deslocamento físico.\n- Katon: Gōkakyū no Jutsu — Rank C — Alta.\n- Katon: Hōsenka no Jutsu — Rank C — Alta.\n- Katon: Ryūka no Jutsu — Rank C — Funcional/Alta.\n- Katon: Hōsenka Tsumabeni — Funcional.\n- Kai — Bom.\n- Fundamentos Uchiha de shuriken, fios e combate com tantō — muito bons para a idade.\n\n**Capacidades Técnicas Complementares:** Excelente em aproximação, pressão móvel e adaptação de terreno. Usa Katon para forçar movimento, entra com taijutsu/tantō e aproveita fios/projéteis para cortar rota de fuga.\n\n**Equipamento:** Kit Chūnin, tantō, kunai, shuriken e fios.\n\n**Limitações Reais:** Sharingan 1T melhora rastreamento e leitura inicial, mas não garante interpretação, reação ou defesa; Genjutsu ofensivo pouco desenvolvido; improvisação agressiva pode expô-lo; selos e precisão abaixo de Akane/Kaede.\n\n**Personalidade / voz:** Sociável, rápido para sorrir, competitivo e provocador, porém muito menos explosivo que Shin. É o mais informal dos três irmãos e costuma quebrar a rigidez da casa, mas sabe ficar sério quando risco real aparece.\n\n**Relações / Conhecimento / Situação:** Respeita Seijūrō, embora haja atrito com a rigidez paterna. Confia muito em Akane, mas irrita-se quando ela tenta controlar cada passo. Com Kaede é o irmão mais abertamente próximo: provoca, implica e protege sem infantilizá-la. Lembra Amatsu da infância como o garoto que vivia com Kaede; era menos hostil a ele do que Seijūrō, mas não possui conhecimento automático de segredos, Sharingan, conversas privadas ou eventos que não presenciou/recebeu.\n\n**Fama:** Entre ninjas jovens de Konoha, tem reputação de Chūnin fácil de trabalhar e bom em decisões rápidas quando o plano quebra. Dentro do clã, alguns mais tradicionais o acham informal demais; sua promoção sem Sharingan é vista como prova de fundamentos sólidos. Não possui epíteto público nem fama nacional.\n\n**Eixo de Inspiração e Matriz de Interpretação:** Kiba do Naruto Clássico para energia competitiva, provocação e fisicalidade + Shikamaru apenas no eixo de decisão de campo sob pressão. Não importar preguiça crônica, ninken ou biografia.",
+      "voice_raw": "- **Âncora:** Kiba do Naruto Clássico para energia competitiva/fisicalidade + Shikamaru apenas em decisão de campo.\n- **Formalidade/corretividade basal:** casual entre pares/família; correto com autoridade.\n- **Vocativo/endereçamento:** primeiro nome com irmãos/pares próximos; títulos conforme hierarquia.\n- **Cadência:** rápida, provocadora e pronunciável; corpo pode responder antes da fala.\n- **Evitar:** explosividade constante de Shin, preguiça de Shikamaru, ninken por analogia, 2T/3T automático.\n\n### Com Kaede\n- provoca e protege sem infantilizar.\n\n### Com Akane\n- confiança alta; irrita-se quando ela tenta controlar cada passo.\n\n### Com Amatsu\n- menos hostil que Seijūrō; mede, cutuca e recalibra se os fatos obrigarem, sem amizade automática.",
+      "arc_specific": false,
+      "reference_essence_v34": {
+        "primary_reference": "Kiba",
+        "phase_anchor": "Kiba do Naruto Clássico + decisão de campo Shikamaru, somente nos eixos mapeados.",
+        "transfer_scope": "documented_axes_only",
+        "personality_transfer_allowed": true,
+        "primary_packet": {
+          "dominant_core": "brash, competitive, short-tempered, instinctive, clan-proud",
+          "social_surface": "loud confidence, teasing, challenges leadership; rough affection with trusted people",
+          "combat_pressure": "likes to fight and can overcommit when agitated; becomes fiercely protective of ninken",
+          "break_trigger": "insult to pride/clan, harm to partner, challenge to leadership",
+          "body_voice": "leans in, bares teeth, points, raises voice; physical proximity escalates",
+          "must_not": "do not make him measured after personal provocation"
+        },
+        "technical_reference_packet": null,
+        "secondary_packets": {
+          "Shikamaru": {
+            "dominant_core": "extremely lazy exterior masking fast strategic intelligence and calm decisiveness",
+            "social_surface": "complains, sighs, avoids effort; dry and understated, not theatrical",
+            "combat_pressure": "maps conditions several steps ahead, uses environment/time, will surrender rationally when resources fail",
+            "break_trigger": "forced responsibility, comrades in danger, impossible workload",
+            "body_voice": "slouch, hands in pockets/head, bored face until eyes sharpen",
+            "must_not": "do not make every line a genius diagnosis"
+          }
+        },
+        "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      }
     }
   },
   "meta": {
@@ -4352,6 +4454,12 @@
     "continuity_id": "classico_floresta_da_morte",
     "note": "Persona registry synced with Canoney for individual/ninken/historical actors needed by v24.1; group placeholders remain non-persona entities.",
     "acting_bible_version": "v25.0.0",
-    "continuity_firewall_v36": "classic-only"
+    "continuity_firewall_v36": "classic-only",
+    "family_dojutsu_v38": {
+      "Seijūrō Uchiha": "Sharingan bilateral 3T especialista",
+      "Akane Uchiha": "Sharingan bilateral 2T estável",
+      "Ritsu Uchiha": "Sharingan bilateral 1T funcional/imaturo",
+      "Kaede Uchiha": "Sharingan não despertado"
+    }
   }
 }
