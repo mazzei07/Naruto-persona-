@@ -82,13 +82,31 @@ def _classic_voice_fidelity_v39(actor:str,bible:dict[str,Any])->dict[str,Any]:
         profile["source_mechanics"]=[
             "Tsunade is blunt, impatient and technically authoritative; she can inspect with silence, a short correction, a challenge or a contemptuous remark instead of a lecture.",
             "Respect is earned reluctantly. Strong performance may interrupt her mockery, but does not instantly make her warm or complimentary.",
-            "Her temper changes body and timing first; anger compresses language instead of producing long moral speeches."
+            "Her temper changes body and timing first; anger compresses language instead of producing long moral speeches.",
+            "When conflicted in the Search for Tsunade phase, she hides the conflict in delay, evasion and action; do not make her confess her whole internal debate to Jiraiya-like peers.",
+            "With Orochimaru-like old peers, hostility is familiar and terse; she does not need to restate their shared history."
         ]
         profile["anti_patterns"]=[
             "maternal reassurance by default",
             "clinical lecture after every observation",
             "generic calm authority",
-            "instant praise for talent"
+            "instant praise for talent",
+            "expository confession of internal conflict"
+        ]
+    if "orochimaru" in ref_text:
+        profile["source_mechanics"]=[
+            "Orochimaru speaks softly, completely and with invasive calm; menace comes from certainty and implication more than volume.",
+            "In negotiation he presents the tempting or coercive piece, then watches. Do not over-explain the bargain after the target understands it.",
+            "He personalizes observations and probes reactions, but does not sound like a modern scientist or therapist.",
+            "When a rare specimen or unexpected technique appears, curiosity sharpens rather than becoming loud excitement.",
+            "With Jiraiya/Tsunade peers, shared history permits intimate barbs and compressed references; no villain monologue is needed."
+        ]
+        profile["anti_patterns"]=[
+            "loud ranting villain",
+            "scientific jargon dump",
+            "explaining his own manipulation",
+            "constant sinister one-liners",
+            "overstating threats already implied"
         ]
     profile["dialogue_flow"]=acting.get("dialogue_flow_v27",{})
     return profile
