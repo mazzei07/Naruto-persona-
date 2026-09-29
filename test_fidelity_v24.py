@@ -107,6 +107,7 @@ class FidelityTests(unittest.TestCase):
 
     def test_v41_proximity_is_provenance_limited(self):
         from fidelity_core import source_proximate_match_v41
+        from acting_bible import compile_acting_packet, health as acting_health
         p=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','ataque e perigo','proteger companheiro')
         self.assertEqual(p['status'],'reference_available')
         self.assertTrue(p['closest']['card_id'])
