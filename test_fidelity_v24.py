@@ -104,4 +104,16 @@ class FidelityTests(unittest.TestCase):
         p=example();p['actors'][0]['dossier_source']=''
         self.assertEqual(validate_turn_packet(p)['status'],'needs_evidence')
 
+
+    def test_v41_proximity_is_provenance_limited(self):
+        from fidelity_core import source_proximate_match_v41
+        p=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','ataque e perigo','proteger companheiro')
+        self.assertEqual(p['status'],'reference_available')
+        self.assertTrue(p['closest']['card_id'])
+        self.assertEqual(p['match_quality'],'phase_situation_synopsis')
+        self.assertFalse(p['dialogue_mechanics_verified'])
+        acting=compile_acting_packet('Kaede Uchiha','Amatsu Uchiha','proteger companheiro','ataque e perigo')
+        self.assertEqual(acting['source_proximate_v41']['closest']['card_id'],p['closest']['card_id'])
+        self.assertTrue(acting_health()['supports_source_proximate_dialogue_v41'])
+
 if __name__=='__main__':unittest.main()
