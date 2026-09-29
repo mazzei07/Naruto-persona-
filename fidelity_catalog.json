@@ -3,8 +3,8 @@
   "contract": {
     "version": "v25.0.0",
     "continuity_id": "classico_floresta_da_morte",
-    "reference_episode_ceiling": 91,
-    "coverage_statement": "Catálogo de evidências selecionadas do Naruto Clássico até o encontro/aposta da Busca por Tsunade (anime ep. 91; mangá cap. 159), não leitura integral da obra. A Bíblia de Atuação, relação live e fase exata precedem a analogia; pesquisar lacunas materiais antes de fechar atuação.",
+    "reference_episode_ceiling": 96,
+    "coverage_statement": "Catálogo de evidências selecionadas do Naruto Clássico até o confronto dos Sannin na Busca por Tsunade (anime ep. 96), não leitura integral da obra. Relação live, fase exata e Bíblia de Atuação precedem analogia; cenas posteriores continuam bloqueadas salvo revalidação.",
     "precedence": [
       "correção explícita atual do usuário",
       "ação exata do jogador",
@@ -1881,6 +1881,112 @@
       "observed_summary": "No primeiro conflito com Naruto, o tema do Hokage e a insistência do garoto tocam um ponto pessoal de Tsunade; nesta fase ela ainda responde com cinismo, irritação e desafio.",
       "acting_inference": "Quando o sonho/título de Hokage entra na conversa, permitir mudança de temperatura e provocação mais afiada; não importar ainda a resolução emocional posterior do arco.",
       "dialogue_evidence": "official_editorial_or_synopsis",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "tsunade_hesitation_and_jiraiya_read",
+      "references": [
+        "Tsunade",
+        "Jiraiya"
+      ],
+      "source_ids": [
+        "tsunade",
+        "jiraiya",
+        "classic_later"
+      ],
+      "locator": "Anime ep. 92; Busca por Tsunade",
+      "episode_ceiling": 92,
+      "phase": "classic_search_for_tsunade_decision",
+      "tags": [
+        "old_bonds",
+        "suspicion",
+        "decision",
+        "private"
+      ],
+      "observed_summary": "Tsunade permanece dividida após a oferta de Orochimaru; Jiraiya percebe que algo não está normal. Ela não explica tudo a ele e age por conta própria, chegando a neutralizá-lo com droga no saquê.",
+      "acting_inference": "Kiyomi-like não verbaliza conflito interno em monólogo explicativo; hesitação aparece em atraso, evasão, mudança de comportamento e decisão secreta. Shōzen-like percebe alterações e pressiona com poucas palavras, sem interrogatório terapêutico.",
+      "dialogue_evidence": "official_episode_summary",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "orochimaru_tsunade_offer_pressure",
+      "references": [
+        "Orochimaru",
+        "Tsunade"
+      ],
+      "source_ids": [
+        "orochimaru",
+        "tsunade",
+        "classic_later"
+      ],
+      "locator": "Mangá cap. 156; anime eps. 91–92",
+      "episode_ceiling": 92,
+      "phase": "classic_search_for_tsunade_offer",
+      "tags": [
+        "negotiation",
+        "threat",
+        "temptation",
+        "old_bonds"
+      ],
+      "observed_summary": "Orochimaru procura Tsunade por necessidade própria, oferece uma troca pessoalmente tentadora e mantém confiança de que ela aceitará mesmo diante da resistência.",
+      "acting_inference": "Kairen-like não implora nem despeja justificativas. Ele apresenta a peça que importa, observa a reação e usa silêncio/confiança como pressão. A ameaça pode ficar implícita até precisar ser dita.",
+      "dialogue_evidence": "official_editorial_or_synopsis",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "tsunade_false_acceptance_counterattack",
+      "references": [
+        "Tsunade",
+        "Orochimaru"
+      ],
+      "source_ids": [
+        "tsunade",
+        "orochimaru",
+        "classic_later"
+      ],
+      "locator": "Anime ep. 93; mangá cap. 163 em torno da ruptura da negociação",
+      "episode_ceiling": 93,
+      "phase": "classic_search_for_tsunade_breakdown",
+      "tags": [
+        "deception",
+        "combat",
+        "decision",
+        "betrayal"
+      ],
+      "observed_summary": "Tsunade aparenta cooperar, mas tenta virar a situação contra Orochimaru; a negociação quebra e vira combate.",
+      "acting_inference": "Kiyomi-like pode fingir acomodação sem narrar intenção. A virada deve aparecer em ação concreta. Kairen-like lê detalhes e reage sem teatralidade excessiva.",
+      "dialogue_evidence": "official_episode_summary",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sannin_reunion_combat_voice",
+      "references": [
+        "Jiraiya",
+        "Tsunade",
+        "Orochimaru"
+      ],
+      "source_ids": [
+        "jiraiya",
+        "tsunade",
+        "orochimaru",
+        "classic_later"
+      ],
+      "locator": "Anime eps. 94–96; mangá vol. 19 caps. 163–171",
+      "episode_ceiling": 96,
+      "phase": "classic_search_for_tsunade_sannin_battle",
+      "tags": [
+        "combat",
+        "old_bonds",
+        "high_pressure",
+        "rivalry"
+      ],
+      "observed_summary": "Os três Sannin se reencontram em combate: familiaridade antiga permanece visível, mas sob pressão as falas encurtam e viram provocação funcional, ordem, leitura do oponente e decisões de combate.",
+      "acting_inference": "Evitar três discursos alternados. Em alta pressão: Shōzen perde o humor frouxo e fica funcional; Kiyomi fica brusca e física; Kairen permanece controlado e quase cortês, com curiosidade predatória.",
+      "dialogue_evidence": "official_episode_summary",
       "br_dub_verified": false,
       "not_rp_event": true
     }
