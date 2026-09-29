@@ -158,6 +158,18 @@ def main():
     )
     assert bad_shin["pass"] is False, bad_shin
 
+
+    shozen_v39 = persona_acting_packet(
+        "Shōzen Arakawa", "Amatsu Uchiha",
+        stimulus="Amatsu mostra progresso inesperado",
+        prior_exchange="Shōzen achava que o treino estava num estágio anterior.",
+        situation="treino seguro",
+        pressure="baixa"
+    )
+    assert "classic_voice_fidelity_v39" in shozen_v39, shozen_v39
+    assert any("Jiraiya" in x for x in shozen_v39["classic_voice_fidelity_v39"].get("source_mechanics", [])), shozen_v39
+    assert h["acting_bible_v25"].get("supports_classic_voice_fidelity_v39") is True, h
+
     kaede_bible = persona_bible("Kaede Uchiha")
     assert kaede_bible["bible"]["relationship_overrides"]["Amatsu Uchiha"]["baseline"], kaede_bible
 
