@@ -117,3 +117,28 @@ Major/fatal bloqueia saída:
 - fala seca artificial;
 - modernidade lexical indevida;
 - exposição de IA.
+
+
+## QES v42 — Enquadramento situacional obrigatório
+Para cada fala relevante, o runtime deve resolver antes da redação:
+- ato de fala: comando, instrução, correção, alerta, pergunta, pedido, apelo, provocação, repreensão, recusa, concordância, elogio, preocupação, ameaça, explicação, análise, admissão, humor ou encerramento;
+- pressão 1–5;
+- hierarquia;
+- relação;
+- valência afetiva do interlocutor;
+- desejo de aprovação;
+- proteção de imagem;
+- rivalidade;
+- audiência;
+- modo ativo do personagem;
+- modalidade verbal;
+- morfologia do imperativo/diretivo;
+- tempo respiratório real para falar.
+
+Para diretivos, testar mentalmente pelo menos variantes equivalentes (ex.: "suba/sobe/tente subir", "faça/faz", "recue/recua") e escolher pela referência + relação + pressão. Primeira formulação gerada nunca vence por inércia.
+
+## Referência de cena
+Quando a fidelidade fina importar, buscar 2–5 cenas de função parecida da referência oficial quando disponíveis. Extrair comportamento, não copiar texto: latência, tamanho do turno, completude, posição de nome, intensidade, silêncio, gesto, resposta a hierarquia e mudança sob pressão.
+
+## Regra de saída
+Uma fala pode estar semanticamente correta e ainda assim ser rejeitada. Conteúdo e forma passam por auditorias separadas. Se só o conteúdo passar, reescrever.
