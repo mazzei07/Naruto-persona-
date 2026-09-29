@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.9.1-v36",
+  "version": "0.9.1-v38",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -55,7 +55,8 @@
     "Pais de Amatsu estão mortos; Takeru é o único familiar direto vivo e é nukenin/Tenkai.",
     "Não expor ausências familiares já estabelecidas sem função real na cena.",
     "Registro Naruto Clássico: sem palavrões como fala padrão; apenas exceções explicitamente autorizadas pelo usuário.",
-    "Se o NPC relevante possui nome estabelecido, usar o nome; cargo/título não apaga a identidade do personagem."
+    "Se o NPC relevante possui nome estabelecido, usar o nome; cargo/título não apaga a identidade do personagem.",
+    "Ritsu Uchiha has bilateral 1T in v38; Akane 2T; Kaede remains unawakened; never regress Ritsu to 'no Sharingan' or auto-promote tomoe."
   ],
   "voice_gates": [
     "falaria_agora",
@@ -725,5 +726,16 @@
     "carryover": "A revalidated character may preserve entity existence and only Classic-source fields.",
     "amatsu_family": "parents dead; only living direct relative is Takeru Uchiha, nukenin/Tenkai",
     "narration": "Do not turn already-established family absences into repetitive exposition."
+  },
+  "family_dojutsu_v38": {
+    "precedence": "latest explicit user correction > prior family/visual overlays",
+    "states": {
+      "Seijūrō Uchiha": "Sharingan bilateral 3T specialist",
+      "Akane Uchiha": "Sharingan bilateral 2T stable/trained",
+      "Ritsu Uchiha": "Sharingan bilateral 1T functional/immature",
+      "Kaede Uchiha": "Sharingan not awakened in this phase"
+    },
+    "perception_rule": "Sharingan perception never equals automatic recognition, reaction, defense or dodge. Body speed, interpretation, timing and actual skill remain separate gates.",
+    "progression_rule": "Do not promote tomoe or grant Mangekyō without explicit live development."
   }
 }
