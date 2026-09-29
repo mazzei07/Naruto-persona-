@@ -51,11 +51,26 @@ def compile_voice_fingerprint(actor: str, bible: dict[str, Any] | None, interloc
             "no_future_phase_leak",
             "epistemic_name_gate",
             "ptbr_performability_gate",
+            "speech_act_resolution_required",
+            "morphology_variant_gate",
+            "breath_time_gate",
         ],
+        "qes_v42": {
+            "speech_act": "resolve before wording",
+            "pressure": pressure,
+            "hierarchy": "resolve from directional relation + scene",
+            "affective_valence": "resolve from live relation",
+            "approval_drive": "resolve from actor/interlocutor",
+            "image_protection": "resolve from actor/interlocutor/audience",
+            "rivalry": "resolve from live relation",
+            "modality": "command/request/question/etc before syntax",
+            "morphology": "test plausible directive variants before choosing",
+            "breath_time": "combat speech requires real physical window"
+        },
         "line_review": [
             "immediate_beat_response","speaker_swap","interlocutor_swap","sentence_length_fit",
             "lexical_age_fit","vocative_fit","fragment_or_completeness_fit","body_first_fit",
-            "source_phase_fit","knowledge_channel_fit"
+            "source_phase_fit","knowledge_channel_fit","speech_act_fit","morphology_fit","breath_time_fit"
         ],
     }
 
