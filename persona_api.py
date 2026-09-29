@@ -4,6 +4,7 @@ Each function returns JSON-serializable dictionaries and can be exposed by an MC
 No LLM call is performed in the core path.
 """
 from fidelity_core import evidence_packet as fidelity_evidence_packet, validate_turn_packet, health as fidelity_health
+from voice_fidelity_v42 import VERSION as VOICE_V42_VERSION, compile_voice_fingerprint, audit_surface_line
 from acting_bible import (
     character_bible as acting_character_bible,
     relationship_bible as acting_relationship_bible,
@@ -179,3 +180,16 @@ def persona_dialogue_audit_v25(
 
 def persona_acting_health():
     return acting_health()
+
+
+def persona_voice_fingerprint_v42(name: str, interlocutor: str = "", pressure: str = "normal", audience: str = ""):
+    bible = acting_character_bible(name)
+    if not bible or bible.get("status") == "not_found":
+        return {"status": "not_found", "name": name}
+    raw = bible.get("bible") if isinstance(bible, dict) and isinstance(bible.get("bible"), dict) else bible
+    return {"status": "ok", "version": VOICE_V42_VERSION, "fingerprint": compile_voice_fingerprint(name, raw, interlocutor, pressure, audience)}
+
+
+def persona_voice_audit_v42(name: str, candidate_dialogue: str, interlocutor: str = "", pressure: str = "normal", audience: str = ""):
+    fp = persona_voice_fingerprint_v42(name, interlocutor, pressure, audience)
+    return {"status": "review", "version": VOICE_V42_VERSION, "fingerprint": fp.get("fingerprint"), "issues": audit_surface_line(candidate_dialogue)}
