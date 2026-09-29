@@ -70,6 +70,36 @@ def classify(stimulus='',situation=''):
     tags=[tag for tag,words in TAG_WORDS.items() if any(re.search(r'(?<!\w)'+re.escape(w)+r'(?!\w)',text) for w in words)]
     return tags or ['neutral']
 
+
+def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',cards=None):
+    """Rank phase-safe reference cards; never infer transcript/prosody from a synopsis."""
+    actor=resolve(name)
+    if not actor:return {'status':'needs_evidence','reason':'unknown_actor','candidates':[]}
+    mapping=catalog()['characters'][actor]
+    tags=set(classify(stimulus,situation))
+    allowed=[]
+    for card in (cards if cards is not None else catalog()['scene_cards']):
+        if card.get('episode_ceiling',10**9)>catalog()['contract']['reference_episode_ceiling']:continue
+        if not set(mapping.get('reference_characters',[]))&set(card.get('references',[])):continue
+        overlap=tags&set(card.get('tags',[]))
+        if not overlap:continue
+        relation=card.get('interlocutor_relation')
+        relation_match=bool(relation and interlocutor and context_text(interlocutor)==context_text(relation))
+        score=10*len(overlap)+int(relation_match)*5
+        allowed.append((score,card,relation_match))
+    allowed.sort(key=lambda item:(-item[0],item[1]['id']))
+    candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
+                 'evidence_kind':c.get('dialogue_evidence','unknown'),'locator':c.get('locator',''),
+                 'source_ids':c.get('source_ids',[])} for score,c,rel in allowed[:3]]
+    best=candidates[0] if candidates else None
+    verified=bool(best and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
+    return {'status':'reference_available' if best else 'needs_evidence','actor':actor,
+            'interlocutor':interlocutor,'phase':'classic_through_forest',
+            'match_quality':'source_excerpt' if verified else ('phase_situation_synopsis' if best else 'none'),
+            'closest':best,'candidates':candidates,'dialogue_mechanics_verified':verified,
+            'pragmatic_function':'requires_scene_review','turn_shape':'requires_scene_review',
+            'rule':'Live state, own dossier and directional relationship outrank an analogue; synopsis does not prove wording, cadence or dub.'}
+
 def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     actor=resolve(name)
     if not actor:return {'version':VERSION,'status':'needs_evidence','reason':'Personagem ausente ou ambíguo. Consultar Canoney; não fabricar equivalente.','research_required':True}
@@ -82,7 +112,9 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
             out_of_phase.append(card['id']);continue
         score=len(tags&set(card['tags']))
         if score:candidates.append((score,card))
-    candidates.sort(key=lambda p:(-p[0],p[1]['id']))
+    proximity=source_proximate_match_v41(actor,interlocutor,situation,stimulus)
+    proximity_ids=[x['card_id'] for x in proximity['candidates']]
+    candidates.sort(key=lambda p:(proximity_ids.index(p[1]['id']) if p[1]['id'] in proximity_ids else 999,-p[0],p[1]['id']))
     selected=[copy.deepcopy(p[1]) for p in candidates[:3]]
     own_voice=mapping['transfer_scope'] in ('technical_or_function_only','original')
     missing=[]
@@ -93,7 +125,7 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     query=f"Naruto clássico {', '.join(mapping['reference_characters']) or 'referência original não documentada'} interlocutor {interlocutor or 'a definir'} situação {situation or stimulus or 'a definir'} Exame Chunin Floresta da Morte diálogo ação relação capítulo episódio fonte oficial"
     return {
         'version':VERSION,'status':'needs_evidence' if missing else 'reference_available',
-        'actor':actor,'mapping':mapping,'scene_cards':selected,
+        'actor':actor,'mapping':mapping,'scene_cards':selected,'source_proximate_v41':proximity,
         'source_links':{sid:catalog()['sources'][sid] for sid in sorted({s for c in selected for s in c['source_ids']})},
         'later_scene_ids_excluded':out_of_phase,'missing_evidence':missing,
         'research_required':bool(missing),'suggested_query':query,
@@ -237,4 +269,4 @@ def health():
     kinds={}
     for m in d['characters'].values():
         kind=m.get('entity_type','individual');kinds[kind]=kinds.get(kind,0)+1
-    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'reference_episode_ceiling':d['contract'].get('reference_episode_ceiling'),'acting_bible_version':d['contract'].get('acting_bible',{}).get('version'),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True}
+    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'reference_episode_ceiling':d['contract'].get('reference_episode_ceiling'),'acting_bible_version':d['contract'].get('acting_bible',{}).get('version'),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True,'supports_source_proximate_dialogue_v41':True,'source_proximate_limit':'catalogue_synopses_are_not_dialogue_transcripts'}
