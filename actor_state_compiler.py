@@ -168,6 +168,7 @@ def compile_actor_state(
         "body_voice_rule": acting.get("body_voice_link", "body and voice must share one impulse"),
         "dialogue_flow": acting.get("dialogue_flow_v27", {}),
         "classic_voice_fidelity_v39": (acting_packet or {}).get("classic_voice_fidelity_v39", {}),
+        "source_proximate_v41": (acting_packet or {}).get("source_proximate_v41", {}),
     }
 
     verifier = {
@@ -180,6 +181,7 @@ def compile_actor_state(
         "anti_caricature": "Reference character is a decision model, not a bag of catchphrases.",
         "oral_fingerprint_v39": "Read aloud in PT-BR. If syntax feels translated, over-complete, too polished, symmetrical, or narrator-like, bend or cut it before output.",
         "source_mechanics_v39": "Check whether the exact-phase reference would speak this much, this neatly, and this explicitly. If not, reduce, interrupt, redirect, or move meaning into body/silence.",
+        "source_proximity_v41": "Check the selected card, provenance, phase and relation. Never call a synopsis a verified transcript; request evidence for unsupported cadence or turn shape.",
     }
 
     return {
@@ -207,5 +209,6 @@ def compile_actor_state(
             "REALIZE language/body in exact-phase reference fingerprint",
             "APPLY classic_voice_fidelity_v39 before sentence-completeness/formality smoothing",
             "VERIFY oral PT-BR cadence, asymmetry, source mechanics, interlocutor-swap, threshold, silence, memory, and camera tests",
+            "VERIFY source_proximate_v41 card and evidence quality; request source review when mechanics are unverified",
         ],
     }
