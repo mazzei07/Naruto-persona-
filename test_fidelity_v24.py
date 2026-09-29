@@ -32,8 +32,8 @@ class FidelityTests(unittest.TestCase):
         self.assertTrue(p['scene_cards']);self.assertTrue(all(c['not_rp_event'] for c in p['scene_cards']))
     def test_phase_filter(self):
         p=evidence_packet('Renji','Hana','equipe em combate')
-        self.assertTrue(all(c['episode_ceiling']<=51 for c in p['scene_cards']))
-        self.assertNotIn('shikamaru_tactics',p['later_scene_ids_excluded'])
+        self.assertTrue(all(c['episode_ceiling']<=catalog()['contract']['reference_episode_ceiling'] and c.get('phase')!='later_reference_only' for c in p['scene_cards']))
+        self.assertIn('shikamaru_tactics',p['later_scene_ids_excluded'])
     def test_technical_reference_is_not_voice(self):
         self.assertTrue(evidence_packet('Kaito','Kaede','conversa')['voice_from_own_dossier'])
         self.assertEqual(catalog()['characters']['Kaito Shimura']['transfer_scope'],'technical_or_function_only')
@@ -83,7 +83,7 @@ class FidelityTests(unittest.TestCase):
         p=example();p['scene']['present'].append('Equipe de Amegakure');p['scene']['active_npcs']=['Iruka Umino','Equipe de Amegakure']
         self.assertIn('non_persona_entity_cannot_be_active:Equipe de Amegakure',validate_turn_packet(p)['issues'])
     def test_preliminary_phase_reference_ceiling(self):
-        r=health();self.assertEqual(r['reference_episode_ceiling'],51);self.assertEqual(r['acting_bible_version'],'v25.0.0')
+        r=health();self.assertEqual(r['reference_episode_ceiling'],catalog()['contract']['reference_episode_ceiling']);self.assertEqual(r['acting_bible_version'],'v25.0.0')
         p=evidence_packet('Shin','Amatsu','preliminares rivalidade provocação')
         self.assertTrue(any(x['id']=='kiba_naruto_public_rivalry' for x in p['scene_cards']),p)
     def test_newly_researched_scene_is_accepted(self):
@@ -103,5 +103,18 @@ class FidelityTests(unittest.TestCase):
     def test_empty_dossier_is_not_evidence(self):
         p=example();p['actors'][0]['dossier_source']=''
         self.assertEqual(validate_turn_packet(p)['status'],'needs_evidence')
+
+
+    def test_v41_proximity_is_provenance_limited(self):
+        from fidelity_core import source_proximate_match_v41
+        from acting_bible import compile_acting_packet, health as acting_health
+        p=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','ataque e perigo','proteger companheiro')
+        self.assertEqual(p['status'],'reference_available')
+        self.assertTrue(p['closest']['card_id'])
+        self.assertEqual(p['match_quality'],'phase_situation_synopsis')
+        self.assertFalse(p['dialogue_mechanics_verified'])
+        acting=compile_acting_packet('Kaede Uchiha','Amatsu Uchiha','proteger companheiro','ataque e perigo')
+        self.assertEqual(acting['source_proximate_v41']['closest']['card_id'],p['closest']['card_id'])
+        self.assertTrue(acting_health()['supports_source_proximate_dialogue_v41'])
 
 if __name__=='__main__':unittest.main()

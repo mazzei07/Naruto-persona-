@@ -2,6 +2,7 @@ from __future__ import annotations
 import json, re, unicodedata
 from pathlib import Path
 from typing import Any
+from fidelity_core import source_proximate_match_v41
 
 BASE=Path(__file__).resolve().parent
 BIBLE_PATH=BASE/"character_acting_bibles.json"
@@ -229,6 +230,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
         "reference_relationship_matrix":b.get("reference_relationship_matrix",{}),"relationship":rel.get("relationship",{}),"relationship_specific":rel.get("specific",False),"relationship_graph_known":rel.get("graph_known",False),"relationship_source":rel.get("relationship_source"),
         "escalation":esc,"stimulus":stimulus,"situation":situation,"prior_exchange":prior_exchange,
         "pressure":pressure,"audience":audience,"body_state":body_state,
+        "source_proximate_v41":source_proximate_match_v41(base["name"],interlocutor,situation,stimulus),
         "classic_voice_fidelity_v39":_classic_voice_fidelity_v39(base["name"],b),
         "generation_directive":[
             "Carry prior exchange forward; do not reset emotional temperature.",
@@ -238,6 +240,7 @@ def compile_acting_packet(name:str,interlocutor:str="",stimulus:str="",situation
             "Apply trigger escalation before wording; canonical break behavior outranks artificial calm when the trigger is actually present.",
             "Choose speak/body/silence from objective + body + audience, then bend the line into actor rhythm.",
             "Apply classic_voice_fidelity_v39: exact-phase oral rhythm outranks polished sentence completeness.",
+            "Use source_proximate_v41 closest card only for documented mechanics; request evidence when source is synopsis-only, and preserve live dossier/relation.",
             "Reject symmetrical banter, narrator-like technical explanation, and tidy setup/punchline exchanges unless source evidence supports them.",
             "Reject a line that could be swapped unchanged onto multiple cast members."
         ]
@@ -275,7 +278,7 @@ def health()->dict[str,Any]:
         "ok":not missing,"version":d.get("meta",{}).get("version"),"reference_essence_protocol":"v34","characters":len(chars),
         "relation_overrides":relation_overrides,"directional_relation_edges":directional_edges,
         "missing":missing,"supports_relationship_graph":True,
-        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True,"supports_classic_voice_fidelity_v39":True
+        "supports_prior_exchange":True,"supports_trigger_escalation":True,"supports_reference_essence_v34":True,"supports_actor_essence_v34":True,"supports_genericity_audit":True,"supports_classic_voice_fidelity_v39":True,"supports_source_proximate_dialogue_v41":True
     }
 
 
@@ -290,7 +293,7 @@ SOURCE_PROXIMATE_DIALOGUE_V41 = {
     "compare_read_aloud_against_source_mechanics",
     "reject_if_generic_or_over-explained"
   ],
-  "priority": "exact source scene > same-phase same-relation analogue > same-phase behavioral essence > own dossier",
+  "priority": "live continuity and own dossier/relation > exact-phase documented source mechanics > phase analogue; never import source biography",
   "anti_patterns": [
     "generic anime comeback",
     "invented modern phrasing",
