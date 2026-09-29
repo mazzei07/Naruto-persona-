@@ -3,8 +3,8 @@
   "contract": {
     "version": "v25.0.0",
     "continuity_id": "classico_floresta_da_morte",
-    "reference_episode_ceiling": 51,
-    "coverage_statement": "Catálogo de evidências selecionadas até a fase das preliminares do Exame Chūnin, não leitura integral de toda a obra. A Bíblia de Atuação v25 e a relação live precedem a analogia; pesquisar lacunas materiais antes de fechar atuação.",
+    "reference_episode_ceiling": 91,
+    "coverage_statement": "Catálogo de evidências selecionadas do Naruto Clássico até o encontro/aposta da Busca por Tsunade (anime ep. 91; mangá cap. 159), não leitura integral da obra. A Bíblia de Atuação, relação live e fase exata precedem a analogia; pesquisar lacunas materiais antes de fechar atuação.",
     "precedence": [
       "correção explícita atual do usuário",
       "ação exata do jogador",
@@ -193,7 +193,8 @@
         "camera",
         "anti_report_dialogue",
         "complete_sentence_when_reference_requires"
-      ]
+      ],
+      "exact_phase_catalog_extension": "Reference ceiling expanded only through anime ep. 91 / manga ch. 159 for current Search-for-Tsunade structural phase; later arc resolution and later maturity remain excluded unless separately revalidated."
     }
   },
   "sources": {
@@ -1783,6 +1784,103 @@
       "observed_summary": "A recomendação dos novatos para o Exame Chūnin coloca jōnin responsáveis e Iruka em uma discussão institucional sob o Hokage. Iruka contesta prontidão/experiência; Kakashi sustenta a indicação. O beat é deliberativo, não urgente.",
       "acting_inference": "Para reuniões de promoção/avaliação, separar vozes por função e relação: Hiruzen-like modera e encadeia a ideia; Kakashi-like pode ser econômico sem virar frase mutilada; Asuma/Kurenai mantêm registro adulto próprio; Iruka pode objetar com cuidado concreto. Não reduzir todos a 'NPC sério'.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "jiraiya_rasengan_staged_instruction",
+      "references": [
+        "Jiraiya"
+      ],
+      "source_ids": [
+        "jiraiya",
+        "classic_later"
+      ],
+      "locator": "Mangá caps. 150–151; anime eps. 86–87",
+      "episode_ceiling": 87,
+      "phase": "classic_search_for_tsunade_training",
+      "tags": [
+        "instruction",
+        "training",
+        "social"
+      ],
+      "observed_summary": "Jiraiya demonstra o Rasengan, divide o aprendizado em etapas e, quando Naruto pede ajuda, oferece uma pista concreta em vez de transformar o treino em uma aula contínua.",
+      "acting_inference": "Com aluno, alternar provocação/excentricidade com instrução curta e funcional. Ele pode deixar o aluno tentar, observar e só então dar uma pista; não verbalizar toda inferência técnica nem preencher cada silêncio.",
+      "dialogue_evidence": "official_editorial_or_synopsis",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "jiraiya_tsunade_reunion_request",
+      "references": [
+        "Jiraiya",
+        "Tsunade"
+      ],
+      "source_ids": [
+        "jiraiya",
+        "tsunade",
+        "classic_later"
+      ],
+      "locator": "Mangá cap. 159; anime ep. 91",
+      "episode_ceiling": 91,
+      "phase": "classic_search_for_tsunade_reunion",
+      "tags": [
+        "social",
+        "authority",
+        "disagreement",
+        "old_bonds"
+      ],
+      "observed_summary": "Jiraiya reencontra Tsunade em Tanzaku e a procura por causa da sucessão de Hokage; a conversa entre velhos pares mistura familiaridade, atrito e assunto sério sem formalidade cerimonial.",
+      "acting_inference": "Entre pares antigos, usar intimidade áspera e mudança rápida entre leveza e seriedade. Evitar explicações polidas do contexto que ambos já conhecem; deixar subtexto, história e irritação comprimirem a fala.",
+      "dialogue_evidence": "official_editorial_or_synopsis",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "tsunade_naruto_rasengan_wager",
+      "references": [
+        "Tsunade"
+      ],
+      "source_ids": [
+        "tsunade",
+        "classic_later"
+      ],
+      "locator": "Mangá cap. 159; anime ep. 91",
+      "episode_ceiling": 91,
+      "phase": "classic_search_for_tsunade_first_conflict",
+      "tags": [
+        "rivalry",
+        "disagreement",
+        "instruction",
+        "social"
+      ],
+      "observed_summary": "Tsunade reconhece o Rasengan de Naruto, percebe que ainda está incompleto, repreende Jiraiya por ensiná-lo e transforma o confronto em uma aposta quando Naruto insiste que vai dominá-lo.",
+      "acting_inference": "Tsunade avalia rápido e reage de forma blunt: crítica, desprezo, desafio e aposta carregam a cena melhor que palestra técnica. Talento ou obstinação podem prender sua atenção sem produzir elogio fácil.",
+      "dialogue_evidence": "official_editorial_or_synopsis",
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "tsunade_hokage_dream_trigger",
+      "references": [
+        "Tsunade"
+      ],
+      "source_ids": [
+        "tsunade",
+        "classic_later"
+      ],
+      "locator": "Busca por Tsunade, mangá caps. 159 em diante; usar somente comportamento já visível até anime ep. 91",
+      "episode_ceiling": 91,
+      "phase": "classic_search_for_tsunade_first_conflict",
+      "tags": [
+        "authority",
+        "disagreement",
+        "rivalry",
+        "old_bonds"
+      ],
+      "observed_summary": "No primeiro conflito com Naruto, o tema do Hokage e a insistência do garoto tocam um ponto pessoal de Tsunade; nesta fase ela ainda responde com cinismo, irritação e desafio.",
+      "acting_inference": "Quando o sonho/título de Hokage entra na conversa, permitir mudança de temperatura e provocação mais afiada; não importar ainda a resolução emocional posterior do arco.",
+      "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
       "not_rp_event": true
     }
