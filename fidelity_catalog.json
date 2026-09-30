@@ -2014,7 +2014,22 @@
       "acting_inference": "Para derivados do Time 7, pesquisar primeiro a dupla específica dentro desta relação antes de usar personalidade isolada. Hierarquia professor→aluno deve afetar endereçamento e referência em terceira pessoa; sinopse não prova redação literal.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Kakashi",
+          "Sakura"
+        ],
+        [
+          "Kakashi",
+          "Naruto"
+        ],
+        [
+          "Kakashi",
+          "Sasuke"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit pair evidence only; listed references alone mean co-presence/context, not direct interaction."
     }
   ],
   "characters": {
