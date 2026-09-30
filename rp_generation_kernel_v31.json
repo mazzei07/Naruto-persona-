@@ -371,5 +371,39 @@
     "profile_unlocks_dialogue": false,
     "google_search_grounding_available_via_gemini_narrator": true,
     "rule": "No material line is approved from adjectives alone. Retrieve source mechanics, then rewrite original content in reboot context."
+  },
+  "live_history_preservation_v45": {
+    "version": "v45",
+    "priority": "live_current_state > accumulated_live_history > explicit relationship/dossier > reference-character mechanics > generic baseline",
+    "rule": "Voice/personality/reference calibration may alter HOW an established relationship is expressed, never WHETHER its established events, intimacy, knowledge, commitments, promises, injuries, consequences or current status exist.",
+    "required_preflight": [
+      "Before generating a relationship-sensitive turn, retrieve the latest directional relation plus accumulated live relationship history.",
+      "If an older baseline conflicts with later live history, later live history wins automatically.",
+      "Reference mappings are acting evidence only and cannot overwrite reboot biography or live relationship state.",
+      "Do not reset a relationship at scene boundaries, arc boundaries, timeskips, travel, deployment, hospitalization, or model/provider changes.",
+      "Corrections to voice/register are non-destructive migrations: preserve all established events unless the user explicitly retcons them."
+    ],
+    "forbidden_regressions": [
+      "dating -> not dating without explicit live breakup",
+      "close/history-rich -> strangers or mere clanmates",
+      "reconciled -> Academy-era hostility as current state",
+      "known fact -> unknown solely because a new persona profile omitted it",
+      "established intimacy -> generic reference-character social distance",
+      "past scene/event deletion caused by personality recalibration"
+    ],
+    "amatsu_kaede_regression_test": {
+      "current_status": "dating",
+      "must_preserve": [
+        "inseparable childhood friendship",
+        "clan/father-driven estrangement",
+        "reconciliation progress",
+        "accepted date",
+        "accepted dating proposal",
+        "private silver Uchiha ring",
+        "missed/rescheduled dinner before Suna"
+      ],
+      "invalid_example": "Kaede denies being Amatsu's romantic partner solely from old Academy-dislike overlay.",
+      "valid_principle": "Kaede may be annoyed, restrained, proud or cold while still unmistakably acting from within the established relationship."
+    }
   }
 }
