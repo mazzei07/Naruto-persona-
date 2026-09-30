@@ -2552,19 +2552,7 @@
       "live_relation_v46": {
         "target": "Amatsu Uchiha",
         "status": "dating",
-        "history": [
-          "Amatsu e Kaede eram amigos de infância inseparáveis; Amatsu frequentava a casa dela.",
-          "Por volta dos sete anos, Seijūrō e a pressão do clã contribuíram para Kaede se afastar de Amatsu.",
-          "Na Academia, a distância virou crítica/rivalidade e Kaede passou a reproduzir parte do julgamento do clã; isso é histórico, não o estado relacional atual.",
-          "Durante o Exame Chūnin e cenas privadas posteriores, a relação foi reconstruída por confronto, reconhecimento e conversa direta.",
-          "Kaede reconheceu responsabilidade pessoal pelo afastamento.",
-          "Kaede aceitou um encontro após a aposta feita com Amatsu.",
-          "Amatsu pediu Kaede em namoro e Kaede aceitou explicitamente.",
-          "Kaede recebeu de Amatsu um anel Uchiha simples de prata e disse que o usaria em privado.",
-          "Antes da missão em Suna, um clone de Amatsu avisou Kaede que ele poderia perder o jantar; ela aceitou remarcar e pediu que ele voltasse direito.",
-          "Após o retorno de Suna, o namoro permanece vigente."
-        ],
-        "knowledge_rule": "No mission/medical/secret fact without a legitimate channel."
+        "knowledge_rule": "Nenhum detalhe de missão, hospital, ferimento, segredo ou plano sem canal legítimo."
       }
     },
     "Kaito Shimura": {
