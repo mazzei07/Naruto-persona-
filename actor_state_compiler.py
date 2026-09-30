@@ -11,6 +11,33 @@ from voice_fidelity_v42 import VERSION as VOICE_V42_VERSION, compile_voice_finge
 VERSION = "v29.0-relational-actor-compiler"
 
 
+def quality_health_v51() -> Dict[str, Any]:
+    """Validate the loaded contract and exercise the compiler's memory bounds."""
+    adaptive = QUALITY_V48.get("adaptive_voice_v51")
+    valid = isinstance(adaptive, dict) and adaptive.get("version") == "v51" and all(
+        isinstance(adaptive.get(key), str) and adaptive[key].strip()
+        for key in ("scope", "syntax", "state_modulation", "player", "memory", "review")
+    )
+    probe = compile_actor_state(
+        actor="healthcheck", interlocutor="", stimulus="", situation="",
+        pressure="", audience="", body_state="", objective="",
+        perception_constraint="probe: observed return only",
+        knowledge_constraint="probe: no medical knowledge", prior_exchange="",
+        relationship_state="", acting_packet={}, sayability={}, actor_beat={}, formality={},
+    )
+    bounds = probe["memory_pipeline"]["bound"]
+    return {
+        "quality_protocol": QUALITY_V48.get("version"),
+        "quality_contract_valid": bool(valid),
+        "supports_adaptive_voice_v51": bool(valid and probe["realization_envelope"]["adaptive_voice_v51"] == adaptive),
+        "preserves_structured_actor_memory_v51": bounds == {
+            "perception_limit": "probe: observed return only",
+            "knowledge_limit": "probe: no medical knowledge",
+            "player_control": "Amatsu voluntary action remains user-only",
+        },
+    }
+
+
 def _list(value: Any) -> List[str]:
     if not value:
         return []
@@ -228,4 +255,3 @@ def compile_actor_state(
             "APPLY EMOTIONAL DENSITY v46: economy is not blandness; high-stakes relation must remain felt in body/timing/subtext/action/voice",
         ],
     }
-

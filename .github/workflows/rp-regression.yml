@@ -12,4 +12,12 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -r requirements.txt pytest
       - run: python -m compileall -q .
-      - run: python -m pytest -q
+      - run: python -m pytest -q | tee test-results.txt
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rp-regression-results
+          path: test-results.txt
+          if-no-files-found: ignore
+          retention-days: 7

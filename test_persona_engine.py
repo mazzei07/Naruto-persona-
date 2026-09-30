@@ -230,5 +230,9 @@ def main():
     }, ensure_ascii=False, indent=2))
 
 
+def test_persona_public_api_regression():
+    main()
+
+
 if __name__ == "__main__":
     main()
