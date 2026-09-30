@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 from fidelity_core import evidence_packet as evidence_v24, lint as lint_v24, classify as classify_v24, health as fidelity_health, catalog as fidelity_catalog, resolve as resolve_fidelity_name
-from actor_state_compiler import compile_actor_state
+from actor_state_compiler import compile_actor_state, QUALITY_V48
 from acting_bible import (
     character_bible as acting_character_bible,
     relationship_bible as acting_relationship_bible,
@@ -910,7 +910,8 @@ def healthcheck() -> Dict[str, Any]:
     return {
         "ok": not missing_voice and not missing_dossier,
         "module": "Naruto Persona Engine",
-        "quality_protocol": "v49.1-calibrated-evidence-performance",
+        "quality_protocol": QUALITY_V48["version"],
+        "supports_adaptive_voice_v51": "adaptive_voice_v51" in QUALITY_V48,
         "version": rules.get("version"),
         "continuity_id": rules.get("continuity_id"),
         "characters": len(chars),
