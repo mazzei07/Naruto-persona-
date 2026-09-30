@@ -933,6 +933,7 @@ def healthcheck() -> Dict[str, Any]:
         "supports_epistemic_fact_gate_v46": True,
         "supports_non_destructive_live_history_v46": True,
         "supports_emotional_density_v46": True,
+        "supports_conversational_cohesion_v50": True,
         "reference_essence_protocol": "v34",
         "formality_calibration": "v33-relational-honorifics",
         "continuity_firewall_v36": _continuity_firewall_v36(),
