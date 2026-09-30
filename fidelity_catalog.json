@@ -1029,7 +1029,14 @@
       "acting_inference": "Distinguir professor preocupado, colega jōnin responsável e destinatários; discordância não vira discurso genérico.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Iruka",
+          "Kakashi"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "iruka_tower",
@@ -1143,7 +1150,14 @@
       "acting_inference": "Competência admite medo e mudança de decisão. Não usar frieza adulta invariável.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Sasuke",
+          "Naruto"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "sasuke_reengages",
@@ -1166,7 +1180,14 @@
       "acting_inference": "Ajustar decisão à informação e capacidade, sem importar selo, trauma ou técnica para o OC.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Sasuke",
+          "Orochimaru"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "gaara_witnessed",
@@ -1310,7 +1331,14 @@
       "acting_inference": "Presença confiante não remove limites. Informação institucional exige canal documentado.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Anko",
+          "Orochimaru"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "lee_protection",
@@ -1358,7 +1386,14 @@
       "acting_inference": "Usar os vínculos próprios já registrados; não importar morte, falas ou resultado da obra.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Zabuza",
+          "Haku"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "neji_limits",
@@ -1451,7 +1486,14 @@
       "acting_inference": "Inspiração técnica funcional não copia temperamento, sarcasmo, arsenal ou escala.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Tenten",
+          "Temari"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "kiba_partner",
@@ -1475,7 +1517,14 @@
       "acting_inference": "Faro não equivale a onisciência; manobras ainda dependem de identificação e janela física.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Kiba",
+          "Akamaru"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "sakura_ino_duel",
@@ -1497,7 +1546,14 @@
       "acting_inference": "Não reduzir Ino à inveja nem apagar afeto por conta de rivalidade; evento não ocorreu automaticamente no RP.",
       "dialogue_evidence": "editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Sakura",
+          "Ino"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "ibiki_exam_pressure",
@@ -1584,7 +1640,14 @@
       "acting_inference": "História de Academia e status anterior devem permanecer vivos em provocações de rivalidade; perda pública pode atingir orgulho de modo imediato e juvenil.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Kiba",
+          "Naruto"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "hyuga_family_trigger",
@@ -1610,7 +1673,14 @@
       "acting_inference": "Conflito clânico/familiar não deve ser tratado como simples duelo neutro. Relação e gatilhos podem alterar voz, corpo e agressividade.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Neji",
+          "Hinata"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "lee_sasuke_physical_challenge",
@@ -1634,7 +1704,14 @@
       "acting_inference": "Para personagens físicos/competitivos, desafio pode aparecer primeiro em ação, postura e pressão corporal, não em discurso sofisticado.",
       "dialogue_evidence": "official_editorial_or_synopsis_only",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Lee",
+          "Sasuke"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "gaara_prelim_presence_v26",
@@ -1790,7 +1867,8 @@
     {
       "id": "jiraiya_rasengan_staged_instruction",
       "references": [
-        "Jiraiya"
+        "Jiraiya",
+        "Naruto"
       ],
       "source_ids": [
         "jiraiya",
@@ -1808,7 +1886,14 @@
       "acting_inference": "Com aluno, alternar provocação/excentricidade com instrução curta e funcional. Ele pode deixar o aluno tentar, observar e só então dar uma pista; não verbalizar toda inferência técnica nem preencher cada silêncio.",
       "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Jiraiya",
+          "Naruto"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "jiraiya_tsunade_reunion_request",
@@ -1834,12 +1919,21 @@
       "acting_inference": "Entre pares antigos, usar intimidade áspera e mudança rápida entre leveza e seriedade. Evitar explicações polidas do contexto que ambos já conhecem; deixar subtexto, história e irritação comprimirem a fala.",
       "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Jiraiya",
+          "Tsunade"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "tsunade_naruto_rasengan_wager",
       "references": [
-        "Tsunade"
+        "Tsunade",
+        "Naruto",
+        "Jiraiya"
       ],
       "source_ids": [
         "tsunade",
@@ -1858,12 +1952,24 @@
       "acting_inference": "Tsunade avalia rápido e reage de forma blunt: crítica, desprezo, desafio e aposta carregam a cena melhor que palestra técnica. Talento ou obstinação podem prender sua atenção sem produzir elogio fácil.",
       "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Tsunade",
+          "Naruto"
+        ],
+        [
+          "Tsunade",
+          "Jiraiya"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "tsunade_hokage_dream_trigger",
       "references": [
-        "Tsunade"
+        "Tsunade",
+        "Naruto"
       ],
       "source_ids": [
         "tsunade",
@@ -1882,7 +1988,14 @@
       "acting_inference": "Quando o sonho/título de Hokage entra na conversa, permitir mudança de temperatura e provocação mais afiada; não importar ainda a resolução emocional posterior do arco.",
       "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Tsunade",
+          "Naruto"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "tsunade_hesitation_and_jiraiya_read",
@@ -1908,7 +2021,14 @@
       "acting_inference": "Kiyomi-like não verbaliza conflito interno em monólogo explicativo; hesitação aparece em atraso, evasão, mudança de comportamento e decisão secreta. Shōzen-like percebe alterações e pressiona com poucas palavras, sem interrogatório terapêutico.",
       "dialogue_evidence": "official_episode_summary",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Tsunade",
+          "Jiraiya"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "orochimaru_tsunade_offer_pressure",
@@ -1934,7 +2054,14 @@
       "acting_inference": "Kairen-like não implora nem despeja justificativas. Ele apresenta a peça que importa, observa a reação e usa silêncio/confiança como pressão. A ameaça pode ficar implícita até precisar ser dita.",
       "dialogue_evidence": "official_editorial_or_synopsis",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Orochimaru",
+          "Tsunade"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "tsunade_false_acceptance_counterattack",
@@ -1960,7 +2087,14 @@
       "acting_inference": "Kiyomi-like pode fingir acomodação sem narrar intenção. A virada deve aparecer em ação concreta. Kairen-like lê detalhes e reage sem teatralidade excessiva.",
       "dialogue_evidence": "official_episode_summary",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Tsunade",
+          "Orochimaru"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "sannin_reunion_combat_voice",
@@ -1988,7 +2122,22 @@
       "acting_inference": "Evitar três discursos alternados. Em alta pressão: Shōzen perde o humor frouxo e fica funcional; Kiyomi fica brusca e física; Kairen permanece controlado e quase cortês, com curiosidade predatória.",
       "dialogue_evidence": "official_episode_summary",
       "br_dub_verified": false,
-      "not_rp_event": true
+      "not_rp_event": true,
+      "interaction_pairs": [
+        [
+          "Jiraiya",
+          "Tsunade"
+        ],
+        [
+          "Jiraiya",
+          "Orochimaru"
+        ],
+        [
+          "Tsunade",
+          "Orochimaru"
+        ]
+      ],
+      "interaction_pair_rule": "Explicit direct interaction supported by this card's observed summary/locator; exact wording/prosody/dub still depends on evidence quality."
     },
     {
       "id": "team7_kakashi_pair_v43",
