@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "v38-kaede-family-relations",
+    "version": "v45-live-relationship-preservation",
     "continuity_id": "classico_floresta_da_morte",
     "created_at": "2026-09-28",
     "rule": "Directional relation context only. Scalar relation traits use priority: explicit acting override > explicit dossier relation > current team/sensei > shared-clan context. No intimacy is inferred from clan.",
@@ -10,7 +10,8 @@
       "active_continuity_id": "classico_floresta_da_morte",
       "rule": "Relations are Classic-only. Shared identity across continuities never transfers old relationship history."
     },
-    "family_dojutsu_v38": "Family relation graph now includes Akane/Ritsu and the current ocular hierarchy."
+    "family_dojutsu_v38": "Family relation graph now includes Akane/Ritsu and the current ocular hierarchy.",
+    "live_relationship_rule": "Current live relationship state outranks older baseline relationship overlays. Voice calibration may change expression, never erase established events, intimacy, knowledge, commitments or consequences."
   },
   "edges": {
     "Amatsu Uchiha": {
@@ -61,18 +62,33 @@
       },
       "Kaede Uchiha": {
         "sources": [
+          "live_childhood_history_v45",
+          "live_exam_reconciliation_v45",
+          "live_dating_v45",
           "shared_clan_context"
         ],
         "facts": [
-          "Both are explicitly identified with Uchiha."
+          "Amatsu e Kaede eram amigos de infância inseparáveis; Amatsu frequentava a casa dela.",
+          "Seijūrō e a pressão do clã levaram Kaede a se afastar de Amatsu por volta dos sete anos; esse afastamento marcou os dois e não apaga a intimidade infantil anterior.",
+          "Durante o Exame Chūnin/Floresta e os duelos posteriores, a relação foi recalibrada por confronto direto, respeito de competência e reconhecimento emocional.",
+          "Kaede reconheceu responsabilidade pessoal pelo afastamento em conversa privada posterior.",
+          "Amatsu revelou que seu primeiro Sharingan despertou ligado ao afastamento de Kaede e que manteve o dōjutsu secreto por anos.",
+          "Após uma aposta, Kaede aceitou um encontro com Amatsu; a relação evoluiu live além de rivalidade simples.",
+          "Amatsu pediu Kaede em namoro; ela aceitou. Eles estão namorando na continuidade live atual.",
+          "Kaede recebeu de Amatsu um anel Uchiha de prata e disse que o usaria em privado.",
+          "Antes da missão/resgate em Suna, Kaede foi avisada pelo clone de Amatsu sobre a ausência/jantar; aceitou remarcar, pediu que ele não fizesse besteira e que voltasse direito.",
+          "No retorno de Suna, o namoro continua vigente. Termos afetivos devem ser julgados pelo contexto atual do casal, não por um overlay antigo de antipatia da Academia."
         ],
         "roles": [
+          "boyfriend",
+          "childhood_best_friend",
+          "rival_peer",
           "same_clan_context"
         ],
-        "familiarity": "not_implied",
-        "hierarchy": "depends_on_family_structure",
-        "default_filter": "derive_from_explicit_relation",
-        "rule": "Same clan does NOT imply friendship, shared knowledge or equal status."
+        "familiarity": "deep_shared_history_and_current_romance",
+        "hierarchy": "peer",
+        "default_filter": "current_relationship_specific",
+        "rule": "Current namoro and shared childhood are established live facts. Do not reduce Amatsu→Kaede to same-clan context or generic rivalry."
       },
       "Shin Uchiha": {
         "sources": [
@@ -368,27 +384,36 @@
       },
       "Amatsu Uchiha": {
         "sources": [
-          "character_acting_bibles.explicit_override",
+          "live_childhood_history_v45",
+          "live_exam_reconciliation_v45",
+          "live_dating_v45",
           "shared_clan_context"
         ],
         "facts": [
-          "Academy-era dislike is established. Kaede regarded Amatsu's pranks/reputation as a public disgrace to the Uchiha name.",
-          "Seijūrō's family guidance reinforced distance from Amatsu.",
-          "She is colder, harsher and more critical toward Amatsu than a neutral classmate; this history remains active until changed by repeated live experience.",
-          "Cold, clipped and exact. Her hostility is usually expressed by distance, dismissiveness and precise cutting remarks rather than Shin's open explosiveness.",
-          "Both are explicitly identified with Uchiha."
+          "Amatsu e Kaede eram amigos de infância inseparáveis; Amatsu frequentava a casa dela.",
+          "Seijūrō e a pressão do clã levaram Kaede a se afastar de Amatsu por volta dos sete anos; esse afastamento marcou os dois e não apaga a intimidade infantil anterior.",
+          "Durante o Exame Chūnin/Floresta e os duelos posteriores, a relação foi recalibrada por confronto direto, respeito de competência e reconhecimento emocional.",
+          "Kaede reconheceu responsabilidade pessoal pelo afastamento em conversa privada posterior.",
+          "Amatsu revelou que seu primeiro Sharingan despertou ligado ao afastamento de Kaede e que manteve o dōjutsu secreto por anos.",
+          "Após uma aposta, Kaede aceitou um encontro com Amatsu; a relação evoluiu live além de rivalidade simples.",
+          "Amatsu pediu Kaede em namoro; ela aceitou. Eles estão namorando na continuidade live atual.",
+          "Kaede recebeu de Amatsu um anel Uchiha de prata e disse que o usaria em privado.",
+          "Antes da missão/resgate em Suna, Kaede foi avisada pelo clone de Amatsu sobre a ausência/jantar; aceitou remarcar, pediu que ele não fizesse besteira e que voltasse direito.",
+          "No retorno de Suna, o namoro continua vigente. Termos afetivos devem ser julgados pelo contexto atual do casal, não por um overlay antigo de antipatia da Academia."
         ],
         "roles": [
-          "explicit_acting_override",
+          "girlfriend",
+          "childhood_best_friend",
+          "rival_peer",
           "same_clan_context"
         ],
-        "familiarity": "explicit",
-        "hierarchy": "as_documented",
-        "default_filter": "override",
-        "rule": "No warm teasing, no quick friendship, no generic tsundere softness, no spectator-commentator voice.",
-        "reference_relation_axis_v28": "Sasuke jovem → Naruto + histórico Uchiha próprio mais hostil",
-        "reference_relation_transfer_v28": "competição e atenção relutante ao crescimento, mas com distância mais fria",
-        "reference_relation_must_not_v28": "não virar camaradagem ou elogio fácil"
+        "familiarity": "deep_shared_history_and_current_romance",
+        "hierarchy": "peer",
+        "default_filter": "current_relationship_specific",
+        "rule": "Live evolution outranks Academy-era hostility. Preserve Kaede's cold/precise temperament, pride and family pressure, but never reset her to 'not intimate' or deny the established namoro. Affection may remain restrained/private; irritation does not erase the relationship.",
+        "reference_relation_axis_v28": "Kaede's own live relationship with Amatsu outranks generic Sasuke→Naruto analogy; Sasuke-like mechanics may shape restraint/precision only.",
+        "reference_relation_transfer_v28": "Use selective attention, pride, clipped delivery and restrained affection compatible with an established young relationship and long childhood history.",
+        "reference_relation_must_not_v28": "Do not reset to Academy dislike, deny dating, forbid ordinary romantic address solely because of old hostility, invent tsundere denial, or erase shared childhood/reconciliation."
       },
       "Shin Uchiha": {
         "sources": [
