@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.13.0-v47-strict-preflight",
+  "version": "0.14.0-v50-conversational-cohesion",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -28,6 +28,7 @@
     "decision",
     "speech_or_silence",
     "voice_realization",
+    "conversational_cohesion_v50",
     "body_realization",
     "post_reaction"
   ],
@@ -42,6 +43,7 @@
     "Correto não significa formal; casual não significa gíria moderna.",
     "Tratamento, título e honorífico são estado relacional: devem ser resolvidos por referência, fase, hierarquia, intimidade e situação antes da redação da fala.",
     "Morfossintaxe faz parte da voz.",
+    "Coesão conversacional faz parte da voz: dentro do mesmo turno, orações semanticamente dependentes devem ser ligadas por marcador, prosódia/pausa, reparo, ação intermediária ou elipse legitimada pelo contexto; corte seco não é estilo automático.",
     "Bordão é microassinatura, não muleta.",
     "Comédia física é válida somente quando contexto, relação e pressão permitirem.",
     "Perigo comprime linguagem, mas não transforma criança em comandante adulto.",
@@ -75,6 +77,7 @@
     "completude_sintatica",
     "registro_e_hierarquia",
     "morfossintaxe",
+    "coesao_conversacional_e_continuidade_do_turno",
     "pos_reacao"
   ],
   "forbidden_modernisms": [
@@ -239,7 +242,8 @@
       "read-aloud character test",
       "body-voice unity",
       "vocative placement",
-      "register consistency"
+      "register consistency",
+      "conversational cohesion / orphan-fragment / marker-crutch test"
     ]
   },
   "forbidden_ai_dialogue": [
@@ -268,7 +272,8 @@
     "explicit_interaction_pair_required_v43",
     "source_grounded_voice_v44",
     "minimum_two_dialogue_exemplars_v44",
-    "synopsis_cannot_unlock_dialogue_v44"
+    "synopsis_cannot_unlock_dialogue_v44",
+    "conversational_cohesion_and_turn_continuation_v50"
   ],
   "sayability_gate_v22": {
     "mandatory": true,
@@ -802,5 +807,105 @@
   "live_history_preservation_v46": {
     "rule": "Current live relation/history outranks old relationship baseline and reference-character analogy.",
     "non_destructive": true
+  },
+  "conversational_cohesion_v50": {
+    "mandatory": true,
+    "name": "Conversational Cohesion & Turn-Continuation Gate",
+    "linguistic_basis": [
+      "marcadores discursivos/conversacionais organizam relações entre unidades adjacentes da fala",
+      "hesitação, repetição, pausa preenchida e autocorreção podem sinalizar planejamento e manutenção do turno",
+      "coesão oral não exige conjunção em toda oração: gesto, pausa, prosódia, interrupção e resposta do interlocutor também podem realizar a ligação"
+    ],
+    "core_rule": "Antes de pontuar ou separar frases, resolver a relação pragmática entre a unidade atual e a seguinte. A superfície deve soar como fala contínua de uma pessoa naquele universo, não como legendas independentes coladas.",
+    "relation_types": {
+      "continuation": [
+        "e",
+        "então",
+        "aí",
+        "depois",
+        "nisso"
+      ],
+      "opposition": [
+        "mas",
+        "só que"
+      ],
+      "cause_explanation": [
+        "porque",
+        "é que"
+      ],
+      "consequence": [
+        "então",
+        "por isso"
+      ],
+      "correction_repair": [
+        "quer dizer",
+        "não...",
+        "eu..."
+      ],
+      "hesitation": [
+        "hm...",
+        "ahn...",
+        "é...",
+        "bem...",
+        "repetição ou reinício parcial"
+      ],
+      "zero_connector": "permitido quando prosódia, pausa, ação corporal, interrupção ou adjacência de turnos torna a relação inequívoca"
+    },
+    "naruto_register": {
+      "rule": "Escolher marcadores que caibam no Naruto Clássico PT-BR, na idade, fase, origem, formalidade e referência do personagem. Não modernizar a voz só para obter fluidez.",
+      "defaults": [
+        "mas",
+        "só que",
+        "então",
+        "aí",
+        "e",
+        "porque",
+        "é que",
+        "bom",
+        "espera",
+        "olha",
+        "hm/ahn quando sustentado"
+      ],
+      "restricted": [
+        "daí não é marcador universal do elenco; só usar se o idioleto/fonte do personagem sustentar",
+        "tipo, literalmente, basicamente e equivalentes não podem virar preenchimento genérico moderno",
+        "porém/contudo/entretanto não são proibidos, mas exigem registro compatível; não usar para fazer criança soar como redação"
+      ]
+    },
+    "adjacency_pair_rule": "Fragmentos de continuação podem depender da fala imediatamente anterior do interlocutor. Ex.: uma resposta 'Não calou.' pode funcionar depois de um 'E?', mas no mesmo turno ininterrupto após 'Eu mandei ele calar a boca.' tende a exigir ligação, pausa expressiva/action beat ou evidência de estilo que justifique o corte.",
+    "orphan_fragment_gate": {
+      "target": "segunda oração curta que depende semanticamente da primeira mas foi isolada como nova frase sem nova deixa conversacional",
+      "bad_default": "Eu mandei ele calar a boca. Não calou.",
+      "repaired_default": "Eu mandei ele calar a boca, só que ele não calou.",
+      "alternative": "Eu mandei ele calar a boca. [interlocutor: E?] — Não calou.",
+      "exception": "corte deliberado pode sobreviver se a referência/fase usa fragmentação abrupta e o silêncio/pontuação produz efeito claro; não presumir essa exceção"
+    },
+    "marker_crutch_gate": {
+      "rule": "Não repetir o mesmo marcador no início de sucessivas unidades apenas para manter fluidez.",
+      "threshold": "três ou mais aberturas próximas com o mesmo marcador exigem revisão, salvo assinatura textual comprovada e situação específica",
+      "examples_to_watch": [
+        "então... então... então...",
+        "aí... aí... aí...",
+        "mas... mas... mas...",
+        "só que... só que... só que..."
+      ]
+    },
+    "character_resolution": [
+      "resolver relação lógica/pragmática entre unidades",
+      "decidir se há continuidade do mesmo turno ou resposta a outro turno",
+      "consultar cadência, formalidade, hesitação e fragmentação da referência/fase",
+      "escolher marcador, pausa, reparo, ação ou zero-connector",
+      "ler em voz alta mentalmente",
+      "aplicar anti-bengala e anti-legenda"
+    ],
+    "anti_patterns": [
+      "frases curtas independentes em série quando semanticamente são uma só fala",
+      "fragmento órfão sem deixa do interlocutor",
+      "conector inserido mecanicamente em toda oração",
+      "mesmo marcador repetido por hábito do gerador",
+      "usar 'daí' como cola universal",
+      "pontuação escrita formal que apaga oralidade do personagem",
+      "oralidade regional/moderna não sustentada pela referência"
+    ]
   }
 }
