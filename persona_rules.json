@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.9.1-v38",
+  "version": "0.10.0-v43-relational-hierarchy",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -257,7 +257,10 @@
     "Antes de aprovar a linha, resolver explicitamente o nível de formalidade e o motivo.",
     "A mesma proposição deve mudar de superfície se o interlocutor mudar.",
     "Nenhum personagem pode escapar do registro universal de Naruto; nenhum personagem pode ser achatado por ele.",
-    "Vocabulário e complexidade precisam caber na idade, experiência e assunto dominado pelo personagem."
+    "Vocabulário e complexidade precisam caber na idade, experiência e assunto dominado pelo personagem.",
+    "third_person_hierarchy_v43",
+    "pairwise_reference_interaction_v43",
+    "explicit_interaction_pair_required_v43"
   ],
   "sayability_gate_v22": {
     "mandatory": true,
@@ -688,7 +691,7 @@
         "teacher": "sensei natural quando endereça professor; baixa energia muda cadência, não necessariamente o título"
       }
     },
-    "direct_address_rule": "Se o nome/título aparece como vocativo direto, usar a forma preferida da relação. Menções em terceira pessoa podem ter forma diferente.",
+    "direct_address_rule": "Resolver vocativo e referência em terceira pessoa separadamente. A forma pode variar, mas hierarquia estável não pode desaparecer por default: quando a relação/fase preserva sensei/Kage/Sannin/mestre, nome nu ou pronome exige contexto natural.",
     "urgency_rule": "Perigo pode comprimir Nome-sensei para 'sensei!' e Hokage-sama para 'Hokage!', mas não deve converter automaticamente uma personagem respeitosa em fala casual.",
     "ptbr_rule": "Preservar função social. Honorífico japonês pode permanecer quando já é parte do registro do RP; equivalente PT-BR é válido se mantiver hierarquia sem soar cerimonial artificial.",
     "anti_patterns": [
@@ -737,5 +740,15 @@
     },
     "perception_rule": "Sharingan perception never equals automatic recognition, reaction, defense or dodge. Body speed, interpretation, timing and actual skill remain separate gates.",
     "progression_rule": "Do not promote tomoe or grant Mangekyō without explicit live development."
+  },
+  "relational_hierarchy_pairwise_v43": {
+    "mandatory": true,
+    "direct_and_third_person": true,
+    "pairwise_reference_required_when_both_mapped": true,
+    "pair_match_requires_explicit_interaction_pairs": true,
+    "missing_pair_behavior": "research_required; Narrator blocks draft until valid external or catalog pair evidence exists",
+    "cooccurrence_rule": "characters listed on the same card are only co-present unless interaction_pairs explicitly contains the pair",
+    "source_quality_rule": "synopsis/editorial may establish relation/event mechanics but never exact wording, prosody, or Brazilian dub",
+    "hierarchy_rule": "preserve relational title/honorific for teacher/Kage/Sannin/master when exact phase/relation supports it; avoid mechanical repetition once referent is naturally established"
   }
 }
