@@ -997,9 +997,15 @@ def relation_get(speaker: str, interlocutor: str, situation: str = "", pressure:
     relationship_bible_v36 = acting_relationship_bible(a, b)
     graph_relation_v36 = relationship_bible_v36.get("relationship", {}) if relationship_bible_v36.get("status") == "ok" else {}
     if graph_relation_v36:
+        if relationship_bible_v36.get("relationship_source") == "relationship_graph_live_override":
+            rel_lines = []
         rel_lines = _uniq(rel_lines + [
             *(graph_relation_v36.get("facts", []) if isinstance(graph_relation_v36.get("facts"), list) else []),
+            *(graph_relation_v36.get("history", []) if isinstance(graph_relation_v36.get("history"), list) else []),
             str(graph_relation_v36.get("rule") or ""),
+            str(graph_relation_v36.get("baseline") or ""),
+            str(graph_relation_v36.get("address") or ""),
+            str(graph_relation_v36.get("must_not") or ""),
             str(graph_relation_v36.get("reference_relation_axis_v28") or ""),
             str(graph_relation_v36.get("reference_relation_transfer_v28") or ""),
             str(graph_relation_v36.get("reference_relation_must_not_v28") or "")
@@ -1071,11 +1077,18 @@ def character_turn_packet(
     rel_lines = _relation_lines(p.get("voice_raw", ""), interlocutor_resolved or "")
     rel_v25 = acting_v25.get("relationship", {}) if acting_v25.get("status") == "ok" else {}
     if rel_v25:
+        if acting_v25.get("relationship_source") == "relationship_graph_live_override":
+            rel_lines = []
         rel_lines = _uniq(rel_lines + [
+            *(rel_v25.get("facts", []) if isinstance(rel_v25.get("facts"), list) else []),
             *(rel_v25.get("history", []) if isinstance(rel_v25.get("history"), list) else []),
+            rel_v25.get("rule", ""),
             rel_v25.get("baseline", ""),
             rel_v25.get("address", ""),
             rel_v25.get("must_not", ""),
+            rel_v25.get("reference_relation_axis_v28", ""),
+            rel_v25.get("reference_relation_transfer_v28", ""),
+            rel_v25.get("reference_relation_must_not_v28", ""),
             *[str(x.get("response", "")) for x in rel_v25.get("trigger_rules", []) if isinstance(x, dict)]
         ])
     tags = _classify_situation(stimulus, situation)
