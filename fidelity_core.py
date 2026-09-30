@@ -88,17 +88,27 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
         if not set(mapping.get('reference_characters',[]))&set(card.get('references',[])):continue
         overlap=tags&set(card.get('tags',[]))
         card_refs=set(card.get('references',[]))
-        pair_match=bool(pair_reference_required and actor_refs&card_refs and target_refs&card_refs)
+        pair_cooccurrence=bool(pair_reference_required and actor_refs&card_refs and target_refs&card_refs)
+        interaction_pairs=card.get('interaction_pairs',[]) or []
+        def _explicit_pair_match():
+            if not pair_reference_required:return False
+            for pair in interaction_pairs:
+                if not isinstance(pair,list) or len(pair)!=2:continue
+                left,right=set([str(pair[0])]),set([str(pair[1])])
+                if (actor_refs&left and target_refs&right) or (actor_refs&right and target_refs&left):
+                    return True
+            return False
+        pair_match=_explicit_pair_match()
         relation=card.get('interlocutor_relation')
         relation_match=bool(relation and interlocutor and context_text(interlocutor)==context_text(relation))
         score=10*len(overlap)+int(relation_match)*5+int(pair_match)*30
-        allowed.append((score,card,relation_match,pair_match))
+        allowed.append((score,card,relation_match,pair_match,pair_cooccurrence))
     allowed.sort(key=lambda item:(-item[0],item[1]['id']))
     candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
-                 'pair_reference_match':pair,
+                 'pair_reference_match':pair,'pair_reference_cooccurrence':cooccur,
                  'evidence_kind':c.get('dialogue_evidence','unknown'),'locator':c.get('locator',''),
                  'source_ids':c.get('source_ids',[]),'source_url':c.get('source_url'),
-                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel,pair in allowed[:3]]
+                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel,pair,cooccur in allowed[:3]]
     best=candidates[0] if candidates else None
     pair_match_found=any(x.get('pair_reference_match') for x in candidates)
     verified=bool(best and best['provenance']=='catalogue' and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
@@ -110,7 +120,7 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
             'pair_reference_match_found':pair_match_found,
             'pair_reference_research_required':bool(pair_reference_required and not pair_match_found),
             'pragmatic_function':'requires_scene_review','turn_shape':'requires_scene_review',
-            'rule':'Live state and directional relation outrank an analogue. When both sides have official references, same-phase pair interaction evidence outranks individual personality fallback. Synopsis does not prove wording, cadence or dub.'}
+            'rule':'Live state and directional relation outrank an analogue. References merely co-occurring on a card do not prove pair interaction; pair_reference_match requires an explicit interaction_pairs entry. When both sides have official references, same-phase direct-pair evidence outranks individual personality fallback. Synopsis does not prove wording, cadence or dub.'}
 
 def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     actor=resolve(name)
