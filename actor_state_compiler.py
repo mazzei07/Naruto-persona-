@@ -12,11 +12,17 @@ VERSION = "v29.0-relational-actor-compiler"
 
 
 def quality_health_v51() -> Dict[str, Any]:
-    """Validate the loaded contract and exercise the compiler's memory bounds."""
+    """Validate v51 voice/memory plus v52 dramatic-simulation gates."""
     adaptive = QUALITY_V48.get("adaptive_voice_v51")
-    valid = isinstance(adaptive, dict) and adaptive.get("version") == "v51" and all(
+    dramatic = QUALITY_V48.get("dramatic_simulation_v52")
+    adaptive_valid = isinstance(adaptive, dict) and adaptive.get("version") == "v51" and all(
         isinstance(adaptive.get(key), str) and adaptive[key].strip()
         for key in ("scope", "syntax", "state_modulation", "player", "memory", "review")
+    )
+    dramatic_valid = isinstance(dramatic, dict) and dramatic.get("version") == "v52" and all(
+        isinstance(dramatic.get(key), str) and dramatic[key].strip()
+        for key in ("scope", "sensory_gate", "private_preflight", "show_dont_tell", "stress_dialogue",
+                    "physical_consequence", "initiative", "player_boundary", "final_surface")
     )
     probe = compile_actor_state(
         actor="healthcheck", interlocutor="", stimulus="", situation="",
@@ -26,17 +32,20 @@ def quality_health_v51() -> Dict[str, Any]:
         relationship_state="", acting_packet={}, sayability={}, actor_beat={}, formality={},
     )
     bounds = probe["memory_pipeline"]["bound"]
+    simulation = probe.get("simulation_workspace", {})
     return {
         "quality_protocol": QUALITY_V48.get("version"),
-        "quality_contract_valid": bool(valid),
-        "supports_adaptive_voice_v51": bool(valid and probe["realization_envelope"]["adaptive_voice_v51"] == adaptive),
+        "quality_contract_valid": bool(adaptive_valid and dramatic_valid),
+        "supports_adaptive_voice_v51": bool(adaptive_valid and probe["realization_envelope"]["adaptive_voice_v51"] == adaptive),
         "preserves_structured_actor_memory_v51": bounds == {
             "perception_limit": "probe: observed return only",
             "knowledge_limit": "probe: no medical knowledge",
             "player_control": "Amatsu voluntary action remains user-only",
         },
+        "supports_dramatic_simulation_v52": bool(dramatic_valid and simulation.get("contract") == dramatic),
+        "enforces_player_window_v52": bool(simulation.get("player_boundary", {}).get("rule")),
+        "enforces_sensory_gate_v52": bool(simulation.get("sensory_gate", {}).get("rule")),
     }
-
 
 def _list(value: Any) -> List[str]:
     if not value:
@@ -189,6 +198,29 @@ def compile_actor_state(
         "rule": "Choose decision category before wording. Style may not override the chosen action.",
     }
 
+    simulation = {
+        "sensory_gate": {
+            "available_cues": perception_constraint or "use only established packet perception; do not invent sensory evidence",
+            "rule": "Actor may react only to established cues physically/perceptually available from the current scene.",
+        },
+        "psychological_pressure": {
+            "pressure": pressure,
+            "objective": objective or actor_beat.get("immediate_objective", ""),
+            "subtext": actor_beat.get("subtext", ""),
+            "rule": "Operational dramatic state only; never expose as chain-of-thought, hidden JSON or a Thought block.",
+        },
+        "physical_commitment": {
+            "body_state": body_state,
+            "first_move": actor_beat.get("first_physical_move", ""),
+            "action_verb": actor_beat.get("action_verb", ""),
+            "rule": "Choose a physically plausible first commitment before prose when action is needed; never invent a decorative gesture merely to fill this field.",
+        },
+        "player_boundary": {
+            "rule": "NPC initiative follows causality. If Amatsu still has a physically meaningful voluntary defense/choice window, stop before deciding it; if no such window remains, resolve external consequence without inventing his voluntary reaction.",
+        },
+        "contract": QUALITY_V48.get("dramatic_simulation_v52", {}),
+    }
+
     realization = {
         "reference_anchor": voice.get("reference_anchor", ""),
         "reference_characters": voice.get("reference_characters", []),
@@ -198,6 +230,7 @@ def compile_actor_state(
         "avoid": voice.get("avoid", ""),
         "formality": formality,
         "adaptive_voice_v51": QUALITY_V48.get("adaptive_voice_v51", {}),
+        "dramatic_simulation_v52": QUALITY_V48.get("dramatic_simulation_v52", {}),
         "body_voice_rule": acting.get("body_voice_link", "body and voice must share one impulse"),
         "dialogue_flow": acting.get("dialogue_flow_v27", {}),
         "classic_voice_fidelity_v39": (acting_packet or {}).get("classic_voice_fidelity_v39", {}),
@@ -220,6 +253,12 @@ def compile_actor_state(
         "epistemic_name_gate_v42": "No NPC may use an unlearned proper name, technique label, organization, diagnosis or secret. Rephrase perceptually or block.",
         "epistemic_fact_gate_v46": "Extend the knowledge gate to every material proposition: events, medical status, injuries, mission results, private conversations, plans, locations, identities, relations and causes all require a legitimate channel. Narrator dossier knowledge is not actor knowledge.",
         "emotional_density_v46": "Economical speech must not flatten a high-stakes relationship beat. Preserve pressure through body, latency, action, subtext, interruption, lexical choice or dialogue; silence must perform a specific action.",
+        "sensory_gate_v52": "Every described cue used by the actor must exist in established perception/scene state; vividness never authorizes invented evidence.",
+        "physical_consequence_v52": "Persist injury, blood, pain, fatigue, impairment, spent resources and terrain change until an established cause changes them; no rubber-world reset or plot armor.",
+        "stress_dialogue_v52": "Stress may alter breath, interruption, repair, hesitation and clause completion only when actor/phase/body support it; no forced stutter.",
+        "show_dont_tell_v52": "Prefer concrete body/timing/space/consequence over narrator emotion labels; do not map every emotion to one stock symptom.",
+        "anti_cliche_v52": "Reject the v52 generic dramatic terms and adjacent trailer/moralizing prose; replace with concrete scene-specific language, not ornate synonyms.",
+        "player_window_v52": "NPCs may exploit causal openings; stop only where a meaningful voluntary Amatsu choice still exists.",
     }
 
     return {
@@ -236,6 +275,7 @@ def compile_actor_state(
         "reaction_threshold": threshold,
         "behavior_frequency_ledger": behavior_frequency_ledger,
         "decision_workspace": decision,
+        "simulation_workspace": simulation,
         "realization_envelope": realization,
         "verification": verifier,
         "generation_contract": [
@@ -253,5 +293,9 @@ def compile_actor_state(
             "APPLY EPISTEMIC NAME GATE v42 before every proper-name or technical-label use",
             "APPLY EPISTEMIC FACT GATE v46 before every material factual proposition; no channel means no certainty",
             "APPLY EMOTIONAL DENSITY v46: economy is not blandness; high-stakes relation must remain felt in body/timing/subtext/action/voice",
+            "APPLY SENSORY GATE v52: use only established cues; vivid prose cannot invent perception",
+            "APPLY PHYSICAL CONSEQUENCE v52: wounds, fatigue, impairment, resources and terrain persist causally",
+            "APPLY PLAYER WINDOW v52: NPC initiative does not wait for turns; stop only before a meaningful remaining voluntary Amatsu choice",
+            "APPLY SURFACE GATES v52: show through concrete body/timing/space, stress-shape dialogue contextually, reject generic dramatic clichés, never print private preflight",
         ],
     }
