@@ -51,6 +51,41 @@ def main():
     assert audit["status"] == "revision_required", audit
     assert audit["revision_requests"], audit
 
+    # v50 conversational cohesion: same-speaker dependent fragments need a real bridge.
+    cohesion_bad = persona_check(
+        "Kaede Uchiha", "Amatsu Uchiha",
+        candidate_dialogue="Eu mandei ele calar a boca. Não calou.",
+        situation="conversa privada contínua; mesma fala de Kaede, sem intervenção do interlocutor",
+        pressure="baixa"
+    )
+    assert any("v50_orphan_followup_fragment" in x for x in cohesion_bad.get("revision_requests", [])), cohesion_bad
+
+    cohesion_good = persona_check(
+        "Kaede Uchiha", "Amatsu Uchiha",
+        candidate_dialogue="Eu mandei ele calar a boca, só que ele não calou.",
+        situation="conversa privada contínua; mesma fala de Kaede",
+        pressure="baixa"
+    )
+    assert not any("v50_orphan_followup_fragment" in x for x in cohesion_good.get("revision_requests", [])), cohesion_good
+
+    adjacency_ok = persona_check(
+        "Kaede Uchiha", "Amatsu Uchiha",
+        candidate_dialogue="Não calou.",
+        prior_exchange="Kaede: Eu mandei ele calar a boca.\\nAmatsu: E?",
+        situation="resposta direta à deixa curta do interlocutor",
+        pressure="baixa"
+    )
+    assert not any("v50_orphan_followup_fragment" in x for x in adjacency_ok.get("revision_requests", [])), adjacency_ok
+
+    marker_crutch = persona_check(
+        "Ritsu Uchiha", "Kaede Uchiha",
+        candidate_dialogue="Então eu fui. Então ele falou. Então eu voltei. Então acabou.",
+        situation="relato casual entre irmãos",
+        pressure="baixa"
+    )
+    assert any("v50_marker_crutch" in x for x in marker_crutch.get("warnings", [])), marker_crutch
+
+
     v22_sayability = persona_sayability(
         "Kazuma Uzumaki", "Amatsu Uchiha",
         stimulus="Amatsu faz uma careta banal que não exige resposta",
