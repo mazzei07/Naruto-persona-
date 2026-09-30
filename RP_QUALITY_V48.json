@@ -1,5 +1,5 @@
 {
-  "version": "v48-integrity-performance-combat",
+  "version": "v49-evidence-agency-tactical-performance",
   "scope": "Continuidade Clássica; aprimora execução sem substituir fichas, eventos ou sistema Chakra V3",
   "hard_rules": [
     "Ação voluntária de Amatsu apenas pelo usuário.",
@@ -16,7 +16,10 @@
     "Escolher intensidade pelo estímulo e histórico; não fabricar conflito para aumentar emoção.",
     "Preservar oralidade, comprimento e respiração específicos: economia não exige frase truncada.",
     "Revisar decisão, sequência, subtexto, gesto e resposta ao interlocutor; palavras funcionais compartilhadas são válidas.",
-    "Manter alvos e agendas dos NPCs durante o combate; evitar reação em fila."
+    "Manter alvos e agendas dos NPCs durante o combate; evitar reação em fila.",
+    "Construir cada beat a partir do estímulo exato, objetivo, vínculo e memória: iniciativa própria, mudança de ritmo e subtexto com consequência; não repetir uma frase ou gesto padrão para reconhecer o personagem.",
+    "Não reduzir intensidade por proibir invenções: usar apenas emoções e lembranças sustentadas, com forma particular de afeto, irritação, orgulho, humor e silêncio de cada ator.",
+    "Preservar conflito e vulnerabilidade quando justificados. Não transformar todos em terapeutas, adultos impassíveis ou comentaristas da técnica do jogador."
   ],
   "combat": [
     "Declarar preparação, compromisso, trajetória, detecção, resposta, contato e consequência em tempo contínuo.",
@@ -24,13 +27,17 @@
     "Ocultação, fumaça, cobertura e linha de visão delimitam percepção; sensor não concede compreensão automática.",
     "Custo, manutenção, corpo que gasta chakra e memórias de clones precisam de ledger; usar custos vigentes e contexto, não inventar tabela por rank.",
     "Guardar ferimentos, perda funcional e tempo de recuperação com evidência; narrar sinais físicos sem HUD.",
-    "Parar na decisão significativa do jogador antes de resolver sua resposta."
+    "Parar na decisão significativa do jogador antes de resolver sua resposta.",
+    "Reação voluntária do Amatsu no timeline também exige declaração do jogador; conhecer ou enxergar uma técnica não garante reconhecer seu nome.",
+    "Pré-requisitos mecânicos exigem booleanos reais; valor ausente ou malformado pede evidência, nunca libera execução."
   ],
   "verification": [
     "Extrair afirmações materiais de fala e ação, inclusive pressupostos; ledger vazio não certifica texto.",
     "Bloqueios determinísticos são requisitos necessários; revisão semântica de voz e fatos ainda é obrigatória.",
     "Testar adversarialmente negacao, sujeito trocado, canal vazio, namoro preservado, histórico apagado e defesa tardia.",
-    "Registrar limitação de fonte e distinguir mudança publicada de runtime ativo."
+    "Registrar limitação de fonte e distinguir mudança publicada de runtime ativo.",
+    "Pesquisa automática exige exemplares distintos com fonte citada, locador e comportamento observado; reservar capacidade para geração e revisão.",
+    "Testar valores inválidos e conservação exata de chakra em sequências de clones; uma proposta de estado nunca modifica a entrada."
   ],
   "research_basis": [
     {

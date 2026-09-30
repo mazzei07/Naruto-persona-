@@ -910,7 +910,7 @@ def healthcheck() -> Dict[str, Any]:
     return {
         "ok": not missing_voice and not missing_dossier,
         "module": "Naruto Persona Engine",
-        "quality_protocol": "v48-integrity-performance-combat",
+        "quality_protocol": "v49-evidence-agency-tactical-performance",
         "version": rules.get("version"),
         "continuity_id": rules.get("continuity_id"),
         "characters": len(chars),
@@ -1314,6 +1314,23 @@ def persona_audit(
     forbidden_facts: List[str] | None = None,
     candidate_facts: List[str] | None = None,
 ) -> Dict[str, Any]:
+    if isinstance(situation, str) and situation.lstrip().startswith('{'):
+        try:
+            envelope = json.loads(situation)
+        except (ValueError, TypeError):
+            envelope = None
+        if isinstance(envelope, dict) and "persona_audit_v49" in envelope:
+            evidence = envelope["persona_audit_v49"]
+            if not isinstance(evidence, dict) or not isinstance(evidence.get("situation", ""), str):
+                return {"pass": False, "violations": ["Malformed persona_audit_v49 envelope"]}
+            for field in ("known_facts", "forbidden_facts", "candidate_facts"):
+                if field in evidence and (not isinstance(evidence[field], list) or
+                        not all(isinstance(x, str) and x.strip() for x in evidence[field])):
+                    return {"pass": False, "violations": [f"Invalid persona_audit_v49.{field}"]}
+            situation = evidence.get("situation", "")
+            known_facts = known_facts if known_facts is not None else evidence.get("known_facts")
+            forbidden_facts = forbidden_facts if forbidden_facts is not None else evidence.get("forbidden_facts")
+            candidate_facts = candidate_facts if candidate_facts is not None else evidence.get("candidate_facts")
     packet = character_turn_packet(
         name=name,
         interlocutor=interlocutor,
