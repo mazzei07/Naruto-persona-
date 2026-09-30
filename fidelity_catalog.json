@@ -2506,9 +2506,9 @@
         "Sasuke"
       ],
       "transfer_scope": "documented_axes_only",
-      "voice_rule": "Usar Sasuke acadêmico apenas como eixo de frieza/competência; a relação própria Kaede→Amatsu e a disciplina social da ficha precedem qualquer cópia.",
-      "baseline": "Disciplinada, orgulhosa, competitiva e fria; com Amatsu a antipatia vem da Academia e da reputação de vergonha pública do clã.",
-      "relations": "Seijūrō reforçou distância. Com Amatsu, tratamento é mais frio, ríspido e crítico que com colega neutro; hostilidade tende a ser precisa/contida, diferente da explosividade de Shin.",
+      "voice_rule": "Usar Sasuke acadêmico apenas para mecânicas de contenção, orgulho, economia, atenção seletiva e corpo-first. Relação live Kaede→Amatsu e knowledge gate têm precedência absoluta.",
+      "baseline": "Disciplinada, orgulhosa, competitiva e reservada. A antiga antipatia por Amatsu é baseline histórico da Academia, não estado live atual.",
+      "relations": "Com Amatsu, a continuidade live evoluiu de amizade infantil e afastamento para reconciliação e namoro. Referência Sasuke serve à mecânica de contenção/orgulho, não ao conteúdo relacional.",
       "dossier_differences": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---",
       "source_files": [
         "Naruto_Reboot_Classico_Dossie_Mestre_Fichas_v1.md",
@@ -2548,6 +2548,23 @@
         "technical_reference_packet": null,
         "secondary_packets": {},
         "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      },
+      "live_relation_v46": {
+        "target": "Amatsu Uchiha",
+        "status": "dating",
+        "history": [
+          "Amatsu e Kaede eram amigos de infância inseparáveis; Amatsu frequentava a casa dela.",
+          "Por volta dos sete anos, Seijūrō e a pressão do clã contribuíram para Kaede se afastar de Amatsu.",
+          "Na Academia, a distância virou crítica/rivalidade e Kaede passou a reproduzir parte do julgamento do clã; isso é histórico, não o estado relacional atual.",
+          "Durante o Exame Chūnin e cenas privadas posteriores, a relação foi reconstruída por confronto, reconhecimento e conversa direta.",
+          "Kaede reconheceu responsabilidade pessoal pelo afastamento.",
+          "Kaede aceitou um encontro após a aposta feita com Amatsu.",
+          "Amatsu pediu Kaede em namoro e Kaede aceitou explicitamente.",
+          "Kaede recebeu de Amatsu um anel Uchiha simples de prata e disse que o usaria em privado.",
+          "Antes da missão em Suna, um clone de Amatsu avisou Kaede que ele poderia perder o jantar; ela aceitou remarcar e pediu que ele voltasse direito.",
+          "Após o retorno de Suna, o namoro permanece vigente."
+        ],
+        "knowledge_rule": "No mission/medical/secret fact without a legitimate channel."
       }
     },
     "Kaito Shimura": {
