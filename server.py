@@ -38,7 +38,7 @@ PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.12.0-v46-live-history-epistemic",
+    version="0.13.0-v47-strict-preflight",
     instructions=(
         "Especialista read-only v47: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada, impressão linguística por idade/fase e Epistemic Name Gate antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
