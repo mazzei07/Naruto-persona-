@@ -45,7 +45,7 @@ def test_v46_hospital_knowledge_leak_blocked():
     assert any("knowledge" in x or "unverified_material_fact" in x for x in bad["violations"]), bad
 
 
-def test_v46_missing_voice_evidence_remains_visible():
+def test_v46_kaede_voice_evidence_is_now_grounded():
     pkt = persona_turn(
         "Kaede Uchiha",
         "Amatsu Uchiha",
@@ -56,12 +56,14 @@ def test_v46_missing_voice_evidence_remains_visible():
         relationship_state="dating; shared childhood; reconciled",
     )
     prox = pkt["research"]["source_proximate_v41"]
-    assert prox["voice_exemplar_research_required"] is True, prox
+    assert prox["voice_exemplar_research_required"] is False, prox
+    assert prox["dialogue_mechanics_verified"] is True, prox
+    assert prox["voice_exemplar_count"] >= 2, prox
 
 
 if __name__ == "__main__":
     test_v46_kaede_live_relationship_wins()
     test_v46_dating_denial_blocked()
     test_v46_hospital_knowledge_leak_blocked()
-    test_v46_missing_voice_evidence_remains_visible()
+    test_v46_kaede_voice_evidence_is_now_grounded()
     print("v46 live-history/epistemic regression: ok")
