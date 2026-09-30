@@ -146,9 +146,19 @@ def relationship_bible(name:str,interlocutor:str)->dict[str,Any]:
         or str(graph_rel.get("familiarity","")).lower().startswith("deep_shared_history")
     )
     if graph_is_live:
-        rel={**explicit, **graph_rel}
-        if explicit.get("history") and graph_rel.get("history"):
-            rel["history"]=list(dict.fromkeys([*explicit.get("history",[]),*graph_rel.get("history",[])]))
+        # v47: a current live relationship is authoritative state, not an additive
+        # overlay on top of stale Academy-era surface rules. Keep the live graph
+        # clean and carry only non-conflicting trigger/history metadata.
+        rel=dict(graph_rel)
+        if explicit.get("trigger_rules") and not rel.get("trigger_rules"):
+            rel["trigger_rules"]=explicit.get("trigger_rules",[])
+        if explicit.get("history") or graph_rel.get("history"):
+            rel["history"]=list(dict.fromkeys([
+                *(explicit.get("history",[]) if isinstance(explicit.get("history"),list) else []),
+                *(graph_rel.get("history",[]) if isinstance(graph_rel.get("history"),list) else [])
+            ]))
+        if explicit:
+            rel["historical_overlay_present"]=True
         source="relationship_graph_live_override"
     else:
         rel=explicit or graph_rel
