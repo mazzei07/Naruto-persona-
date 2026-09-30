@@ -103,7 +103,8 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
         relation_match=bool(relation and interlocutor and context_text(interlocutor)==context_text(relation))
         score=10*len(overlap)+int(relation_match)*5+int(pair_match)*30
         allowed.append((score,card,relation_match,pair_match,pair_cooccurrence))
-    allowed.sort(key=lambda item:(-item[0],item[1]['id']))
+    strong_kinds_for_sort={'official_excerpt','licensed_text_or_audio','official_excerpt_plus_named_transcript'}
+    allowed.sort(key=lambda item:(-item[0],-(1 if item[1].get('dialogue_evidence') in strong_kinds_for_sort else 0),item[1]['id']))
     candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
                  'pair_reference_match':pair,'pair_reference_cooccurrence':cooccur,
                  'evidence_kind':c.get('dialogue_evidence','unknown'),'voice_exemplars_count':int(c.get('voice_exemplars_count',0) or 0),
