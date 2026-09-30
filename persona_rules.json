@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.11.0-v44-source-grounded-character-replication",
+  "version": "0.12.0-v46-live-history-epistemic",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -773,5 +773,29 @@
       "adult exposition disguised as dialogue",
       "same sentence survives speaker/interlocutor swap"
     ]
+  },
+  "epistemic_fact_gate_v46": {
+    "mandatory": true,
+    "scope": "all material facts, not only proper names",
+    "rule": "Every factual proposition requires a legitimate actor knowledge channel; narrator dossier knowledge is not actor knowledge.",
+    "blocked_without_channel": [
+      "hospital/medical status",
+      "injury",
+      "mission detail/result",
+      "private conversation",
+      "plan/location",
+      "identity/relation",
+      "technique/organization/secret",
+      "cause/result"
+    ],
+    "recovery": "Correct outside RP and rewind to last valid beat; no in-character retroactive denial."
+  },
+  "emotional_density_v46": {
+    "rule": "Economy is not blandness. High-stakes relationship beats must preserve pressure through body, timing, action, subtext, interruption, lexical choice or dialogue.",
+    "silence": "Silence must do a specific relational/tactical job."
+  },
+  "live_history_preservation_v46": {
+    "rule": "Current live relation/history outranks old relationship baseline and reference-character analogy.",
+    "non_destructive": true
   }
 }
