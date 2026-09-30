@@ -1,5 +1,5 @@
 {
-  "version": "v39.0-classic-oral-fidelity",
+  "version": "v43.0-relational-hierarchy-pair-research",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -69,7 +69,10 @@
         "preserve stable peer suffixes such as -kun/-san only in licensed relationships",
         "allow urgency to compress titles without automatically erasing respect",
         "select one consistent PT-BR/Japanese surface for the scene",
-        "reject decorative blanket honorifics"
+        "reject decorative blanket honorifics",
+        "resolve third-person reference form as well as direct address",
+        "preserve sensei/Kage/Sannin/master titles in third-person reference when exact relation/phase supports them",
+        "do not replace a materially relevant superior with bare pronoun or bare name by generator default"
       ]
     },
     {
@@ -119,6 +122,18 @@
         "treat synopsis as behavioral analogue, never as proof of exact oral cadence or dialogue shape",
         "preserve live continuity, reboot dossier and directional relation before documented source mechanics",
         "request evidence if the draft depends on unverified scene mechanics; reject generic or over-explained lines"
+      ]
+    },
+    {
+      "id": "S4F",
+      "name": "Pairwise Reference Interaction Gate v43",
+      "does": [
+        "when actor and interlocutor both map to official references, prefer source evidence where both references interact in the exact phase",
+        "search same pair + same phase + equivalent situation before individual personality evidence",
+        "extract direct address, third-person reference, vocative placement, turn length, interruption/latency, public/private filter, body/silence and rupture behavior",
+        "mark pair_reference_research_required when direct pair evidence is absent or only weak synopsis evidence exists",
+        "never certify wording, dub cadence or honorific frequency from synopsis alone",
+        "use individual profile only as conservative fallback after pairwise search"
       ]
     },
     {
@@ -188,7 +203,7 @@
     "forbidden": "Contradicts phase, relation, knowledge, repertoire, or established characterization."
   },
   "contrastive_decision_rule": "At important beats compare at least: silence/body-only; minimal functional response; active relational response. Choose by objective + threshold + reference decision pattern, not by stylistic resemblance.",
-  "research_rule": "Search 'how X reacts to Y when Z happens' in the correct phase. Extract behavioral evidence, thresholds and frequency. Never search only 'personality of X' when a relation-specific decision matters.",
+  "research_rule": "If actor and interlocutor both have official references, search the pair first: 'REFERENCE_A + REFERENCE_B + exact phase + situation + interaction/dialogue'. Extract treatment, third-person reference, latency, interruption, body/silence and frequency. Only then fall back to 'how X reacts to Y when Z happens'. Never search only generic personality when relation-specific evidence can exist.",
   "narrator_rule": "Prefer observable action -> body/perception -> necessary speech -> immediate consequence. Internal thought only when focalization truly warrants it.",
   "combat_rule": "position -> named-technique research gate -> simultaneous intentions -> perception -> timing/hand-seal telegraph -> response attempt -> collision -> consequence -> impression/threat update -> next actionable window.",
   "anti_patterns": [
@@ -236,8 +251,14 @@
       "all superiors receive identical wording",
       "pressure deletes every title",
       "honorific repeated in every sentence",
-      "bare-name teacher/Kage from a hierarchy-sensitive character without a trigger"
-    ]
+      "bare-name teacher/Kage from a hierarchy-sensitive character without a trigger",
+      "hierarchy exists in metadata but disappears from third-person wording",
+      "student defaults to bare pronoun/bare name for teacher despite reference preserving sensei",
+      "individual personality evidence overrides direct pair interaction evidence"
+    ],
+    "third_person_reference_mandatory": true,
+    "pair_reference_research_required": true,
+    "third_person_rule": "Titles/honorifics are relational state in direct address and third-person reference. Preserve sensei/Kage/Sannin/master forms when exact phase/relation supports them; pronoun/name omission is allowed only when natural and not hierarchy-erasing."
   },
   "reference_essence_gate_v34": {
     "mandatory": true,
@@ -311,13 +332,20 @@
     "No internal English prompt/evidence wording leaks into final PT-BR.",
     "Technical observation is not automatically verbalized; body/silence/narration may carry it.",
     "Banter may end asymmetrically; do not manufacture balanced callbacks.",
-    "S4E: source_proximate_v41 evidence quality and actor/relation/phase match checked without invented source mechanics"
+    "S4E: source_proximate_v41 evidence quality and actor/relation/phase match checked without invented source mechanics",
+    "If actor and interlocutor both have official references, pairwise exact-phase interaction evidence was checked first.",
+    "Third-person references preserve hierarchy where the exact relation normally preserves title/honorific; no automatic 'ele/ela' flattening."
   ],
   "source_proximate_gate_v41": {
     "enabled": true,
     "required_field": "source_proximate_v41",
     "source_quality_rule": "No transcript or prosody claim from editorial synopsis.",
     "priority": "live state and own dossier/relation > documented source mechanics > phase analogue",
-    "max_additional_model_calls": 0
+    "max_additional_model_calls": 0,
+    "pairwise_upgrade_v43": {
+      "enabled": true,
+      "rule": "Exact reference-pair evidence outranks individual analogue when both actor and interlocutor have mapped official references.",
+      "missing_pair_behavior": "mark pair_reference_research_required; request external research before certifying relational voice"
+    }
   }
 }
