@@ -405,5 +405,62 @@
       "invalid_example": "Kaede denies being Amatsu's romantic partner solely from old Academy-dislike overlay.",
       "valid_principle": "Kaede may be annoyed, restrained, proud or cold while still unmistakably acting from within the established relationship."
     }
+  },
+  "epistemic_fact_gate_v46": {
+    "version": "v46",
+    "mandatory": true,
+    "scope": "every material NPC proposition, not only proper names",
+    "pipeline": [
+      "extract what the NPC is about to assert as fact",
+      "map each fact to a perception/report/memory/professional-knowledge/relationship-history channel",
+      "if no channel exists, block certainty",
+      "rewrite as question, uncertainty or raw perception only when that is what the actor would genuinely do"
+    ],
+    "never_assume": [
+      "hospitalization or medical treatment",
+      "injury not visibly perceived",
+      "mission result/detail",
+      "private conversation",
+      "secret identity/organization/technique",
+      "plan/location/cause",
+      "relationship event the actor did not participate in"
+    ],
+    "narrator_dossier_rule": "Narrator/canon knowledge is not automatically NPC knowledge.",
+    "failure": "hard block before prose",
+    "exposed_error_recovery": "If an invalid line has already been shown, correct it outside the RP and rewind once to the last valid beat. Never force an in-character retroactive denial."
+  },
+  "emotional_density_v46": {
+    "rule": "Economy of speech is not economy of emotional consequence.",
+    "high_stakes_requirement": "When relationship history, danger, reunion, shame, affection, rivalry or loss materially matters, encode pressure through at least one concrete channel: body/timing/action/subtext/interruption/lexical choice/dialogue.",
+    "silence_rule": "Silence must perform a specific relational or tactical action. Empty silence is not fidelity.",
+    "anti_blandness": [
+      "do not turn reserved into low-energy",
+      "do not solve every cautious character with one short sentence and a stare",
+      "do not discard accumulated relationship temperature merely to stay concise",
+      "do not replace actor beat with safe generic dialogue"
+    ]
+  },
+  "source_research_enforcement_v46": {
+    "mandatory": true,
+    "rule": "If v44/v41 marks pair_reference_research_required or voice_exemplar_research_required, material dialogue cannot be finalized from generic personality.",
+    "allowed_paths": [
+      "retrieve valid external reference evidence",
+      "use an already verified direct exemplar packet",
+      "choose body/silence only if the evidence and beat genuinely support it"
+    ],
+    "forbidden_path": "invent generic anime dialogue to avoid research"
+  },
+  "pre_output_atomicity_v46": {
+    "rule": "Knowledge, continuity, relation, agency, source and voice gates execute before any visible RP text. Do not publish a bad line and repair it inside the story.",
+    "order": [
+      "current live state",
+      "individual knowledge ledger",
+      "directional relation/history",
+      "reference research/evidence",
+      "actor beat and intensity",
+      "wording",
+      "swap/read-aloud/drift audit",
+      "visible output"
+    ]
   }
 }
