@@ -2030,6 +2030,38 @@
         ]
       ],
       "interaction_pair_rule": "Explicit pair evidence only; listed references alone mean co-presence/context, not direct interaction."
+    },
+    {
+      "id": "sakura_naruto_early_pair_v43",
+      "references": [
+        "Sakura",
+        "Naruto"
+      ],
+      "interaction_pairs": [
+        [
+          "Sakura",
+          "Naruto"
+        ]
+      ],
+      "source_ids": [
+        "ep3",
+        "sakura"
+      ],
+      "locator": "Anime ep. 3; mangá cap. 3 e referências iniciais da coluna oficial de Sakura",
+      "episode_ceiling": 3,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "rivalry",
+        "comedy",
+        "team"
+      ],
+      "observed_summary": "No início do Time 7, Naruto procura a atenção de Sakura e ela já o trata de modo muito diferente daquele usado com Sasuke; a relação direta Sakura↔Naruto é juvenil, assimétrica e socialmente pouco filtrada.",
+      "acting_inference": "Para derivados Sakura-like↔Naruto-like, usar a interação direta da dupla para calibrar filtro social, irritação, interrupção e diferença de tratamento em relação ao crush/autoridade. Não copiar falas nem transferir romance/biografia do original.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true,
+      "interaction_pair_rule": "Direct pair relation is supported; exact wording, prosody and Brazilian dub remain unverified."
     }
   ],
   "characters": {
