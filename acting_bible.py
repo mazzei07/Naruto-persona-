@@ -35,6 +35,19 @@ def _apply_continuity_firewall_v36(data:dict[str,Any])->dict[str,Any]:
                 for k in list(v): v[k]=repl(v[k])
             return v
         repl(amatsu)
+    kaede=(data.get("characters") or {}).get("Kaede Uchiha")
+    if isinstance(kaede,dict):
+        # v47: the Academy hostility remains historical dossier context, but it
+        # must not survive inside the CURRENT acting core after the dating state.
+        acting=kaede.get("acting") or {}
+        traits=acting.get("core_traits")
+        if isinstance(traits,list):
+            acting["core_traits"]=[
+                ("reservada com afeto contido; namoro live com Amatsu, hostilidade da Academia é histórica"
+                 if isinstance(x,str) and "não gosta de Amatsu" in x else x)
+                for x in traits
+            ]
+        kaede["acting"]=acting
     return data
 
 def _load()->dict[str,Any]:
@@ -150,6 +163,11 @@ def relationship_bible(name:str,interlocutor:str)->dict[str,Any]:
         # overlay on top of stale Academy-era surface rules. Keep the live graph
         # clean and carry only non-conflicting trigger/history metadata.
         rel=dict(graph_rel)
+        # v47 schema guard: hard current-state fields must survive even if an
+        # older graph producer omitted them. These are copied only when absent.
+        for key in ("current_status","baseline","address","must_not"):
+            if explicit.get(key) and not rel.get(key):
+                rel[key]=explicit.get(key)
         if explicit.get("trigger_rules") and not rel.get("trigger_rules"):
             rel["trigger_rules"]=explicit.get("trigger_rules",[])
         if explicit.get("history") or graph_rel.get("history"):
