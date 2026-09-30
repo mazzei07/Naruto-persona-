@@ -76,29 +76,41 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
     actor=resolve(name)
     if not actor:return {'status':'needs_evidence','reason':'unknown_actor','candidates':[]}
     mapping=catalog()['characters'][actor]
+    target=resolve(interlocutor) if interlocutor else None
+    target_mapping=catalog()['characters'].get(target,{}) if target else {}
+    actor_refs=set(mapping.get('reference_characters',[]))
+    target_refs=set(target_mapping.get('reference_characters',[]))
+    pair_reference_required=bool(actor_refs and target_refs)
     tags=set(classify(stimulus,situation))
     allowed=[]
     for card in (cards if cards is not None else catalog()['scene_cards']):
         if card.get('phase')=='later_reference_only' or card.get('episode_ceiling',10**9)>catalog()['contract']['reference_episode_ceiling']:continue
         if not set(mapping.get('reference_characters',[]))&set(card.get('references',[])):continue
         overlap=tags&set(card.get('tags',[]))
+        card_refs=set(card.get('references',[]))
+        pair_match=bool(pair_reference_required and actor_refs&card_refs and target_refs&card_refs)
         relation=card.get('interlocutor_relation')
         relation_match=bool(relation and interlocutor and context_text(interlocutor)==context_text(relation))
-        score=10*len(overlap)+int(relation_match)*5
-        allowed.append((score,card,relation_match))
+        score=10*len(overlap)+int(relation_match)*5+int(pair_match)*30
+        allowed.append((score,card,relation_match,pair_match))
     allowed.sort(key=lambda item:(-item[0],item[1]['id']))
     candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
+                 'pair_reference_match':pair,
                  'evidence_kind':c.get('dialogue_evidence','unknown'),'locator':c.get('locator',''),
                  'source_ids':c.get('source_ids',[]),'source_url':c.get('source_url'),
-                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel in allowed[:3]]
+                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel,pair in allowed[:3]]
     best=candidates[0] if candidates else None
+    pair_match_found=any(x.get('pair_reference_match') for x in candidates)
     verified=bool(best and best['provenance']=='catalogue' and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
     return {'status':'reference_available' if best and best['score'] else 'needs_evidence','actor':actor,
             'interlocutor':interlocutor,'phase':'classic_through_forest',
             'match_quality':'source_excerpt' if verified else ('phase_situation_synopsis' if best and best['score'] else 'weak_phase_analogue' if best else 'none'),
             'closest':best,'candidates':candidates,'dialogue_mechanics_verified':verified,
+            'pair_reference_required':pair_reference_required,
+            'pair_reference_match_found':pair_match_found,
+            'pair_reference_research_required':bool(pair_reference_required and not pair_match_found),
             'pragmatic_function':'requires_scene_review','turn_shape':'requires_scene_review',
-            'rule':'Live state, own dossier and directional relationship outrank an analogue; synopsis does not prove wording, cadence or dub.'}
+            'rule':'Live state and directional relation outrank an analogue. When both sides have official references, same-phase pair interaction evidence outranks individual personality fallback. Synopsis does not prove wording, cadence or dub.'}
 
 def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     actor=resolve(name)
@@ -120,9 +132,12 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     missing=[]
     if mapping['mapping_status']=='unresolved_or_original' and not mapping.get('baseline'):missing.append('matriz de voz própria não fechada')
     if mapping['reference_characters'] and not selected:missing.append('cena equivalente da fase atual não encontrada no catálogo')
+    if proximity.get('pair_reference_research_required'):missing.append('evidência par-a-par das duas referências oficiais não encontrada; pesquisar a dupla na fase/situação antes de certificar voz relacional')
     if not situation and not stimulus:missing.append('situação/estímulo não fornecidos')
     if mapping['later_reference_characters']:missing.append('referência posterior exige recorte explícito; não existe versão juvenil presumida')
-    query=f"Naruto clássico {', '.join(mapping['reference_characters']) or 'referência original não documentada'} interlocutor {interlocutor or 'a definir'} situação {situation or stimulus or 'a definir'} Exame Chunin Floresta da Morte diálogo ação relação capítulo episódio fonte oficial"
+    target_refs=(catalog()['characters'].get(resolve(interlocutor),{}).get('reference_characters',[]) if interlocutor and resolve(interlocutor) else [])
+    pair_query=(f"NARUTO clássico {' / '.join(mapping['reference_characters'])} + {' / '.join(target_refs)} mesma cena interação diálogo tratamento honorífico fase {mapping.get('source_anchor','')} situação {situation or stimulus or 'a definir'}" if mapping.get('reference_characters') and target_refs else '')
+    query=pair_query or f"Naruto clássico {', '.join(mapping['reference_characters']) or 'referência original não documentada'} interlocutor {interlocutor or 'a definir'} situação {situation or stimulus or 'a definir'} Exame Chunin Floresta da Morte diálogo ação relação capítulo episódio fonte oficial"
     return {
         'version':VERSION,'status':'needs_evidence' if missing else 'reference_available',
         'actor':actor,'mapping':mapping,'scene_cards':selected,'source_proximate_v41':proximity,
