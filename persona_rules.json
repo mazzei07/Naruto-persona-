@@ -1,6 +1,6 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.10.0-v43-relational-hierarchy",
+  "version": "0.11.0-v44-source-grounded-character-replication",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
@@ -260,7 +260,10 @@
     "Vocabulário e complexidade precisam caber na idade, experiência e assunto dominado pelo personagem.",
     "third_person_hierarchy_v43",
     "pairwise_reference_interaction_v43",
-    "explicit_interaction_pair_required_v43"
+    "explicit_interaction_pair_required_v43",
+    "source_grounded_voice_v44",
+    "minimum_two_dialogue_exemplars_v44",
+    "synopsis_cannot_unlock_dialogue_v44"
   ],
   "sayability_gate_v22": {
     "mandatory": true,
@@ -750,5 +753,25 @@
     "cooccurrence_rule": "characters listed on the same card are only co-present unless interaction_pairs explicitly contains the pair",
     "source_quality_rule": "synopsis/editorial may establish relation/event mechanics but never exact wording, prosody, or Brazilian dub",
     "hierarchy_rule": "preserve relational title/honorific for teacher/Kage/Sannin/master when exact phase/relation supports it; avoid mechanical repetition once referent is naturally established"
+  },
+  "source_grounded_voice_v44": {
+    "mandatory": true,
+    "applies_to": "every material spoken turn whose actor maps to an official reference character",
+    "minimum_direct_dialogue_exemplars": 2,
+    "exact_phase_required": true,
+    "exact_pair_preferred": true,
+    "same_relation_fallback": "allowed only after exact-pair search fails and must be flagged",
+    "synopsis_unlocks_dialogue": false,
+    "personality_profile_unlocks_dialogue": false,
+    "databook_unlocks_dialogue": false,
+    "rule": "Profile/databook/synopsis establish facts and traits. Line shape must come from direct dialogue/behavior evidence; if missing, research or silence/body, never invented banter.",
+    "reject": [
+      "generic witty comeback",
+      "invented punchline",
+      "sarcasm inferred only from adjective",
+      "cold character reduced to one-word robot",
+      "adult exposition disguised as dialogue",
+      "same sentence survives speaker/interlocutor swap"
+    ]
   }
 }
