@@ -1354,11 +1354,44 @@ def persona_audit(
             if pronoun_only and not target_names_in_line and not target_titles_in_line:
                 warnings.append("v43_third_person_authority_erased:named_superior_referenced_as_bare_pronoun")
                 grounded_revision = "third_person_hierarchy: preserve the materially identified superior's title/name form; bare pronoun needs contextual justification"
+    # v44 source-grounded speech-act gate: negative voice evidence can veto a line.
+    v44_revision = ""
+    if candidate_dialogue:
+        evidence_pack = packet.get("evidence_v24", {}) or packet.get("research", {}) or {}
+        cards = evidence_pack.get("scene_cards", []) or []
+        supported_acts = set()
+        negative_rules = []
+        for card in cards:
+            mechanics = card.get("voice_mechanics", {}) if isinstance(card, dict) else {}
+            for act in mechanics.get("speech_acts", []) or []:
+                supported_acts.add(_norm(str(act)))
+            for neg in mechanics.get("negative", []) or []:
+                negative_rules.append(_norm(str(neg)))
+        words = candidate_dialogue.split()
+        punchline_markers = [
+            "viu?", "dessa vez", "nem fui eu", "nao fui eu",
+            "pelo menos", "ate que", "quem diria", "olha so"
+        ]
+        looks_like_punchline = len(words) <= 18 and any(m in ntext for m in punchline_markers)
+        forbids_punchline = any(
+            ("punchline" in neg or "one-liner" in neg or "piada" in neg or "joke" in neg)
+            for neg in negative_rules
+        )
+        supports_banter = any(
+            any(k in act for k in ["banter","joke","humor","comedy","quip"])
+            for act in supported_acts
+        )
+        if looks_like_punchline and forbids_punchline and not supports_banter:
+            warnings.append("v44_unsupported_punchline:line_shape_not_supported_by_reference_voice_evidence")
+            v44_revision = "source_grounded_voice_v44: remove the invented punchline; use a source-supported speech act, or silence/body if the beat is already complete"
+
     grounded = lint_v24(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
     violations = _uniq(violations + grounded["violations"])
     revisions = grounded["revision_requests"]
     if 'grounded_revision' in locals() and grounded_revision:
         revisions = _uniq(revisions + [grounded_revision])
+    if 'v44_revision' in locals() and v44_revision:
+        revisions = _uniq(revisions + [v44_revision])
     status = "blocked" if violations else "revision_required" if revisions else grounded["status"]
     return {
         "pass": status == "reviewable",
@@ -1385,6 +1418,8 @@ def persona_audit(
             "modernism",
             "third_person_hierarchy_v43",
             "pairwise_reference_v43",
+            "source_grounded_voice_v44",
+            "source_speech_act_gate_v44",
             "player_control"
         ],
         "packet": packet,
