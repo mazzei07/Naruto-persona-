@@ -1,5 +1,5 @@
 {
-  "version": "v51-adaptive-voice-memory-contract",
+  "version": "v52-dramatic-simulation-gates",
   "scope": "Continuidade Clássica; aprimora execução sem substituir fichas, eventos ou sistema Chakra V3",
   "hard_rules": [
     "Ação voluntária de Amatsu apenas pelo usuário.",
@@ -8,7 +8,9 @@
     "Estado relacional vigente prevalece; modulação de voz não reinicia romance, confiança, rivalidade ou lembranças.",
     "Perceber, interpretar, ter tempo e executar são condições distintas para defesa.",
     "Fonte secundária ou sinopse não comprova cadência/dublagem; títulos, fase e locadores precisam ser conferidos.",
-    "Uma iniciativa de toque de NPC não autoriza virar mãos, puxar membros, mover o corpo ou decidir que Amatsu coopera. Narrar a tentativa e parar antes da resposta voluntária."
+    "Uma iniciativa de toque de NPC não autoriza virar mãos, puxar membros, mover o corpo ou decidir que Amatsu coopera. Narrar a tentativa e parar antes da resposta voluntária.",
+    "V52: use a private operational preflight for sensory access, pressure/objective and first physical commitment; never print chain-of-thought, hidden JSON or a mandatory Thought block.",
+    "V52: NPC initiative follows causality, not turn courtesy. Stop only at a remaining meaningful voluntary choice for Amatsu; when no physical reaction window remains, resolve the external consequence without inventing his voluntary reaction."
   ],
   "performance": [
     "Recuperar memória episódica relevante do ator e relação direcional antes de decidir.",
@@ -23,7 +25,9 @@
     "Preservar conflito e vulnerabilidade quando justificados. Não transformar todos em terapeutas, adultos impassíveis ou comentaristas da técnica do jogador.",
     "Reencontro de namorados pode carregar saudade, afeto e expectativa pela ausência já conhecida; não exige conhecimento de perigo grave. Separar vínculo íntimo de investigação clínica: não inventar inspeção corporal, ferimento ou ameaça para criar emoção.",
     "A referência canônica orienta cadência e decisões, mas os vínculos próprios do reboot determinam o ato relacional. Uma lista de speech_acts não é catálogo fechado de frases nem motivo para apagar afeto confirmado.",
-    "Em cada beat, responder à fala concreta do jogador com ato relacional específico. Evitar veredictos espirituosos transplantáveis, inspeções em sequência e repetição do mesmo termo como substituto de emoção."
+    "Em cada beat, responder à fala concreta do jogador com ato relacional específico. Evitar veredictos espirituosos transplantáveis, inspeções em sequência e repetição do mesmo termo como substituto de emoção.",
+    "V52: show concrete body/timing/space/consequence instead of narrator emotion labels; never force one stock physiological symptom across characters.",
+    "V52: stress may alter breath, syntax, interruption, repair and latency only when actor/phase/body support it; no mandatory stutter or fragment quota."
   ],
   "combat": [
     "Declarar preparação, compromisso, trajetória, detecção, resposta, contato e consequência em tempo contínuo.",
@@ -33,7 +37,8 @@
     "Guardar ferimentos, perda funcional e tempo de recuperação com evidência; narrar sinais físicos sem HUD.",
     "Parar na decisão significativa do jogador antes de resolver sua resposta.",
     "Reação voluntária do Amatsu no timeline também exige declaração do jogador; conhecer ou enxergar uma técnica não garante reconhecer seu nome.",
-    "Pré-requisitos mecânicos exigem booleanos reais; valor ausente ou malformado pede evidência, nunca libera execução."
+    "Pré-requisitos mecânicos exigem booleanos reais; valor ausente ou malformado pede evidência, nunca libera execução.",
+    "V52: persist blood loss, pain, impairment, fatigue, spent resources and terrain damage until an established recovery/change occurs; plot importance never resets state."
   ],
   "verification": [
     "Extrair afirmações materiais de fala e ação, inclusive pressupostos; ledger vazio não certifica texto.",
@@ -43,7 +48,8 @@
     "Pesquisa automática exige exemplares distintos com fonte citada, locador e comportamento observado; reservar capacidade para geração e revisão.",
     "Testar valores inválidos e conservação exata de chakra em sequências de clones; uma proposta de estado nunca modifica a entrada.",
     "Revisar fatos materiais sem confundir sentimento próprio com informação secreta. Saudação e expressão de afeto comuns não são falhas por compartilharem palavras; avaliar decisão e sequência do beat com evidência concreta.",
-    "v51: check adaptive syntax without quotas, no forced thoughts/HUD, and structured actor memory survives prompt compaction without [object Object] or dropped knowledge bounds."
+    "v51: check adaptive syntax without quotas, no forced thoughts/HUD, and structured actor memory survives prompt compaction without [object Object] or dropped knowledge bounds.",
+    "V52: audit sensory provenance, player decision window, persistent physical consequence, stress-dialogue fit, show-don't-tell surface and anti-cliche terms before accepting a beat."
   ],
   "research_basis": [
     {
@@ -77,5 +83,30 @@
     "memory": "Retrieved text is candidate context, not evidence of NPC knowledge. Preserve continuity ID, event identity, source, validation/correction status, participants and legitimate information channels. Latest authoritative correction wins; drafts and other continuities never become memories.",
     "efficiency": "Keep world rules, player agency, latest scene state, knowledge boundaries and live relationship authoritative. Retrieve optional lore on relevance, never solely on keywords; lack of a keyword cannot remove core mechanics. Reuse valid evidence when available; research gaps, not already verified material.",
     "review": "Evaluate multi-beat change: baseline, pressure, interlocutor switch, recovery and later recall. A short tactical warning can be shared; judge identity across decisions and rhythm. Preserve fear, affection, pride and humor when justified."
+  },
+  "dramatic_simulation_v52": {
+    "version": "v52",
+    "scope": "NPC/world simulation and final RP surface; private operational preflight only, never exposed as chain-of-thought",
+    "sensory_gate": "Before acting, restrict the actor to established immediately available sensory cues and explicit perception channels. Do not invent a sound, smell, wound, position, expression or hidden action merely to make the prose vivid.",
+    "private_preflight": "Internally resolve concise sensory input, pressure/state, immediate objective and first physical commitment before prose. This is operational state, not chain-of-thought; never print hidden analysis, pseudo-JSON or a Thought block to the player.",
+    "show_dont_tell": "On narrator surface, prefer observable body, timing, spatial behavior and concrete consequence over narrator labels such as 'ele sentiu raiva'. Dialogue may name emotion when that character naturally would. Never replace every emotion with the same stock symptom or gesture.",
+    "stress_dialogue": "Under real pressure, interruption, self-repair, hesitation, clipped breath, unfinished clauses and overlap may appear when supported by actor/phase/body. They are possibilities, not mandatory stutters or fragment quotas.",
+    "physical_consequence": "Persist wounds, bleeding, pain, fatigue, impaired function, spent tools/chakra and terrain changes until treatment, recovery or another established cause changes them. The world does not reset between beats and plot importance grants no protection.",
+    "initiative": "NPCs do not wait for a turn if a causal opening exists. Resolve simultaneous intent by detection, timing, geometry and committed action. If Amatsu still has a physically meaningful voluntary defense/choice window, stop before deciding it for him; if no such window physically remains, resolve the external consequence without inventing his voluntary reaction.",
+    "player_boundary": "Never author Amatsu's speech, thought, emotion, consent, intention, voluntary movement, attack, defense or reaction. A hostile NPC may begin or continue an attack according to causality; the narrator stops only where a meaningful player-controlled choice still exists.",
+    "anti_cliche": {
+      "avoid_terms": [
+        "testamento",
+        "tapeçaria",
+        "dança mortal",
+        "camaradagem",
+        "arrepio na espinha",
+        "afinal",
+        "inabalável",
+        "poesia em movimento"
+      ],
+      "rule": "Reject these as generic dramatic narration and reject adjacent trailer-like moralizing. Do not replace them with equally ornate synonyms; use concrete scene-specific description."
+    },
+    "final_surface": "RP output contains only diegetic narration/dialogue needed for the beat. No private reasoning, hidden JSON, moral lesson, end-of-scene emotional summary or assistant-style advice."
   }
 }
