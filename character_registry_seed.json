@@ -259,8 +259,8 @@
         "Clones / Kuchiyose / Senjutsu / Bijū": "Sem clone físico, Kuchiyose, Senjutsu ou Bijū.",
         "Equipamento": "Kit Genin, shuriken adicionais e fios.",
         "Limitações reais": "Reserva apenas boa; sem dōjutsu; orgulho e rigidez podem reduzir adaptação social.",
-        "Personalidade / voz": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
-        "Relações e conhecimento": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo. É irmã caçula de Akane Uchiha e Ritsu Uchiha.",
+        "Personalidade / voz": "Disciplinada, orgulhosa, competitiva, crítica e reservada. O texto antigo de antipatia por Amatsu descreve a fase Academia; o estado live atual deve vir do overlay relacional.",
+        "Relações e conhecimento": "Amatsu: amizade inseparável de infância, afastamento sob pressão clânica, reconciliação progressiva e namoro vigente. Kaede não sabe fatos de missão/segredos sem canal legítimo. É irmã caçula de Akane Uchiha e Ritsu Uchiha.",
         "Identidade de combate": "Precisão, Katon, projéteis e leitura disciplinada de padrões.",
         "Inspiração e comparação — Naruto Clássico": "É o paralelo mais próximo do Sasuke “melhor aluno/prodígio Uchiha”, mas sem massacre/vingança. Próxima do Sasuke inicial em completude; menos explosiva fisicamente, melhor fundação de Genjutsu convencional e disciplina social.\n\n---"
       },
@@ -283,6 +283,11 @@
         "technical_reference_packet": null,
         "secondary_packets": {},
         "application_rule": "Primary reference controls dominant acting mechanics. Secondary references contribute only explicitly documented axes. Reboot biography/powers/live relationship/body/knowledge always outrank reference import."
+      },
+      "live_relationship_v46": {
+        "target": "Amatsu Uchiha",
+        "status": "dating",
+        "precedence": "live > historical dossier > reference"
       }
     },
     "Kaito Shimura": {
