@@ -1226,6 +1226,62 @@ def character_turn_packet(
     }
 
 
+def _epistemic_fact_gate_v46(
+    candidate_text: str,
+    knowledge_constraint: str = "",
+    known_facts: List[str] | None = None,
+    forbidden_facts: List[str] | None = None,
+    candidate_facts: List[str] | None = None,
+    prior_exchange: str = "",
+) -> List[str]:
+    """Deterministic hard gate for material facts, not only proper names."""
+    issues: List[str] = []
+    ntext = _norm(candidate_text)
+    nk = _norm(knowledge_constraint)
+    nprior = _norm(prior_exchange)
+    known = [_norm(x) for x in (known_facts or []) if str(x).strip()]
+    forbidden = [_norm(x) for x in (forbidden_facts or []) if str(x).strip()]
+
+    # Explicitly forbidden facts are always a hard issue when asserted.
+    for fact in forbidden:
+        if fact and (fact in ntext or any(tok in ntext for tok in fact.split() if len(tok) >= 6)):
+            issues.append(f"v46_knowledge_without_channel:{fact}")
+
+    # Backward-compatible parsing for callers that only have knowledge_constraint.
+    # We only mine the negative portion, never infer new positive knowledge.
+    negative_markers = [
+        "nao sabe", "nao conhece", "sem canal", "sem conhecimento",
+        "does not know", "has no channel", "unknown to"
+    ]
+    for marker in negative_markers:
+        pos = nk.find(marker)
+        if pos < 0:
+            continue
+        tail = nk[pos + len(marker):]
+        tail = re.split(r"[.;\n]", tail, maxsplit=1)[0]
+        pieces = re.split(r"[,/]|\bou\b|\be\b|\band\b", tail)
+        for piece in pieces:
+            p = piece.strip(" :-")
+            if not p:
+                continue
+            keywords = [x for x in p.split() if len(x) >= 5 and x not in {"detalhes","qualquer","sobre","facts","details"}]
+            if keywords and any(x in ntext for x in keywords):
+                issues.append(f"v46_knowledge_constraint_violation:{p}")
+
+    # Structured candidate claims can be checked positively.
+    if candidate_facts:
+        support_space = " ".join([*known, nk, nprior])
+        for fact in candidate_facts:
+            nf = _norm(fact)
+            if nf and nf not in support_space:
+                ftoks = [x for x in nf.split() if len(x) >= 4]
+                overlap = sum(1 for x in ftoks if x in support_space)
+                if not ftoks or overlap / max(1, len(ftoks)) < 0.75:
+                    issues.append(f"v46_unverified_material_fact:{nf}")
+
+    return _uniq(issues)
+
+
 def persona_audit(
     name: str,
     interlocutor: str = "",
@@ -1235,10 +1291,21 @@ def persona_audit(
     pressure: str = "normal",
     stimulus: str = "",
     prior_exchange: str = "",
+    perception_constraint: str = "",
+    knowledge_constraint: str = "",
+    known_facts: List[str] | None = None,
+    forbidden_facts: List[str] | None = None,
+    candidate_facts: List[str] | None = None,
 ) -> Dict[str, Any]:
     packet = character_turn_packet(
-        name, interlocutor, stimulus or candidate_action or candidate_dialogue,
-        situation, pressure, prior_exchange=prior_exchange
+        name=name,
+        interlocutor=interlocutor,
+        stimulus=stimulus or candidate_action or candidate_dialogue,
+        situation=situation,
+        pressure=pressure,
+        perception_constraint=perception_constraint,
+        knowledge_constraint=knowledge_constraint,
+        prior_exchange=prior_exchange,
     )
     if packet.get("status") != "ok":
         return {"pass": False, "packet_status": packet.get("status"), "violations": [packet.get("rule", "invalid actor")], "packet": packet}
@@ -1252,6 +1319,28 @@ def persona_audit(
     warnings.extend(acting_review.get("warnings", []))
     text = f"{candidate_dialogue} {candidate_action}".strip()
     ntext = _norm(text)
+
+    # v46: ordinary factual claims need a knowledge channel, not only proper names.
+    violations.extend(_epistemic_fact_gate_v46(
+        text,
+        knowledge_constraint=knowledge_constraint,
+        known_facts=known_facts,
+        forbidden_facts=forbidden_facts,
+        candidate_facts=candidate_facts,
+        prior_exchange=prior_exchange,
+    ))
+
+    # v46 non-destructive relationship regression gate.
+    acting_relation = ((packet.get("acting_bible_v25") or {}).get("relationship") or {})
+    current_status = _norm(acting_relation.get("current_status", ""))
+    if current_status in {"dating", "romantic", "relationship"} and candidate_dialogue:
+        denial_patterns = [
+            r"\bnao\s+(?:sou|somos)\b.{0,24}\b(?:amor|namorad[oa]|casal)\b",
+            r"\bnao\s+estamos\s+namorando\b",
+            r"\bvoce\s+nao\s+e\s+meu\s+(?:amor|namorad[oa])\b",
+        ]
+        if any(re.search(p, ntext) for p in denial_patterns):
+            violations.append("v46_live_relationship_regression:established_dating_denied")
     for word in _rules().get("forbidden_modernisms", []):
         if re.search(r"(?<!\w)" + re.escape(_norm(word)) + r"(?!\w)", ntext):
             violations.append(f"modernism_or_meta_language:{word}")
@@ -1420,6 +1509,9 @@ def persona_audit(
             "pairwise_reference_v43",
             "source_grounded_voice_v44",
             "source_speech_act_gate_v44",
+            "epistemic_fact_gate_v46",
+            "non_destructive_live_history_v46",
+            "emotional_density_v46",
             "player_control"
         ],
         "packet": packet,
