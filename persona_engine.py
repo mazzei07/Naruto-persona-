@@ -1312,7 +1312,7 @@ def _conversational_cohesion_audit_v50(candidate_dialogue: str, prior_exchange: 
     revisions: List[str] = []
     # Units remain within the SAME speaker turn. A new interlocutor turn is not
     # inferred merely because punctuation created a new sentence.
-    units = [u.strip() for u in re.split(r"(?<=[.!?])\\s+|\\n+", text) if u.strip()]
+    units = [u.strip() for u in re.split(r"(?<=[.!?])\s+|\n+", text) if u.strip()]
     connector_starts = (
         "mas ", "só que ", "so que ", "então ", "entao ", "aí ", "ai ",
         "daí ", "dai ", "e ", "porque ", "é que ", "e que ", "bom ",
@@ -1323,10 +1323,10 @@ def _conversational_cohesion_audit_v50(candidate_dialogue: str, prior_exchange: 
     # a subtitle detached from the clause it semantically completes.
     for left, right in zip(units, units[1:]):
         nr = _norm(right)
-        right_words = re.findall(r"\\b[\\wÀ-ÿ'-]+\\b", right, flags=re.UNICODE)
-        left_words = re.findall(r"\\b[\\wÀ-ÿ'-]+\\b", left, flags=re.UNICODE)
+        right_words = re.findall(r"\b[\wÀ-ÿ'-]+\b", right, flags=re.UNICODE)
+        left_words = re.findall(r"\b[\wÀ-ÿ'-]+\b", left, flags=re.UNICODE)
         starts_with_connector = any(nr.startswith(_norm(x).strip()) for x in connector_starts)
-        bare_negative = bool(re.match(r"^(?:não|nao)\\s+[\\wÀ-ÿ'-]+", right, flags=re.I))
+        bare_negative = bool(re.match(r"^(?:não|nao)\s+[\wÀ-ÿ'-]+", right, flags=re.I))
         if bare_negative and not starts_with_connector and len(right_words) <= 5 and len(left_words) >= 4:
             revisions.append(
                 "v50_orphan_followup_fragment: unir a continuação à oração anterior com marcador/prosódia/ação, "
@@ -1338,8 +1338,8 @@ def _conversational_cohesion_audit_v50(candidate_dialogue: str, prior_exchange: 
     # are a generator habit unless an idiolect/source explicitly licenses it.
     starts: List[str] = []
     marker_patterns = [
-        ("então", r"^ent[aã]o\\b"), ("aí", r"^a[ií]\\b"), ("daí", r"^da[ií]\\b"),
-        ("mas", r"^mas\\b"), ("só que", r"^s[oó]\\s+que\\b"), ("bom", r"^bom\\b")
+        ("então", r"^ent[aã]o\b"), ("aí", r"^a[ií]\b"), ("daí", r"^da[ií]\b"),
+        ("mas", r"^mas\b"), ("só que", r"^s[oó]\s+que\b"), ("bom", r"^bom\b")
     ]
     for unit in units:
         nu = _norm(unit)
@@ -1356,7 +1356,7 @@ def _conversational_cohesion_audit_v50(candidate_dialogue: str, prior_exchange: 
 
     # 'Daí' is not a universal Naruto-register glue word. It needs character/source support.
     ntext = _norm(text)
-    if re.search(r"(?m)(?:^|[.!?]\\s+)dai\\b", ntext):
+    if re.search(r"(?m)(?:^|[.!?]\s+)dai\b", ntext):
         if "dai" not in _norm(idiolect_text):
             revisions.append("v50_dai_requires_idiolect_evidence: 'daí' não é cola universal do elenco; substituir ou justificar por referência/idioleto")
 
@@ -1618,6 +1618,7 @@ def persona_audit(
             "epistemic_fact_gate_v46",
             "non_destructive_live_history_v46",
             "emotional_density_v46",
+            "conversational_cohesion_v50",
             "player_control"
         ],
         "packet": packet,
