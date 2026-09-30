@@ -1289,9 +1289,35 @@ def persona_audit(
                 warnings.append("Saya_to_teacher_bare_name_is_unusual_without_contextual_reason")
             elif "sensei" not in ntext and len(candidate_dialogue.split()) > 5:
                 warnings.append("Saya_to_teacher_may_need_title_or_more_respectful_register")
+    # v43: hierarchy must survive third-person reference, not only direct vocative.
+    # Conservative deterministic gate: only fires when the scene explicitly identifies
+    # the actor's own sensei/superior as the person being discussed.
+    if candidate_dialogue:
+        bible = acting_character_bible(name)
+        raw_bible = bible.get("bible", {}) if isinstance(bible, dict) else {}
+        actor_sensei = str((raw_bible.get("identity", {}) or {}).get("sensei") or "")
+        nsit = _norm(situation)
+        sensei_first = _norm(_first_name(actor_sensei)) if actor_sensei else ""
+        discusses_own_sensei = bool(actor_sensei and (
+            _norm(actor_sensei) in nsit or
+            (sensei_first and sensei_first in nsit and "sensei" in nsit) or
+            ("seu sensei" in nsit or "sensei dela" in nsit or "sensei dele" in nsit)
+        ))
+        pronoun_only = bool(re.search(r"(?<!\w)(ele|ela)(?!\w)", ntext))
+        preserves_teacher_form = bool(
+            "sensei" in ntext or
+            (sensei_first and re.search(r"(?<!\w)" + re.escape(sensei_first) + r"(?!\w)", ntext))
+        )
+        if discusses_own_sensei and pronoun_only and not preserves_teacher_form:
+            warnings.append("v43_third_person_hierarchy_erased:own_sensei_referenced_as_bare_pronoun")
+            grounded_revision = "third_person_hierarchy: preserve sensei/title when the superior is materially identified; pronoun-only reference needs contextual justification"
+        else:
+            grounded_revision = ""
     grounded = lint_v24(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
     violations = _uniq(violations + grounded["violations"])
     revisions = grounded["revision_requests"]
+    if 'grounded_revision' in locals() and grounded_revision:
+        revisions = _uniq(revisions + [grounded_revision])
     status = "blocked" if violations else "revision_required" if revisions else grounded["status"]
     return {
         "pass": status == "reviewable",
@@ -1316,6 +1342,8 @@ def persona_audit(
             "reference_voice_family",
             "body_voice_consistency",
             "modernism",
+            "third_person_hierarchy_v43",
+            "pairwise_reference_v43",
             "player_control"
         ],
         "packet": packet,
