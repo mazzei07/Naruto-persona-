@@ -81,8 +81,27 @@ def persona_check(
     pressure: str = "normal",
     stimulus: str = "",
     prior_exchange: str = "",
+    perception_constraint: str = "",
+    knowledge_constraint: str = "",
+    known_facts: list[str] | None = None,
+    forbidden_facts: list[str] | None = None,
+    candidate_facts: list[str] | None = None,
 ):
-    return persona_audit(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure, stimulus, prior_exchange)
+    return persona_audit(
+        name=name,
+        interlocutor=interlocutor,
+        candidate_dialogue=candidate_dialogue,
+        candidate_action=candidate_action,
+        situation=situation,
+        pressure=pressure,
+        stimulus=stimulus,
+        prior_exchange=prior_exchange,
+        perception_constraint=perception_constraint,
+        knowledge_constraint=knowledge_constraint,
+        known_facts=known_facts,
+        forbidden_facts=forbidden_facts,
+        candidate_facts=candidate_facts,
+    )
 
 
 def persona_sayability(
