@@ -34,3 +34,22 @@ if __name__ == "__main__":
     test_third_person_hierarchy_v43()
     test_pairwise_reference_v43()
     print("v43 hierarchy/pairwise regression: ok")
+
+
+def test_hokage_third_person_hierarchy_v43():
+    bad = persona_check(
+        "Saya Haruno", "Amatsu Uchiha",
+        candidate_dialogue="Você acha que ele vai deixar isso passar?",
+        situation="Saya fala de Daizen Sarutobi, o Quinto Hokage, para Amatsu em contexto institucional seguro.",
+        pressure="low",
+    )
+    assert bad["status"] == "revision_required", bad
+    assert any("third_person_hierarchy" in x for x in bad["revision_requests"]), bad
+
+    good = persona_check(
+        "Saya Haruno", "Amatsu Uchiha",
+        candidate_dialogue="Você acha que o Hokage-sama vai deixar isso passar?",
+        situation="Saya fala de Daizen Sarutobi, o Quinto Hokage, para Amatsu em contexto institucional seguro.",
+        pressure="low",
+    )
+    assert good["status"] in {"reviewable", "needs_evidence"}, good
