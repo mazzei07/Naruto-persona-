@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
-VERSION = "v43-relational-hierarchy-pair-research"
+VERSION = "v44-source-grounded-character-replication"
 
 MODERNITY_FLAGS = (
     "operacionalmente", "otimizar", "protocolo de resposta", "janela operacional",
@@ -56,6 +56,7 @@ def compile_voice_fingerprint(actor: str, bible: dict[str, Any] | None, interloc
             "breath_time_gate",
             "third_person_hierarchy_gate",
             "pairwise_reference_interaction_gate",
+            "source_grounded_voice_gate",
         ],
         "qes_v42": {
             "speech_act": "resolve before wording",
@@ -69,13 +70,14 @@ def compile_voice_fingerprint(actor: str, bible: dict[str, Any] | None, interloc
             "morphology": "test plausible directive variants before choosing",
             "breath_time": "combat speech requires real physical window",
             "third_person_hierarchy": "resolve whether a superior must retain sensei/Kage/Sannin/master title when referred to, not only when addressed",
-            "pairwise_reference": "when actor and interlocutor both map to official references, exact-phase pair interaction evidence outranks individual personality fallback"
+            "pairwise_reference": "when actor and interlocutor both map to official references, exact-phase pair interaction evidence outranks individual personality fallback",
+            "source_grounded_voice": "material dialogue requires direct dialogue exemplars; synopsis/profile alone cannot authorize line shape"
         },
         "line_review": [
             "immediate_beat_response","speaker_swap","interlocutor_swap","sentence_length_fit",
             "lexical_age_fit","vocative_fit","fragment_or_completeness_fit","body_first_fit",
             "source_phase_fit","knowledge_channel_fit","speech_act_fit","morphology_fit","breath_time_fit",
-            "third_person_hierarchy_fit","pairwise_reference_fit"
+            "third_person_hierarchy_fit","pairwise_reference_fit","source_grounded_voice_fit"
         ],
     }
 
