@@ -910,7 +910,7 @@ def healthcheck() -> Dict[str, Any]:
     return {
         "ok": not missing_voice and not missing_dossier,
         "module": "Naruto Persona Engine",
-        "quality_protocol": "v49-evidence-agency-tactical-performance",
+        "quality_protocol": "v49.1-calibrated-evidence-performance",
         "version": rules.get("version"),
         "continuity_id": rules.get("continuity_id"),
         "characters": len(chars),

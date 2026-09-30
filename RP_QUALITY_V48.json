@@ -1,5 +1,5 @@
 {
-  "version": "v49-evidence-agency-tactical-performance",
+  "version": "v49.1-calibrated-evidence-performance",
   "scope": "Continuidade Clássica; aprimora execução sem substituir fichas, eventos ou sistema Chakra V3",
   "hard_rules": [
     "Ação voluntária de Amatsu apenas pelo usuário.",
@@ -41,7 +41,8 @@
     "Testar adversarialmente negacao, sujeito trocado, canal vazio, namoro preservado, histórico apagado e defesa tardia.",
     "Registrar limitação de fonte e distinguir mudança publicada de runtime ativo.",
     "Pesquisa automática exige exemplares distintos com fonte citada, locador e comportamento observado; reservar capacidade para geração e revisão.",
-    "Testar valores inválidos e conservação exata de chakra em sequências de clones; uma proposta de estado nunca modifica a entrada."
+    "Testar valores inválidos e conservação exata de chakra em sequências de clones; uma proposta de estado nunca modifica a entrada.",
+    "Revisar fatos materiais sem confundir sentimento próprio com informação secreta. Saudação e expressão de afeto comuns não são falhas por compartilharem palavras; avaliar decisão e sequência do beat com evidência concreta."
   ],
   "research_basis": [
     {
