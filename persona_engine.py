@@ -1313,6 +1313,43 @@ def persona_audit(
             grounded_revision = "third_person_hierarchy: preserve sensei/title when the superior is materially identified; pronoun-only reference needs contextual justification"
         else:
             grounded_revision = ""
+        # General v43 authority reference gate. Fires only when the scene itself
+        # explicitly identifies a named authority/teacher as the person being discussed.
+        hierarchy_targets = []
+        for candidate_name, candidate_profile in _characters().get("characters", {}).items():
+            cname = _norm(candidate_name)
+            cfirst = _norm(_first_name(candidate_name))
+            mentioned = cname in nsit or (cfirst and len(cfirst) > 3 and re.search(r"(?<!\\w)" + re.escape(cfirst) + r"(?!\\w)", nsit))
+            if not mentioned:
+                continue
+            ident = _norm(_extract_field(candidate_profile, "Identificação"))
+            dossier = _norm(candidate_profile.get("dossier_raw", ""))
+            explicit_role = ""
+            for role in ["hokage", "kazekage", "mizukage", "raikage", "tsuchikage", "sannin"]:
+                if role in ident or role in dossier or role in nsit:
+                    explicit_role = role
+                    break
+            # Teacher/master status needs an explicit scene cue unless this is the actor's own sensei.
+            if not explicit_role and ("sensei" in nsit or "mestre" in nsit):
+                if candidate_name == actor_sensei or cname in nsit or cfirst in nsit:
+                    explicit_role = "sensei" if "sensei" in nsit else "mestre"
+            if explicit_role:
+                hierarchy_targets.append((candidate_name, explicit_role))
+
+        if hierarchy_targets:
+            target_names_in_line = any(
+                _norm(_first_name(tname)) in ntext or _norm(tname) in ntext
+                for tname, _ in hierarchy_targets
+            )
+            target_titles_in_line = any(
+                title in ntext for title in [
+                    "sensei", "hokage", "kazekage", "mizukage", "raikage",
+                    "tsuchikage", "sannin", "mestre", "sama"
+                ]
+            )
+            if pronoun_only and not target_names_in_line and not target_titles_in_line:
+                warnings.append("v43_third_person_authority_erased:named_superior_referenced_as_bare_pronoun")
+                grounded_revision = "third_person_hierarchy: preserve the materially identified superior's title/name form; bare pronoun needs contextual justification"
     grounded = lint_v24(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
     violations = _uniq(violations + grounded["violations"])
     revisions = grounded["revision_requests"]
