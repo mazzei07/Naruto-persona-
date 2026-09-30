@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from epistemic_gate import fact_supported
+
 import json
 import re
 import unicodedata
@@ -908,6 +910,7 @@ def healthcheck() -> Dict[str, Any]:
     return {
         "ok": not missing_voice and not missing_dossier,
         "module": "Naruto Persona Engine",
+        "quality_protocol": "v48-integrity-performance-combat",
         "version": rules.get("version"),
         "continuity_id": rules.get("continuity_id"),
         "characters": len(chars),
@@ -1289,14 +1292,9 @@ def _epistemic_fact_gate_v46(
 
     # Structured candidate claims can be checked positively.
     if candidate_facts:
-        support_space = " ".join([*known, nk, nprior])
         for fact in candidate_facts:
-            nf = _norm(fact)
-            if nf and nf not in support_space:
-                ftoks = [x for x in nf.split() if len(x) >= 4]
-                overlap = sum(1 for x in ftoks if x in support_space)
-                if not ftoks or overlap / max(1, len(ftoks)) < 0.75:
-                    issues.append(f"v46_unverified_material_fact:{nf}")
+            if not fact_supported(fact, known_facts or []):
+                issues.append(f"v46_unverified_material_fact:{_norm(str(fact))}")
 
     return _uniq(issues)
 
@@ -1535,3 +1533,4 @@ def persona_audit(
         ],
         "packet": packet,
     }
+

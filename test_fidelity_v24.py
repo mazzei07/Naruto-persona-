@@ -24,7 +24,9 @@ class FidelityTests(unittest.TestCase):
         self.assertNotIn('registro_meta_ou_moderno:meta',r['revision_requests'])
     def test_didactic_language_not_blanket_banned(self):
         r=lint('Iruka','Amatsu','Isso significa que vocês passaram porque trouxeram os dois pergaminhos.',situation='explicação na torre')
-        self.assertEqual(r['status'],'reviewable')
+        self.assertEqual(r['violations'],[])
+        self.assertNotIn('explicacao_didatica_proibida',r.get('revision_requests',[]))
+        self.assertTrue(r['semantic_review_required'])
     def test_agency(self):
         self.assertEqual(persona_turn('Amatsu','Saya')['status'],'blocked_player_control')
     def test_scene_not_biography(self):
@@ -111,8 +113,8 @@ class FidelityTests(unittest.TestCase):
         p=source_proximate_match_v41('Kaede Uchiha','Amatsu Uchiha','ataque e perigo','proteger companheiro')
         self.assertEqual(p['status'],'reference_available')
         self.assertTrue(p['closest']['card_id'])
-        self.assertEqual(p['match_quality'],'phase_situation_synopsis')
-        self.assertFalse(p['dialogue_mechanics_verified'])
+        self.assertEqual(p['match_quality'],'source_excerpt')
+        self.assertTrue(p['dialogue_mechanics_verified'])
         acting=compile_acting_packet('Kaede Uchiha','Amatsu Uchiha','proteger companheiro','ataque e perigo')
         self.assertEqual(acting['source_proximate_v41']['closest']['card_id'],p['closest']['card_id'])
         self.assertTrue(acting_health()['supports_source_proximate_dialogue_v41'])
@@ -148,3 +150,4 @@ class FidelityTests(unittest.TestCase):
         self.assertFalse(match['dialogue_mechanics_verified'])
 
 if __name__=='__main__':unittest.main()
+

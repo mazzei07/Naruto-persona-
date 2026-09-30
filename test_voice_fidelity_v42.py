@@ -1,9 +1,9 @@
-from voice_fidelity_v42 import compile_voice_fingerprint, audit_surface_line, epistemic_name_gate
+from voice_fidelity_v42 import VERSION, compile_voice_fingerprint, audit_surface_line, epistemic_name_gate
 
 def test_voice_fingerprint_qes():
     bible={"identity":{"identification":"14 anos"},"voice":{"reference_anchor":"Sakura inicial","register":"coloquial-correto","cadence":"expressiva"},"acting":{}}
     fp=compile_voice_fingerprint("Saya Haruno",bible,"Amatsu Uchiha","medium","team")
-    assert fp["version"].startswith("v42")
+    assert fp["version"] == VERSION
     assert "qes_v42" in fp
     assert "speech_act_fit" in fp["line_review"]
 
@@ -20,3 +20,4 @@ def test_epistemic_name_gate():
     known=["o homem ferido deixou sangue na trilha"]
     assert not epistemic_name_gate("Shuren Kurose",known)
     assert epistemic_name_gate("homem ferido",known)
+

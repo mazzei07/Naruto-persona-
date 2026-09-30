@@ -1,6 +1,10 @@
 from __future__ import annotations
 
 from typing import Any, Dict, List
+import json
+from pathlib import Path
+
+QUALITY_V48 = json.loads((Path(__file__).parent / "RP_QUALITY_V48.json").read_text())
 from voice_fidelity_v42 import VERSION as VOICE_V42_VERSION, compile_voice_fingerprint
 
 
@@ -192,6 +196,7 @@ def compile_actor_state(
 
     return {
         "version": VERSION,
+        "quality_contract_v48": QUALITY_V48,
         "actor": actor,
         "interlocutor": interlocutor or None,
         "stimulus": stimulus,
@@ -222,3 +227,4 @@ def compile_actor_state(
             "APPLY EMOTIONAL DENSITY v46: economy is not blandness; high-stakes relation must remain felt in body/timing/subtext/action/voice",
         ],
     }
+

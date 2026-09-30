@@ -1,0 +1,53 @@
+{
+  "version": "v48-integrity-performance-combat",
+  "scope": "Continuidade Clássica; aprimora execução sem substituir fichas, eventos ou sistema Chakra V3",
+  "hard_rules": [
+    "Ação voluntária de Amatsu apenas pelo usuário.",
+    "Fato afirmado ou pressuposto exige ledger individual; verdade do mundo não é conhecimento do NPC.",
+    "Histórico é append-only; falha de geração recebe correção fora de cena e não uma negação fabricada pelo personagem.",
+    "Estado relacional vigente prevalece; modulação de voz não reinicia romance, confiança, rivalidade ou lembranças.",
+    "Perceber, interpretar, ter tempo e executar são condições distintas para defesa.",
+    "Fonte secundária ou sinopse não comprova cadência/dublagem; títulos, fase e locadores precisam ser conferidos."
+  ],
+  "performance": [
+    "Recuperar memória episódica relevante do ator e relação direcional antes de decidir.",
+    "Fixar objetivo imediato e obstáculo; escolher uma ação social concreta, inclusive gesto ou silêncio.",
+    "Usar referência em fase equivalente e respeitar divergências próprias do reboot.",
+    "Escolher intensidade pelo estímulo e histórico; não fabricar conflito para aumentar emoção.",
+    "Preservar oralidade, comprimento e respiração específicos: economia não exige frase truncada.",
+    "Revisar decisão, sequência, subtexto, gesto e resposta ao interlocutor; palavras funcionais compartilhadas são válidas.",
+    "Manter alvos e agendas dos NPCs durante o combate; evitar reação em fila."
+  ],
+  "combat": [
+    "Declarar preparação, compromisso, trajetória, detecção, resposta, contato e consequência em tempo contínuo.",
+    "Resolver ações simultâneas por geometria, atenção, execução e tempo; nunca por ordem de parágrafos.",
+    "Ocultação, fumaça, cobertura e linha de visão delimitam percepção; sensor não concede compreensão automática.",
+    "Custo, manutenção, corpo que gasta chakra e memórias de clones precisam de ledger; usar custos vigentes e contexto, não inventar tabela por rank.",
+    "Guardar ferimentos, perda funcional e tempo de recuperação com evidência; narrar sinais físicos sem HUD.",
+    "Parar na decisão significativa do jogador antes de resolver sua resposta."
+  ],
+  "verification": [
+    "Extrair afirmações materiais de fala e ação, inclusive pressupostos; ledger vazio não certifica texto.",
+    "Bloqueios determinísticos são requisitos necessários; revisão semântica de voz e fatos ainda é obrigatória.",
+    "Testar adversarialmente negacao, sujeito trocado, canal vazio, namoro preservado, histórico apagado e defesa tardia.",
+    "Registrar limitação de fonte e distinguir mudança publicada de runtime ativo."
+  ],
+  "research_basis": [
+    {
+      "url": "https://narutod8.weebly.com/",
+      "use": "foco declarado em balanceamento e combate estratégico; não transplantar D8 ao IC/Chakra V3"
+    },
+    {
+      "url": "https://aclanthology.org/2025.emnlp-main.1372/",
+      "use": "avaliação adaptativa e raciocínio breve focado; não promessa de fidelidade perfeita"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.05631",
+      "use": "avaliar trajetória de comportamento e interação em cenas, além de falas isoladas"
+    },
+    {
+      "url": "https://naruto-official.com/en/news/01_1903",
+      "use": "casualidade de Kakashi e proteção firme; referências de Parte I, sem importar história ao Kagetsu"
+    }
+  ]
+}
