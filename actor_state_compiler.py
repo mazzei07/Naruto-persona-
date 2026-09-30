@@ -170,6 +170,7 @@ def compile_actor_state(
         "addressing": voice.get("addressing", ""),
         "avoid": voice.get("avoid", ""),
         "formality": formality,
+        "adaptive_voice_v51": QUALITY_V48.get("adaptive_voice_v51", {}),
         "body_voice_rule": acting.get("body_voice_link", "body and voice must share one impulse"),
         "dialogue_flow": acting.get("dialogue_flow_v27", {}),
         "classic_voice_fidelity_v39": (acting_packet or {}).get("classic_voice_fidelity_v39", {}),

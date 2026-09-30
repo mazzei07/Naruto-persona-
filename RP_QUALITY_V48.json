@@ -1,5 +1,5 @@
 {
-  "version": "v49.1-calibrated-evidence-performance",
+  "version": "v51-adaptive-voice-memory-contract",
   "scope": "Continuidade Clássica; aprimora execução sem substituir fichas, eventos ou sistema Chakra V3",
   "hard_rules": [
     "Ação voluntária de Amatsu apenas pelo usuário.",
@@ -42,7 +42,8 @@
     "Registrar limitação de fonte e distinguir mudança publicada de runtime ativo.",
     "Pesquisa automática exige exemplares distintos com fonte citada, locador e comportamento observado; reservar capacidade para geração e revisão.",
     "Testar valores inválidos e conservação exata de chakra em sequências de clones; uma proposta de estado nunca modifica a entrada.",
-    "Revisar fatos materiais sem confundir sentimento próprio com informação secreta. Saudação e expressão de afeto comuns não são falhas por compartilharem palavras; avaliar decisão e sequência do beat com evidência concreta."
+    "Revisar fatos materiais sem confundir sentimento próprio com informação secreta. Saudação e expressão de afeto comuns não são falhas por compartilharem palavras; avaliar decisão e sequência do beat com evidência concreta.",
+    "v51: check adaptive syntax without quotas, no forced thoughts/HUD, and structured actor memory survives prompt compaction without [object Object] or dropped knowledge bounds."
   ],
   "research_basis": [
     {
@@ -61,5 +62,20 @@
       "url": "https://naruto-official.com/en/news/01_1903",
       "use": "casualidade de Kakashi e proteção firme; referências de Parte I, sem importar história ao Kagetsu"
     }
-  ]
+  ],
+  "adaptive_voice_v51": {
+    "version": "v51",
+    "scope": "NPCs only; character-specific source evidence and live correction take precedence",
+    "syntax": "Treat length, clause shape, interruption, hesitation, repair, latency and punctuation as contextual tendencies. No universal ten-word ceiling, punctuation quota, mandatory body-first response, or blacklist of common emotional words.",
+    "state_modulation": "Resolve baseline -> interlocutor/hierarchy -> current objective -> perceived pressure/body -> residual emotion from prior exchange. Compression under danger and expansion during teaching/confession are possible, never automatic for every actor.",
+    "idiolect": "Shared world jargon does not imply shared knowledge. Vary syntax, speech acts and rhythm; lexical choices also distinguish speakers when supported. Hm, ellipses, doubled punctuation and Inner are not mandatory signatures.",
+    "player": "Do not author Amatsu's voice, internal monologue or voluntary reactions. His observed player-written speech is context, not permission to speak for him.",
+    "subtext": "Track only a concise dramatic intention/state in the actor packet. Do not request or print model chain-of-thought, a mandatory Thought line, invisible JSON, or HUD. Inner Saya appears only as established character narration when the beat warrants it; it conveys no telepathy.",
+    "examples": "Select existing verified exemplars by exact actor reference, phase, interlocutor and speech act. Use varied contrasting circumstances; examples guide form, not future biography or canonical facts. No fixed three-example requirement and no invented examples labeled as manga/anime evidence.",
+    "sampling": "Natural-language persona prompts guide generation but do not install numerical per-word logit penalties. Do not claim mathematical word reweighting unless the backend explicitly implements it.",
+    "ic80": "Preserve the project's documented IC-80 meaning; do not reinterpret it as an 80% psychology/narration quota.",
+    "memory": "Retrieved text is candidate context, not evidence of NPC knowledge. Preserve continuity ID, event identity, source, validation/correction status, participants and legitimate information channels. Latest authoritative correction wins; drafts and other continuities never become memories.",
+    "efficiency": "Keep world rules, player agency, latest scene state, knowledge boundaries and live relationship authoritative. Retrieve optional lore on relevance, never solely on keywords; lack of a keyword cannot remove core mechanics. Reuse valid evidence when available; research gaps, not already verified material.",
+    "review": "Evaluate multi-beat change: baseline, pressure, interlocutor switch, recovery and later recall. A short tactical warning can be shared; judge identity across decisions and rhythm. Preserve fear, affection, pride and humor when justified."
+  }
 }
