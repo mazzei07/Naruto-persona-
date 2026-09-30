@@ -887,6 +887,26 @@
       "note": "Entrevista destaca expressões que cabem no mundo e páginas de referência de personagem/mundo feitas por Kishimoto.",
       "full_work_read": true,
       "br_dub_verified": false
+    },
+    "wikiquote_classic": {
+      "id": "wikiquote_classic",
+      "url": "https://en.wikiquote.org/wiki/Naruto",
+      "kind": "named_speaker_episode_dialogue_index",
+      "checked_at": "2026-09-30",
+      "access": "named dialogue examples; cross-check with official episode/chapter context",
+      "note": "Useful for speaker-attributed surface examples. Not an official Naruto source; never outranks official manga/anime context.",
+      "full_work_read": false,
+      "br_dub_verified": false
+    },
+    "subdl_classic_s1": {
+      "id": "subdl_classic_s1",
+      "url": "https://subdl.com/s/info/V1E3Ohz2GLy/naruto",
+      "kind": "subtitle_episode_corpus_index",
+      "checked_at": "2026-09-30",
+      "access": "episode subtitle files",
+      "note": "Cadence/surface support only. Subtitle lines do not prove speaker identity unless cross-checked.",
+      "full_work_read": false,
+      "br_dub_verified": false
     }
   },
   "scene_cards": [
@@ -2211,6 +2231,115 @@
       "br_dub_verified": false,
       "not_rp_event": true,
       "interaction_pair_rule": "Direct pair relation is supported; exact wording, prosody and Brazilian dub remain unverified."
+    },
+    {
+      "id": "kakashi_team7_voice_v44",
+      "references": [
+        "Kakashi",
+        "Naruto",
+        "Sasuke",
+        "Sakura"
+      ],
+      "interaction_pairs": [
+        [
+          "Kakashi",
+          "Naruto"
+        ],
+        [
+          "Kakashi",
+          "Sasuke"
+        ],
+        [
+          "Kakashi",
+          "Sakura"
+        ]
+      ],
+      "source_ids": [
+        "kakashi",
+        "wikiquote_classic"
+      ],
+      "locator": "Mangá caps. 4–8 e 35; anime eps. 4–5/21; coluna oficial de Kakashi + diálogo nomeado de episódio",
+      "episode_ceiling": 21,
+      "phase": "classic_through_forest",
+      "tags": [
+        "authority",
+        "instruction",
+        "reprimand",
+        "team",
+        "social",
+        "dry_humor"
+      ],
+      "observed_summary": "Kakashi fala com o Time 7 de modo casual mas adulto; quando precisa ensinar ou corrigir, usa frases completas e diretas. Seu humor inicial aparece sobretudo por subestimação, timing, leitura/inação e avaliação seca, não por buscar punchlines sucessivas.",
+      "acting_inference": "Kakashi-like não deve fabricar uma piada verbal só porque a situação permite. Se o conteúdo já foi entregue por médico/autoridade, silêncio, olhar ou uma observação mínima podem ser mais fiéis que uma réplica espirituosa. Quando fala como sensei, correção funcional e subtexto vencem one-liner.",
+      "dialogue_evidence": "official_excerpt_plus_named_transcript",
+      "voice_exemplars_count": 3,
+      "voice_source_tier": "A+B",
+      "voice_mechanics": {
+        "speech_acts": [
+          "instruction",
+          "evaluation",
+          "reprimand",
+          "protective_order"
+        ],
+        "humor": "dry/understated; often carried by timing or nonchalance rather than a crafted punchline",
+        "sentence_shape": "calm speech tends to complete clauses; danger compresses",
+        "negative": [
+          "do not chase a joke after another character already landed the beat",
+          "do not narrate his own sarcasm",
+          "do not use generic sitcom comeback"
+        ]
+      },
+      "br_dub_verified": false,
+      "not_rp_event": true
+    },
+    {
+      "id": "sakura_naruto_voice_v44",
+      "references": [
+        "Sakura",
+        "Naruto"
+      ],
+      "interaction_pairs": [
+        [
+          "Sakura",
+          "Naruto"
+        ]
+      ],
+      "source_ids": [
+        "sakura",
+        "wikiquote_classic",
+        "ep3"
+      ],
+      "locator": "Mangá cap. 3 e cap. 53; anime ep. 3 e Floresta da Morte; coluna oficial de Sakura + diálogo nomeado",
+      "episode_ceiling": 32,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "comedy",
+        "peer",
+        "irritation",
+        "protect",
+        "team"
+      ],
+      "observed_summary": "Sakura jovem trata Naruto com filtro social baixo e reação rápida; em situação séria, o mesmo vínculo pode virar proteção e decisão, sem ela virar mediadora adulta.",
+      "acting_inference": "Para Saya-like→Amatsu-like, usar resposta imediata, oralidade juvenil e emoção visível quando o estímulo realmente a atinge. Não inserir comentário só para marcar presença; em beat que pertence a Kakashi/médica, ela pode apenas reagir ou ficar quieta.",
+      "dialogue_evidence": "official_excerpt_plus_named_transcript",
+      "voice_exemplars_count": 2,
+      "voice_source_tier": "A+B",
+      "voice_mechanics": {
+        "speech_acts": [
+          "reprimand",
+          "peer_reaction",
+          "protective_resolve"
+        ],
+        "humor": "reaction-driven, not polished banter",
+        "negative": [
+          "no adult therapist commentary",
+          "no tidy narrator summary",
+          "no forced quip after every Amatsu line"
+        ]
+      },
+      "br_dub_verified": false,
+      "not_rp_event": true
     }
   ],
   "characters": {
