@@ -137,15 +137,29 @@ def relationship_bible(name:str,interlocutor:str)->dict[str,Any]:
     overrides=entry.get("relationship_overrides",{})
     explicit=overrides.get(target or interlocutor,{})
     graph_rel=_graph().get("edges",{}).get(actor,{}).get(target or interlocutor,{})
-    rel=explicit or graph_rel
-    source="explicit_override" if explicit else "relationship_graph" if graph_rel else "fallback_summary"
+    graph_sources=[str(x) for x in graph_rel.get("sources",[]) if x]
+    graph_roles=[str(x) for x in graph_rel.get("roles",[]) if x]
+    graph_is_live=bool(graph_rel) and (
+        any(x.startswith("live") or "current_live" in x for x in graph_sources)
+        or any(x in {"girlfriend","boyfriend","partner","spouse","current_romantic_partner"} for x in graph_roles)
+        or str(graph_rel.get("current_status","")).lower() in {"dating","relationship","romantic"}
+        or str(graph_rel.get("familiarity","")).lower().startswith("deep_shared_history")
+    )
+    if graph_is_live:
+        rel={**explicit, **graph_rel}
+        if explicit.get("history") and graph_rel.get("history"):
+            rel["history"]=list(dict.fromkeys([*explicit.get("history",[]),*graph_rel.get("history",[])]))
+        source="relationship_graph_live_override"
+    else:
+        rel=explicit or graph_rel
+        source="explicit_override" if explicit else "relationship_graph" if graph_rel else "fallback_summary"
     return {
         "status":"ok","version":_load()["meta"]["version"],"actor":actor,
         "interlocutor":target or interlocutor or None,
-        "specific":bool(explicit),"graph_known":bool(graph_rel),"relationship_source":source,
+        "specific":bool(explicit or graph_rel),"graph_known":bool(graph_rel),"relationship_source":source,
         "relationship":rel,
         "fallback_relation_summary":entry.get("voice",{}).get("relation_summary",""),
-        "rule":"explicit relationship override > established relationship graph > dossier summary > generic personality/reference"
+        "rule":"current live relationship graph > accumulated live explicit override > dossier historical baseline > generic personality/reference"
     }
 
 def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
@@ -206,7 +220,8 @@ def escalation_packet(name:str,interlocutor:str="",stimulus:str="",prior_exchang
     levels=entry.get("escalation",{}).get("levels",[])
     matched=next((x for x in levels if x.get("level")==level),{"level":level,"name":"custom","surface":""})
     actor_rule=entry.get("escalation",{}).get("actor_rule","")
-    relation=entry.get("relationship_overrides",{}).get(target or interlocutor,{})
+    relation_packet=relationship_bible(actor,target or interlocutor or "") if (target or interlocutor) else {"relationship":{}}
+    relation=relation_packet.get("relationship",{}) or {}
     trigger_rules=relation.get("trigger_rules",[])
     return {
         "status":"ok","version":_load()["meta"]["version"],"actor":actor,"interlocutor":target or interlocutor or None,
