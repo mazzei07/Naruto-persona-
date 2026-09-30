@@ -1989,6 +1989,32 @@
       "dialogue_evidence": "official_episode_summary",
       "br_dub_verified": false,
       "not_rp_event": true
+    },
+    {
+      "id": "team7_kakashi_pair_v43",
+      "references": [
+        "Kakashi",
+        "Sakura",
+        "Naruto",
+        "Sasuke"
+      ],
+      "source_ids": [
+        "kakashi"
+      ],
+      "locator": "Mangá caps. 4–8; anime eps. 4–5 (formação/teste do Time 7)",
+      "episode_ceiling": 5,
+      "phase": "classic_through_forest",
+      "tags": [
+        "authority",
+        "instruction",
+        "team",
+        "social"
+      ],
+      "observed_summary": "Kakashi é o jōnin responsável por Naruto, Sasuke e Sakura e conduz o teste de sobrevivência, estabelecendo a relação sensei→alunos do Time 7.",
+      "acting_inference": "Para derivados do Time 7, pesquisar primeiro a dupla específica dentro desta relação antes de usar personalidade isolada. Hierarquia professor→aluno deve afetar endereçamento e referência em terceira pessoa; sinopse não prova redação literal.",
+      "dialogue_evidence": "official_editorial_or_synopsis_only",
+      "br_dub_verified": false,
+      "not_rp_event": true
     }
   ],
   "characters": {
