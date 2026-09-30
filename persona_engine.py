@@ -1219,6 +1219,7 @@ def character_turn_packet(
             "pressure_rule": "high pressure compresses language and prioritizes functional speech; it does not grant adult command vocabulary",
         },
         "voice_contract_v23": universal_voice_v23,
+        "conversational_cohesion_v50": _rules().get("conversational_cohesion_v50", {}),
         "voice_contract_v21_legacy": _v21_voice_contract(p, rel_lines, baseline, filter_level, plev),
         "body_realization": {
             "tendencies": body,
@@ -1238,6 +1239,8 @@ def character_turn_packet(
             "V47: mapear world truth / percepção individual / compreensão antes da fala; fato sem canal legítimo bloqueia o candidato antes de sair.",
             "Carregar o prior_exchange; não reiniciar temperatura emocional a cada fala.",
             "Economia verbal não é baixa intensidade: beat relacional material precisa carregar peso em corpo, latência, subtexto, ação ou fala.",
+            "V50: resolver coesão conversacional antes da pontuação final; continuação dependente não vira frase-legenda órfã sem marcador, prosódia, ação ou nova deixa.",
+            "V50: marcador discursivo é função, não muleta; evitar repetição mecânica e não usar daí como cola universal sem evidência de idioleto.",
             "Se a fala puder ser trocada entre três NPCs sem alteração, reescrever.",
             "Uma ordem funcional como Abaixa! pode servir a várias pessoas sem ser um erro.",
             "Avaliar identidade no conjunto de decisões e falas; não forçar bordão, gesto ou insulto.",
@@ -1299,6 +1302,67 @@ def _epistemic_fact_gate_v46(
     return _uniq(issues)
 
 
+def _conversational_cohesion_audit_v50(candidate_dialogue: str, prior_exchange: str = "", idiolect_text: str = "") -> Dict[str, List[str]]:
+    """Audit oral turn continuity without forcing connectors into every clause."""
+    text = (candidate_dialogue or "").strip()
+    if not text:
+        return {"warnings": [], "revision_requests": []}
+
+    warnings: List[str] = []
+    revisions: List[str] = []
+    # Units remain within the SAME speaker turn. A new interlocutor turn is not
+    # inferred merely because punctuation created a new sentence.
+    units = [u.strip() for u in re.split(r"(?<=[.!?])\\s+|\\n+", text) if u.strip()]
+    connector_starts = (
+        "mas ", "só que ", "so que ", "então ", "entao ", "aí ", "ai ",
+        "daí ", "dai ", "e ", "porque ", "é que ", "e que ", "bom ",
+        "quer dizer "
+    )
+
+    # V50 orphan-fragment gate: a bare short negated follow-up often reads like
+    # a subtitle detached from the clause it semantically completes.
+    for left, right in zip(units, units[1:]):
+        nr = _norm(right)
+        right_words = re.findall(r"\\b[\\wÀ-ÿ'-]+\\b", right, flags=re.UNICODE)
+        left_words = re.findall(r"\\b[\\wÀ-ÿ'-]+\\b", left, flags=re.UNICODE)
+        starts_with_connector = any(nr.startswith(_norm(x).strip()) for x in connector_starts)
+        bare_negative = bool(re.match(r"^(?:não|nao)\\s+[\\wÀ-ÿ'-]+", right, flags=re.I))
+        if bare_negative and not starts_with_connector and len(right_words) <= 5 and len(left_words) >= 4:
+            revisions.append(
+                "v50_orphan_followup_fragment: unir a continuação à oração anterior com marcador/prosódia/ação, "
+                "ou manter o corte apenas se houver deixa real do interlocutor ou fragmentação sustentada pela referência"
+            )
+            break
+
+    # V50 marker-crutch gate. Three nearby clause openings with the same marker
+    # are a generator habit unless an idiolect/source explicitly licenses it.
+    starts: List[str] = []
+    marker_patterns = [
+        ("então", r"^ent[aã]o\\b"), ("aí", r"^a[ií]\\b"), ("daí", r"^da[ií]\\b"),
+        ("mas", r"^mas\\b"), ("só que", r"^s[oó]\\s+que\\b"), ("bom", r"^bom\\b")
+    ]
+    for unit in units:
+        nu = _norm(unit)
+        found = ""
+        for label, pattern in marker_patterns:
+            if re.search(pattern, nu):
+                found = label
+                break
+        starts.append(found)
+    for label in {x for x in starts if x}:
+        positions = [i for i, x in enumerate(starts) if x == label]
+        if len(positions) >= 3 and positions[-1] - positions[0] <= 4:
+            warnings.append(f"v50_marker_crutch:{label}: repetição próxima demais; variar estrutura ou retirar marcadores sem função")
+
+    # 'Daí' is not a universal Naruto-register glue word. It needs character/source support.
+    ntext = _norm(text)
+    if re.search(r"(?m)(?:^|[.!?]\\s+)dai\\b", ntext):
+        if "dai" not in _norm(idiolect_text):
+            revisions.append("v50_dai_requires_idiolect_evidence: 'daí' não é cola universal do elenco; substituir ou justificar por referência/idioleto")
+
+    return {"warnings": _uniq(warnings), "revision_requests": _uniq(revisions)}
+
+
 def persona_audit(
     name: str,
     interlocutor: str = "",
@@ -1353,6 +1417,14 @@ def persona_audit(
     warnings.extend(acting_review.get("warnings", []))
     text = f"{candidate_dialogue} {candidate_action}".strip()
     ntext = _norm(text)
+    idiolect_text = json.dumps({
+        "voice": packet.get("voice_realization", {}),
+        "reference": packet.get("reference", {}),
+        "relationship": packet.get("directional_relationship", {}),
+    }, ensure_ascii=False)
+    cohesion_v50 = _conversational_cohesion_audit_v50(candidate_dialogue, prior_exchange, idiolect_text)
+    warnings.extend(cohesion_v50.get("warnings", []))
+
 
     # v46: ordinary factual claims need a knowledge channel, not only proper names.
     violations.extend(_epistemic_fact_gate_v46(
@@ -1510,7 +1582,7 @@ def persona_audit(
 
     grounded = lint_v24(name, interlocutor, candidate_dialogue, candidate_action, situation, pressure)
     violations = _uniq(violations + grounded["violations"])
-    revisions = grounded["revision_requests"]
+    revisions = _uniq(grounded["revision_requests"] + cohesion_v50.get("revision_requests", []))
     if 'grounded_revision' in locals() and grounded_revision:
         revisions = _uniq(revisions + [grounded_revision])
     if 'v44_revision' in locals() and v44_revision:
