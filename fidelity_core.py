@@ -106,12 +106,18 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
     allowed.sort(key=lambda item:(-item[0],item[1]['id']))
     candidates=[{'card_id':c['id'],'score':score,'matched_tags':sorted(tags&set(c.get('tags',[]))),'relation_match':rel,
                  'pair_reference_match':pair,'pair_reference_cooccurrence':cooccur,
-                 'evidence_kind':c.get('dialogue_evidence','unknown'),'locator':c.get('locator',''),
+                 'evidence_kind':c.get('dialogue_evidence','unknown'),'voice_exemplars_count':int(c.get('voice_exemplars_count',0) or 0),
+                 'voice_source_tier':c.get('voice_source_tier'),'locator':c.get('locator',''),
                  'source_ids':c.get('source_ids',[]),'source_url':c.get('source_url'),
-                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel,pair,cooccur in allowed[:3]]
+                 'checked_at':c.get('checked_at'),'provenance':c.get('provenance','catalogue')} for score,c,rel,pair,cooccur in allowed[:5]]
     best=candidates[0] if candidates else None
     pair_match_found=any(x.get('pair_reference_match') for x in candidates)
-    verified=bool(best and best['provenance']=='catalogue' and best['evidence_kind'] in ('official_excerpt','licensed_text_or_audio'))
+    strong_kinds=('official_excerpt','licensed_text_or_audio','official_excerpt_plus_named_transcript')
+    voice_candidates=[x for x in candidates if x.get('evidence_kind') in strong_kinds and (not pair_reference_required or x.get('pair_reference_match'))]
+    voice_exemplar_count=sum(max(1,int(x.get('voice_exemplars_count',0) or 0)) for x in voice_candidates)
+    voice_exemplar_required=bool(actor_refs)
+    voice_exemplar_research_required=bool(voice_exemplar_required and voice_exemplar_count<2)
+    verified=bool(voice_exemplar_count>=2)
     return {'status':'reference_available' if best and best['score'] else 'needs_evidence','actor':actor,
             'interlocutor':interlocutor,'phase':'classic_through_forest',
             'match_quality':'source_excerpt' if verified else ('phase_situation_synopsis' if best and best['score'] else 'weak_phase_analogue' if best else 'none'),
@@ -119,8 +125,11 @@ def source_proximate_match_v41(name,interlocutor='',situation='',stimulus='',car
             'pair_reference_required':pair_reference_required,
             'pair_reference_match_found':pair_match_found,
             'pair_reference_research_required':bool(pair_reference_required and not pair_match_found),
+            'voice_exemplar_required':voice_exemplar_required,
+            'voice_exemplar_count':voice_exemplar_count,
+            'voice_exemplar_research_required':voice_exemplar_research_required,
             'pragmatic_function':'requires_scene_review','turn_shape':'requires_scene_review',
-            'rule':'Live state and directional relation outrank an analogue. References merely co-occurring on a card do not prove pair interaction; pair_reference_match requires an explicit interaction_pairs entry. When both sides have official references, same-phase direct-pair evidence outranks individual personality fallback. Synopsis does not prove wording, cadence or dub.'}
+            'rule':'V44: relation evidence and voice evidence are separate. Synopsis may establish relation, but material dialogue requires at least two direct dialogue exemplars from strong source evidence. Co-occurrence is not interaction; generic personality cannot fill missing line shape.'}
 
 def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     actor=resolve(name)
@@ -143,6 +152,7 @@ def evidence_packet(name,interlocutor='',situation='',stimulus=''):
     if mapping['mapping_status']=='unresolved_or_original' and not mapping.get('baseline'):missing.append('matriz de voz própria não fechada')
     if mapping['reference_characters'] and not selected:missing.append('cena equivalente da fase atual não encontrada no catálogo')
     if proximity.get('pair_reference_research_required'):missing.append('evidência par-a-par das duas referências oficiais não encontrada; pesquisar a dupla na fase/situação antes de certificar voz relacional')
+    if proximity.get('voice_exemplar_research_required'):missing.append('V44: faltam pelo menos dois exemplares diretos de fala/comportamento vocal da referência na fase/relação; sinopse não autoriza gerar diálogo')
     if not situation and not stimulus:missing.append('situação/estímulo não fornecidos')
     if mapping['later_reference_characters']:missing.append('referência posterior exige recorte explícito; não existe versão juvenil presumida')
     target_refs=(catalog()['characters'].get(resolve(interlocutor),{}).get('reference_characters',[]) if interlocutor and resolve(interlocutor) else [])
@@ -296,4 +306,4 @@ def health():
     kinds={}
     for m in d['characters'].values():
         kind=m.get('entity_type','individual');kinds[kind]=kinds.get(kind,0)+1
-    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'reference_episode_ceiling':d['contract'].get('reference_episode_ceiling'),'acting_bible_version':d['contract'].get('acting_bible',{}).get('version'),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True,'supports_source_proximate_dialogue_v41':True,'supports_third_person_hierarchy_v43':True,'supports_pairwise_reference_v43':True,'pairwise_match_requires_explicit_interaction_pairs':True,'source_proximate_limit':'catalogue_synopses_are_not_dialogue_transcripts'}
+    return {'version':VERSION,'ok':not bad and len(ids)==len(d['scene_cards']),'characters_mapped':len(d['characters']),'entity_types':kinds,'scene_cards':len(ids),'source_records':len(d['sources']),'reference_episode_ceiling':d['contract'].get('reference_episode_ceiling'),'acting_bible_version':d['contract'].get('acting_bible',{}).get('version'),'coverage':'selected_evidence_not_complete_corpus','br_dub_verified':False,'full_manga_read':False,'network_access':False,'semantic_review_required':True,'supports_active_npcs':True,'supports_source_proximate_dialogue_v41':True,'supports_third_person_hierarchy_v43':True,'supports_pairwise_reference_v43':True,'pairwise_match_requires_explicit_interaction_pairs':True,'supports_source_grounded_voice_v44':True,'minimum_voice_exemplars_v44':2,'synopsis_cannot_unlock_dialogue_v44':True,'source_proximate_limit':'catalogue_synopses_are_not_dialogue_transcripts'}
