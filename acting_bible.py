@@ -186,9 +186,21 @@ def _trigger_level(actor:str,target:str|None,text:str)->tuple[int,list[str]]:
         if any(x in n for x in ["perdeu","patetic","patética","patetica","passou vergonha"]):
             level=max(level,3);reasons.append("public_loss_pride_trigger")
     if actor=="Kaede Uchiha" and target=="Amatsu Uchiha":
-        if any(x in n for x in ["vergonha","cla","clã","uchiha"]):
+        # v47: surnames/locations like "Uchiha" or "distrito Uchiha" are context,
+        # not provocation. Reputation escalation requires an actual evaluative hit.
+        clan_reputation = any(x in n for x in [
+            "vergonha do cla","vergonha do clã","vergonha dos uchiha",
+            "vergonha para o cla","vergonha para o clã","envergonha o cla","envergonha o clã",
+            "nome uchiha","reputacao do cla","reputação do clã","honra do cla","honra do clã"
+        ])
+        if clan_reputation:
             level=max(level,2);reasons.append("clan_reputation_trigger")
-        if any(x in n for x in ["melhor","prodig","competencia","competência","fraca","fracass"]):
+        competence_provocation = any(x in n for x in [
+            "voce e fraca","você é fraca","mais fraca","fracassada","fracasso",
+            "sou melhor que voce","sou melhor que você","melhor que voce","melhor que você",
+            "prodigio de verdade","prodígio de verdade","competencia uchiha","competência uchiha"
+        ])
+        if competence_provocation:
             level=max(level,3);reasons.append("competence_status_trigger")
     if actor=="Yoshiro Sabaku":
         trigger_n = re.sub(
