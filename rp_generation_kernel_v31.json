@@ -1,5 +1,5 @@
 {
-  "version": "v43.0-relational-hierarchy-pair-research",
+  "version": "v44.0-source-grounded-character-replication",
   "purpose": "Compile believable Naruto Classic character behavior before prose; bots are evidence providers, not prose authorities.",
   "stages": [
     {
@@ -134,6 +134,20 @@
         "mark pair_reference_research_required when direct pair evidence is absent or only weak synopsis evidence exists",
         "never certify wording, dub cadence or honorific frequency from synopsis alone",
         "use individual profile only as conservative fallback after pairwise search"
+      ]
+    },
+    {
+      "id": "S4G",
+      "name": "Source-Grounded Voice RAG v44",
+      "does": [
+        "for every material spoken turn with an official reference, retrieve at least two direct dialogue/behavior exemplars",
+        "separate relationship evidence from line-shape evidence",
+        "synopsis/databook/profile may establish facts or traits but cannot unlock dialogue surface",
+        "prefer exact reference pair + exact phase + equivalent speech act/situation",
+        "if pair evidence is absent, research before generation; generic personality fallback is forbidden",
+        "extract speech act, latency, sentence shape, vocative/title, humor type, interruption, body/silence and negative rules",
+        "new joke/punchline requires source-supported humor mechanism; otherwise prefer silence/body/function",
+        "do not reproduce long copyrighted dialogue; store mechanics and locators"
       ]
     },
     {
@@ -347,5 +361,15 @@
       "rule": "Exact reference-pair evidence outranks individual analogue when both actor and interlocutor have mapped official references.",
       "missing_pair_behavior": "mark pair_reference_research_required; request external research before certifying relational voice"
     }
+  },
+  "source_grounded_voice_v44": {
+    "mandatory": true,
+    "mapped_reference_count": 58,
+    "minimum_direct_dialogue_exemplars": 2,
+    "synopsis_unlocks_dialogue": false,
+    "databook_unlocks_dialogue": false,
+    "profile_unlocks_dialogue": false,
+    "google_search_grounding_available_via_gemini_narrator": true,
+    "rule": "No material line is approved from adjectives alone. Retrieve source mechanics, then rewrite original content in reboot context."
   }
 }
