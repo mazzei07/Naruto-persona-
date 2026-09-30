@@ -38,7 +38,7 @@ PORT = int(os.getenv("PORT", "8000"))
 
 mcp = MCPServer(
     "Naruto Persona Engine",
-    version="0.9.2-v42",
+    version="0.12.0-v46-live-history-epistemic",
     instructions=(
         "Especialista read-only v42: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada, impressão linguística por idade/fase e Epistemic Name Gate antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
@@ -185,8 +185,13 @@ def persona_check(
     pressure: str = "normal",
     stimulus: str = "",
     prior_exchange: str = "",
+    perception_constraint: str = "",
+    knowledge_constraint: str = "",
+    known_facts: list[str] | None = None,
+    forbidden_facts: list[str] | None = None,
+    candidate_facts: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Audit a proposed line/action against persona, relation, stage and v25 trigger rules."""
+    """Audit a proposed line/action against persona, relation, stage, source evidence and v46 epistemic fact gate."""
     return _check(
         name=name,
         interlocutor=interlocutor,
@@ -196,6 +201,11 @@ def persona_check(
         pressure=pressure,
         stimulus=stimulus,
         prior_exchange=prior_exchange,
+        perception_constraint=perception_constraint,
+        knowledge_constraint=knowledge_constraint,
+        known_facts=known_facts,
+        forbidden_facts=forbidden_facts,
+        candidate_facts=candidate_facts,
     )
 
 
