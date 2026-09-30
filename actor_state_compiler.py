@@ -186,6 +186,8 @@ def compile_actor_state(
         "source_proximity_v41": "Check the selected card, provenance, phase and relation. Never call a synopsis a verified transcript; request evidence for unsupported cadence or turn shape.",
         "voice_surface_v42": "Resolve age/phase, grammar, formality, orality, sentence completeness, lexical age, vocative, latency and silence independently; reserved is not robotic.",
         "epistemic_name_gate_v42": "No NPC may use an unlearned proper name, technique label, organization, diagnosis or secret. Rephrase perceptually or block.",
+        "epistemic_fact_gate_v46": "Extend the knowledge gate to every material proposition: events, medical status, injuries, mission results, private conversations, plans, locations, identities, relations and causes all require a legitimate channel. Narrator dossier knowledge is not actor knowledge.",
+        "emotional_density_v46": "Economical speech must not flatten a high-stakes relationship beat. Preserve pressure through body, latency, action, subtext, interruption, lexical choice or dialogue; silence must perform a specific action.",
     }
 
     return {
@@ -216,5 +218,7 @@ def compile_actor_state(
             "VERIFY source_proximate_v41 card and evidence quality; request source review when mechanics are unverified",
             "APPLY VOICE FIDELITY v42: age/register/orality/completeness/vocative/latency/silence as independent gates",
             "APPLY EPISTEMIC NAME GATE v42 before every proper-name or technical-label use",
+            "APPLY EPISTEMIC FACT GATE v46 before every material factual proposition; no channel means no certainty",
+            "APPLY EMOTIONAL DENSITY v46: economy is not blandness; high-stakes relation must remain felt in body/timing/subtext/action/voice",
         ],
     }
