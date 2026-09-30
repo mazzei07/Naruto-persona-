@@ -99,10 +99,10 @@
       "secondary_references": [],
       "phase_anchor": "Sasuke acadêmico + disciplina Uchiha própria.",
       "transfer_scope": "documented_axes_only",
-      "own_core": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã.",
-      "own_relationship_baseline": "Segue fortemente orientação familiar de Seijūrō; rivalidade com Amatsu ainda é social/acadêmica, não vínculo íntimo.",
+      "own_core": "Disciplinada, orgulhosa, competitiva, crítica e reservada; afeto tende a vazar por ação/atenção. O estado live atual inclui namoro com Amatsu.",
+      "own_relationship_baseline": "Amatsu: amizade inseparável de infância → afastamento clânico → rivalidade/mágoa → reconciliação → namoro vigente. A fase Academia é história, não baseline atual.",
       "own_combat_identity": "Precisão, Katon, projéteis e leitura disciplinada de padrões.",
-      "social_surface": "Disciplinada, orgulhosa, competitiva, crítica; não gosta de Amatsu e o vê como vergonha pública do clã. | economical speech, selective contempt, cool challenge; rarely explains himself unless personally cornered",
+      "social_surface": "Reservada e precisa, inclusive no namoro; emoção forte pode existir sem exposição longa. Intimidade atual permite familiaridade, cobrança, preocupação e afeto contido.",
       "combat_pressure": "Precisão, Katon, projéteis e leitura disciplinada de padrões. | becomes sharper and more aggressive when pride/competence are tested; can tunnel on rival/trauma triggers",
       "break_triggers": {
         "source": "reference_plus_reboot",
@@ -131,9 +131,11 @@
       },
       "anti_regression": [
         "do not equate economy with dry one-word AI lines or adult stoicism",
-        "Do not replace directional relationship/body/knowledge with generic reference imitation."
+        "Do not replace directional relationship/body/knowledge with generic reference imitation.",
+        "Do not reset Kaede→Amatsu to Academy hostility or deny the established dating relationship.",
+        "Do not equate restraint with blandness; intensity may live in body, timing, subtext and selective wording."
       ],
-      "application_rule": "Own reboot personality and exact relationship are fused with the mapped phase-specific reference acting mechanics; live state outranks both."
+      "application_rule": "Own current live relationship and accumulated history are authoritative. Sasuke-like reference supplies acting mechanics only, never relational content."
     },
     "Kaito Shimura": {
       "actor": "Kaito Shimura",
