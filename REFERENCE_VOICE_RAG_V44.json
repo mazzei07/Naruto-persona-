@@ -1,0 +1,652 @@
+{
+  "version": "v44-source-grounded-character-replication",
+  "goal": "Reproduce documented behavioral/speech mechanics of the mapped Naruto reference, not a loose 'like X' imitation.",
+  "precedence": [
+    "live reboot canon and player agency",
+    "exact reference character + exact phase + exact interlocutor pair + equivalent situation",
+    "exact reference character + exact phase + same relationship class",
+    "databook/profile facts",
+    "generic personality fallback is forbidden for material dialogue"
+  ],
+  "source_tiers": [
+    {
+      "tier": "A",
+      "sources": [
+        "naruto-official.com",
+        "viz.com",
+        "shueisha.co.jp"
+      ],
+      "use": "official manga excerpts, official character columns, databook publication/facts"
+    },
+    {
+      "tier": "B",
+      "sources": [
+        "wikiquote.org"
+      ],
+      "use": "episode/chapter-labeled named dialogue examples; cross-check phase/context"
+    },
+    {
+      "tier": "C",
+      "sources": [
+        "naruto.fandom.com"
+      ],
+      "use": "episode/chapter locator, relation/context synopsis; not sufficient alone for line shape"
+    },
+    {
+      "tier": "D",
+      "sources": [
+        "subdl.com",
+        "kitsunekko.net"
+      ],
+      "use": "subtitle surface/cadence support only; speaker attribution must be cross-checked"
+    }
+  ],
+  "requirements": {
+    "relationship_evidence": "may use synopsis/editorial",
+    "material_dialogue": "requires direct dialogue exemplars or official excerpt evidence; synopsis alone blocks",
+    "minimum_direct_dialogue_exemplars": 2,
+    "extract": [
+      "speech_act",
+      "response_latency",
+      "sentence_length",
+      "fragment_vs_complete",
+      "vocative/title",
+      "interruption",
+      "humor_type",
+      "anger_surface",
+      "silence/body substitution",
+      "public_private_shift",
+      "what_the_character_does_not_say"
+    ],
+    "anti_invention": [
+      "no generic witty comeback",
+      "no narrator-made punchline",
+      "no therapy/corporate/modern internet phrasing",
+      "no dialogue justified only by 'this character is sarcastic/calm/cold'",
+      "no transplantable one-liner",
+      "if exact evidence is absent, silence/body or research block beats invented dialogue"
+    ]
+  },
+  "mapped_references": {
+    "Akamaru": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Akamaru dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Anko": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Anko dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Asuma": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Asuma dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Choji": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Choji dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Choza": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Choza dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Danzo": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Danzo dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Deidara": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Deidara dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Fugaku": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Fugaku dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Gaara": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Gaara dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Gato": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Gato dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Guy": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Guy dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Haku": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Haku dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Hashirama": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Hashirama dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Hiashi": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Hiashi dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Hidan": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Hidan dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Hinata": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Hinata dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Hiruzen": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Hiruzen dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Ibiki": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Ibiki dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Ino": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Ino dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Inoichi": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Inoichi dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Iruka": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Iruka dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Itachi": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Itachi dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Jiraiya": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Jiraiya dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kabuto": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kabuto dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kakashi": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kakashi dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kakuzu": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kakuzu dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kankuro": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kankuro dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kiba": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kiba dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kisame": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kisame dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Konan": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Konan dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Konohamaru": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Konohamaru dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kurama": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kurama dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Kurenai": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Kurenai dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Lee": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Lee dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Madara": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Madara dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Mito": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Mito dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Nagato": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Nagato dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Naruto": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Naruto dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Neji": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Neji dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Obito": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Obito dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Orochimaru": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Orochimaru dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Pain": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Pain dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Sakura": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Sakura dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Sasori": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Sasori dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Sasuke": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Sasuke dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Shibi": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Shibi dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Shikaku": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Shikaku dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Shikamaru": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Shikamaru dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Shino": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Shino dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Tazuna": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Tazuna dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Temari": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Temari dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Tenten": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Tenten dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Tobirama": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Tobirama dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Tsume": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Tsume dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Tsunade": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Tsunade dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Yamato": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Yamato dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Zabuza": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Zabuza dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    },
+    "Zetsu": {
+      "required_per_material_speech": true,
+      "minimum_direct_dialogue_exemplars": 2,
+      "same_phase_required": true,
+      "same_pair_preferred": true,
+      "fallback_relation_exemplar_allowed": true,
+      "corpus_status": "retrieve_on_demand",
+      "search_template": "Naruto Zetsu dialogue interaction exact phase interlocutor situation manga chapter anime episode official quote",
+      "block_if_only_synopsis": true
+    }
+  }
+}
