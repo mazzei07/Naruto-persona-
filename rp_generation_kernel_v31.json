@@ -462,5 +462,30 @@
       "swap/read-aloud/drift audit",
       "visible output"
     ]
+  },
+  "strict_preflight_orchestration_v47": {
+    "version": "v47",
+    "mandatory_before_every_material_npc_turn": true,
+    "order": [
+      "CANON_SNAPSHOT: recover exact current live branch, last valid user action, location/time/present/positions/body/chakra/injuries/equipment/effects.",
+      "EPISTEMIC_MAP: separate world truth, what each actor directly perceived, and what each actor may infer. Material facts require a legitimate channel.",
+      "RELATION_STATE: load current directional relationship and accumulated live history; current live state replaces conflicting historical baselines.",
+      "REFERENCE_EVIDENCE: load exact-phase source-proximate voice/behavior evidence. If direct evidence is missing, perform grounded research before drafting; do not compensate with generic shortness.",
+      "ACTOR_STATE: resolve objective, private impulse, social filter, body, latency, escalation/break trigger, speak/body/silence choice.",
+      "DRAFT: write only NPC/world surface; never choose Amatsu's voluntary behavior.",
+      "CANDIDATE_AUDIT: reject knowledge leaks, relationship regression, interchangeable dialogue, low-density generic restraint, modern/meta phrasing and unsupported speech acts.",
+      "SEMANTIC_REVIEW: Narrator reviewer checks the complete candidate against the authoritative packet before any prose is surfaced.",
+      "PLAYER_WINDOW: stop at Amatsu's next meaningful decision."
+    ],
+    "hard_fail_policy": {
+      "missing_live_state": "do not draft; retrieve state",
+      "knowledge_without_channel": "block candidate before output",
+      "stale_relationship_conflict": "current live relation wins and stale baseline is excluded from active surface rules",
+      "insufficient_voice_evidence": "research; if still insufficient, prefer a source-supported body/silence response rather than invented generic dialogue",
+      "bland_high_stakes_or_relational_beat": "revise; economy of speech cannot erase emotional pressure",
+      "amatsu_agency_violation": "block candidate"
+    },
+    "rollback_rule": "A generation error never becomes an in-universe fact. If an invalid line somehow surfaces, explicitly rewind out of RP to the last valid beat and regenerate from there. Never make the NPC claim it 'didn't say' the line inside the scene and never invent retroactive reports/witnesses to justify it.",
+    "chat_usage_rule": "For live RP, a material NPC line must not be produced from Persona alone. Persona supplies acting; Canoney/live state supplies facts; Engine supplies causality/knowledge; Narrator supplies draft+semantic review; source research fills evidence gaps."
   }
 }
