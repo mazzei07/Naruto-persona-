@@ -53,3 +53,15 @@ def test_hokage_third_person_hierarchy_v43():
         pressure="low",
     )
     assert good["status"] in {"reviewable", "needs_evidence"}, good
+
+
+def test_v44_kakashi_punchline_rejected():
+    bad = persona_check(
+        "Kagetsu Shiranui", "Amatsu Uchiha",
+        candidate_dialogue="Viu? Dessa vez nem fui eu.",
+        situation="Enfermaria de Suna; a médica acabou de encerrar o beat sobre a alta de Amatsu. Kagetsu é sensei dele.",
+        pressure="low",
+    )
+    assert bad["status"] == "revision_required", bad
+    assert any("source_grounded_voice_v44" in x for x in bad["revision_requests"]), bad
+    assert any("unsupported_punchline" in x for x in bad["warnings"]), bad
