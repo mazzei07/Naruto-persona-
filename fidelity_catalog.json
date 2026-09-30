@@ -2340,6 +2340,66 @@
       },
       "br_dub_verified": false,
       "not_rp_event": true
+    },
+    {
+      "id": "sasuke_team7_voice_v46",
+      "references": [
+        "Sasuke",
+        "Naruto",
+        "Sakura"
+      ],
+      "interaction_pairs": [
+        [
+          "Sasuke",
+          "Naruto"
+        ],
+        [
+          "Sasuke",
+          "Sakura"
+        ]
+      ],
+      "source_ids": [
+        "ep28",
+        "ep29",
+        "wikiquote_classic"
+      ],
+      "locator": "Anime eps. 28–29 e 32; páginas oficiais para contexto de fase + diálogo nomeado de episódio para superfície/cadência",
+      "episode_ceiling": 32,
+      "phase": "classic_through_forest",
+      "tags": [
+        "social",
+        "rivalry",
+        "danger",
+        "protect",
+        "concern",
+        "team"
+      ],
+      "observed_summary": "Sasuke jovem alterna contenção e fala econômica com mudanças bruscas de intensidade quando competência, sobrevivência ou alguém próximo entram em jogo. Pode corrigir, recusar, desafiar ou perguntar diretamente; preocupação aparece por ação e foco seletivo, não por exposição emocional longa.",
+      "acting_inference": "Para Kaede, transferir apenas mecânicas de contenção, orgulho, atenção seletiva, recusa/desafio e preocupação que emerge sob pressão. O conteúdo relacional vem da história live Kaede→Amatsu; Sasuke→Naruto/Sakura não substitui namoro, intimidade ou conhecimento do reboot.",
+      "dialogue_evidence": "official_excerpt_plus_named_transcript",
+      "voice_exemplars_count": 4,
+      "voice_source_tier": "A+B",
+      "voice_mechanics": {
+        "speech_acts": [
+          "direct_challenge",
+          "tactical_correction",
+          "refusal",
+          "direct_concern",
+          "protective_focus",
+          "sparse_acknowledgment"
+        ],
+        "latency": "baseline selective/deliberate; threat or personal trigger can make response immediate",
+        "sentence_shape": "often short-to-medium complete clauses; intensity can compress or sharpen without becoming robotic",
+        "body_relation": "attention, decisive action and posture can carry affect that is not verbalized",
+        "negative": [
+          "do not equate reserve with low emotional density",
+          "do not invent a witty punchline merely because Sasuke is cool or cutting",
+          "do not import Sasuke→Naruto hostility to erase a different reboot relationship",
+          "do not turn silence into emotional absence when the beat has personal stakes"
+        ]
+      },
+      "br_dub_verified": false,
+      "not_rp_event": true
     }
   ],
   "characters": {
