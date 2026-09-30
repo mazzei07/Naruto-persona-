@@ -1,18 +1,18 @@
 {
   "engine_name": "Naruto Persona Engine",
-  "version": "0.12.0-v46-live-history-epistemic",
+  "version": "0.13.0-v47-strict-preflight",
   "continuity_id": "classico_floresta_da_morte",
   "scope": "Naruto Reboot — Continuidade Clássica",
   "purpose": "Resolver interpretação, relação, voz, corpo e reação sem narrar nem alterar cânone.",
   "precedence": [
     "correção live mais recente do usuário",
     "estado live validado pelo chat/Canoney",
+    "relação direcional live atual e histórico acumulado",
     "perfil individual do registro clássico",
-    "relação direcional específica",
     "fase exata da referência",
     "situação/pressão/audiência/corpo",
     "regras globais de voz",
-    "pesquisa externa apenas como calibração"
+    "pesquisa externa como calibração quando evidência local for insuficiente"
   ],
   "pipeline": [
     "continuity_firewall_v36",
@@ -56,7 +56,12 @@
     "Não expor ausências familiares já estabelecidas sem função real na cena.",
     "Registro Naruto Clássico: sem palavrões como fala padrão; apenas exceções explicitamente autorizadas pelo usuário.",
     "Se o NPC relevante possui nome estabelecido, usar o nome; cargo/título não apaga a identidade do personagem.",
-    "Ritsu Uchiha has bilateral 1T in v38; Akane 2T; Kaede remains unawakened; never regress Ritsu to 'no Sharingan' or auto-promote tomoe."
+    "Ritsu Uchiha has bilateral 1T in v38; Akane 2T; Kaede remains unawakened; never regress Ritsu to 'no Sharingan' or auto-promote tomoe.",
+    "Antes de fala material, o chat deve fornecer percepção e conhecimento delimitados; se faltar canal para um fato, o candidato deve ser bloqueado antes de sair.",
+    "Estado relacional live atual substitui overlays históricos conflitantes; baseline antigo pode sobreviver como história, nunca como regra ativa contraditória.",
+    "Economia verbal não reduz densidade emocional: reencontro, risco, vergonha, afeto e rivalidade devem aparecer por timing, corpo, escolha lexical, interrupção, ação ou subtexto.",
+    "Um turno material não deve ser produzido pelo Persona isoladamente: fatos vêm de Canoney/live state, causalidade/knowledge gate do Engine e rascunho/revisão semântica do Narrator.",
+    "Se uma saída inválida escapar, ela é não canônica e a cena volta ao último beat válido; nunca justificar o erro inventando conhecimento retroativo ou fazendo o NPC negar diegeticamente a própria fala."
   ],
   "voice_gates": [
     "falaria_agora",
