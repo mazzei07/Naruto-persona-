@@ -7,7 +7,8 @@
     "Histórico é append-only; falha de geração recebe correção fora de cena e não uma negação fabricada pelo personagem.",
     "Estado relacional vigente prevalece; modulação de voz não reinicia romance, confiança, rivalidade ou lembranças.",
     "Perceber, interpretar, ter tempo e executar são condições distintas para defesa.",
-    "Fonte secundária ou sinopse não comprova cadência/dublagem; títulos, fase e locadores precisam ser conferidos."
+    "Fonte secundária ou sinopse não comprova cadência/dublagem; títulos, fase e locadores precisam ser conferidos.",
+    "Uma iniciativa de toque de NPC não autoriza virar mãos, puxar membros, mover o corpo ou decidir que Amatsu coopera. Narrar a tentativa e parar antes da resposta voluntária."
   ],
   "performance": [
     "Recuperar memória episódica relevante do ator e relação direcional antes de decidir.",
@@ -19,7 +20,10 @@
     "Manter alvos e agendas dos NPCs durante o combate; evitar reação em fila.",
     "Construir cada beat a partir do estímulo exato, objetivo, vínculo e memória: iniciativa própria, mudança de ritmo e subtexto com consequência; não repetir uma frase ou gesto padrão para reconhecer o personagem.",
     "Não reduzir intensidade por proibir invenções: usar apenas emoções e lembranças sustentadas, com forma particular de afeto, irritação, orgulho, humor e silêncio de cada ator.",
-    "Preservar conflito e vulnerabilidade quando justificados. Não transformar todos em terapeutas, adultos impassíveis ou comentaristas da técnica do jogador."
+    "Preservar conflito e vulnerabilidade quando justificados. Não transformar todos em terapeutas, adultos impassíveis ou comentaristas da técnica do jogador.",
+    "Reencontro de namorados pode carregar saudade, afeto e expectativa pela ausência já conhecida; não exige conhecimento de perigo grave. Separar vínculo íntimo de investigação clínica: não inventar inspeção corporal, ferimento ou ameaça para criar emoção.",
+    "A referência canônica orienta cadência e decisões, mas os vínculos próprios do reboot determinam o ato relacional. Uma lista de speech_acts não é catálogo fechado de frases nem motivo para apagar afeto confirmado.",
+    "Em cada beat, responder à fala concreta do jogador com ato relacional específico. Evitar veredictos espirituosos transplantáveis, inspeções em sequência e repetição do mesmo termo como substituto de emoção."
   ],
   "combat": [
     "Declarar preparação, compromisso, trajetória, detecção, resposta, contato e consequência em tempo contínuo.",
