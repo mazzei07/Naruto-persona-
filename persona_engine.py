@@ -1326,7 +1326,7 @@ def persona_audit(
     # v46: ordinary factual claims need a knowledge channel, not only proper names.
     violations.extend(_epistemic_fact_gate_v46(
         text,
-        knowledge_constraint=knowledge_constraint,
+        knowledge_constraint="\n".join(x for x in [knowledge_constraint, situation] if x),
         known_facts=known_facts,
         forbidden_facts=forbidden_facts,
         candidate_facts=candidate_facts,
