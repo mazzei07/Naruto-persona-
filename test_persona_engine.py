@@ -4,14 +4,15 @@ from persona_api import persona_healthcheck, persona_relation, persona_turn, per
 
 def main():
     h = persona_healthcheck()
-    assert h["characters"] == 92, h
-    assert h["evidence_entities"] == 99, h
+    assert h["characters"] == 94, h
+    assert h["evidence_entities"] == 101, h
     assert h["fidelity_protocol"] == "v25.0.0", h
-    assert h["acting_bible_v25"]["characters"] == 99, h
+    assert h["acting_bible_v25"]["characters"] == 101, h
     assert h["continuity_id"] == "classico_floresta_da_morte"
     assert h["universal_language_protocol"] == "v23"
     assert h["formality_protocol"] == "v23"
     assert h["addressing_protocol"] == "v33"
+    assert h["supports_conversational_cohesion_v50"] is True, h
 
     sa = persona_turn(
         "Saya Haruno", "Amatsu Uchiha",
