@@ -11,7 +11,8 @@
       "rule": "Relations are Classic-only. Shared identity across continuities never transfers old relationship history."
     },
     "family_dojutsu_v38": "Family relation graph now includes Akane/Ritsu and the current ocular hierarchy.",
-    "live_relationship_rule": "Current live relationship state outranks older baseline relationship overlays. Voice calibration may change expression, never erase established events, intimacy, knowledge, commitments or consequences."
+    "live_relationship_rule": "Current live relationship state outranks older baseline relationship overlays. Voice calibration may change expression, never erase established events, intimacy, knowledge, commitments or consequences.",
+    "relationship_schema_v47": "current_status is mandatory for explicit current romantic state; roles alone are not sufficient for hard regression gates."
   },
   "edges": {
     "Amatsu Uchiha": {
@@ -88,7 +89,8 @@
         "familiarity": "deep_shared_history_and_current_romance",
         "hierarchy": "peer",
         "default_filter": "current_relationship_specific",
-        "rule": "Current namoro and shared childhood are established live facts. Do not reduce Amatsu→Kaede to same-clan context or generic rivalry."
+        "rule": "Current namoro and shared childhood are established live facts. Do not reduce Amatsu→Kaede to same-clan context or generic rivalry.",
+        "current_status": "dating"
       },
       "Shin Uchiha": {
         "sources": [
@@ -413,7 +415,8 @@
         "rule": "Live evolution outranks Academy-era hostility. Preserve Kaede's cold/precise temperament, pride and family pressure, but never reset her to 'not intimate' or deny the established namoro. Affection may remain restrained/private; irritation does not erase the relationship.",
         "reference_relation_axis_v28": "Kaede's own live relationship with Amatsu outranks generic Sasuke→Naruto analogy; Sasuke-like mechanics may shape restraint/precision only.",
         "reference_relation_transfer_v28": "Use selective attention, pride, clipped delivery and restrained affection compatible with an established young relationship and long childhood history.",
-        "reference_relation_must_not_v28": "Do not reset to Academy dislike, deny dating, forbid ordinary romantic address solely because of old hostility, invent tsundere denial, or erase shared childhood/reconciliation."
+        "reference_relation_must_not_v28": "Do not reset to Academy dislike, deny dating, forbid ordinary romantic address solely because of old hostility, invent tsundere denial, or erase shared childhood/reconciliation.",
+        "current_status": "dating"
       },
       "Shin Uchiha": {
         "sources": [
