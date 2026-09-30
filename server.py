@@ -40,7 +40,7 @@ mcp = MCPServer(
     "Naruto Persona Engine",
     version="0.12.0-v46-live-history-epistemic",
     instructions=(
-        "Especialista read-only v42: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada, impressão linguística por idade/fase e Epistemic Name Gate antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
+        "Especialista read-only v47: Bíblia de Atuação por personagem, histórico relacional, prior_exchange, gatilhos de escalada, impressão linguística por idade/fase e Epistemic Name Gate antes da voz. Evidência por turno continua obrigatória; inspiração técnica não importa personalidade. "
         "Resolve referência, fase, relação direcional, filtro social, latência, corpo, voz, "
         "vocativo, morfossintaxe, silêncio e reação. Aplica o contrato v25 antes das heurísticas de registro, formalidade e relação; não força microgestos nem bordões. Família de voz só vale para inspiração de personalidade documentada. Canoney/estado live continuam sendo "
         "autoridade factual. Nunca gere decisão voluntária de Amatsu Uchiha."
@@ -54,7 +54,7 @@ async def root(_: Request) -> JSONResponse:
     return JSONResponse(
         {
             "service": "Naruto Persona Engine",
-            "version": "0.9.2-v42",
+            "version": "0.13.0-v47-strict-preflight",
             "status": "ok",
             "mcp_endpoint": "/mcp",
             "health_endpoint": "/health",
@@ -70,7 +70,7 @@ async def health(_: Request) -> JSONResponse:
         {
             "status": "ok" if result.get("ok") else "degraded",
             "service": "Naruto Persona Engine",
-            "version": "0.8.0-v31",
+            "version": "0.13.0-v47-strict-preflight",
             "persona_engine": result,
         },
         status_code=200 if result.get("ok") else 503,
